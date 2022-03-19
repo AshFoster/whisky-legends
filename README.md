@@ -1,108 +1,241 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Whisky Legends
 
-Welcome USER_NAME,
+[Click here to view the live site.](https://whisky-legends.herokuapp.com/)
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+![Am I Responsive Image](assets/readme-images/am-i-responsive.JPG)
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+## Contents
 
-## Gitpod Reminders
+- [Overview](#overview)
+- [User Experience (UX)](#user-experience)
+    - [Strategy](#strategy)
+    - [Scope](#scope)
+    - [Structure](#structure)
+    - [Skeleton](#skeleton)
+    - [Surface](#surface)
+- [Features](#features)
+    - [Existing Features](#existing-features)
+- [Testing](#testing)
+    - [User Stories Testing](#user-stories-testing)
+    - [Validator Testing](#validator-testing)
+    - [Performance Testing](#performance-testing)
+    - [Device and Browser Compatibility Testing](#device-and-browser-compatibility-testing)
+    - [Bugs](#bugs)
+- [Deployment](#deployment)
+- [Technologies Used](#technologies-used)
+    - [Languages](#languages)
+    - [Online Resources](#online-resources)
+- [Credits](#credits)
+    - [Code](#code)
+    - [Media](#media)
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+## Overview
 
-`python3 -m http.server`
+## User Experience
 
-A blue button should appear to click: _Make Public_,
+### Strategy
 
-Another blue button should appear to click: _Open Browser_.
+#### Epics and User Stories
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+More detail about the user stories including acceptance criteria and tasks associated with each of them can be found in the [issues](https://github.com/AshFoster/whisky-legends/issues) section of the GitHub repository.
 
-A blue button should appear to click: _Make Public_,
+  - __Epic 1:__
+      - 
 
-Another blue button should appear to click: _Open Browser_.
+### Scope
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+### Structure
 
-To log into the Heroku toolbelt CLI:
+![Site Map](assets/readme-images/site-map.png)
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+#### Data Models
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+##### App Models
 
-------
 
-## Release History
+### Skeleton
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+#### Wireframes
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+Wireframes were created for mobiles, tablets, and desktops using [Balsamiq](https://balsamiq.com/). The actual pages do differ slightly from the original wireframes.
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+Here are links to each of them:
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+- [Desktop - Home](assets/wireframes/home-desktop.png)
+- [Tablet - Home](assets/wireframes/home-tablet.png)
+- [Mobile - Home](assets/wireframes/home-mobile.png)
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+### Surface
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+#### Imagery
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+#### Colour Scheme
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+![Website's Colours](assets/readme-images/colour-scheme.JPG)
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+#### Typography
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+For the typography choices, [Google Fonts](https://fonts.google.com/?sort=popularity) was used, sorted by popularity to give an idea of some fonts that are likely to work well across many websites.
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+The ones that stood out and seemed most suited to the project were chosen. They are as follows:
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+Each of them is of the font category Sans Serif which is the font used as a fallback if for any reason the specified font isn't available.
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+## Features
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+### Existing Features
 
-------
+- __Navbar__
 
-## FAQ about the uptime script
+  ![Navbar](assets/readme-images/navbar.JPG)
 
-**Why have you added this script?**
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+## Testing
 
-**How will this affect me?**
+### User Stories Testing
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+#### Epic 1:
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
+### Validator Testing
 
-**So….?**
+- __HTML__
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
+  - Originally, a few errors were showing up when the site was put through the [W3C Markup Validation Service.](https://validator.w3.org/), but they have all since been rectified and now no errors are showing on any of the pages.
 
-**Can I opt out?**
+- __CSS__
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
+  - No errors were found when put through the [W3C CSS Validation Service - Jigsaw.](https://jigsaw.w3.org/css-validator/)
 
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
+- __JavaScript__
 
-**Anything more?**
+  - No errors were found when put through the [JSHint.](https://jshint.com/)
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
 
----
+- __Python__
 
-Happy coding!
+  - All python files have been put through the [PEP8 linter](http://pep8online.com/). Any issues that were found due to long lines, trailing whitespace etc. have been rectified and no errors are now showing.
+
+### Performance Testing
+
+The website was audited for mobile and desktop using Google Chrome's lighthouse feature.
+
+[WAVE Evaluation Tool](https://wave.webaim.org/) was used to test the accessibility across all the pages of the site.
+
+### Device and Browser Compatibility Testing
+
+To test the site's compatibility across a range of devices [Responsinator](https://www.responsinator.com/) was used, going through all of the user stories on each device it includes in both portrait and landscape modes. The devices included are as follows:
+
+  - iPhone X
+  - Pixel 2
+  - iPhone 6-8
+  - iPhone 6-8 Large Version
+  - iPad
+
+Chrome Dev Tools was also used to check the site's compatibility across a range of other devices also in both portrait and landscape modes. These devices include:
+
+  - Ipad Pro
+  - Galaxy Fold (which has a very narrow viewport of only 280px in portrait mode)
+
+Actual mobile devices belonging to family and friends were also used for testing which includes the following:
+
+  - iPhone 7
+  - Pixel 4
+  - S10 Plus
+
+A desktop monitor was also used for testing with a couple of different resolutions to check that the site remains to look and act as expected on larger screens. The resolutions were: 1366 x 768 and 1920 x 1080.
+
+Google Chrome was the browser used for the majority of testing during the development process, but once development had neared an end some other browsers were used for testing to make sure the site had cross-browser compatibility. The full list of browsers used for testing are as follows:
+
+  - Chrome
+  - Edge
+  - Firefox
+
+### Bugs
+
+#### Fixed Bugs
+
+- 
+
+#### Unfixed Bugs
+
+- 
+
+
+## Deployment
+
+[Here's a link to the live site.](https://whisky-legends.herokuapp.com/)
+
+### Deploying with Heroku
+
+This project has been deployed on Heroku using the following steps:
+ 
+- Log into Heroku or create an account.
+- Create a new Heroku App with an appropriate name and region.
+- Once created go to the Resources tab, then under Add-ons search and add 'Heroku Postgres’.
+- Then go to the Settings tab and click Reveal Config Vars.
+- Add the following variables as config vars:
+  - SECRET_KEY - can be any key you like
+  - EMAIL_HOST_USER - must be the email address associated with a SendGrid account
+- Now go to the Deploy tab.
+- Connect to Github using the relevant repository name.
+- Then click 'Deploy a GitHub branch' under the Manual deploy section.
+- Once confirmation of deployment is shown, the project is now deployed and can be opened.
+
+### Forking or Cloning the GitHub Repository
+
+To deploy this application, fork or clone the [repository](https://github.com/AshFoster/whisky-legends), then follow the steps outlined in the '[Deploying with Heroku](#deploying-with-heroku)' section above.
+
+#### Forking the Repository
+
+To fork the GitHub repository follow these steps:
+
+- Log in to GitHub and navigate to the [repository](https://github.com/AshFoster/whisky-legends).
+- Once the page has loaded look for the "Fork" button near the top right of the page and click it.
+- A copy of the original repository should now be in your GitHub account.
+
+#### Cloning the Repository
+
+To clone the GitHub repository follow these steps:
+
+- Log in to GitHub and navigate to the [repository](https://github.com/AshFoster/whisky-legends).
+- Above the repository's list of files, on the right, click on the "Code" button.
+- Copy the link that is shown in the drop-down list.
+- Open Git Bash and change the current working directory to the location where you want the cloned directory to be made.
+- In the terminal, type `git clone`, and then paste the URL you copied earlier and press enter.
+- A local clone of the original repository should now be available.
+
+## Technologies Used
+
+### Languages
+
+- [HTML5](https://en.wikipedia.org/wiki/HTML5)
+- [CSS3](https://en.wikipedia.org/wiki/CSS)
+- [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
+- [Python](https://en.wikipedia.org/wiki/Python_(programming_language))
+
+### Frameworks
+
+- [Django](https://www.djangoproject.com/)
+- [Bootstrap 5](https://getbootstrap.com/)
+
+### Online Resources
+
+- [Git](https://en.wikipedia.org/wiki/Git) - for version control.
+- [GitPod](https://www.gitpod.io/) - the online IDE (Integrated Development Environment) used for development.
+- [GitHub](https://github.com/) - used as an online code repository.
+- [Heroku](https://www.heroku.com/) - used for deployment.
+- [Google Fonts](https://fonts.google.com/) - for the fonts used throughout the site.
+- [Font Awesome](https://fontawesome.com/) - for the icons used throughout the site.
+- [Colormind](http://colormind.io/) - used to obtain colour palette images.
+- [SendGrid](https://sendgrid.com/) - used to send emails when required.
+- [Lucidchart](https://www.lucidchart.com/) - used to create site map and entity relationship diagrams. 
+
+## Credits
+
+### Code
+
+- [YouTube](https://www.youtube.com/)
+- [Code Institute's Full Stack Developer Course](https://codeinstitute.net/)
+  - Course material and walkthrough projects provided some ideas.
