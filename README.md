@@ -64,6 +64,9 @@ Here are links to each of them:
 - [Desktop - Home](assets/wireframes/home-desktop.png)
 - [Tablet - Home](assets/wireframes/home-tablet.png)
 - [Mobile - Home](assets/wireframes/home-mobile.png)
+- [Desktop - Shop](assets/wireframes/shop-desktop.png)
+- [Tablet - Shop](assets/wireframes/shop-tablet.png)
+- [Mobile - Shop](assets/wireframes/shop-mobile.png)
 
 ### Surface
 
