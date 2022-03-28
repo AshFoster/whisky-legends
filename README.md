@@ -31,16 +31,73 @@
 
 ## Overview
 
+Whisky Legends is an ecommerce website that sells an array of whiskies from all over the world. A subscription service is also available, offering users the chance of sampling different whiskies on a monthly basis. There are 3 subscription lengths: 3 months, 6 months and 12 months. Users will also be able to register for an account which will provide them access to their own profile, order history and wishlist functionality. Registered users will also be able to rate and review whiskies they have previously purchased.
+
 ## User Experience
 
 ### Strategy
 
 #### Epics and User Stories
 
+This website is aimed at whisky fans who would like to purchase one or multiple bottles of whisky, and/or who would like to sample different whiskies every month over a subscription period.
+
+There are 5 epics, each of which have been split up into multiple user stories. All of which are outlined below.
+
 More detail about the user stories including acceptance criteria and tasks associated with each of them can be found in the [issues](https://github.com/AshFoster/whisky-legends/issues) section of the GitHub repository.
 
-  - __Epic 1:__
-      - 
+  - __Epic 1: Admin and Store Management__
+      - As a store owner I want to be able to add a product so that I can add new items to my store
+      - As a store owner I want to be able to edit/update a product so that I can change product prices, descriptions, images and other product criteria
+      - As a store owner I want to be able to delete a product so that I can remove items that are no longer for sale
+      - As a store owner I want to be able to approve product reviews so that I can filter out any questionable reviews
+      - As a store owner I want to be able to delete product reviews so that I can delete any reviews that are no longer relevant
+      - As a store owner I want to be able to be notified when a review/comment needs to be approved so that I can avoid the need to keep checking the admin site for anything to be approved
+      - As a store owner I want to be able to be notified when a user has submitted the contact form so that I can avoid the need to keep checking the admin site for any contact form submissions to read
+
+  - __Epic 2: User Accounts__
+      - As a site user I want to be able to easily register for an account so that I can have a personal account and be able to view my profile
+      - As a registered site user I want to be able to easily log in or log out so that I can access my personal account information
+      - As a registered site user I want to be able to easily recover my password in case I forget it so that I can recover access to my account
+      - As a registered site user I want to be able to receive an email confirmation after registering so that I can verify that my account registration was successful
+      - As a registered site user I want to be able to update the email address linked to my account so that I can use a new email address with my account
+      - As a registered site user I want to be able to update my password so that I can strengthen my password or use a more memorable password
+      - As a registered site user I want to be able to have a personalised user profile so that I can view my personal order history and order confirmations, and save my payment information
+      - As a registered site user I want to be able to write reviews of whiskies or other products so that I can share my opinion about products with other users
+      - As a registered site user I want to be able to update/edit any product reviews I've written so that I can amend any mistakes I might have made or add further detail
+      - As a registered site user I want to be able to delete any product reviews I've written so that I can remove any reviews I no londer wish to share
+      - As a registered site user I want to be able to rate whiskies or other products that I've purchased so that I can show other users how much I like or dislike them
+  
+  - __Epic 3: Browsing and Navigation__
+      - As a site user I want to be able to view a list of whiskies and other available products so that I can select something to purchase
+      - As a site user I want to be able to view individual whiskies or other products details so that I can identify its price, description, rating and image
+      - As a site user I want to be able to quickly identify deals and/or special offers so that I can take advantage of special savings on whiskies I'd like to purchase
+      - As a site user I want to be able to easily view the total of my purchases at any time so that I can avoid spending too much
+      - As a site user I want to be able to view the site's privacy policy so that I can see what information is collected about me and how it is used
+      - As a site user I want to be able to click a link to the site's facebook business page so that I can follow them on facebook
+      - As a site user I want to be able to sign up to the site's newsletter so that I can receive the latest newsletters as soon as they're released
+      - As a site user I want to be able to fill in a contact form so that I can get in contact with the site owners to ask any questions I might have
+      - As a site user I want to be able to read customer reviews on whiskies or other products so that I can see what other customers have to say about them
+      - As a site user I want to be able to view ratings of whiskies or other products so that I can see which have the highest and lowest ratings
+
+  - __Epic 4: Filtering, Sorting and Searching__
+      - As a site user I want to be able to sort the list of available whiskies and other products so that I can easily identify the best rated, best priced and regionally sorted whiskies
+      - As a site user I want to be able to filter on a specific category/categories of whisky so that I can easily identify whiskies of a particular category/categories
+      - As a site user I want to be able to sort a specific category of whisky so that I can find the best priced or best rated whisky from a specific category or sort the whiskies in that category by name
+      - As a site user I want to be able to sort multiple categories of whiskies simultaneously so that I can find the best priced or best rated whiskies across broad categories such as "region" or "type"
+      - As a site user I want to be able to search for a whisky or other product by name or description so that I can find a specific whisky or other product I'd like to purchase
+      - As a site user I want to be able to easily see what I've searched for and the number of results so that I can quickly decide whether the whisky or other product I want is available
+
+  - __Epic 5: Purchasing and Checkout__
+      - As a site user I want to be able to easily add whiskies and/or other products to my shopping cart so that I can keep track of multiple items I'd like to purchase together
+      - As a site user I want to be able to easily select the quantity of a whisky or other product when purchasing it so that I can ensure I don't accidentally select the wrong product quantity
+      - As a site user I want to be able to view items in my cart to be purchased so that I can identify the total cost of my purchase and all items I will receive
+      - As a site user I want to be able to adjust the quantity of individual items in my cart so that I can easly make changes to my purchase before checkout
+      - As a site user I want to be able to put whiskies into a personal wishlist so that I can keep track of whiskies that I'd like to purchase in the furture
+      - As a site user I want to be able to remove items from personal wishlist so that I can remove items that I've now purchased or no longer wish to purchase in the future
+      - As a site user I want to be able to easily enter my payment information so that I can check out quickly and with no hassle
+      - As a site user I want to be able to feel my personal and payment information is safe and secure so that I can confidentily provide the needed information to make a purchase
+      - As a site user I want to be able to view an order confirmation after checkout so that I can verify that I haven't made any mistakes
+      - As a site user I want to be able to recieve an email confirmation after checking out so that I can keep the confirmation of what I've purchased for my records
 
 ### Scope
 
