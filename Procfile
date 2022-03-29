@@ -1,0 +1,1 @@
+web: gunicorn whiskylegends.wsgi:application
