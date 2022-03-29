@@ -39,9 +39,9 @@ Whisky Legends is an ecommerce website that sells an array of whiskies from all 
 
 #### Epics and User Stories
 
-This website is aimed at whisky fans who would like to purchase one or multiple bottles of whisky, and/or who would like to sample different whiskies every month over a subscription period.
+This website is aimed at whisky fans who would like to purchase one or multiple bottles of whisky, and/or who would like to sample different whiskies every month over a chosen subscription period.
 
-There are 5 epics, each of which have been split up into multiple user stories. All of which are outlined below.
+The project has been split up into 5 epics, each of which have been split up into multiple user stories. All of which are outlined below.
 
 More detail about the user stories including acceptance criteria and tasks associated with each of them can be found in the [issues](https://github.com/AshFoster/whisky-legends/issues) section of the GitHub repository.
 
