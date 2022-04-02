@@ -1,0 +1,88 @@
+<div class="row d-md-none topnav">
+    <nav class="navbar navbar-expand-md navbar-light w-100 p-0 text-center">
+        <!-- Mobile Search Icon and Dropdown -->
+        <li class="list-inline-item dropdown">
+            <a class="nav-link" href="#" id="mobile-search" data-bs-toggle="dropdown" aria-haspopup="true"
+                aria-expanded="false">
+                <div class="text-center ms-3">
+                    <div><i class="fas fa-search fa-2x"></i></div>
+                </div>
+            </a>
+            <div class="dropdown-menu w-100 my-0 p-2 mobile-search-dropdown" aria-labelledby="mobile-search">
+                <form method="GET" action="">
+                    <div class="input-group w-100 border rounded-3 search-bar-container">
+                        <input class="form-control px-4 search-bar" type="text" name="search"
+                            placeholder="Search our whiskies..." title="Main search bar - Mobile">
+                        <div class="input-group-append">
+                            <button class="form-control btn btn-black search-bar-icon" type="submit"
+                                aria-label="Search bar icon button">
+                                <span class="icon">
+                                    <i class="fas fa-search"></i>
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </li>
+        <!-- Mobile Cart Icon -->
+        <li class="list-inline-item me-1">
+            <a class="nav-link p-2 cart-icon" href="">
+                <div class="text-center">
+                    <div><i class="fas fa-shopping-cart fa-1x"></i></div>
+                    <p class="my-0">
+                        £0.00
+                    </p>
+                </div>
+            </a>
+        </li>
+        <!-- Mobile Logo -->
+        <li class="list-inline-item">
+            <a href="{% url 'home' %}" class="nav-link">
+                <h1 class="logo fs-1 my-0">Whisky <br> Legends</h1>
+            </a>
+        </li>
+        <!-- Mobile Accounts Icon and Dropdown -->
+        <li class="list-inline-item dropdown">
+            <a class="nav-link p-2 account-icon" href="#" id="mobile-user-options" data-bs-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                <div class="text-center">
+                    <div><i class="fas fa-user fa-2x"></i></div>
+                </div>
+            </a>
+            <div class="dropdown-menu dropdown-menu-end border rounded-3 account-dropdown"
+                aria-labelledby="mobile-user-options">
+                {% if request.user.is_authenticated %}
+                {% if request.user.is_superuser %}
+                <a href="" class="dropdown-item">Product Management</a>
+                {% endif %}
+                <a href="" class="dropdown-item">My Profile</a>
+                <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
+                {% else %}
+                <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
+                <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
+                {% endif %}
+            </div>
+        </li>
+        <!-- Mobile Menu Icon and Dropdown -->
+        <li class="list-inline-item">
+            <button class="navbar-toggler me-3" type="button" data-bs-toggle="collapse" data-bs-target="#main-nav"
+                aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fas fa-bars fa-2x"></i>
+            </button>
+        </li>
+        <div class="collapse navbar-collapse border w-100 main-nav-dropdown" id="main-nav">
+            <ul class="navbar-nav list-unstyled text-center">
+                <li class="nav-item">
+                    <a class="nav-link p-2 active" aria-current="page" href="#">Shop</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link p-2" href="#">Join</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link p-2" href="#">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</div>

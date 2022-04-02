@@ -1,0 +1,114 @@
+/* All main section names within this style sheet are preceeded with /// for ease of finding */
+
+/* Variables for colours used throughout site*/
+:root {
+    /* --logo-text-color: #420F0F; */
+    --logo-text-color: #611b1b;
+}
+
+/* /// ---------------------------------------------------- BASE.HTML styles */
+
+/* Navbar */
+
+header a {
+    color: black !important;
+    text-transform: uppercase;
+}
+
+header a:hover,
+header a:focus {
+    font-weight: 600;
+}
+
+.topnav {
+    background: url("/media/bg-header-paper.jpg") no-repeat center center;
+    background-size: cover;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 500;
+    border-bottom: 2px solid var(--logo-text-color);
+}
+
+.account-icon:hover,
+.account-icon:focus {
+    font-size: 110%;
+    padding: 6.3px !important;
+}
+
+.logo {
+    font-family: 'Lobster', cursive;
+    color: var(--logo-text-color) !important;
+    text-transform: none;
+}
+
+.search-bar-container {
+    border-color: var(--logo-text-color) !important;
+}
+
+.search-bar,
+.search-bar-icon {
+    border: none;
+}
+
+.search-bar-icon {
+    background-color: white !important;
+}
+
+.navbar-light .navbar-toggler {
+    color: rgba(0,0,0,1);
+    border: none;
+}
+
+.dropdown-item:focus,
+.dropdown-item:hover {
+    background-color: transparent !important;
+}
+
+.account-dropdown {
+    background: url("/media/bg-header-paper.jpg") no-repeat center center;
+    background-size: cover;
+    border-color: var(--logo-text-color) !important;
+}
+
+.mobile-search-dropdown {
+    background: url("/media/bg-header-paper.jpg") no-repeat center center;
+    background-size: cover;
+    border-color: var(--logo-text-color) !important;
+    width: calc(100vw + 2px) !important;
+    top: 78px !important;
+    left: -1px !important;
+}
+
+.main-nav-dropdown {
+    background: url("/media/bg-header-paper.jpg") no-repeat center center;
+    background-size: cover;
+    border-color: var(--logo-text-color) !important;
+    position: absolute;
+    left: 0;
+    top: 97px;
+    font-size: 1rem !important;
+}
+
+
+/* /// ---------------------------------------------------- MEDIA QUERIES */
+
+/* For very small screen sizes with maximum height of 470px */
+@media screen and (max-width: 470px) {
+    .mobile-search-dropdown {
+        top: 71px !important;
+    }
+    
+    .list-inline-item .nav-link,
+    .list-inline-item .navbar-toggler {
+        font-size: 65%;
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+/* For screen sizes with maximum height of 767px - below Bootstrap md */
+@media screen and (max-width: 767px) {
+    .navbar {
+        height: 96px;
+    }
+}
