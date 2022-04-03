@@ -8,7 +8,7 @@
 
 /* /// ---------------------------------------------------- BASE.HTML styles */
 
-/* Navbar */
+/* Header/Navbar */
 
 header a {
     color: black !important;
@@ -27,12 +27,6 @@ header a:focus {
     font-size: 1.2rem;
     font-weight: 500;
     border-bottom: 2px solid var(--logo-text-color);
-}
-
-.account-icon:hover,
-.account-icon:focus {
-    font-size: 110%;
-    padding: 6.3px !important;
 }
 
 .logo {
@@ -55,7 +49,7 @@ header a:focus {
 }
 
 .navbar-light .navbar-toggler {
-    color: rgba(0,0,0,1);
+    color: rgba(0, 0, 0, 1);
     border: none;
 }
 
@@ -89,6 +83,72 @@ header a:focus {
     font-size: 1rem !important;
 }
 
+/* Footer */
+
+footer {
+    background: url("/media/bg-header-paper.jpg") no-repeat center center;
+    background-size: cover;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 500;
+    border-top: 2px solid var(--logo-text-color);
+}
+
+.privacy-policy a {
+    color: var(--logo-text-color);
+}
+
+.privacy-policy a:hover,
+.privacy-policy a:focus {
+    font-weight: 600;
+}
+
+.mailchimp-container,
+.facebook-container {
+    border-color: transparent !important;
+}
+
+#mc-embedded-subscribe-form .input-group {
+    border-color: var(--logo-text-color) !important;
+}
+
+#mc-embedded-subscribe-form .btn {
+    color: #fff !important;
+    background-color: var(--logo-text-color);
+    border-radius: 0;
+}
+
+.brandingLogo img {
+    border-color: var(--logo-text-color) !important;
+}
+
+.social-links i {
+    font-size: 280%;
+}
+
+.modal-content {
+    background: url("/media/bg-header-paper.jpg") no-repeat center center;
+    background-size: cover;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.modal-header {
+    border: none !important;
+}
+
+.modal-body {
+    background-color: #fff;
+}
+
+.modal-footer {
+    border: none !important;
+}
+
+.modal-footer .btn {
+    color: #fff !important;
+    background-color: var(--logo-text-color);
+}
+
 
 /* /// ---------------------------------------------------- MEDIA QUERIES */
 
@@ -97,12 +157,16 @@ header a:focus {
     .mobile-search-dropdown {
         top: 71px !important;
     }
-    
+
     .list-inline-item .nav-link,
     .list-inline-item .navbar-toggler {
         font-size: 65%;
         padding-left: 0;
         padding-right: 0;
+    }
+
+    .brandingLogo img {
+        width: 70% !important;
     }
 }
 
@@ -110,5 +174,21 @@ header a:focus {
 @media screen and (max-width: 767px) {
     .navbar {
         height: 96px;
+    }
+
+}
+
+/* For screen sizes with minimum height of 768px - Bootstrap md */
+@media screen and (min-width: 767px) {
+
+    .account-icon:hover,
+    .account-icon:focus {
+        font-size: 110%;
+        padding: 6.3px !important;
+    }
+
+    .brandingLogo img {
+        width: 90% !important;
+        max-width: 222px;
     }
 }
