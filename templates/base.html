@@ -22,7 +22,7 @@
     <!-- Google Fonts links -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Poppins&family=Roboto+Condensed&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Lato&family=Roboto+Condensed&display=swap"
         rel="stylesheet">
 
     <!-- Mailchimp link -->
@@ -65,15 +65,18 @@
     {% block page_header %}
     {% endblock %}
 
-    {% block content %}
-    {% endblock %}
+    <!-- Main section for all inheriting templates -->
+    <main class="my-auto">
+        {% block content %}
+        {% endblock content %}
+    </main>
 
     <!-- Footer -->
     <footer class="mt-auto">
         <div class="container-fluid">
-            <div class="row justify-content-center">
+            <div class="row justify-content-center mt-4">
                 <div class="col-8 text-center">
-                    <h3 class="mt-3">About Us:</h3>
+                    <h4 class="mt-3"><strong>About Us</strong></h4>
                     <p>Here at Whisky Legends we offer you not only the chance to purchase from a great
                         selection of the finest whiskies from all around the world, but for you also to be able to
                         sample different whiskies on a monthly basis. You can join for as little as 3 months to see how
