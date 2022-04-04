@@ -37,9 +37,21 @@ Whisky Legends is an ecommerce website that sells an array of whiskies from all 
 
 ### Strategy
 
-#### Epics and User Stories
-
 This website is aimed at whisky fans who would like to purchase one or multiple bottles of whisky, and/or who would like to sample different whiskies every month over a chosen subscription period.
+
+#### Marketing Strategy
+
+The marketing strategy for this site uses a combination of Email Marketing, Social Media Marketing and Search Engine Optimisation.
+
+Users can subscribe to the site's mailing list by submitting their email address via a simple MailChimp form in the site's footer.
+
+A [Facebook business page](https://www.facebook.com/Whisky-Legends-113839797954063) has been created which is also linked to in the footer of the site, where users are encourged to visit and follow the page.
+
+##### Search Engine Optimisation
+
+To optimise how search engines will view this site, a number of short and long tail keywords are needed. After some research using Google's 'People always ask' and 'Related Searches' features, a list of 10-20 short and long tail keywords were discovered and have been placed in the keywords meta tag in the head of the main html document.
+
+#### Epics and User Stories
 
 The project has been split up into 5 epics, each of which have been split up into multiple user stories. All of which are outlined below.
 
