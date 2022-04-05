@@ -59,6 +59,20 @@ class Region(models.Model):
         return self.friendly_name
 
 
+class Flavour(models.Model):
+    name = models.CharField(max_length=254)
+    friendly_name = models.CharField(max_length=254, null=True, blank=True)
+
+    class Meta:
+        ordering = ['name']
+
+    def __str__(self):
+        return str(self.name)
+
+    def get_friendly_name(self):
+        return self.friendly_name
+
+
 class Product(models.Model):
     type = models.ForeignKey(
         'Type',
@@ -80,6 +94,12 @@ class Product(models.Model):
     )
     region = models.ForeignKey(
         'Region',
+        null=True,
+        blank=True,
+        on_delete=models.SET_NULL
+    )
+    flavour = models.ForeignKey(
+        'Flavour',
         null=True,
         blank=True,
         on_delete=models.SET_NULL
