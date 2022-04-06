@@ -19,6 +19,18 @@ class Type(models.Model):
 class Brand(models.Model):
     name = models.CharField(max_length=254)
     friendly_name = models.CharField(max_length=254, null=True, blank=True)
+    country = models.ForeignKey(
+        'Country',
+        null=True,
+        blank=True,
+        on_delete=models.SET_NULL
+    )
+    region = models.ForeignKey(
+        'Region',
+        null=True,
+        blank=True,
+        on_delete=models.SET_NULL
+    )
 
     class Meta:
         ordering = ['name']
@@ -86,18 +98,6 @@ class Product(models.Model):
         blank=True,
         on_delete=models.SET_NULL
     )
-    country = models.ForeignKey(
-        'Country',
-        null=True,
-        blank=True,
-        on_delete=models.SET_NULL
-    )
-    region = models.ForeignKey(
-        'Region',
-        null=True,
-        blank=True,
-        on_delete=models.SET_NULL
-    )
     flavour = models.ForeignKey(
         'Flavour',
         null=True,
@@ -109,7 +109,10 @@ class Product(models.Model):
     price = models.DecimalField(max_digits=6, decimal_places=2)
     age = models.IntegerField(null=True, blank=True)
     rated = models.ManyToManyField(
-        User, related_name='product_rated', blank=True)
+        User,
+        related_name='product_rated',
+        blank=True
+    )
     rating_total = models.IntegerField(null=True, blank=True)
     rating = models.DecimalField(
         max_digits=6,
