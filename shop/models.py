@@ -113,15 +113,15 @@ class Product(models.Model):
         related_name='product_rated',
         blank=True
     )
+    wishlist = models.ManyToManyField(
+        User,
+        related_name='product_wishlist',
+        blank=True
+    )
     rating_total = models.IntegerField(null=True, blank=True)
     rating = models.DecimalField(
         max_digits=6,
         decimal_places=2,
-        null=True,
-        blank=True
-    )
-    image_url = models.URLField(
-        max_length=1024,
         null=True,
         blank=True
     )

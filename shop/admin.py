@@ -19,11 +19,11 @@ class ProductAdmin(admin.ModelAdmin):
 
     def country(self, obj):
         return obj.brand.country
-    country.admin_order_field  = 'brand__country'
+    country.admin_order_field = 'brand__country'
 
     def region(self, obj):
         return obj.brand.region
-    region.admin_order_field  = 'brand__region'
+    region.admin_order_field = 'brand__region'
 
 
 class TypeAdmin(admin.ModelAdmin):
