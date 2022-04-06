@@ -6,9 +6,20 @@
     --paper-url: url("/media/bg-header-paper.jpg");
 }
 
+/* Element selectors */
+body {
+    font-family: 'Lato', sans-serif;
+}
+
 /* Box shadows */
 .box-shadow-custom {
     box-shadow: 0 6px 10px rgba(0, 0, 0, .8), 0 0 6px rgba(0, 0, 0, .5);
+}
+
+/* Links */
+.btn-custom {
+    color: #fff !important;
+    background-color: var(--logo-text-color);
 }
 
 
@@ -40,10 +51,8 @@
     text-shadow: 4px 4px 8px #000;
 }
 
-.hero-container .btn {
-    background-color: var(--logo-text-color);
-    color: #fff;
-}
+/* Shop page */
+
 
 
 /* /// ---------------------------------------------------- BASE.HTML styles */
@@ -154,8 +163,6 @@ footer {
 }
 
 #mc-embedded-subscribe-form .btn {
-    color: #fff !important;
-    background-color: var(--logo-text-color);
     border-radius: 0;
 }
 
@@ -183,11 +190,6 @@ footer {
 
 .modal-footer {
     border: none !important;
-}
-
-.modal-footer .btn {
-    color: #fff !important;
-    background-color: var(--logo-text-color);
 }
 
 
