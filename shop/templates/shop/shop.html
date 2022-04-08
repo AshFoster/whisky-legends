@@ -3,7 +3,109 @@
 
 {% block content %}
 
-<div class="container-fluid">
+<div class="container-fluid shop-container">
+    <div class="shop-container-opacity"></div>
+    <div class="row filter-bar justify-content-center">
+        <div class="filter-bar-opacity"></div>
+        <div class="col-10 my-4">
+            <div class="row mb-3">
+                <div class="col d-flex justify-content-center">
+                    <div class="dropdown">
+                        <button class="btn filter-btn dropdown-toggle" type="button" id="dropdownFilter3"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Whisky Type
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownFilter3">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </div>
+                    <div class="dropdown">
+                        <button class="btn filter-btn dropdown-toggle" type="button" id="dropdownFilter4"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Brand
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownFilter4">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </div>
+                    <div class="dropdown">
+                        <button class="btn filter-btn dropdown-toggle" type="button" id="dropdownFilter5"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Country
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownFilter5">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </div>
+                    <div class="dropdown">
+                        <button class="btn filter-btn dropdown-toggle" type="button" id="dropdownFilter6"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Region
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownFilter6">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col d-flex justify-content-center">
+                    <div class="dropdown">
+                        <button class="btn filter-btn dropdown-toggle" type="button" id="dropdownFilter3"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Price
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownFilter3">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </div>
+                    <div class="dropdown">
+                        <button class="btn filter-btn dropdown-toggle" type="button" id="dropdownFilter4"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Age
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownFilter4">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </div>
+                    <div class="dropdown">
+                        <button class="btn filter-btn dropdown-toggle" type="button" id="dropdownFilter5"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Flavour
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownFilter5">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </div>
+                    <div class="dropdown">
+                        <button class="btn filter-btn dropdown-toggle" type="button" id="dropdownFilter6"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Sort By
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownFilter6">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="row justify-content-center">
         <div class="col-sm-11 col-md-10">
             <div class="row justify-content-evenly mt-5">
@@ -13,7 +115,8 @@
                         <img src="{{ product.image.url }}" class="card-img-top img-fluid"
                             alt="{{ product.brand.friendly_name }}: {{ product.name }}">
                         <div class="card-body">
-                            <h5 class="card-title text-center product-card-title">{{ product.brand.friendly_name }}: {{ product.name }}
+                            <h5 class="card-title text-center product-card-title">{{ product.brand.friendly_name }}:
+                                {{ product.name }}
                             </h5>
                             <div class="d-flex justify-content-between my-3">
                                 <p class="d-inline my-0 ms-2">

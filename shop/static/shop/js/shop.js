@@ -25,7 +25,7 @@ function setMaxHeight(className) {
 // END CREDIT
 
 /* 
-Once the DOM has finshed loading call necessary functions
+Once the DOM has finshed loading call setMaxHeight function on all elements with .product-card-title class
 */
 document.addEventListener('DOMContentLoaded', function () {
 
@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 /* 
-Set 'resize' event listener to call setMaxHeight function on all elements with .product-card-title class
+Call setMaxHeight function on all elements with .product-card-title class when the window is resized
 */
 window.addEventListener('resize', function () {
 

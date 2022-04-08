@@ -4,6 +4,7 @@
 :root {
     --logo-text-color: #611b1b;
     --paper-url: url("/media/bg-header-paper.jpg");
+    --whisky-hero-url: url("/media/whisky-hero-image.jpg");
 }
 
 /* Element selectors */
@@ -41,7 +42,7 @@ body {
     right: 0;
     bottom: 0;
     left: 0;
-    background: url("/media/whisky-hero-image.jpg") no-repeat center center;
+    background: var(--whisky-hero-url) no-repeat center center;
     background-size: cover;
     z-index: -1;
 }
@@ -53,6 +54,25 @@ body {
 
 /* Shop page */
 
+.filter-bar {
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.filter-bar .dropdown {
+    border: .5px solid rgba(0, 0, 0, .3);
+    border-radius: .3rem;
+    margin-right: .75rem;
+    margin-left: .75rem;
+}
+
+.filter-btn {
+    color: rgba(0, 0, 0, .6);
+    font-weight: 600;
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
 
 /* /// ---------------------------------------------------- BASE.HTML styles */
