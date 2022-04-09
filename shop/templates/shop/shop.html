@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
+{% load shop_extras %}
 
 {% block content %}
 
@@ -11,47 +12,99 @@
             <div class="row mb-3">
                 <div class="col d-flex justify-content-center">
                     <div class="dropdown">
-                        <button class="btn filter-btn dropdown-toggle" type="button" id="dropdownFilter3"
+                        <button class="btn filter-btn dropdown-toggle" type="button" id="typeDropdown"
                             data-bs-toggle="dropdown" aria-expanded="false">
-                            Whisky Type
+                            {% if types_count == 1 and types_filtered %}
+                            {% for key, value in types.items %}
+                            {{ key }} ({{ value }})
+                            {% endfor %}
+                            {% else %}
+                            Whisky Type ({{ types_count }})
+                            {% endif %}
                         </button>
-                        <ul class="dropdown-menu" aria-labelledby="dropdownFilter3">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        <ul class="dropdown-menu" aria-labelledby="typeDropdown">
+                            {% if types_count == 1 and types_filtered %}
+                            <li class="dropdown-item" id="typeClear">Clear 'Whisky Type' filter</li>
+                            {% else %}
+                            {% for key, value in types.items %}
+                            <li class="dropdown-item type-item">
+                                {{ key }} ({{ value }})
+                                <input type="hidden" class="type-name" value="{{ type_names|lookup:key }}">
+                            </li>
+                            {% endfor %}
+                            {% endif %}
                         </ul>
                     </div>
                     <div class="dropdown">
-                        <button class="btn filter-btn dropdown-toggle" type="button" id="dropdownFilter4"
+                        <button class="btn filter-btn dropdown-toggle" type="button" id="brandDropdown"
                             data-bs-toggle="dropdown" aria-expanded="false">
-                            Brand
+                            {% if brands_count == 1 and brands_filtered %}
+                            {% for key, value in brands.items %}
+                            {{ key }} ({{ value }})
+                            {% endfor %}
+                            {% else %}
+                            Brand ({{ brands_count }})
+                            {% endif %}
                         </button>
-                        <ul class="dropdown-menu" aria-labelledby="dropdownFilter4">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        <ul class="dropdown-menu" aria-labelledby="brandDropdown">
+                            {% if brands_count == 1 and brands_filtered %}
+                            <li class="dropdown-item" id="brandClear">Clear 'Brand' filter</li>
+                            {% else %}
+                            {% for key, value in brands.items %}
+                            <li class="dropdown-item brand-item">
+                                {{ key }} ({{ value }})
+                                <input type="hidden" class="brand-name" value="{{ brand_names|lookup:key }}">
+                            </li>
+                            {% endfor %}
+                            {% endif %}
                         </ul>
                     </div>
                     <div class="dropdown">
-                        <button class="btn filter-btn dropdown-toggle" type="button" id="dropdownFilter5"
+                        <button class="btn filter-btn dropdown-toggle" type="button" id="countryDropdown"
                             data-bs-toggle="dropdown" aria-expanded="false">
-                            Country
+                            {% if countries_count == 1 and countries_filtered %}
+                            {% for key, value in countries.items %}
+                            {{ key }} ({{ value }})
+                            {% endfor %}
+                            {% else %}
+                            Country ({{ countries_count }})
+                            {% endif %}
                         </button>
-                        <ul class="dropdown-menu" aria-labelledby="dropdownFilter5">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        <ul class="dropdown-menu" aria-labelledby="countryDropdown">
+                            {% if countries_count == 1 and countries_filtered %}
+                            <li class="dropdown-item" id="countryClear">Clear 'Country' filter</li>
+                            {% else %}
+                            {% for key, value in countries.items %}
+                            <li class="dropdown-item country-item">
+                                {{ key }} ({{ value }})
+                                <input type="hidden" class="country-name" value="{{ country_names|lookup:key }}">
+                            </li>
+                            {% endfor %}
+                            {% endif %}
                         </ul>
                     </div>
                     <div class="dropdown">
-                        <button class="btn filter-btn dropdown-toggle" type="button" id="dropdownFilter6"
+                        <button class="btn filter-btn dropdown-toggle" type="button" id="regionDropdown"
                             data-bs-toggle="dropdown" aria-expanded="false">
-                            Region
+                            {% if regions_count == 1 and regions_filtered %}
+                            {% for key, value in regions.items %}
+                            {{ key }} ({{ value }})
+                            {% endfor %}
+                            {% else %}
+                            Region ({{ regions_count }})
+                            {% endif %}
                         </button>
-                        <ul class="dropdown-menu" aria-labelledby="dropdownFilter6">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        <ul class="dropdown-menu" aria-labelledby="regionDropdown">
+                            {% if regions_count == 1 and regions_filtered %}
+                            <li class="dropdown-item" id="regionClear">Clear 'Region' filter</li>
+                            {% else %}
+                            {% for key, value in regions.items %}
+                            <li class="dropdown-item region-item">
+                                {{ key }} ({{ value }})
+                                <input type="hidden" class="region-name" value="{{ region_names|lookup:key }}">
+                            </li>
+                            {% endfor %}
+                            {% endif %}
                         </ul>
                     </div>
                 </div>
@@ -59,44 +112,57 @@
             <div class="row">
                 <div class="col d-flex justify-content-center">
                     <div class="dropdown">
-                        <button class="btn filter-btn dropdown-toggle" type="button" id="dropdownFilter3"
+                        <button class="btn filter-btn dropdown-toggle" type="button" id="priceDropdown"
                             data-bs-toggle="dropdown" aria-expanded="false">
                             Price
                         </button>
-                        <ul class="dropdown-menu" aria-labelledby="dropdownFilter3">
+                        <ul class="dropdown-menu" aria-labelledby="priceDropdown">
                             <li><a class="dropdown-item" href="#">Action</a></li>
                             <li><a class="dropdown-item" href="#">Another action</a></li>
                             <li><a class="dropdown-item" href="#">Something else here</a></li>
                         </ul>
                     </div>
                     <div class="dropdown">
-                        <button class="btn filter-btn dropdown-toggle" type="button" id="dropdownFilter4"
+                        <button class="btn filter-btn dropdown-toggle" type="button" id="ageDropdown"
                             data-bs-toggle="dropdown" aria-expanded="false">
                             Age
                         </button>
-                        <ul class="dropdown-menu" aria-labelledby="dropdownFilter4">
+                        <ul class="dropdown-menu" aria-labelledby="ageDropdown">
                             <li><a class="dropdown-item" href="#">Action</a></li>
                             <li><a class="dropdown-item" href="#">Another action</a></li>
                             <li><a class="dropdown-item" href="#">Something else here</a></li>
                         </ul>
                     </div>
                     <div class="dropdown">
-                        <button class="btn filter-btn dropdown-toggle" type="button" id="dropdownFilter5"
+                        <button class="btn filter-btn dropdown-toggle" type="button" id="flavourDropdown"
                             data-bs-toggle="dropdown" aria-expanded="false">
-                            Flavour
+                            {% if flavours_count == 1 and flavours_filtered %}
+                            {% for key, value in flavours.items %}
+                            {{ key }} ({{ value }})
+                            {% endfor %}
+                            {% else %}
+                            Flavour ({{ flavours_count }})
+                            {% endif %}
                         </button>
-                        <ul class="dropdown-menu" aria-labelledby="dropdownFilter5">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        <ul class="dropdown-menu" aria-labelledby="flavourDropdown">
+                            {% if flavours_count == 1 and flavours_filtered %}
+                            <li class="dropdown-item" id="flavourClear">Clear 'Flavour' filter</li>
+                            {% else %}
+                            {% for key, value in flavours.items %}
+                            <li class="dropdown-item flavour-item">
+                                {{ key }} ({{ value }})
+                                <input type="hidden" class="flavour-name" value="{{ flavour_names|lookup:key }}">
+                            </li>
+                            {% endfor %}
+                            {% endif %}
                         </ul>
                     </div>
                     <div class="dropdown">
-                        <button class="btn filter-btn dropdown-toggle" type="button" id="dropdownFilter6"
+                        <button class="btn filter-btn dropdown-toggle" type="button" id="sortDropdown"
                             data-bs-toggle="dropdown" aria-expanded="false">
                             Sort By
                         </button>
-                        <ul class="dropdown-menu" aria-labelledby="dropdownFilter6">
+                        <ul class="dropdown-menu" aria-labelledby="sortDropdown">
                             <li><a class="dropdown-item" href="#">Action</a></li>
                             <li><a class="dropdown-item" href="#">Another action</a></li>
                             <li><a class="dropdown-item" href="#">Something else here</a></li>

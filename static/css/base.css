@@ -3,6 +3,7 @@
 /* Variables for colours used throughout site*/
 :root {
     --logo-text-color: #611b1b;
+    --bs-dark: #212529;
     --paper-url: url("/media/bg-header-paper.jpg");
     --whisky-hero-url: url("/media/whisky-hero-image.jpg");
 }
@@ -65,6 +66,12 @@ body {
     margin-left: .75rem;
 }
 
+.filter-bar .dropdown-item:hover,
+.filter-bar .dropdown-item:focus {
+    font-weight: 600 !important;
+    cursor: pointer;
+}
+
 .filter-btn {
     color: rgba(0, 0, 0, .6);
     font-weight: 600;
@@ -72,6 +79,15 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.filter-bar .dropdown-menu {
+    min-width: 200px;
+}
+
+.active-filter {
+    border: 2px solid var(--bs-dark);
+    color: var(--bs-dark);
 }
 
 
