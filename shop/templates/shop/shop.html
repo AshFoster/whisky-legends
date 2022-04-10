@@ -26,7 +26,7 @@
                             {% if types_count == 1 and types_filtered %}
                             <li class="dropdown-item" id="typeClear">Clear 'Whisky Type' filter</li>
                             {% else %}
-                            {% for key, value in types.items %}
+                            {% for key, value in types.items|dictsort:0 %}
                             <li class="dropdown-item type-item">
                                 {{ key }} ({{ value }})
                                 <input type="hidden" class="type-name" value="{{ type_names|lookup:key }}">
@@ -50,7 +50,7 @@
                             {% if brands_count == 1 and brands_filtered %}
                             <li class="dropdown-item" id="brandClear">Clear 'Brand' filter</li>
                             {% else %}
-                            {% for key, value in brands.items %}
+                            {% for key, value in brands.items|dictsort:0 %}
                             <li class="dropdown-item brand-item">
                                 {{ key }} ({{ value }})
                                 <input type="hidden" class="brand-name" value="{{ brand_names|lookup:key }}">
@@ -74,7 +74,7 @@
                             {% if countries_count == 1 and countries_filtered %}
                             <li class="dropdown-item" id="countryClear">Clear 'Country' filter</li>
                             {% else %}
-                            {% for key, value in countries.items %}
+                            {% for key, value in countries.items|dictsort:0 %}
                             <li class="dropdown-item country-item">
                                 {{ key }} ({{ value }})
                                 <input type="hidden" class="country-name" value="{{ country_names|lookup:key }}">
@@ -98,7 +98,7 @@
                             {% if regions_count == 1 and regions_filtered %}
                             <li class="dropdown-item" id="regionClear">Clear 'Region' filter</li>
                             {% else %}
-                            {% for key, value in regions.items %}
+                            {% for key, value in regions.items|dictsort:0 %}
                             <li class="dropdown-item region-item">
                                 {{ key }} ({{ value }})
                                 <input type="hidden" class="region-name" value="{{ region_names|lookup:key }}">
@@ -144,14 +144,14 @@
                             {{ key }} Years Old ({{ value }})
                             {% endfor %}
                             {% else %}
-                            Age ({{ ages_count }})
+                            Age ({{ ages_count|subtract:1 }})
                             {% endif %}
                         </button>
                         <ul class="dropdown-menu" aria-labelledby="ageDropdown">
                             {% if ages_count == 1 and ages_filtered %}
-                            <li class="dropdown-item" id="ageClear">Clear 'age' filter</li>
+                            <li class="dropdown-item" id="ageClear">Clear 'Age' filter</li>
                             {% else %}
-                            {% for key, value in ages.items %}
+                            {% for key, value in ages.items|dictsortreversed:0 %}
                             {% if key|is_numeric %}
                             <li class="dropdown-item age-item"><span class="age-name">{{ key }}</span> Years Old ({{ value }})
                             </li>
@@ -175,7 +175,7 @@
                             {% if flavours_count == 1 and flavours_filtered %}
                             <li class="dropdown-item" id="flavourClear">Clear 'Flavour' filter</li>
                             {% else %}
-                            {% for key, value in flavours.items %}
+                            {% for key, value in flavours.items|dictsort:0 %}
                             <li class="dropdown-item flavour-item">
                                 {{ key }} ({{ value }})
                                 <input type="hidden" class="flavour-name" value="{{ flavour_names|lookup:key }}">
