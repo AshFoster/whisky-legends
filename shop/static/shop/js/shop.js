@@ -133,32 +133,6 @@ function setRegionFilter() {
     }
 }
 
-function setFlavourFilter() {
-    let flavourFilterURL = params.get('flavour');
-    let flavourListItems = document.querySelectorAll('.flavour-item');
-    let flavourClear = document.getElementById('flavourClear');
-
-    if (flavourFilterURL != null) {
-        document.getElementById('flavourDropdown').classList.add('active-filter');
-    }
-
-    for (let item of flavourListItems) {
-        item.addEventListener('click', function () {
-            if (flavourFilterURL != null) {
-                window.location.search = window.location.search.replace(flavourFilterURL, item.querySelector('.flavour-name').value);
-            } else {
-                window.location.search += '&flavour=' + item.querySelector('.flavour-name').value;
-            }
-        });
-    }
-
-    if (flavourClear != null) {
-        flavourClear.addEventListener('click', function () {
-            window.location.search = window.location.search.replace('&flavour=' + flavourFilterURL, '');
-        });
-    }
-}
-
 function setPriceFilter() {
     let priceFilterURL = params.get('price');
     let minPrice = document.querySelector('.min-price');
@@ -207,6 +181,58 @@ function setPriceFilter() {
     }
 }
 
+function setAgeFilter() {
+    let ageFilterURL = params.get('age');
+    let ageListItems = document.querySelectorAll('.age-item');
+    let ageClear = document.getElementById('ageClear');
+
+    if (ageFilterURL != null) {
+        document.getElementById('ageDropdown').classList.add('active-filter');
+    }
+
+    for (let item of ageListItems) {
+        item.addEventListener('click', function () {
+            if (ageFilterURL != null) {
+                window.location.search = window.location.search.replace(ageFilterURL, item.querySelector('.age-name').textContent);
+            } else {
+                window.location.search += '&age=' + item.querySelector('.age-name').textContent;
+            }
+        });
+    }
+
+    if (ageClear != null) {
+        ageClear.addEventListener('click', function () {
+            window.location.search = window.location.search.replace('&age=' + ageFilterURL, '');
+        });
+    }
+}
+
+function setFlavourFilter() {
+    let flavourFilterURL = params.get('flavour');
+    let flavourListItems = document.querySelectorAll('.flavour-item');
+    let flavourClear = document.getElementById('flavourClear');
+
+    if (flavourFilterURL != null) {
+        document.getElementById('flavourDropdown').classList.add('active-filter');
+    }
+
+    for (let item of flavourListItems) {
+        item.addEventListener('click', function () {
+            if (flavourFilterURL != null) {
+                window.location.search = window.location.search.replace(flavourFilterURL, item.querySelector('.flavour-name').value);
+            } else {
+                window.location.search += '&flavour=' + item.querySelector('.flavour-name').value;
+            }
+        });
+    }
+
+    if (flavourClear != null) {
+        flavourClear.addEventListener('click', function () {
+            window.location.search = window.location.search.replace('&flavour=' + flavourFilterURL, '');
+        });
+    }
+}
+
 
 /* 
 Once the DOM has finshed loading call all necessary functions
@@ -223,9 +249,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
     setRegionFilter();
 
-    setFlavourFilter();
-
     setPriceFilter();
+
+    setAgeFilter();
+
+    setFlavourFilter();
 
 });
 

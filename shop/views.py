@@ -25,11 +25,9 @@ class Shop(generic.ListView):
         country_filter = self.request.GET.get('country')
         region_filter = self.request.GET.get('region')
         flavour_filter = self.request.GET.get('flavour')
+        age_filter = self.request.GET.get('age')
         price_filter = self.request.GET.get('price')
         search_query = self.request.GET.get('search')
-
-        for product in self.queryset:
-            self.price_min_initial = product.price
 
         if type_filter:
             self.queryset = self.queryset.filter(
@@ -50,6 +48,10 @@ class Shop(generic.ListView):
         if flavour_filter:
             self.queryset = self.queryset.filter(
                 flavour__name=flavour_filter)
+
+        if age_filter:
+            self.queryset = self.queryset.filter(
+                age=age_filter)
 
         self.price_min_initial = int(math.floor(
             self.queryset.aggregate(Min('price'))['price__min']))
@@ -93,6 +95,7 @@ class Shop(generic.ListView):
         countries_filtered = self.request.GET.get('country')
         regions_filtered = self.request.GET.get('region')
         flavours_filtered = self.request.GET.get('flavour')
+        ages_filtered = self.request.GET.get('age')
         prices_filtered = self.request.GET.get('price')
 
         types = {}
@@ -110,6 +113,8 @@ class Shop(generic.ListView):
         flavours = {}
         flavour_names = {}
         flavours_count = 0
+        ages = {}
+        ages_count = 0
 
         for product in self.queryset:
             if product.type.friendly_name not in types:
@@ -155,6 +160,12 @@ class Shop(generic.ListView):
                 flavours[product.flavour.friendly_name] = flavours[
                     product.flavour.friendly_name] + 1
 
+            if product.age not in ages:
+                ages[product.age] = 1
+                ages_count += 1
+            else:
+                ages[product.age] = ages[product.age] + 1
+
         context['types'] = types
         context['type_names'] = type_names
         context['types_count'] = types_count
@@ -175,6 +186,9 @@ class Shop(generic.ListView):
         context['flavour_names'] = flavour_names
         context['flavours_count'] = flavours_count
         context['flavours_filtered'] = flavours_filtered
+        context['ages'] = ages
+        context['ages_count'] = ages_count
+        context['ages_filtered'] = ages_filtered
         context['price_min'] = self.price_min
         context['price_max'] = self.price_max
         context['price_min_initial'] = self.price_min_initial

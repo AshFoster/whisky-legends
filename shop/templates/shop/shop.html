@@ -126,8 +126,9 @@
                                 <input type="number" name="minPrice" class="min-price" min="{{ price_min_initial }}"
                                     max="{{ price_max_initial|subtract:1 }}" value="{{ price_min_initial }}">
                                 <label for="maxPrice" class="max-price-label">Max: </label>
-                                <input type="number" name="maxPrice" class="max-price" min="{{ price_min_initial|add:1 }}"
-                                    max="{{ price_max_initial }}" value="{{ price_max_initial }}">
+                                <input type="number" name="maxPrice" class="max-price"
+                                    min="{{ price_min_initial|add:1 }}" max="{{ price_max_initial }}"
+                                    value="{{ price_max_initial }}">
                             </li>
                             <li class="dropdown-item pt-2" id="priceApply">Apply 'Price' filter</li>
                             {% if prices_filtered %}
@@ -138,12 +139,25 @@
                     <div class="dropdown">
                         <button class="btn filter-btn dropdown-toggle" type="button" id="ageDropdown"
                             data-bs-toggle="dropdown" aria-expanded="false">
-                            Age
+                            {% if ages_count == 1 and ages_filtered %}
+                            {% for key, value in ages.items %}
+                            {{ key }} Years Old ({{ value }})
+                            {% endfor %}
+                            {% else %}
+                            Age ({{ ages_count }})
+                            {% endif %}
                         </button>
                         <ul class="dropdown-menu" aria-labelledby="ageDropdown">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            {% if ages_count == 1 and ages_filtered %}
+                            <li class="dropdown-item" id="ageClear">Clear 'age' filter</li>
+                            {% else %}
+                            {% for key, value in ages.items %}
+                            {% if key|is_numeric %}
+                            <li class="dropdown-item age-item"><span class="age-name">{{ key }}</span> Years Old ({{ value }})
+                            </li>
+                            {% endif %}
+                            {% endfor %}
+                            {% endif %}
                         </ul>
                     </div>
                     <div class="dropdown">
