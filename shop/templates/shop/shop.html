@@ -114,12 +114,25 @@
                     <div class="dropdown">
                         <button class="btn filter-btn dropdown-toggle" type="button" id="priceDropdown"
                             data-bs-toggle="dropdown" aria-expanded="false">
-                            Price
+                            {% if prices_filtered %}
+                            Price: £{{ price_min }} to £{{ price_max }}
+                            {% else %}
+                            Price: £{{ price_min_initial }} to £{{ price_max_initial }}
+                            {% endif %}
                         </button>
-                        <ul class="dropdown-menu" aria-labelledby="priceDropdown">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        <ul class="dropdown-menu price-dropdown" aria-labelledby="priceDropdown">
+                            <li class="text-center">
+                                <label for="minPrice" class="min-price-label">Min: </label>
+                                <input type="number" name="minPrice" class="min-price" min="{{ price_min_initial }}"
+                                    max="{{ price_max_initial|subtract:1 }}" value="{{ price_min_initial }}">
+                                <label for="maxPrice" class="max-price-label">Max: </label>
+                                <input type="number" name="maxPrice" class="max-price" min="{{ price_min_initial|add:1 }}"
+                                    max="{{ price_max_initial }}" value="{{ price_max_initial }}">
+                            </li>
+                            <li class="dropdown-item pt-2" id="priceApply">Apply 'Price' filter</li>
+                            {% if prices_filtered %}
+                            <li class="dropdown-item" id="priceClear">Clear 'Price' filter</li>
+                            {% endif %}
                         </ul>
                     </div>
                     <div class="dropdown">

@@ -1,5 +1,6 @@
+import math
 from django.contrib import messages
-from django.db.models import Q
+from django.db.models import Q, Min, Max
 from django.views import generic
 from .models import Product
 
@@ -13,6 +14,10 @@ class Shop(generic.ListView):
     queryset = Product.objects.all()
     template_name = 'shop/shop.html'
     context_object_name = 'products'
+    price_min = 0
+    price_max = 0
+    price_min_initial = 0
+    price_max_initial = 0
 
     def get_queryset(self):
         type_filter = self.request.GET.get('type')
@@ -20,7 +25,11 @@ class Shop(generic.ListView):
         country_filter = self.request.GET.get('country')
         region_filter = self.request.GET.get('region')
         flavour_filter = self.request.GET.get('flavour')
+        price_filter = self.request.GET.get('price')
         search_query = self.request.GET.get('search')
+
+        for product in self.queryset:
+            self.price_min_initial = product.price
 
         if type_filter:
             self.queryset = self.queryset.filter(
@@ -41,6 +50,23 @@ class Shop(generic.ListView):
         if flavour_filter:
             self.queryset = self.queryset.filter(
                 flavour__name=flavour_filter)
+
+        self.price_min_initial = int(math.floor(
+            self.queryset.aggregate(Min('price'))['price__min']))
+        self.price_max_initial = int(math.ceil(
+            self.queryset.aggregate(Max('price'))['price__max']))
+
+        if price_filter:
+            price_range = price_filter.split(',')
+            try:
+                self.price_min = int(float(price_range[0]))
+                self.price_max = int(float(price_range[1]))
+            except ValueError:
+                self.price_min = self.price_min_initial
+                self.price_max = self.price_max_initial
+
+            self.queryset = self.queryset.filter(
+                price__range=(self.price_min, self.price_max))
 
         if not search_query:
             messages.error(
@@ -67,6 +93,7 @@ class Shop(generic.ListView):
         countries_filtered = self.request.GET.get('country')
         regions_filtered = self.request.GET.get('region')
         flavours_filtered = self.request.GET.get('flavour')
+        prices_filtered = self.request.GET.get('price')
 
         types = {}
         type_names = {}
@@ -148,5 +175,10 @@ class Shop(generic.ListView):
         context['flavour_names'] = flavour_names
         context['flavours_count'] = flavours_count
         context['flavours_filtered'] = flavours_filtered
+        context['price_min'] = self.price_min
+        context['price_max'] = self.price_max
+        context['price_min_initial'] = self.price_min_initial
+        context['price_max_initial'] = self.price_max_initial
+        context['prices_filtered'] = prices_filtered
 
         return context

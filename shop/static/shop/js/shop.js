@@ -159,9 +159,57 @@ function setFlavourFilter() {
     }
 }
 
+function setPriceFilter() {
+    let priceFilterURL = params.get('price');
+    let minPrice = document.querySelector('.min-price');
+    let maxPrice = document.querySelector('.max-price');
+    let minPriceValue = 0;
+    let maxPriceValue = 0;
+    let priceApply = document.getElementById('priceApply');
+    let priceClear = document.getElementById('priceClear');
+
+    if (priceFilterURL != null) {
+        document.getElementById('priceDropdown').classList.add('active-filter');
+        minPrice.value = priceFilterURL.split(',')[0]
+        maxPrice.value = priceFilterURL.split(',')[1]
+        minPrice.max = Number(maxPrice.value) - 1
+        maxPrice.min = Number(minPrice.value) + 1
+    }
+
+    priceApply.addEventListener('click', function () {
+        if (Number(minPrice.value) >= Number(minPrice.min) && Number(minPrice.value) <= Number(minPrice.max)) {
+            minPriceValue = Math.round(minPrice.value)
+        } else if (Number(minPrice.value) <= Number(minPrice.max)) {
+            minPriceValue = Math.round(minPrice.min)
+        } else {
+            minPriceValue = Math.round(minPrice.max)
+        }
+
+        if (Number(maxPrice.value) <= Number(maxPrice.max) && Number(maxPrice.value) >= Number(maxPrice.min)) {
+            maxPriceValue = Math.round(maxPrice.value)
+        } else if (Number(maxPrice.value) >= Number(maxPrice.min)) {
+            maxPriceValue = Math.round(maxPrice.max)
+        } else {
+            maxPriceValue = Math.round(maxPrice.min)
+        }
+
+        if (priceFilterURL != null) {
+            window.location.search = window.location.search.replace(priceFilterURL, minPriceValue + ',' + maxPriceValue);
+        } else {
+            window.location.search += '&price=' + minPriceValue + ',' + maxPriceValue;
+        }
+    });
+
+    if (priceClear != null) {
+        priceClear.addEventListener('click', function () {
+            window.location.search = window.location.search.replace('&price=' + priceFilterURL, '');
+        });
+    }
+}
+
 
 /* 
-Once the DOM has finshed loading call setMaxHeight function on all elements with .product-card-title class
+Once the DOM has finshed loading call all necessary functions
 */
 document.addEventListener('DOMContentLoaded', function () {
 
@@ -176,6 +224,8 @@ document.addEventListener('DOMContentLoaded', function () {
     setRegionFilter();
 
     setFlavourFilter();
+
+    setPriceFilter();
 
 });
 
