@@ -1,7 +1,5 @@
 // Global Variables
 const params = new URLSearchParams(window.location.search);
-let searchHiddenInput = document.querySelector('#search-shop');
-let searchInput = document.querySelector('.search-bar');
 
 // CREDIT 
 // Idea for this function came from:
@@ -28,6 +26,43 @@ function setMaxHeight(className) {
 }
 // END CREDIT
 
+function setSort() {
+    let sortURL = params.get('sort');
+    let directionURL = params.get('direction');
+    let sortListItems = document.querySelectorAll('.sort-item');
+    let sortClear = document.getElementById('sortClear');
+
+    if (sortURL != null) {
+        document.getElementById('sortDropdown').classList.add('active-filter');
+    }
+
+    for (let item of sortListItems) {
+        item.addEventListener('click', function () {
+            let sort = item.querySelector('.sort-name').value.split('_')[0]
+            let direction = item.querySelector('.sort-name').value.split('_')[1]
+            let currentURL = window.location.search
+            if (sortURL != null) {
+                currentURL = currentURL .replace(sortURL, sort);
+                currentURL = currentURL .replace(directionURL, direction);
+                window.location.search = currentURL
+            } else {
+                currentURL += '&sort=' + sort;
+                currentURL += '&direction=' + direction;
+                window.location.search = currentURL
+            }
+        });
+    }
+
+    if (sortClear != null) {
+        sortClear.addEventListener('click', function () {
+            let currentURL = window.location.search
+            currentURL = currentURL.replace('&sort=' + sortURL, '');
+            currentURL = currentURL.replace('&direction=' + directionURL, '');
+            window.location.search = currentURL
+        });
+    }
+}
+
 function setTypeFilter() {
     let typeFilterURL = params.get('type');
     let typeListItems = document.querySelectorAll('.type-item');
@@ -44,7 +79,6 @@ function setTypeFilter() {
             } else {
                 window.location.search += '&type=' + item.querySelector('.type-name').value;
             }
-            document.getElementById('typeDropdown').classList.add('active-filter');
         });
     }
 
@@ -240,6 +274,8 @@ Once the DOM has finshed loading call all necessary functions
 document.addEventListener('DOMContentLoaded', function () {
 
     setMaxHeight('.product-card-title');
+
+    setSort()
 
     setTypeFilter();
 

@@ -1,6 +1,7 @@
 import math
 from django.contrib import messages
 from django.db.models import Q, Min, Max
+from django.db.models.functions import Lower
 from django.views import generic
 from .models import Product
 
@@ -14,12 +15,16 @@ class Shop(generic.ListView):
     queryset = Product.objects.all()
     template_name = 'shop/shop.html'
     context_object_name = 'products'
+    sort = None
+    direction = None
     price_min = 0
     price_max = 0
     price_min_initial = 0
     price_max_initial = 0
 
     def get_queryset(self):
+        sort_by = self.request.GET.get('sort')
+        sort_direction = self.request.GET.get('direction')
         type_filter = self.request.GET.get('type')
         brand_filter = self.request.GET.get('brand')
         country_filter = self.request.GET.get('country')
@@ -28,6 +33,19 @@ class Shop(generic.ListView):
         age_filter = self.request.GET.get('age')
         price_filter = self.request.GET.get('price')
         search_query = self.request.GET.get('search')
+
+        if sort_by:
+            self.sort = sort_by
+            if sort_by == 'brand':
+                sort_by = 'lower_brand'
+                self.queryset = self.queryset.annotate(
+                    lower_brand=Lower('brand__friendly_name'))
+
+            if sort_direction:
+                self.direction = sort_direction
+                if sort_direction == 'desc':
+                    sort_by = f'-{sort_by}'
+            self.queryset = self.queryset.order_by(sort_by)
 
         if type_filter:
             self.queryset = self.queryset.filter(
@@ -90,6 +108,7 @@ class Shop(generic.ListView):
         """
         context = super(Shop, self).get_context_data(**kwargs)
 
+        products_sorted = self.request.GET.get('sort')
         types_filtered = self.request.GET.get('type')
         brands_filtered = self.request.GET.get('brand')
         countries_filtered = self.request.GET.get('country')
@@ -98,6 +117,7 @@ class Shop(generic.ListView):
         ages_filtered = self.request.GET.get('age')
         prices_filtered = self.request.GET.get('price')
 
+        current_sorting = f'{self.sort}_{self.direction}'
         types = {}
         type_names = {}
         types_count = 0
@@ -166,6 +186,8 @@ class Shop(generic.ListView):
             else:
                 ages[str(product.age)] = ages[str(product.age)] + 1
 
+        context['current_sorting'] = current_sorting
+        context['products_sorted'] = products_sorted
         context['types'] = types
         context['type_names'] = type_names
         context['types_count'] = types_count

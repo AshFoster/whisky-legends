@@ -12,7 +12,7 @@
             <div class="row mb-3">
                 <div class="col d-flex justify-content-center">
                     <div class="dropdown">
-                        <button class="btn filter-btn dropdown-toggle" type="button" id="typeDropdown"
+                        <button class="btn filter-btn dropdown-toggle text-wrap text-break" type="button" id="typeDropdown"
                             data-bs-toggle="dropdown" aria-expanded="false">
                             {% if types_count == 1 and types_filtered %}
                             {% for key, value in types.items %}
@@ -36,7 +36,7 @@
                         </ul>
                     </div>
                     <div class="dropdown">
-                        <button class="btn filter-btn dropdown-toggle" type="button" id="brandDropdown"
+                        <button class="btn filter-btn dropdown-toggle text-wrap text-break" type="button" id="brandDropdown"
                             data-bs-toggle="dropdown" aria-expanded="false">
                             {% if brands_count == 1 and brands_filtered %}
                             {% for key, value in brands.items %}
@@ -60,7 +60,7 @@
                         </ul>
                     </div>
                     <div class="dropdown">
-                        <button class="btn filter-btn dropdown-toggle" type="button" id="countryDropdown"
+                        <button class="btn filter-btn dropdown-toggle text-wrap text-break" type="button" id="countryDropdown"
                             data-bs-toggle="dropdown" aria-expanded="false">
                             {% if countries_count == 1 and countries_filtered %}
                             {% for key, value in countries.items %}
@@ -84,7 +84,7 @@
                         </ul>
                     </div>
                     <div class="dropdown">
-                        <button class="btn filter-btn dropdown-toggle" type="button" id="regionDropdown"
+                        <button class="btn filter-btn dropdown-toggle text-wrap text-break" type="button" id="regionDropdown"
                             data-bs-toggle="dropdown" aria-expanded="false">
                             {% if regions_count == 1 and regions_filtered %}
                             {% for key, value in regions.items %}
@@ -112,7 +112,7 @@
             <div class="row">
                 <div class="col d-flex justify-content-center">
                     <div class="dropdown">
-                        <button class="btn filter-btn dropdown-toggle" type="button" id="priceDropdown"
+                        <button class="btn filter-btn dropdown-toggle text-wrap text-break" type="button" id="priceDropdown"
                             data-bs-toggle="dropdown" aria-expanded="false">
                             {% if prices_filtered %}
                             Price: £{{ price_min }} to £{{ price_max }}
@@ -137,7 +137,7 @@
                         </ul>
                     </div>
                     <div class="dropdown">
-                        <button class="btn filter-btn dropdown-toggle" type="button" id="ageDropdown"
+                        <button class="btn filter-btn dropdown-toggle text-wrap text-break" type="button" id="ageDropdown"
                             data-bs-toggle="dropdown" aria-expanded="false">
                             {% if ages_count == 1 and ages_filtered %}
                             {% for key, value in ages.items %}
@@ -161,7 +161,7 @@
                         </ul>
                     </div>
                     <div class="dropdown">
-                        <button class="btn filter-btn dropdown-toggle" type="button" id="flavourDropdown"
+                        <button class="btn filter-btn dropdown-toggle text-wrap text-break" type="button" id="flavourDropdown"
                             data-bs-toggle="dropdown" aria-expanded="false">
                             {% if flavours_count == 1 and flavours_filtered %}
                             {% for key, value in flavours.items %}
@@ -185,14 +185,32 @@
                         </ul>
                     </div>
                     <div class="dropdown">
-                        <button class="btn filter-btn dropdown-toggle" type="button" id="sortDropdown"
+                        <button class="btn filter-btn dropdown-toggle text-wrap text-break" type="button" id="sortDropdown"
                             data-bs-toggle="dropdown" aria-expanded="false">
+                            {% if products_sorted %}
+                            {% if current_sorting == 'brand_asc'%}Brand (A-Z)
+                            {% elif current_sorting == 'brand_desc'%}Brand (Z-A)
+                            {% elif current_sorting == 'price_asc'%}Price (low to high)
+                            {% elif current_sorting == 'price_desc'%}Price (high to low)
+                            {% elif current_sorting == 'rating_asc'%}Rating (low to high)
+                            {% elif current_sorting == 'rating_desc'%}Rating (high to low)
+                            {% else %}
                             Sort By
+                            {% endif %}
+                            {% else %}
+                            Sort By
+                            {% endif %}
                         </button>
                         <ul class="dropdown-menu" aria-labelledby="sortDropdown">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            {% if products_sorted %}
+                            <li class="dropdown-item" id="sortClear">Clear 'Sort'</li>
+                            {% endif %}
+                            <li class="dropdown-item sort-item">Brand (A-Z)<input type="hidden" class="sort-name" value="brand_asc"></li>
+                            <li class="dropdown-item sort-item">Brand (Z-A)<input type="hidden" class="sort-name" value="brand_desc"></li>
+                            <li class="dropdown-item sort-item">Price (low to high)<input type="hidden" class="sort-name" value="price_asc"></li>
+                            <li class="dropdown-item sort-item">Price (high to low)<input type="hidden" class="sort-name" value="price_desc"></li>
+                            <li class="dropdown-item sort-item">Rating (low to high)<input type="hidden" class="sort-name" value="rating_asc"></li>
+                            <li class="dropdown-item sort-item">Rating (high to low)<input type="hidden" class="sort-name" value="rating_desc"></li>
                         </ul>
                     </div>
                 </div>
