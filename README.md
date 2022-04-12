@@ -228,7 +228,7 @@ Google Chrome was the browser used for the majority of testing during the develo
 
 #### Fixed Bugs
 
-- 
+- On the 'ages' dropdown in the filtering section of shop.html the 'dictsort' function was treating the integer values as string values which meant that the order of the whisky ages was not correct in the dropdown. This was caused because some of the products did not have 'age' values and were therefore of 'None' type. This was fixed by not adding these products to the 'ages' dictionary created within the get_context_data function in views.py.
 
 #### Unfixed Bugs
 

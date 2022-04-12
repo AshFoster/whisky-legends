@@ -13,9 +13,3 @@ def lookup(dic, key):
 @register.filter
 def subtract(value, arg):
     return value - arg
-
-
-# CREDIT - https://stackoverflow.com/questions/63662873/check-variable-is-numerical-django-template
-@register.filter()
-def is_numeric(value):
-    return str(value).isnumeric()

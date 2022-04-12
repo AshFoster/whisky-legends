@@ -158,19 +158,17 @@
                                     {% elif ages_count == 0 %}
                                     Age ({{ ages_count }})
                                     {% else %}
-                                    Age ({{ ages_count|subtract:1 }})
+                                    Age ({{ ages_count }})
                                     {% endif %}
                                 </button>
                                 <ul class="dropdown-menu" aria-labelledby="ageDropdown">
                                     {% if ages_count == 1 and ages_filtered %}
                                     <li class="dropdown-item" id="ageClear">Clear 'Age' filter</li>
                                     {% else %}
-                                    {% for key, value in ages.items|dictsortreversed:0 %}
-                                    {% if key|is_numeric %}
+                                    {% for key, value in ages.items|dictsort:0 %}
                                     <li class="dropdown-item age-item"><span class="age-name">{{ key }}</span> Years Old
                                         ({{ value }})
                                     </li>
-                                    {% endif %}
                                     {% endfor %}
                                     {% endif %}
                                 </ul>
@@ -261,7 +259,7 @@
     </div>
     <div class="row justify-content-center">
         <div class="col-sm-11 col-md-10">
-            <div class="row justify-content-evenly mt-4">
+            <div class="row justify-content-center justify-content-sm-start mt-4">
                 {% for product in products %}
                 <div class="col-10 col-sm-6 col-lg-4 col-xl-3 mb-5">
                     <div class="card h-100 mx-sm-2 mx-md-3 p-3 product-card box-shadow-custom">

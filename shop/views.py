@@ -189,11 +189,12 @@ class Shop(generic.ListView):
                 flavours[product.flavour.friendly_name] = flavours[
                     product.flavour.friendly_name] + 1
 
-            if str(product.age) not in ages:
-                ages[str(product.age)] = 1
-                ages_count += 1
-            else:
-                ages[str(product.age)] = ages[str(product.age)] + 1
+            if product.age:
+                if product.age not in ages:
+                    ages[product.age] = 1
+                    ages_count += 1
+                else:
+                    ages[product.age] = ages[product.age] + 1
 
         context['current_sorting'] = current_sorting
         context['products_sorted'] = products_sorted
