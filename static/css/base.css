@@ -10,7 +10,7 @@
 
 /* Element selectors */
 body {
-    font-family: 'Lato', sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
 }
 
 /* Box shadows */
@@ -18,10 +18,20 @@ body {
     box-shadow: 0 6px 10px rgba(0, 0, 0, .8), 0 0 6px rgba(0, 0, 0, .5);
 }
 
-/* Links */
+/* Links/Buttons */
 .btn-custom {
     color: #fff !important;
     background-color: var(--logo-text-color);
+}
+
+.link-custom {
+    color: var(--logo-text-color);
+}
+
+.link-custom:hover,
+.link-custom:focus {
+    font-weight: 600;
+    color: var(--logo-text-color);
 }
 
 /* Widths & Heights */
@@ -59,6 +69,11 @@ body {
 }
 
 /* Shop page */
+
+.filter-bar-toggler .dropdown-toggle[aria-expanded="true"]::after {
+    border-top: none;
+    border-bottom: 6px solid #fff;
+}
 
 .filter-bar {
     font-family: 'Roboto Condensed', sans-serif;
@@ -104,6 +119,10 @@ body {
     border-radius: .3rem;
     height: 30px;
     width: 55px;
+}
+
+.shop-title {
+    color: rgba(0, 0, 0, .7);
 }
 
 
@@ -194,15 +213,6 @@ footer {
     font-size: 1.2rem;
     font-weight: 500;
     border-top: 2px solid var(--logo-text-color);
-}
-
-.privacy-policy a {
-    color: var(--logo-text-color);
-}
-
-.privacy-policy a:hover,
-.privacy-policy a:focus {
-    font-weight: 600;
 }
 
 .mailchimp-container,

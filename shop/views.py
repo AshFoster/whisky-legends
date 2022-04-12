@@ -21,6 +21,8 @@ class Shop(generic.ListView):
     price_max = 0
     price_min_initial = 0
     price_max_initial = 0
+    products_filtered = False
+    search_query = None
 
     def get_queryset(self):
         sort_by = self.request.GET.get('sort')
@@ -32,7 +34,7 @@ class Shop(generic.ListView):
         flavour_filter = self.request.GET.get('flavour')
         age_filter = self.request.GET.get('age')
         price_filter = self.request.GET.get('price')
-        search_query = self.request.GET.get('search')
+        self.search_query = self.request.GET.get('search')
 
         if sort_by:
             self.sort = sort_by
@@ -48,26 +50,32 @@ class Shop(generic.ListView):
             self.queryset = self.queryset.order_by(sort_by)
 
         if type_filter:
+            self.products_filtered = True
             self.queryset = self.queryset.filter(
                 type__name=type_filter)
 
         if brand_filter:
+            self.products_filtered = True
             self.queryset = self.queryset.filter(
                 brand__name=brand_filter)
 
         if country_filter:
+            self.products_filtered = True
             self.queryset = self.queryset.filter(
                 brand__country__name=country_filter)
 
         if region_filter:
+            self.products_filtered = True
             self.queryset = self.queryset.filter(
                 brand__region__name=region_filter)
 
         if flavour_filter:
+            self.products_filtered = True
             self.queryset = self.queryset.filter(
                 flavour__name=flavour_filter)
 
         if age_filter:
+            self.products_filtered = True
             self.queryset = self.queryset.filter(
                 age=age_filter)
 
@@ -77,6 +85,7 @@ class Shop(generic.ListView):
             self.queryset.aggregate(Max('price'))['price__max']))
 
         if price_filter:
+            self.products_filtered = True
             price_range = price_filter.split(',')
             try:
                 self.price_min = int(float(price_range[0]))
@@ -88,16 +97,16 @@ class Shop(generic.ListView):
             self.queryset = self.queryset.filter(
                 price__range=(self.price_min, self.price_max))
 
-        if not search_query:
+        if not self.search_query:
             messages.error(
                 self.request,
                 "You didn't enter any search criteria!"
             )
             return self.queryset
 
-        queries = (Q(name__icontains=search_query) |
-                   Q(brand__friendly_name__icontains=search_query) |
-                   Q(age__icontains=search_query))
+        queries = (Q(name__icontains=self.search_query) |
+                   Q(brand__friendly_name__icontains=self.search_query) |
+                   Q(age__icontains=self.search_query))
         self.queryset = self.queryset.filter(queries)
 
         return self.queryset
@@ -216,5 +225,7 @@ class Shop(generic.ListView):
         context['price_min_initial'] = self.price_min_initial
         context['price_max_initial'] = self.price_max_initial
         context['prices_filtered'] = prices_filtered
+        context['products_filtered'] = self.products_filtered
+        context['search_query'] = self.search_query
 
         return context

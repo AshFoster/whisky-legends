@@ -6,235 +6,262 @@
 
 <div class="container-fluid shop-container">
     <div class="shop-container-opacity"></div>
-    <nav class="navbar-expand-md">
-        <div class="row g-0 justify-content-center">
-            <button class="col-10 navbar-toggler btn btn-custom box-shadow-custom mt-2 py-2 mw-250px" type="button" data-bs-toggle="collapse" data-bs-target="#filterBarToggler"
-                aria-controls="filterBarToggler" aria-expanded="false" aria-label="Filter Toggler">
-                Sort & Filter
-            </button>
-        </div>
-        <div class="row filter-bar justify-content-center collapse navbar-collapse" id="filterBarToggler">
-            <div class="filter-bar-opacity"></div>
-            <div class="col-10 my-4">
-                <div class="row mb-md-3">
-                    <div class="col d-flex flex-column flex-md-row align-items-center justify-content-md-center">
-                        <div class="dropdown">
-                            <button class="btn filter-btn dropdown-toggle text-wrap text-break" type="button"
-                                id="typeDropdown" data-bs-toggle="dropdown" aria-expanded="false">
-                                {% if types_count == 1 and types_filtered %}
-                                {% for key, value in types.items %}
-                                {{ key }} ({{ value }})
-                                {% endfor %}
-                                {% else %}
-                                Whisky Type ({{ types_count }})
-                                {% endif %}
-                            </button>
-                            <ul class="dropdown-menu" aria-labelledby="typeDropdown">
-                                {% if types_count == 1 and types_filtered %}
-                                <li class="dropdown-item" id="typeClear">Clear 'Whisky Type' filter</li>
-                                {% else %}
-                                {% for key, value in types.items|dictsort:0 %}
-                                <li class="dropdown-item type-item">
+    <nav class="row g-0 navbar-expand-md">
+        <div class="col">
+            <div class="row g-0 justify-content-center filter-bar-toggler">
+                <button
+                    class="col-10 navbar-toggler btn btn-custom dropdown-toggle box-shadow-custom my-2 py-2 mw-250px"
+                    type="button" data-bs-toggle="collapse" data-bs-target="#filterBarToggler"
+                    aria-controls="filterBarToggler" aria-expanded="false" aria-label="Filter Toggler">
+                    Sort & Filter
+                </button>
+            </div>
+            <div class="row filter-bar justify-content-center collapse navbar-collapse" id="filterBarToggler">
+                <div class="filter-bar-opacity"></div>
+                <div class="col-10 my-4">
+                    <div class="row mb-md-3">
+                        <div class="col d-flex flex-column flex-md-row align-items-center justify-content-md-center">
+                            <div class="dropdown">
+                                <button class="btn filter-btn dropdown-toggle text-wrap text-break" type="button"
+                                    id="typeDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                    {% if types_count == 1 and types_filtered %}
+                                    {% for key, value in types.items %}
                                     {{ key }} ({{ value }})
-                                    <input type="hidden" class="type-name" value="{{ type_names|lookup:key }}">
-                                </li>
-                                {% endfor %}
-                                {% endif %}
-                            </ul>
-                        </div>
-                        <div class="dropdown">
-                            <button class="btn filter-btn dropdown-toggle text-wrap text-break" type="button"
-                                id="brandDropdown" data-bs-toggle="dropdown" aria-expanded="false">
-                                {% if brands_count == 1 and brands_filtered %}
-                                {% for key, value in brands.items %}
-                                {{ key }} ({{ value }})
-                                {% endfor %}
-                                {% else %}
-                                Brand ({{ brands_count }})
-                                {% endif %}
-                            </button>
-                            <ul class="dropdown-menu" aria-labelledby="brandDropdown">
-                                {% if brands_count == 1 and brands_filtered %}
-                                <li class="dropdown-item" id="brandClear">Clear 'Brand' filter</li>
-                                {% else %}
-                                {% for key, value in brands.items|dictsort:0 %}
-                                <li class="dropdown-item brand-item">
+                                    {% endfor %}
+                                    {% else %}
+                                    Whisky Type ({{ types_count }})
+                                    {% endif %}
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="typeDropdown">
+                                    {% if types_count == 1 and types_filtered %}
+                                    <li class="dropdown-item" id="typeClear">Clear 'Whisky Type' filter</li>
+                                    {% else %}
+                                    {% for key, value in types.items|dictsort:0 %}
+                                    <li class="dropdown-item type-item">
+                                        {{ key }} ({{ value }})
+                                        <input type="hidden" class="type-name" value="{{ type_names|lookup:key }}">
+                                    </li>
+                                    {% endfor %}
+                                    {% endif %}
+                                </ul>
+                            </div>
+                            <div class="dropdown">
+                                <button class="btn filter-btn dropdown-toggle text-wrap text-break" type="button"
+                                    id="brandDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                    {% if brands_count == 1 and brands_filtered %}
+                                    {% for key, value in brands.items %}
                                     {{ key }} ({{ value }})
-                                    <input type="hidden" class="brand-name" value="{{ brand_names|lookup:key }}">
-                                </li>
-                                {% endfor %}
-                                {% endif %}
-                            </ul>
-                        </div>
-                        <div class="dropdown">
-                            <button class="btn filter-btn dropdown-toggle text-wrap text-break" type="button"
-                                id="countryDropdown" data-bs-toggle="dropdown" aria-expanded="false">
-                                {% if countries_count == 1 and countries_filtered %}
-                                {% for key, value in countries.items %}
-                                {{ key }} ({{ value }})
-                                {% endfor %}
-                                {% else %}
-                                Country ({{ countries_count }})
-                                {% endif %}
-                            </button>
-                            <ul class="dropdown-menu" aria-labelledby="countryDropdown">
-                                {% if countries_count == 1 and countries_filtered %}
-                                <li class="dropdown-item" id="countryClear">Clear 'Country' filter</li>
-                                {% else %}
-                                {% for key, value in countries.items|dictsort:0 %}
-                                <li class="dropdown-item country-item">
+                                    {% endfor %}
+                                    {% else %}
+                                    Brand ({{ brands_count }})
+                                    {% endif %}
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="brandDropdown">
+                                    {% if brands_count == 1 and brands_filtered %}
+                                    <li class="dropdown-item" id="brandClear">Clear 'Brand' filter</li>
+                                    {% else %}
+                                    {% for key, value in brands.items|dictsort:0 %}
+                                    <li class="dropdown-item brand-item">
+                                        {{ key }} ({{ value }})
+                                        <input type="hidden" class="brand-name" value="{{ brand_names|lookup:key }}">
+                                    </li>
+                                    {% endfor %}
+                                    {% endif %}
+                                </ul>
+                            </div>
+                            <div class="dropdown">
+                                <button class="btn filter-btn dropdown-toggle text-wrap text-break" type="button"
+                                    id="countryDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                    {% if countries_count == 1 and countries_filtered %}
+                                    {% for key, value in countries.items %}
                                     {{ key }} ({{ value }})
-                                    <input type="hidden" class="country-name" value="{{ country_names|lookup:key }}">
-                                </li>
-                                {% endfor %}
-                                {% endif %}
-                            </ul>
-                        </div>
-                        <div class="dropdown">
-                            <button class="btn filter-btn dropdown-toggle text-wrap text-break" type="button"
-                                id="regionDropdown" data-bs-toggle="dropdown" aria-expanded="false">
-                                {% if regions_count == 1 and regions_filtered %}
-                                {% for key, value in regions.items %}
-                                {{ key }} ({{ value }})
-                                {% endfor %}
-                                {% else %}
-                                Region ({{ regions_count }})
-                                {% endif %}
-                            </button>
-                            <ul class="dropdown-menu" aria-labelledby="regionDropdown">
-                                {% if regions_count == 1 and regions_filtered %}
-                                <li class="dropdown-item" id="regionClear">Clear 'Region' filter</li>
-                                {% else %}
-                                {% for key, value in regions.items|dictsort:0 %}
-                                <li class="dropdown-item region-item">
+                                    {% endfor %}
+                                    {% else %}
+                                    Country ({{ countries_count }})
+                                    {% endif %}
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="countryDropdown">
+                                    {% if countries_count == 1 and countries_filtered %}
+                                    <li class="dropdown-item" id="countryClear">Clear 'Country' filter</li>
+                                    {% else %}
+                                    {% for key, value in countries.items|dictsort:0 %}
+                                    <li class="dropdown-item country-item">
+                                        {{ key }} ({{ value }})
+                                        <input type="hidden" class="country-name"
+                                            value="{{ country_names|lookup:key }}">
+                                    </li>
+                                    {% endfor %}
+                                    {% endif %}
+                                </ul>
+                            </div>
+                            <div class="dropdown">
+                                <button class="btn filter-btn dropdown-toggle text-wrap text-break" type="button"
+                                    id="regionDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                    {% if regions_count == 1 and regions_filtered %}
+                                    {% for key, value in regions.items %}
                                     {{ key }} ({{ value }})
-                                    <input type="hidden" class="region-name" value="{{ region_names|lookup:key }}">
-                                </li>
-                                {% endfor %}
-                                {% endif %}
-                            </ul>
+                                    {% endfor %}
+                                    {% else %}
+                                    Region ({{ regions_count }})
+                                    {% endif %}
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="regionDropdown">
+                                    {% if regions_count == 1 and regions_filtered %}
+                                    <li class="dropdown-item" id="regionClear">Clear 'Region' filter</li>
+                                    {% else %}
+                                    {% for key, value in regions.items|dictsort:0 %}
+                                    <li class="dropdown-item region-item">
+                                        {{ key }} ({{ value }})
+                                        <input type="hidden" class="region-name" value="{{ region_names|lookup:key }}">
+                                    </li>
+                                    {% endfor %}
+                                    {% endif %}
+                                </ul>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="col d-flex flex-column flex-md-row align-items-center justify-content-md-center">
-                        <div class="dropdown">
-                            <button class="btn filter-btn dropdown-toggle text-wrap text-break" type="button"
-                                id="priceDropdown" data-bs-toggle="dropdown" aria-expanded="false">
-                                {% if prices_filtered %}
-                                Price: £{{ price_min }} to £{{ price_max }}
-                                {% else %}
-                                Price: £{{ price_min_initial }} to £{{ price_max_initial }}
-                                {% endif %}
-                            </button>
-                            <ul class="dropdown-menu price-dropdown" aria-labelledby="priceDropdown">
-                                <li class="dropdown-item px-md-2">
-                                    <label for="minPrice" class="min-price-label">Min: </label>
-                                    <input type="number" name="minPrice" class="min-price" min="{{ price_min_initial }}"
-                                        max="{{ price_max_initial|subtract:1 }}" value="{{ price_min_initial }}">
-                                    <label for="maxPrice" class="max-price-label">Max: </label>
-                                    <input type="number" name="maxPrice" class="max-price"
-                                        min="{{ price_min_initial|add:1 }}" max="{{ price_max_initial }}"
-                                        value="{{ price_max_initial }}">
-                                </li>
-                                <li class="dropdown-item pt-2" id="priceApply">Apply 'Price' filter</li>
-                                {% if prices_filtered %}
-                                <li class="dropdown-item" id="priceClear">Clear 'Price' filter</li>
-                                {% endif %}
-                            </ul>
-                        </div>
-                        <div class="dropdown">
-                            <button class="btn filter-btn dropdown-toggle text-wrap text-break" type="button"
-                                id="ageDropdown" data-bs-toggle="dropdown" aria-expanded="false">
-                                {% if ages_count == 1 and ages_filtered %}
-                                {% for key, value in ages.items %}
-                                {{ key }} Years Old ({{ value }})
-                                {% endfor %}
-                                {% else %}
-                                Age ({{ ages_count|subtract:1 }})
-                                {% endif %}
-                            </button>
-                            <ul class="dropdown-menu" aria-labelledby="ageDropdown">
-                                {% if ages_count == 1 and ages_filtered %}
-                                <li class="dropdown-item" id="ageClear">Clear 'Age' filter</li>
-                                {% else %}
-                                {% for key, value in ages.items|dictsortreversed:0 %}
-                                {% if key|is_numeric %}
-                                <li class="dropdown-item age-item"><span class="age-name">{{ key }}</span> Years Old
-                                    ({{ value }})
-                                </li>
-                                {% endif %}
-                                {% endfor %}
-                                {% endif %}
-                            </ul>
-                        </div>
-                        <div class="dropdown">
-                            <button class="btn filter-btn dropdown-toggle text-wrap text-break" type="button"
-                                id="flavourDropdown" data-bs-toggle="dropdown" aria-expanded="false">
-                                {% if flavours_count == 1 and flavours_filtered %}
-                                {% for key, value in flavours.items %}
-                                {{ key }} ({{ value }})
-                                {% endfor %}
-                                {% else %}
-                                Flavour ({{ flavours_count }})
-                                {% endif %}
-                            </button>
-                            <ul class="dropdown-menu" aria-labelledby="flavourDropdown">
-                                {% if flavours_count == 1 and flavours_filtered %}
-                                <li class="dropdown-item" id="flavourClear">Clear 'Flavour' filter</li>
-                                {% else %}
-                                {% for key, value in flavours.items|dictsort:0 %}
-                                <li class="dropdown-item flavour-item">
+                    <div class="row">
+                        <div class="col d-flex flex-column flex-md-row align-items-center justify-content-md-center">
+                            <div class="dropdown">
+                                <button class="btn filter-btn dropdown-toggle text-wrap text-break" type="button"
+                                    id="priceDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                    {% if prices_filtered %}
+                                    Price: £{{ price_min }} to £{{ price_max }}
+                                    {% else %}
+                                    Price: £{{ price_min_initial }} to £{{ price_max_initial }}
+                                    {% endif %}
+                                </button>
+                                <ul class="dropdown-menu price-dropdown" aria-labelledby="priceDropdown">
+                                    <li class="dropdown-item px-md-2">
+                                        <label for="minPrice" class="min-price-label">Min: </label>
+                                        <input type="number" name="minPrice" class="min-price"
+                                            min="{{ price_min_initial }}" max="{{ price_max_initial|subtract:1 }}"
+                                            value="{{ price_min_initial }}">
+                                        <label for="maxPrice" class="max-price-label">Max: </label>
+                                        <input type="number" name="maxPrice" class="max-price"
+                                            min="{{ price_min_initial|add:1 }}" max="{{ price_max_initial }}"
+                                            value="{{ price_max_initial }}">
+                                    </li>
+                                    <li class="dropdown-item pt-2" id="priceApply">Apply 'Price' filter</li>
+                                    {% if prices_filtered %}
+                                    <li class="dropdown-item" id="priceClear">Clear 'Price' filter</li>
+                                    {% endif %}
+                                </ul>
+                            </div>
+                            <div class="dropdown">
+                                <button class="btn filter-btn dropdown-toggle text-wrap text-break" type="button"
+                                    id="ageDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                    {% if ages_count == 1 and ages_filtered %}
+                                    {% for key, value in ages.items %}
+                                    {{ key }} Years Old ({{ value }})
+                                    {% endfor %}
+                                    {% elif ages_count == 0 %}
+                                    Age ({{ ages_count }})
+                                    {% else %}
+                                    Age ({{ ages_count|subtract:1 }})
+                                    {% endif %}
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="ageDropdown">
+                                    {% if ages_count == 1 and ages_filtered %}
+                                    <li class="dropdown-item" id="ageClear">Clear 'Age' filter</li>
+                                    {% else %}
+                                    {% for key, value in ages.items|dictsortreversed:0 %}
+                                    {% if key|is_numeric %}
+                                    <li class="dropdown-item age-item"><span class="age-name">{{ key }}</span> Years Old
+                                        ({{ value }})
+                                    </li>
+                                    {% endif %}
+                                    {% endfor %}
+                                    {% endif %}
+                                </ul>
+                            </div>
+                            <div class="dropdown">
+                                <button class="btn filter-btn dropdown-toggle text-wrap text-break" type="button"
+                                    id="flavourDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                    {% if flavours_count == 1 and flavours_filtered %}
+                                    {% for key, value in flavours.items %}
                                     {{ key }} ({{ value }})
-                                    <input type="hidden" class="flavour-name" value="{{ flavour_names|lookup:key }}">
-                                </li>
-                                {% endfor %}
-                                {% endif %}
-                            </ul>
-                        </div>
-                        <div class="dropdown">
-                            <button class="btn filter-btn dropdown-toggle text-wrap text-break" type="button"
-                                id="sortDropdown" data-bs-toggle="dropdown" aria-expanded="false">
-                                {% if products_sorted %}
-                                {% if current_sorting == 'brand_asc'%}Brand (A-Z)
-                                {% elif current_sorting == 'brand_desc'%}Brand (Z-A)
-                                {% elif current_sorting == 'price_asc'%}Price (low to high)
-                                {% elif current_sorting == 'price_desc'%}Price (high to low)
-                                {% elif current_sorting == 'rating_asc'%}Rating (low to high)
-                                {% elif current_sorting == 'rating_desc'%}Rating (high to low)
-                                {% else %}
-                                Sort By
-                                {% endif %}
-                                {% else %}
-                                Sort By
-                                {% endif %}
-                            </button>
-                            <ul class="dropdown-menu" aria-labelledby="sortDropdown">
-                                {% if products_sorted %}
-                                <li class="dropdown-item" id="sortClear">Clear 'Sort'</li>
-                                {% endif %}
-                                <li class="dropdown-item sort-item">Brand (A-Z)<input type="hidden" class="sort-name"
-                                        value="brand_asc"></li>
-                                <li class="dropdown-item sort-item">Brand (Z-A)<input type="hidden" class="sort-name"
-                                        value="brand_desc"></li>
-                                <li class="dropdown-item sort-item">Price (low to high)<input type="hidden"
-                                        class="sort-name" value="price_asc"></li>
-                                <li class="dropdown-item sort-item">Price (high to low)<input type="hidden"
-                                        class="sort-name" value="price_desc"></li>
-                                <li class="dropdown-item sort-item">Rating (low to high)<input type="hidden"
-                                        class="sort-name" value="rating_asc"></li>
-                                <li class="dropdown-item sort-item">Rating (high to low)<input type="hidden"
-                                        class="sort-name" value="rating_desc"></li>
-                            </ul>
+                                    {% endfor %}
+                                    {% else %}
+                                    Flavour ({{ flavours_count }})
+                                    {% endif %}
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="flavourDropdown">
+                                    {% if flavours_count == 1 and flavours_filtered %}
+                                    <li class="dropdown-item" id="flavourClear">Clear 'Flavour' filter</li>
+                                    {% else %}
+                                    {% for key, value in flavours.items|dictsort:0 %}
+                                    <li class="dropdown-item flavour-item">
+                                        {{ key }} ({{ value }})
+                                        <input type="hidden" class="flavour-name"
+                                            value="{{ flavour_names|lookup:key }}">
+                                    </li>
+                                    {% endfor %}
+                                    {% endif %}
+                                </ul>
+                            </div>
+                            <div class="dropdown">
+                                <button class="btn filter-btn dropdown-toggle text-wrap text-break" type="button"
+                                    id="sortDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                    {% if products_sorted %}
+                                    {% if current_sorting == 'brand_asc'%}Brand (A-Z)
+                                    {% elif current_sorting == 'brand_desc'%}Brand (Z-A)
+                                    {% elif current_sorting == 'price_asc'%}Price (low to high)
+                                    {% elif current_sorting == 'price_desc'%}Price (high to low)
+                                    {% elif current_sorting == 'rating_asc'%}Rating (low to high)
+                                    {% elif current_sorting == 'rating_desc'%}Rating (high to low)
+                                    {% else %}
+                                    Sort By
+                                    {% endif %}
+                                    {% else %}
+                                    Sort By
+                                    {% endif %}
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="sortDropdown">
+                                    {% if products_sorted %}
+                                    <li class="dropdown-item" id="sortClear">Clear 'Sort'</li>
+                                    {% endif %}
+                                    <li class="dropdown-item sort-item">Brand (A-Z)<input type="hidden"
+                                            class="sort-name" value="brand_asc"></li>
+                                    <li class="dropdown-item sort-item">Brand (Z-A)<input type="hidden"
+                                            class="sort-name" value="brand_desc"></li>
+                                    <li class="dropdown-item sort-item">Price (low to high)<input type="hidden"
+                                            class="sort-name" value="price_asc"></li>
+                                    <li class="dropdown-item sort-item">Price (high to low)<input type="hidden"
+                                            class="sort-name" value="price_desc"></li>
+                                    <li class="dropdown-item sort-item">Rating (low to high)<input type="hidden"
+                                            class="sort-name" value="rating_asc"></li>
+                                    <li class="dropdown-item sort-item">Rating (high to low)<input type="hidden"
+                                            class="sort-name" value="rating_desc"></li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </nav>
+    <div class="row">
+        <div class="col text-center">
+            <h2 class="text-uppercase shop-title">Shop</h2>
+            <hr class="w-50 mx-auto">
+        </div>
+    </div>
     <div class="row justify-content-center">
         <div class="col-sm-11 col-md-10">
-            <div class="row justify-content-evenly mt-5">
+            <p class="text-muted mt-md-2 mb-0 text-center">
+                {% if search_query or products_filtered or current_sorting != 'None_None' %}
+                <span><a href="{% url 'shop' %}" class="link-custom">Shop Home</a> | </span>
+                {% endif %}
+                {% if not search_query %}Showing {% endif %}{{ products|length }}
+                Product{% if products|length != 1 %}s{% endif %}{% if search_query %} found for
+                <strong>"{{ search_query }}"</strong>{% endif %}
+            </p>
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-sm-11 col-md-10">
+            <div class="row justify-content-evenly mt-4">
                 {% for product in products %}
                 <div class="col-10 col-sm-6 col-lg-4 col-xl-3 mb-5">
                     <div class="card h-100 mx-sm-2 mx-md-3 p-3 product-card box-shadow-custom">
@@ -244,27 +271,32 @@
                             <h5 class="card-title text-center product-card-title">{{ product.brand.friendly_name }}:
                                 {{ product.name }}
                             </h5>
+                            {% if product.rating %}
                             <div class="d-flex justify-content-between my-3">
                                 <p class="d-inline my-0 ms-2">
                                     <i class="fas fa-star"></i>
                                     {{ product.rating }}
                                 </p>
-                                <p class="d-inline my-0 me-2">
-                                    £{{ product.price }}
-                                </p>
-                            </div>
-                            <div class="d-flex justify-content-center">
-                                <a href="#" class="btn btn-custom box-shadow-custom w-100">Add to cart</a>
+                                <p class="d-inline my-0"></p>
+                            {% else %}
+                                <div class="d-flex justify-content-center my-3">
+                                    <p class="d-inline my-0 me-2"></p>
+                            {% endif %}
+                                        £{{ product.price }}
+                                    </p>
+                                </div>
+                                <div class="d-flex justify-content-center">
+                                    <a href="#" class="btn btn-custom box-shadow-custom w-100">Add to cart</a>
+                                </div>
                             </div>
                         </div>
                     </div>
+                    {% endfor %}
                 </div>
-                {% endfor %}
             </div>
         </div>
     </div>
 </div>
-
 {% endblock %}
 
 {% block postloadjs %}

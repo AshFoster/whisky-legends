@@ -171,6 +171,8 @@ function setPriceFilter() {
     let priceFilterURL = params.get('price');
     let minPrice = document.querySelector('.min-price');
     let maxPrice = document.querySelector('.max-price');
+    let minPriceOriginal = minPrice.value;
+    let maxPriceOriginal = maxPrice.value;
     let minPriceValue = 0;
     let maxPriceValue = 0;
     let priceApply = document.getElementById('priceApply');
@@ -199,6 +201,11 @@ function setPriceFilter() {
             maxPriceValue = Math.round(maxPrice.max)
         } else {
             maxPriceValue = Math.round(maxPrice.min)
+        }
+
+        if (minPriceValue >= maxPriceValue) {
+            minPriceValue = minPriceOriginal;
+            maxPriceValue = maxPriceOriginal;
         }
 
         if (priceFilterURL != null) {
