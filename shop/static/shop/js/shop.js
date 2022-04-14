@@ -15,13 +15,17 @@ function setMaxHeight(className) {
     });
 
     document.querySelectorAll(className).forEach(function (e) {
-        if (e.clientHeight > maxHeight) {
-            maxHeight = e.clientHeight;
+        if (document.documentElement.clientWidth >= 576) {
+            if (e.clientHeight > maxHeight) {
+                maxHeight = e.clientHeight;
+            }
         }
     });
 
     document.querySelectorAll(className).forEach(function (e) {
-        e.style.minHeight = maxHeight + 'px';
+        if (document.documentElement.clientWidth >= 576) {
+            e.style.minHeight = maxHeight + 'px';
+        }
     });
 }
 // END CREDIT
