@@ -172,14 +172,15 @@ class Shop(generic.ListView):
                 countries[product.brand.country.friendly_name] = countries[
                     product.brand.country.friendly_name] + 1
 
-            if product.brand.region.friendly_name not in regions:
-                region_names[product.brand.region.friendly_name] = \
-                    product.brand.region.name
-                regions[product.brand.region.friendly_name] = 1
-                regions_count += 1
-            else:
-                regions[product.brand.region.friendly_name] = regions[
-                    product.brand.region.friendly_name] + 1
+            if product.brand.region:
+                if product.brand.region.friendly_name not in regions:
+                    region_names[product.brand.region.friendly_name] = \
+                        product.brand.region.name
+                    regions[product.brand.region.friendly_name] = 1
+                    regions_count += 1
+                else:
+                    regions[product.brand.region.friendly_name] = regions[
+                        product.brand.region.friendly_name] + 1
 
             if product.flavour.friendly_name not in flavours:
                 flavour_names[product.flavour.friendly_name] = \
