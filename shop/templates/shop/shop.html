@@ -258,7 +258,7 @@
         </div>
     </div>
     <div class="row justify-content-center">
-        <div class="col-sm-11 col-md-10">
+        <div class="col-10">
             <div class="row justify-content-center justify-content-sm-start mt-4">
                 {% for product in products %}
                 <div class="col-10 col-sm-6 col-lg-4 col-xl-3 mb-5">
@@ -276,11 +276,11 @@
                                     {{ product.rating }}
                                 </p>
                                 <p class="d-inline my-0"></p>
-                            {% else %}
+                                {% else %}
                                 <div class="d-flex justify-content-center my-3">
                                     <p class="d-inline my-0 me-2"></p>
-                            {% endif %}
-                                        £{{ product.price }}
+                                    {% endif %}
+                                    £{{ product.price }}
                                     </p>
                                 </div>
                                 <div class="d-flex justify-content-center">
@@ -294,6 +294,11 @@
             </div>
         </div>
     </div>
+</div>
+<div class="btt-button">
+    <a class="btt-link">
+        <i class="fas fa-chevron-circle-up mx-auto my-auto"></i>
+    </a>
 </div>
 {% endblock %}
 

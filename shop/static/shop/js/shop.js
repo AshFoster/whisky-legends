@@ -42,8 +42,8 @@ function setSort() {
             let direction = item.querySelector('.sort-name').value.split('_')[1]
             let currentURL = window.location.search
             if (sortURL != null) {
-                currentURL = currentURL .replace(sortURL, sort);
-                currentURL = currentURL .replace(directionURL, direction);
+                currentURL = currentURL.replace(sortURL, sort);
+                currentURL = currentURL.replace(directionURL, direction);
                 window.location.search = currentURL
             } else {
                 currentURL += '&sort=' + sort;
@@ -274,6 +274,23 @@ function setFlavourFilter() {
     }
 }
 
+function setBttButton() {
+    let bttButton = document.querySelector('.btt-button')
+
+    window.addEventListener("scroll", function () {
+        let y = window.scrollY;
+        if (y > 0) {
+            bttButton.style.display = 'block'
+        } else {
+            bttButton.style.display = 'none'
+        }
+    });
+
+    bttButton.addEventListener('click', function () {
+        window.scrollTo(0, 0);
+    });
+}
+
 
 /* 
 Once the DOM has finshed loading call all necessary functions
@@ -297,6 +314,8 @@ document.addEventListener('DOMContentLoaded', function () {
     setAgeFilter();
 
     setFlavourFilter();
+
+    setBttButton()
 
 });
 

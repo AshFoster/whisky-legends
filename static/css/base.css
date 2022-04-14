@@ -125,6 +125,23 @@ body {
     color: rgba(0, 0, 0, .7);
 }
 
+.btt-button {
+    display: none;
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    z-index: 99;
+}
+
+.btt-button i {
+    color: var(--logo-text-color);
+    font-size: 300%;
+}
+
+.btt-link {
+    cursor: pointer;
+}
+
 
 /* /// ---------------------------------------------------- BASE.HTML styles */
 
@@ -272,6 +289,15 @@ footer {
 
     .brandingLogo img {
         width: 70% !important;
+    }
+
+    .btt-button {
+        right: 7px;
+        bottom: 7px;
+    }
+
+    .btt-button i {
+        font-size: 275%;
     }
 }
 
