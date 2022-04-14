@@ -302,7 +302,9 @@ To clone the GitHub repository follow these steps:
 - [Font Awesome](https://fontawesome.com/) - for the icons used throughout the site.
 - [Colormind](http://colormind.io/) - used to obtain colour palette images.
 - [SendGrid](https://sendgrid.com/) - used to send emails when required.
-- [Lucidchart](https://www.lucidchart.com/) - used to create site map and entity relationship diagrams. 
+- [Lucidchart](https://www.lucidchart.com/) - used to create site map and entity relationship diagrams.
+- [Logo Pony](https://logopony.co.uk/) - To create default product image
+- [Red Ketchup Image Resizer](https://redketchup.io/image-resizer) - To resize default product image
 
 ## Credits
 
