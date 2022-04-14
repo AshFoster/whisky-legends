@@ -1,8 +1,9 @@
 import math
+from django.shortcuts import render, get_object_or_404
 from django.contrib import messages
 from django.db.models import Q, Min, Max
 from django.db.models.functions import Lower
-from django.views import generic
+from django.views import generic, View
 from .models import Product
 
 
@@ -230,3 +231,21 @@ class Shop(generic.ListView):
         context['search_query'] = self.search_query
 
         return context
+
+
+class ProductDetail(View):
+    """
+    Product Detail class based view to show individual Product model
+    objects on product_detail.html
+    """
+    def get(self, request, product_id, *args, **kwargs):
+        queryset = Product.objects.all()
+        product = get_object_or_404(queryset, pk=product_id)
+
+        return render(
+            request,
+            'shop/product_detail.html',
+            {
+                'product': product,
+            },
+        )

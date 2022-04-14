@@ -125,6 +125,11 @@ body {
     color: rgba(0, 0, 0, .7);
 }
 
+.product-card-title-link {
+    color: inherit !important;
+    text-decoration: none;
+}
+
 .btt-button {
     display: none;
     position: fixed;

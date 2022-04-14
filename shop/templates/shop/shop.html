@@ -263,12 +263,16 @@
                 {% for product in products %}
                 <div class="col-10 col-sm-6 col-lg-4 col-xl-3 mb-5">
                     <div class="card h-100 mx-sm-2 mx-md-3 p-3 product-card box-shadow-custom">
-                        <img src="{{ product.image.url }}" class="card-img-top img-fluid"
-                            alt="{{ product.brand.friendly_name }}: {{ product.name }}">
+                        <a href="{% url 'product_detail' product.id %}">
+                            <img src="{{ product.image.url }}" class="card-img-top img-fluid"
+                                alt="{{ product.brand.friendly_name }}: {{ product.name }}">
+                        </a>
                         <div class="card-body">
-                            <h5 class="card-title text-center product-card-title">{{ product.brand.friendly_name }}:
-                                {{ product.name }}
-                            </h5>
+                            <a href="{% url 'product_detail' product.id %}" class="product-card-title-link">
+                                <h5 class="card-title text-center product-card-title">{{ product.brand.friendly_name }}:
+                                    {{ product.name }}
+                                </h5>
+                            </a>
                             {% if product.rating %}
                             <div class="d-flex justify-content-between my-3">
                                 <p class="d-inline my-0 ms-2">
