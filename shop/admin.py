@@ -29,35 +29,30 @@ class ProductAdmin(admin.ModelAdmin):
 class TypeAdmin(admin.ModelAdmin):
     list_display = (
         'friendly_name',
-        'name',
     )
 
 
 class BrandAdmin(admin.ModelAdmin):
     list_display = (
         'friendly_name',
-        'name',
     )
 
 
 class CountryAdmin(admin.ModelAdmin):
     list_display = (
         'friendly_name',
-        'name',
     )
 
 
 class RegionAdmin(admin.ModelAdmin):
     list_display = (
         'friendly_name',
-        'name',
     )
 
 
 class FlavourAdmin(admin.ModelAdmin):
     list_display = (
         'friendly_name',
-        'name',
     )
 
 
