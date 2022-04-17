@@ -4,56 +4,80 @@ from .models import Type, Brand, Country, Region, Flavour, Product
 
 class ProductAdmin(admin.ModelAdmin):
     list_display = (
+        'brand_friendly',
         'name',
         'type',
-        'brand',
         'country',
         'region',
         'flavour',
         'price',
-        'rating',
+        'abv',
+        'volume',
+        'get_rating',
         'image',
     )
 
-    ordering = ('name',)
+    ordering = ('brand',)
+
+    def brand_friendly(self, obj):
+        if obj.brand:
+            return obj.brand.friendly_name
+        else:
+            return None
+    brand_friendly.short_description = 'Brand'
 
     def country(self, obj):
-        return obj.brand.country
+        if obj.brand.country:
+            return obj.brand.country.friendly_name
+        else:
+            return None
     country.admin_order_field = 'brand__country'
 
     def region(self, obj):
-        return obj.brand.region
+        if obj.brand.region:
+            return obj.brand.region.friendly_name
+        else:
+            return None
     region.admin_order_field = 'brand__region'
+
+    def get_rating(self, obj):
+        return obj.calc_rating()
+    brand_friendly.short_description = 'Rating'
 
 
 class TypeAdmin(admin.ModelAdmin):
     list_display = (
         'friendly_name',
     )
+    exclude = ('name',)
 
 
 class BrandAdmin(admin.ModelAdmin):
     list_display = (
         'friendly_name',
     )
+    exclude = ('name',)
 
 
 class CountryAdmin(admin.ModelAdmin):
     list_display = (
         'friendly_name',
     )
+    exclude = ('name',)
 
 
 class RegionAdmin(admin.ModelAdmin):
     list_display = (
         'friendly_name',
     )
+    exclude = ('name',)
 
 
 class FlavourAdmin(admin.ModelAdmin):
     list_display = (
         'friendly_name',
     )
+    exclude = ('name',)
 
 
 admin.site.register(Product, ProductAdmin)

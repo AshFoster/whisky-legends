@@ -147,6 +147,16 @@ body {
     cursor: pointer;
 }
 
+/* Shop Detail page */
+
+#rating {
+    font-size: 120%;
+}
+
+#stars i {
+    color: gold;
+}
+
 
 /* /// ---------------------------------------------------- BASE.HTML styles */
 

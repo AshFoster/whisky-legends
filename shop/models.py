@@ -146,16 +146,14 @@ class Product(models.Model):
         blank=True
     )
     rating_total = models.IntegerField(null=True, blank=True)
-    rating = models.DecimalField(
-        max_digits=6,
-        decimal_places=2,
-        null=True,
-        blank=True
-    )
     image = models.ImageField(null=True, blank=True)
 
     def __str__(self):
         return str(self.name)
 
     def calc_rating(self):
-        self.rating = self.rating_total/self.rated.count()
+        if self.rating_total and self.rated.count() != 0:
+            print(self.rated.count())
+            self.rating = self.rating_total/self.rated.count()
+
+        return self.rating

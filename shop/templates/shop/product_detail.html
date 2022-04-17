@@ -1,6 +1,45 @@
 {% extends "base.html" %}
 {% load static %}
+{% load shop_extras %}
 
 {% block content %}
-<h2>{{ product.brand.friendly_name }}: {{ product.name }}</h2>
+<div class="container-fluid my-4">
+    <div class="row justify-content-center">
+        <div class="col-6">
+            <div class="row">
+                <div class="col-6">
+                    <h2 class="mt-5 mb-0">{{ product.brand.friendly_name }}: {{ product.name }}</h2>
+                    <small>({{ product.volume|round_down }}cl) ({{ product.abv|round_down }}%)</small>
+                    <p class="mt-4">{{ product.description }}</p>
+                    <div>
+                        {% if product.rating_total and product.rated.count > 0 %}
+                        Rating: <strong id="rating">{{ product.calc_rating }}</strong>/10 <span id=stars class="ms-3"></span>
+                        {% else %}
+                        Not yet Rated
+                        {% endif %}
+                    </div>
+                </div>
+                <div class="col-6">
+                    {% if product.image %}
+                    <a href="{{ product.image.url }}" target="_blank">
+                        <img src="{{ product.image.url }}" class="card-img-top img-fluid"
+                            alt="{{ product.brand.friendly_name }}: {{ product.name }}">
+                    </a>
+                    {% else %}
+                    <a href="">
+                        <img src="{{ MEDIA_URL }}no-image.jpg" class="card-img-top img-fluid"
+                            alt="{{ product.brand.friendly_name }}: {{ product.name }}">
+                    </a>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% block postloadjs %}
+
+<script src="{% static 'shop/js/product_detail.js' %}"></script>
+
+{% endblock %}
+
 {% endblock %}

@@ -1,7 +1,7 @@
 import math
 from django.shortcuts import render, get_object_or_404
 from django.contrib import messages
-from django.db.models import Q, Min, Max
+from django.db.models import Q, Min, Max, F, Count
 from django.db.models.functions import Lower
 from django.views import generic, View
 from .models import Product
@@ -13,7 +13,7 @@ class Shop(generic.ListView):
     filtering, sorting and search queries
     """
     model = Product
-    queryset = Product.objects.all()
+    queryset = Product.objects.all().order_by('brand')
     template_name = 'shop/shop.html'
     context_object_name = 'products'
     sort = None
@@ -43,6 +43,12 @@ class Shop(generic.ListView):
                 sort_by = 'lower_brand'
                 self.queryset = self.queryset.annotate(
                     lower_brand=Lower('brand__friendly_name'))
+
+            if sort_by == 'rating':
+                self.queryset = self.queryset.annotate(
+                    rating_count=Count('rated'))
+                self.queryset = self.queryset.annotate(
+                    rating=F('rating_total') / F('rating_count'))
 
             if sort_direction:
                 self.direction = sort_direction
