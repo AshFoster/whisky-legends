@@ -8,6 +8,7 @@
     <div class="shop-container-opacity"></div>
     <nav class="row g-0 navbar-expand-md">
         <div class="col">
+            <!-- Sort and Filter toggle button -->
             <div class="row g-0 justify-content-center filter-bar-toggler">
                 <button
                     class="col-10 navbar-toggler btn btn-custom dropdown-toggle box-shadow-custom my-2 py-2 maxw-250px"
@@ -16,11 +17,15 @@
                     Sort & Filter
                 </button>
             </div>
+
+            <!-- Filter bar -->
             <div class="row filter-bar justify-content-center collapse navbar-collapse" id="filterBarToggler">
                 <div class="filter-bar-opacity"></div>
                 <div class="col-10 my-4">
                     <div class="row mb-md-3">
                         <div class="col d-flex flex-column flex-md-row align-items-center justify-content-md-center">
+                            
+                            <!-- Type dropdown -->
                             <div class="dropdown">
                                 <button class="btn filter-btn dropdown-toggle text-wrap text-break" type="button"
                                     id="typeDropdown" data-bs-toggle="dropdown" aria-expanded="false">
@@ -45,6 +50,8 @@
                                     {% endif %}
                                 </ul>
                             </div>
+
+                            <!-- Brands dropdown -->
                             <div class="dropdown">
                                 <button class="btn filter-btn dropdown-toggle text-wrap text-break" type="button"
                                     id="brandDropdown" data-bs-toggle="dropdown" aria-expanded="false">
@@ -69,6 +76,8 @@
                                     {% endif %}
                                 </ul>
                             </div>
+
+                            <!-- Country dropdown -->
                             <div class="dropdown">
                                 <button class="btn filter-btn dropdown-toggle text-wrap text-break" type="button"
                                     id="countryDropdown" data-bs-toggle="dropdown" aria-expanded="false">
@@ -94,6 +103,8 @@
                                     {% endif %}
                                 </ul>
                             </div>
+
+                            <!-- Region dropdown -->
                             <div class="dropdown">
                                 <button class="btn filter-btn dropdown-toggle text-wrap text-break" type="button"
                                     id="regionDropdown" data-bs-toggle="dropdown" aria-expanded="false">
@@ -122,6 +133,8 @@
                     </div>
                     <div class="row">
                         <div class="col d-flex flex-column flex-md-row align-items-center justify-content-md-center">
+
+                            <!-- Price dropdown -->
                             <div class="dropdown">
                                 <button class="btn filter-btn dropdown-toggle text-wrap text-break" type="button"
                                     id="priceDropdown" data-bs-toggle="dropdown" aria-expanded="false">
@@ -148,6 +161,8 @@
                                     {% endif %}
                                 </ul>
                             </div>
+
+                            <!-- Age dropdown -->
                             <div class="dropdown">
                                 <button class="btn filter-btn dropdown-toggle text-wrap text-break" type="button"
                                     id="ageDropdown" data-bs-toggle="dropdown" aria-expanded="false">
@@ -173,6 +188,8 @@
                                     {% endif %}
                                 </ul>
                             </div>
+
+                            <!-- Flavours dropdown -->
                             <div class="dropdown">
                                 <button class="btn filter-btn dropdown-toggle text-wrap text-break" type="button"
                                     id="flavourDropdown" data-bs-toggle="dropdown" aria-expanded="false">
@@ -198,6 +215,8 @@
                                     {% endif %}
                                 </ul>
                             </div>
+
+                            <!-- Sort By dropdown -->
                             <div class="dropdown">
                                 <button class="btn filter-btn dropdown-toggle text-wrap text-break" type="button"
                                     id="sortDropdown" data-bs-toggle="dropdown" aria-expanded="false">
@@ -239,12 +258,16 @@
             </div>
         </div>
     </nav>
+
+    <!-- Shop title -->
     <div class="row">
         <div class="col text-center">
             <h2 class="text-uppercase shop-title">Shop</h2>
             <hr class="w-50 mx-auto">
         </div>
     </div>
+
+    <!-- Product home link and product count message -->
     <div class="row justify-content-center">
         <div class="col-sm-11 col-md-10">
             <p class="text-muted mt-md-2 mb-0 text-center">
@@ -257,8 +280,10 @@
             </p>
         </div>
     </div>
+
+    <!-- Product list -->
     <div class="row justify-content-center">
-        <div class="col-10">
+        <div class="col-11 col-sm-10">
             <div class="row justify-content-center justify-content-sm-start mt-4">
                 {% for product in products %}
                 <div class="col-10 col-sm-6 col-lg-4 col-xl-3 mb-5">
@@ -306,6 +331,8 @@
         </div>
     </div>
 </div>
+
+<!-- Back to top button -->
 <div class="btt-button">
     <a class="btt-link">
         <i class="fas fa-chevron-circle-up mx-auto my-auto"></i>

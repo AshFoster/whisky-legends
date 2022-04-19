@@ -349,6 +349,14 @@ footer {
     }
 }
 
+
+/* For small screen sizes with maximum height of 575px - below Bootstrap sm */
+@media screen and (max-width: 575px) {
+    .product-detail-container hr {
+        width: 75%;
+    }
+}
+
 /* For small screen sizes with minimum height of 576px - Bootstrap sm */
 @media screen and (min-width: 576px) {
     .minw-sm-390px {
