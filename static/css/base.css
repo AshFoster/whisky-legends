@@ -35,8 +35,12 @@ body {
 }
 
 /* Widths & Heights */
-.mw-250px {
+.maxw-250px {
     max-width: 250px !important;
+}
+
+.minw-390px {
+    min-width: 390px;
 }
 
 
@@ -147,14 +151,43 @@ body {
     cursor: pointer;
 }
 
-/* Shop Detail page */
+/* Product Detail page */
 
-#rating {
+.product-detail-container {
+    font-size: 110%;
+}
+
+#ratingValue {
     font-size: 120%;
 }
 
 #stars i {
-    color: gold;
+    color: var(--logo-text-color);
+}
+
+.rating-count {
+    font-size: 80%;
+}
+
+.wishlist-btn {
+    background-color: inherit;
+    color: inherit;
+    text-decoration: none;
+    border: none;
+}
+
+.wishlist-btn:hover,
+.wishlist-btn:focus {
+    color: inherit;
+}
+
+.wishlist-btn i {
+    color: var(--logo-text-color);
+    font-size: 120%;
+}
+
+.back-to-shop i {
+    color: var(--logo-text-color);
 }
 
 
@@ -313,6 +346,13 @@ footer {
 
     .btt-button i {
         font-size: 275%;
+    }
+}
+
+/* For small screen sizes with minimum height of 576px - Bootstrap sm */
+@media screen and (min-width: 576px) {
+    .minw-sm-390px {
+        min-width: 390px;
     }
 }
 

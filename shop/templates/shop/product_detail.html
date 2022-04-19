@@ -3,23 +3,46 @@
 {% load shop_extras %}
 
 {% block content %}
-<div class="container-fluid my-4">
+<div class="container-fluid mb-5 my-lg-0 product-detail-container">
     <div class="row justify-content-center">
-        <div class="col-6">
-            <div class="row">
-                <div class="col-6">
-                    <h2 class="mt-5 mb-0">{{ product.brand.friendly_name }}: {{ product.name }}</h2>
+        <div class="col-12 col-sm-11 col-xl-9 col-xxl-8">
+            <div class="row justify-content-center align-items-center">
+                <div class="col-11 col-sm-8 col-lg-6 order-2 order-lg-1 minw-sm-390px p-0 p-sm-2 text-center text-sm-start">
+                    <h2 class="mt- mb-0">{{ product.brand.friendly_name }}: {{ product.name }}</h2>
                     <small>({{ product.volume|round_down }}cl) ({{ product.abv|round_down }}%)</small>
                     <p class="mt-4">{{ product.description }}</p>
-                    <div>
-                        {% if product.rating_total and product.rated.count > 0 %}
-                        Rating: <strong id="rating">{{ product.calc_rating }}</strong>/10 <span id=stars class="ms-3"></span>
-                        {% else %}
-                        Not yet Rated
-                        {% endif %}
+                    <div class="d-flex flex-column flex-sm-row justify-content-between align-items-center">
+                        <div class="d-flex flex-column justify-content-center justify-content-sm-start">
+                            <div>
+                                Rating: <strong id="ratingValue">
+                                    {% if product.rating_total and product.rated.count > 0 %}{{ product.calc_rating }}{% else %}0{% endif %}
+                                </strong>/10
+                            </div>
+                            <small class="rating-count">({{ product.rated.count }}
+                                vote{% if product.rated.count != 1 %}s{% endif %})</small>
+                        </div>
+                        <div id=stars class="ms-sm-1"></div>
+                    </div>
+                    <hr>
+                    <p class="fs-2 text-center">£{{ product.price }}</p>
+                    <div class="d-flex justify-content-center mb-4">
+                        <button class="wishlist-btn text-uppercase">
+                            {% if wishlist %}
+                            Remove from wishlist &nbsp;<i class="fas fa-heart">
+                                {% else %}
+                                Add to wishlist &nbsp;<i class="far fa-heart"></i>
+                                {% endif %}
+                        </button>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center mx-3">
+                        <a href="{% url 'shop' %}" class="btn btn-outline-black p-0 back-to-shop">
+                            <i class="fas fa-chevron-left"></i><i class="fas fa-chevron-left"></i>
+                            <span class="text-uppercase">&nbsp;Back to shop</span>
+                        </a>
+                        <button class="btn btn-custom text-uppercase fs-5">Add to cart</button>
                     </div>
                 </div>
-                <div class="col-6">
+                <div class="col-11 col-sm-8 col-lg-6 order-1 order-lg-2 minw-sm-390px">
                     {% if product.image %}
                     <a href="{{ product.image.url }}" target="_blank">
                         <img src="{{ product.image.url }}" class="card-img-top img-fluid"
@@ -37,9 +60,8 @@
     </div>
 </div>
 {% block postloadjs %}
-
+{{ block.super }}
 <script src="{% static 'shop/js/product_detail.js' %}"></script>
-
 {% endblock %}
 
 {% endblock %}

@@ -13,7 +13,7 @@ class ProductAdmin(admin.ModelAdmin):
         'price',
         'abv',
         'volume',
-        'get_rating',
+        'rating',
         'image',
     )
 
@@ -40,7 +40,7 @@ class ProductAdmin(admin.ModelAdmin):
             return None
     region.admin_order_field = 'brand__region'
 
-    def get_rating(self, obj):
+    def rating(self, obj):
         return obj.calc_rating()
     brand_friendly.short_description = 'Rating'
 

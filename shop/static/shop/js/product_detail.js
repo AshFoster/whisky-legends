@@ -1,8 +1,6 @@
-// CREDIT - get start function idea was found here:
+// CREDIT - getStars function idea was found here:
 // https://codereview.stackexchange.com/questions/177945/convert-rating-value-to-visible-stars-using-fontawesome-icons
-rating = document.getElementById("rating").textContent
-document.getElementById("stars").innerHTML = getStars(rating);
-
+// This function outputs stars to the nearest half based on a rating out of 10
 function getStars(rating) {
 
     // Round to nearest half
@@ -14,7 +12,7 @@ function getStars(rating) {
         output.push('<i class="fas fa-star" aria-hidden="true"></i>&nbsp;');
 
     // If there is a half a star, append it
-    if (i == .5) output.push('<i class="fas fa-star-half-alt" aria-hidden="true"></i>&nbsp;');
+    if (i == 0.5) output.push('<i class="fas fa-star-half-alt" aria-hidden="true"></i>&nbsp;');
 
     // Fill the empty stars
     for (let i = (10 - rating); i >= 1; i--)
@@ -24,3 +22,6 @@ function getStars(rating) {
 
 }
 // END CREDIT
+
+rating = document.getElementById("ratingValue").textContent
+document.getElementById("stars").innerHTML = getStars(rating);

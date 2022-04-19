@@ -10,7 +10,7 @@
         <div class="col">
             <div class="row g-0 justify-content-center filter-bar-toggler">
                 <button
-                    class="col-10 navbar-toggler btn btn-custom dropdown-toggle box-shadow-custom my-2 py-2 mw-250px"
+                    class="col-10 navbar-toggler btn btn-custom dropdown-toggle box-shadow-custom my-2 py-2 maxw-250px"
                     type="button" data-bs-toggle="collapse" data-bs-target="#filterBarToggler"
                     aria-controls="filterBarToggler" aria-expanded="false" aria-label="Filter Toggler">
                     Sort & Filter
@@ -314,7 +314,6 @@
 {% endblock %}
 
 {% block postloadjs %}
-
+{{ block.super }}
 <script src="{% static 'shop/js/shop.js' %}"></script>
-
 {% endblock %}
