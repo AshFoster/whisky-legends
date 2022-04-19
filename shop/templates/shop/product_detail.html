@@ -46,7 +46,7 @@
 
                     <!-- Add to cart and back to shop buttons -->
                     <div class="d-flex justify-content-between align-items-center mx-3">
-                        <a href="{% url 'shop' %}" class="btn btn-outline-black p-0 back-to-shop">
+                        <a href="{% url 'shop' %}" class="btn p-2 back-to-shop">
                             <i class="fas fa-chevron-left"></i><i class="fas fa-chevron-left"></i>
                             <span class="text-uppercase">&nbsp;Back to shop</span>
                         </a>
@@ -72,9 +72,9 @@
         </div>
     </div>
 </div>
+{% endblock %}
+
 {% block postloadjs %}
 {{ block.super }}
 <script src="{% static 'shop/js/product_detail.js' %}"></script>
-{% endblock %}
-
 {% endblock %}

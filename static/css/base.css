@@ -24,6 +24,11 @@ body {
     background-color: var(--logo-text-color);
 }
 
+.btn-custom:hover,
+.btn-custom:focus {
+    opacity: .9;
+}
+
 .link-custom {
     color: var(--logo-text-color);
 }
@@ -186,8 +191,18 @@ body {
     font-size: 120%;
 }
 
-.back-to-shop i {
+/* /// ---------------------------------------------------- MULTI PAGE STYLES */
+
+/* Product detail page and Cart page */
+.back-to-shop {
+    border-color: var(--logo-text-color) !important;
     color: var(--logo-text-color);
+}
+
+.back-to-shop:hover,
+.back-to-shop:focus {
+    background-color: var(--logo-text-color);
+    color: #fff;
 }
 
 
