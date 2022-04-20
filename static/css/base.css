@@ -337,6 +337,17 @@ footer {
 
 /* /// ---------------------------------------------------- MEDIA QUERIES */
 
+/* For very small screen sizes with maximum height of 325px */
+@media screen and (max-width: 325px) {
+    #mobile-search > div {
+        margin-left: .5rem !important;
+    }
+    
+    .navbar-toggler {
+        margin-right: .25rem !important;
+    }
+}
+
 /* For very small screen sizes with minimum height of 375px */
 @media screen and (min-width: 375px) {
     .px-375px-3 {
@@ -354,8 +365,8 @@ footer {
     .list-inline-item .nav-link,
     .list-inline-item .navbar-toggler {
         font-size: 65%;
-        padding-left: 0;
-        padding-right: 0;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
     }
 
     .brandingLogo img {
