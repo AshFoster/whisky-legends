@@ -3,7 +3,7 @@
 {% load shop_extras %}
 
 {% block content %}
-<div class="container-fluid mt-4 mb-5 mb-lg-4 product-detail-container">
+<div class="container-fluid mt-4 mb-5 mb-lg-5 my-5 product-detail-container">
     <div class="row justify-content-center">
         <div class="col-12 col-sm-11 col-xl-9 col-xxl-8">
             <div class="row justify-content-center align-items-center">
@@ -12,8 +12,11 @@
                 <div
                     class="col-11 col-sm-8 col-lg-6 order-2 order-lg-1 minw-sm-390px p-0 p-sm-2 text-center text-sm-start">
                     <h2 class="mt- mb-0">{{ product.brand.friendly_name }}: {{ product.name }}</h2>
-                    <small>({{ product.volume|round_down }}cl) ({{ product.abv|round_down }}%)</small>
+                    <small class="px-1">{{ product.brand.region.friendly_name }}, {{ product.brand.country.friendly_name }}</small>
+                    <br>
+                    <small class="px-1">({{ product.volume|round_down }}cl, {{ product.abv|round_down }}%)</small>
                     <p class="mt-4">{{ product.description }}</p>
+                    <p class="my-3"><small>Flavour: {{ product.flavour.friendly_name }}</small></p>
 
                     <!-- Product rating -->
                     <div class="d-flex flex-column flex-sm-row justify-content-between align-items-center">
