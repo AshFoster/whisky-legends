@@ -1,0 +1,38 @@
+<script type="text/javascript">
+    // Disable +/- buttons outside 1-99 range
+    function handleEnableDisable(productId) {
+        let currentValue = parseInt(document.querySelector(`#id-qty-${productId}`).value)
+        let minusDisabled = currentValue < 2;
+        let plusDisabled = currentValue > 98;
+        document.querySelector(`#decrement-qty-${productId}`).disabled = minusDisabled;
+        document.querySelector(`#increment-qty-${productId}`).disabled = plusDisabled;
+    }
+
+    // Ensure proper enabling/disabling of qty-input elements on page load
+    let qtyInput = document.querySelector('.input-group .qty-input');
+    handleEnableDisable(qtyInput.getAttribute('data-product-id'));
+
+    qtyInput.addEventListener('change', function () {
+        handleEnableDisable(this.getAttribute('data-product-id'));
+    })
+
+    // Increment quantity
+    document.querySelector('.increment-qty').addEventListener('click', function (e) {
+        e.preventDefault();
+        let qtyInput = document.querySelector('.input-group .qty-input');
+        let currentValue = parseInt(qtyInput.value);
+        qtyInput.value = currentValue + 1;
+        let productId = this.getAttribute('data-product-id')
+        handleEnableDisable(productId);
+    })
+
+    // Decrement quantity
+    document.querySelector('.decrement-qty').addEventListener('click', function (e) {
+        e.preventDefault();
+        let qtyInput = document.querySelector('.input-group .qty-input');
+        let currentValue = parseInt(qtyInput.value);
+        qtyInput.value = currentValue - 1;
+        let productId = this.getAttribute('data-product-id')
+        handleEnableDisable(productId);
+    })
+</script>

@@ -54,17 +54,17 @@
                                     <div class="input-group">
                                         <div class="input-group-prepend">
                                             <button class="decrement-qty btn btn-custom rounded-0 rounded-start"
-                                                type="button" data-item_id="{{ product.id }}"
+                                                data-product-id="{{ product.id }}"
                                                 id="decrement-qty-{{ product.id }}">
                                                 <i class="fas fa-minus"></i>
                                             </button>
                                         </div>
                                         <input class="form-control qty-input" type="number" name="quantity" value="1"
-                                            min="1" max="99" data-item_id="{{ product.id }}"
+                                            min="1" max="99" data-product-id="{{ product.id }}"
                                             id="id-qty-{{ product.id }}">
                                         <div class="input-group-append">
                                             <button class="increment-qty btn btn-custom rounded-0 rounded-end"
-                                                type="button" data-item_id="{{ product.id }}"
+                                                data-product-id="{{ product.id }}"
                                                 id="increment-qty-{{ product.id }}">
                                                 <i class="fas fa-plus"></i>
                                             </button>
@@ -120,5 +120,6 @@
 
 {% block postloadjs %}
 {{ block.super }}
+{% include 'shop/includes/quantity_input_script.html' %}
 <script src="{% static 'shop/js/product_detail.js' %}"></script>
 {% endblock %}
