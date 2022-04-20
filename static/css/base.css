@@ -337,6 +337,14 @@ footer {
 
 /* /// ---------------------------------------------------- MEDIA QUERIES */
 
+/* For very small screen sizes with minimum height of 375px */
+@media screen and (min-width: 375px) {
+    .px-375px-3 {
+        padding-right: 1rem;
+        padding-left: 1rem;;
+    }
+}
+
 /* For very small screen sizes with maximum height of 470px */
 @media screen and (max-width: 470px) {
     .mobile-search-dropdown {

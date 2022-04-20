@@ -1,5 +1,5 @@
 # CREDIT - Idea and basic structure of contexts.py came from
-# Code Institue's walkthrough project Boutique Ado
+# Code Institue's walkthrough project 'Boutique Ado'
 from decimal import Decimal
 from django.conf import settings
 
