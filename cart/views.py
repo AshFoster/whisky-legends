@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
 
+
 def view_cart(request):
     """ A view to return the cart contents page """
 
@@ -7,7 +8,7 @@ def view_cart(request):
 
 
 def add_to_cart(request, product_id):
-    """ 
+    """
     A view to add a chosen quantity of a specified
     product to the cart
     """
@@ -21,4 +22,5 @@ def add_to_cart(request, product_id):
         cart[product_id] = quantity
 
     request.session['cart'] = cart
+    print(request.session['cart'])
     return redirect(redirect_url)
