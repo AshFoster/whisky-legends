@@ -193,8 +193,26 @@ body {
     border-right: none;
 }
 
-.cart-table .wishlist-btn {
+.cart-table .wishlist-btn,
+.remove-btn,
+.update-btn  {
     font-size: 90%;
+}
+
+.remove-btn,
+.update-btn {
+    cursor: pointer;
+    background-color: inherit;
+    text-decoration: none;
+    border: none;
+}
+
+.remove-btn:hover,
+.remove-btn:focus,
+.update-btn:hover,
+.update-btn:focus {
+    color: inherit;
+    text-decoration: underline;
 }
 
 .cart-subtotal,
