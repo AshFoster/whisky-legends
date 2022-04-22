@@ -194,9 +194,7 @@ body {
 }
 
 .cart-table .wishlist-btn {
-    position: absolute;
-    bottom: 10%;
-    /* right: 5%; */
+    font-size: 90%;
 }
 
 .cart-subtotal,
@@ -233,6 +231,7 @@ body {
 .wishlist-btn:hover,
 .wishlist-btn:focus {
     color: inherit;
+    text-decoration: underline;
 }
 
 .wishlist-btn i {
@@ -457,6 +456,16 @@ footer {
         width: 100%;
     }
 
+    .cart-table td {
+        display: block;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .cart-table td img {
+        width: 50%;
+    }
 }
 
 /* For screen sizes with minimum height of 768px - Bootstrap md */

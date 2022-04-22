@@ -54,8 +54,7 @@
                                     <div class="input-group">
                                         <div class="input-group-prepend">
                                             <button class="decrement-qty btn btn-custom rounded-0 rounded-start"
-                                                data-product-id="{{ product.id }}"
-                                                id="decrement-qty-{{ product.id }}">
+                                                data-product-id="{{ product.id }}" id="decrement-qty-{{ product.id }}">
                                                 <i class="fas fa-minus"></i>
                                             </button>
                                         </div>
@@ -64,8 +63,7 @@
                                             id="id-qty-{{ product.id }}">
                                         <div class="input-group-append">
                                             <button class="increment-qty btn btn-custom rounded-0 rounded-end"
-                                                data-product-id="{{ product.id }}"
-                                                id="increment-qty-{{ product.id }}">
+                                                data-product-id="{{ product.id }}" id="increment-qty-{{ product.id }}">
                                                 <i class="fas fa-plus"></i>
                                             </button>
                                         </div>
@@ -90,10 +88,10 @@
                     <div class="d-flex justify-content-center mt-4">
                         <button class="wishlist-btn text-uppercase">
                             {% if wishlist %}
-                            Remove from wishlist &nbsp;<i class="fas fa-heart">
-                                {% else %}
-                                Add to wishlist &nbsp;<i class="far fa-heart"></i>
-                                {% endif %}
+                            Remove from wishlist<span class="ms-1"><i class="fas fa-heart"></span>
+                            {% else %}
+                            Add to wishlist<span class="ms-1"><i class="far fa-heart"></i></span>
+                            {% endif %}
                         </button>
                     </div>
                 </div>

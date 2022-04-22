@@ -8,37 +8,42 @@
 
     <!-- Cart Heading -->
     <div class="row justify-content-center">
-        <div class="col-12">
-            <h2 class="my-4">Your Shopping Cart <small class="text-muted fs-5">({{ product_count }} items)</small></h2>
+        <div class="col-11 col-lg-12">
+            <h2 class="my-4 text-center text-lg-start">Your Shopping Cart <small
+                    class="d-block d-lg-inline text-muted fs-5">({{ product_count }} items)</small></h2>
+            <div class="row g-0 justify-content-center">
+                <hr class="d-lg-none mt-0 mb-4">
+            </div>
         </div>
     </div>
 
     <!-- Cart items list -->
     <div class="row justify-content-evenly">
-        <div class="col-8">
+        <div class="col-11 col-lg-8 order-2 order-lg-1">
             {% if cart_items %}
-            <div class="table-responsive rounded">
+            <div class="table-responsive rounded text-center text-md-start">
                 <table class="table table-sm table-bordered cart-table">
                     {% for item in cart_items %}
-                    <tr class="position-relative">
-                        <td class="p-3 w-15 w-140px">
+                    <tr>
+                        <td class="p-md-3 w-140px">
                             <img class="img-fluid rounded" src="{{ item.product.image.url }}">
                         </td>
-                        <td class="pt-5">
+                        <td class="pt-md-5 position-relative">
                             <p class="my-0"><strong>{{ item.product.brand.friendly_name }}:
                                     {{ item.product.name }}</strong></p>
-                            <p class="my-0 text-muted">{{ item.product.volume|round_down }}cl,
+                            <p class="mt-0 mb-3 text-muted">{{ item.product.volume|round_down }}cl,
                                 {{ item.product.abv|round_down }}%</p>
-                            <button class="wishlist-btn text-uppercase p-0">
+                            <button class="wishlist-btn text-uppercase mt-4 p-0 d-none d-md-inline-block">
                                 {% if wishlist %}
-                                Remove from wishlist &nbsp;<i class="fas fa-heart">
-                                    {% else %}
-                                    Add to wishlist &nbsp;<i class="far fa-heart"></i>
-                                    {% endif %}
+                                Remove from wishlist<span class="ms-1"><i class="fas fa-heart"></span>
+                                {% else %}
+                                Add to wishlist<span class="ms-1"><i class="far fa-heart"></i></span>
+                                {% endif %}
                             </button>
                         </td>
-                        <td class="pt-5">
-                            <div class="col-12 d-flex flex-column justify-content-start align-items-start">
+                        <td class="pt-md-5">
+                            <div
+                                class="col-12 d-flex flex-column justify-content-start align-items-center align-items-md-start">
                                 <p class="mb-1"><strong>Quantity:</strong></p>
                                 <div class="form-group w-75">
                                     <div class="input-group">
@@ -64,15 +69,23 @@
                                 <p class="mt-2">Price: £{{ item.product.price }}</p>
                             </div>
                         </td>
-                        <td class="pt-5">
+                        <td class="pt-md-5">
                             <p class="mb-1"><strong>Item total:</strong></p>
-                            <p class="my-0 fs-5"><strong>£{{ item.product.price|calc_subtotal:item.quantity }}</strong>
+                            <p class="mt-0 mb-3 fs-5">
+                                <strong>£{{ item.product.price|calc_subtotal:item.quantity }}</strong>
                             </p>
+                            <button class="wishlist-btn text-uppercase my-3 p-0 d-md-none">
+                                {% if wishlist %}
+                                Remove from wishlist<span class="ms-1"><i class="fas fa-heart"></span>
+                                {% else %}
+                                Add to wishlist<span class="ms-1"><i class="far fa-heart"></i></span>
+                                {% endif %}
+                            </button>
                         </td>
                     </tr>
                     {% endfor %}
                 </table>
-                <a href="{% url 'shop' %}" class="btn p-2 back-to-shop my-4 ms-3">
+                <a href="{% url 'shop' %}" class="btn p-2 back-to-shop my-4 ms-md-3">
                     <i class="fas fa-chevron-left"></i><i class="fas fa-chevron-left"></i>
                     <span class="text-uppercase">&nbsp;Back to shop</span>
                 </a>
@@ -90,8 +103,8 @@
         </div>
 
         <!-- Cart totals and checkout button -->
-        <div class="col-4">
-            <div class="mx-4 p-4 rounded-3 box-shadow-custom">
+        <div class="col-10 col-sm-8 col-lg-4 order-1 order-lg-2 mb-4">
+            <div class="mx-lg-4 p-4 rounded-3 box-shadow-custom">
                 <h4 class="mb-4"><strong>Order now</strong></h4>
                 <div class="d-flex justify-content-between align-items-center mb-3 me-3">
                     <span class="cart-subtotal">Subtotal</span>
