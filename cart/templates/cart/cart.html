@@ -1,23 +1,84 @@
 {% extends "base.html" %}
 {% load static %}
+{% load cart_extras %}
 
 {% block content %}
 
-<div class="container mb-2">
-    <div class="row">
-        <div class="col">
+<div class="container-lg my-3">
+
+    <!-- Cart Heading -->
+    <div class="row justify-content-center">
+        <div class="col-12">
             <h2 class="my-4">Your Shopping Cart <small class="text-muted fs-5">({{ product_count }} items)</small></h2>
-            <hr>
         </div>
     </div>
 
-    <div class="row">
-        <div class="col">
+    <!-- Cart items list -->
+    <div class="row justify-content-evenly">
+        <div class="col-8">
             {% if cart_items %}
             <div class="table-responsive rounded">
-                {{ cart_items }}
+                <table class="table table-sm table-bordered cart-table">
+                    {% for item in cart_items %}
+                    <tr class="position-relative">
+                        <td class="p-3 w-15 w-140px">
+                            <img class="img-fluid rounded" src="{{ item.product.image.url }}">
+                        </td>
+                        <td class="pt-5">
+                            <p class="my-0"><strong>{{ item.product.brand.friendly_name }}:
+                                    {{ item.product.name }}</strong></p>
+                            <p class="my-0 text-muted">{{ item.product.volume|round_down }}cl,
+                                {{ item.product.abv|round_down }}%</p>
+                            <button class="wishlist-btn text-uppercase p-0">
+                                {% if wishlist %}
+                                Remove from wishlist &nbsp;<i class="fas fa-heart">
+                                    {% else %}
+                                    Add to wishlist &nbsp;<i class="far fa-heart"></i>
+                                    {% endif %}
+                            </button>
+                        </td>
+                        <td class="pt-5">
+                            <div class="col-12 d-flex flex-column justify-content-start align-items-start">
+                                <p class="mb-1"><strong>Quantity:</strong></p>
+                                <div class="form-group w-75">
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <button class="decrement-qty btn btn-custom rounded-0 rounded-start"
+                                                data-product-id="{{ item.product.id }}"
+                                                id="decrement-qty-{{ item.product.id }}">
+                                                <i class="fas fa-minus"></i>
+                                            </button>
+                                        </div>
+                                        <input class="form-control qty-input" type="number" name="quantity"
+                                            value="{{ item.quantity }}" min="1" max="99"
+                                            data-product-id="{{ item.product.id }}" id="id-qty-{{ item.product.id }}">
+                                        <div class="input-group-append">
+                                            <button class="increment-qty btn btn-custom rounded-0 rounded-end"
+                                                data-product-id="{{ item.product.id }}"
+                                                id="increment-qty-{{ item.product.id }}">
+                                                <i class="fas fa-plus"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="mt-2">Price: £{{ item.product.price }}</p>
+                            </div>
+                        </td>
+                        <td class="pt-5">
+                            <p class="mb-1"><strong>Item total:</strong></p>
+                            <p class="my-0 fs-5"><strong>£{{ item.product.price|calc_subtotal:item.quantity }}</strong>
+                            </p>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </table>
+                <a href="{% url 'shop' %}" class="btn p-2 back-to-shop my-4 ms-3">
+                    <i class="fas fa-chevron-left"></i><i class="fas fa-chevron-left"></i>
+                    <span class="text-uppercase">&nbsp;Back to shop</span>
+                </a>
             </div>
             {% else %}
+            <hr>
             <div class="d-flex flex-column justify-content-center align-items-center mb-4 mx-3">
                 <p class="lead mt-5">Your cart is empty.</p>
                 <a href="{% url 'shop' %}" class="btn p-2 back-to-shop">
@@ -27,7 +88,39 @@
             </div>
             {% endif %}
         </div>
+
+        <!-- Cart totals and checkout button -->
+        <div class="col-4">
+            <div class="mx-4 p-4 rounded-3 box-shadow-custom">
+                <h4 class="mb-4"><strong>Order now</strong></h4>
+                <div class="d-flex justify-content-between align-items-center mb-3 me-3">
+                    <span class="cart-subtotal">Subtotal</span>
+                    <span>£{{ total|floatformat:2 }}</span>
+                </div>
+                <div class="d-flex justify-content-between align-items-center mb-3 me-3">
+                    <span class="cart-delivery">Delivery</span>
+                    <span>£{{ delivery|floatformat:2 }}</span>
+                </div>
+                <hr>
+                <div class="d-flex justify-content-between align-items-center mb-3 me-3">
+                    <span class="cart-total"><strong>Total</strong></span>
+                    <span><strong>£{{ grand_total|floatformat:2 }}</strong></span>
+                </div>
+                {% if free_delivery_delta > 0 %}
+                <p class="mb-1 text-danger">
+                    You could get free delivery by spending just <strong>£{{ free_delivery_delta }}</strong> more!
+                </p>
+                {% endif %}
+                <a href="#" class="btn btn-custom text-uppercase w-100 my-2 fs-5 box-shadow-custom">Checkout&nbsp;
+                    <i class="fas fa-lock"></i></a>
+            </div>
+        </div>
     </div>
 </div>
 
+{% endblock %}
+
+{% block postloadjs %}
+{{ block.super }}
+{% include 'shop/includes/quantity_input_script.html' %}
 {% endblock %}

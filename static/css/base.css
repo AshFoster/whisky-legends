@@ -48,6 +48,14 @@ body {
     min-width: 390px;
 }
 
+.w-15 {
+    width: 15%;
+}
+
+.w-140px {
+    width: 140px;
+}
+
 
 /* /// ---------------------------------------------------- SPECIFIC PAGE STYLES */
 
@@ -174,20 +182,30 @@ body {
     font-size: 80%;
 }
 
-.wishlist-btn {
-    background-color: inherit;
-    color: inherit;
-    text-decoration: none;
-    border: none;
+/* Cart page */
+
+.cart-table {
+    border-color: rgba(0, 0, 0, .25);
 }
 
-.wishlist-btn:hover,
-.wishlist-btn:focus {
-    color: inherit;
+.cart-table td {
+    border-left: none;
+    border-right: none;
 }
 
-.wishlist-btn i {
-    color: var(--logo-text-color);
+.cart-table .wishlist-btn {
+    position: absolute;
+    bottom: 10%;
+    /* right: 5%; */
+}
+
+.cart-subtotal,
+.cart-delivery {
+    font-size: 110%;
+    color: rgba(0, 0, 0, .8);
+}
+
+.cart-total {
     font-size: 120%;
 }
 
@@ -203,6 +221,23 @@ body {
 .back-to-shop:focus {
     background-color: var(--logo-text-color);
     color: #fff;
+}
+
+.wishlist-btn {
+    background-color: inherit;
+    color: inherit;
+    text-decoration: none;
+    border: none;
+}
+
+.wishlist-btn:hover,
+.wishlist-btn:focus {
+    color: inherit;
+}
+
+.wishlist-btn i {
+    color: var(--logo-text-color);
+    font-size: 120%;
 }
 
 
@@ -339,10 +374,10 @@ footer {
 
 /* For very small screen sizes with maximum height of 325px */
 @media screen and (max-width: 325px) {
-    #mobile-search > div {
+    #mobile-search>div {
         margin-left: .5rem !important;
     }
-    
+
     .navbar-toggler {
         margin-right: .25rem !important;
     }
@@ -352,7 +387,8 @@ footer {
 @media screen and (min-width: 375px) {
     .px-375px-3 {
         padding-right: 1rem;
-        padding-left: 1rem;;
+        padding-left: 1rem;
+        ;
     }
 }
 
@@ -448,9 +484,7 @@ footer {
 }
 
 /* For screen sizes with maximum height of 991px - below Bootstrap lg */
-@media screen and (max-width: 991px) {
-
-}
+@media screen and (max-width: 991px) {}
 
 /* For screen sizes with minimum height of 992px - Bootstrap lg */
 @media screen and (min-width: 992px) {
