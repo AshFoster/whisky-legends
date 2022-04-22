@@ -40,35 +40,43 @@
                             </button>
                         </td>
                         <td class="pt-md-5">
-                            <div class="col-12 d-flex flex-column justify-content-start align-items-center align-items-md-start">
-                                <div class="d-flex justify-content-between align-items-center w-75">
-                                    <p class="mb-1"><strong>Quantity:</strong></p>
-                                    <a class="update-btn text-primary text-uppercase mb-1 p-0">
-                                        Update<span class="ms-1"><i class="fas fa-edit"></i></span>
-                                    </a>
-                                </div>
-                                <div class="form-group w-75">
-                                    <div class="input-group">
-                                        <div class="input-group-prepend">
-                                            <button class="decrement-qty btn btn-custom rounded-0 rounded-start"
-                                                data-product-id="{{ item.product.id }}"
-                                                id="decrement-qty-{{ item.product.id }}">
-                                                <i class="fas fa-minus"></i>
-                                            </button>
+                            <div
+                                class="d-flex flex-column justify-content-start align-items-center align-items-md-start">
+                                <form class="form update-form w-75" action="{% url 'update_cart' item.product_id %}" method="POST">
+                                    {% csrf_token %}
+                                    <div class="form-row">
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <p class="mb-1"><strong>Quantity:</strong></p>
+                                            <a class="update-btn text-primary text-uppercase mb-1 p-0">
+                                                Update<span class="ms-1"><i class="fas fa-edit"></i></span>
+                                            </a>
                                         </div>
-                                        <input class="form-control qty-input" type="number" name="quantity"
-                                            value="{{ item.quantity }}" min="1" max="99"
-                                            data-product-id="{{ item.product.id }}" id="id-qty-{{ item.product.id }}">
-                                        <div class="input-group-append">
-                                            <button class="increment-qty btn btn-custom rounded-0 rounded-end"
-                                                data-product-id="{{ item.product.id }}"
-                                                id="increment-qty-{{ item.product.id }}">
-                                                <i class="fas fa-plus"></i>
-                                            </button>
+
+                                        <div class="form-group">
+                                            <div class="input-group">
+                                                <div class="input-group-prepend">
+                                                    <button class="decrement-qty btn btn-custom rounded-0 rounded-start"
+                                                        data-product-id="{{ item.product.id }}"
+                                                        id="decrement-qty-{{ item.product.id }}">
+                                                        <i class="fas fa-minus"></i>
+                                                    </button>
+                                                </div>
+                                                <input class="form-control qty-input" type="number" name="quantity"
+                                                    value="{{ item.quantity }}" min="1" max="99"
+                                                    data-product-id="{{ item.product.id }}"
+                                                    id="id-qty-{{ item.product.id }}">
+                                                <div class="input-group-append">
+                                                    <button class="increment-qty btn btn-custom rounded-0 rounded-end"
+                                                        data-product-id="{{ item.product.id }}"
+                                                        id="increment-qty-{{ item.product.id }}">
+                                                        <i class="fas fa-plus"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <p class="mt-2 mb-0">Price: £{{ item.product.price }}</p>
+                                </form>
+                                <p class="mt-2 mb-0"><small>Price: £{{ item.product.price }}</small></p>
                             </div>
                         </td>
                         <td class="pt-md-5">
@@ -139,4 +147,13 @@
 {% block postloadjs %}
 {{ block.super }}
 {% include 'shop/includes/quantity_input_script.html' %}
+<script type="text/javascript">
+    // Update quantity on click
+    document.querySelectorAll('.update-btn').forEach(item => {
+        item.addEventListener('click', function () {
+            let form = this.closest('.update-form');
+            form.submit();
+        });
+    });
+</script>
 {% endblock %}
