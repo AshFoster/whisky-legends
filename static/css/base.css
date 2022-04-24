@@ -13,6 +13,16 @@ body {
     font-family: 'Roboto Condensed', sans-serif;
 }
 
+main {
+    position: relative;
+    top: 96px;
+}
+
+footer {
+    position: relative;
+    bottom: -96px;
+}
+
 /* Box shadows */
 .box-shadow-custom {
     box-shadow: 0 6px 10px rgba(0, 0, 0, .8), 0 0 6px rgba(0, 0, 0, .5);
@@ -488,6 +498,17 @@ footer {
 
 /* For screen sizes with minimum height of 768px - Bootstrap md */
 @media screen and (min-width: 767px) {
+    main {
+        top: 122px;
+    }
+
+    footer {
+        bottom: -122px;
+    }
+
+    .topnav {
+        height: 122px;
+    }
 
     .account-icon:hover,
     .account-icon:focus {
