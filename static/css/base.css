@@ -503,6 +503,15 @@ footer {
     .product-detail-container hr {
         width: 75%;
     }
+
+    .message-container {
+        left: 5%;
+        right: 5%;
+    }
+
+    .toast {
+        width: 100% !important;
+    }
 }
 
 /* For small screen sizes with minimum height of 576px - Bootstrap sm */
@@ -545,6 +554,7 @@ footer {
     .cart-table td img {
         width: 50%;
     }
+
 }
 
 /* For screen sizes with minimum height of 768px - Bootstrap md */
