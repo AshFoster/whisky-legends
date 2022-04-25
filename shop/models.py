@@ -154,6 +154,4 @@ class Product(models.Model):
     def calc_rating(self):
         if self.rating_total and self.rated.count() != 0:
             print(self.rated.count())
-            self.rating = self.rating_total/self.rated.count()
-
-        return self.rating
+            return self.rating_total/self.rated.count()

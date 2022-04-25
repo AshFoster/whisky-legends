@@ -28,6 +28,23 @@ footer {
     box-shadow: 0 6px 10px rgba(0, 0, 0, .8), 0 0 6px rgba(0, 0, 0, .5);
 }
 
+.box-shadow-success {
+    box-shadow: 0 6px 10px #124d20, 0 0 6px #124d20;
+}
+
+.box-shadow-warning {
+    box-shadow: 0 6px 10px #5f4804, 0 0 6px #5f4804;
+}
+
+.box-shadow-error {
+    box-shadow: 0 6px 10px #641820, 0 0 6px #641820;
+}
+
+.box-shadow-info {
+    box-shadow: 0 6px 10px #01264e, 0 0 6px #01264e;
+}
+
+
 /* Links/Buttons */
 .btn-custom {
     color: #fff !important;
@@ -396,6 +413,35 @@ footer {
     border: none !important;
 }
 
+/* Bootstrap toasts */
+
+.message-container {
+    position: fixed;
+    top: 105px;
+    right: 5px;
+    z-index: 9999;
+    max-width: calc(100% - 10px);
+}
+
+.custom-toast {
+    overflow: visible;
+    color: rgba(0, 0, 0, 1);
+}
+
+.custom-toast .toast-header {
+    color: rgba(0, 0, 0, 1);
+}
+
+.toast-close {
+    background-color: inherit;
+    border: none;
+}
+
+.toast-close i {
+    color: rgba(0, 0, 0, .6);
+    font-size: 150%;
+}
+
 
 /* /// ---------------------------------------------------- MEDIA QUERIES */
 
@@ -415,7 +461,6 @@ footer {
     .px-375px-3 {
         padding-right: 1rem;
         padding-left: 1rem;
-        ;
     }
 }
 

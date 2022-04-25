@@ -63,7 +63,21 @@
     </header>
 
     {% if messages %}
-    <div class="message-container"></div>
+    <div class="message-container">
+        {% for message in messages %}
+        {% with message.level as level %}
+        {% if level == 40 %}
+        {% include 'includes/toasts/toast_error.html' %}
+        {% elif level == 30 %}
+        {% include 'includes/toasts/toast_warning.html' %}
+        {% elif level == 25 %}
+        {% include 'includes/toasts/toast_success.html' %}
+        {% else %}
+        {% include 'includes/toasts/toast_info.html' %}
+        {% endif %}
+        {% endwith %}
+        {% endfor %}
+    </div>
     {% endif %}
 
     {% block page_header %}
@@ -128,7 +142,8 @@
             <div class="row g-0">
                 <div class="col text-center">
                     <p class="mb-2">
-                        <a href="#" class="link-custom" data-bs-toggle="modal" data-bs-target="#privacyPolicyModal">Privacy Policy</a>
+                        <a href="#" class="link-custom" data-bs-toggle="modal"
+                            data-bs-target="#privacyPolicyModal">Privacy Policy</a>
                     </p>
                 </div>
             </div>
@@ -160,6 +175,12 @@
     </div>
 
     {% block postloadjs %}
+    <script type="text/javascript">
+        document.querySelectorAll('.toast').forEach(item => {
+            toast = new bootstrap.Toast(item);
+            toast.show();
+        });
+    </script>
     {% endblock %}
 
 </body>

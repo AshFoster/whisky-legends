@@ -105,10 +105,10 @@ class Shop(generic.ListView):
                 price__range=(self.price_min, self.price_max))
 
         if not self.search_query:
-            messages.error(
-                self.request,
-                "You didn't enter any search criteria!"
-            )
+            # messages.error(
+            #     self.request,
+            #     "You didn't enter any search criteria!"
+            # )
             return self.queryset
 
         queries = (Q(name__icontains=self.search_query) |
