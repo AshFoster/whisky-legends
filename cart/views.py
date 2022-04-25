@@ -47,7 +47,6 @@ def update_cart(request, product_id):
     try:
         product = get_object_or_404(Product, pk=product_id)
         quantity = int(request.POST.get('quantity'))
-        print(quantity)
         cart = request.session.get('cart', {})
 
         if quantity > 0:

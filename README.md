@@ -232,6 +232,8 @@ Google Chrome was the browser used for the majority of testing during the develo
 
 - If a product did not have a region associated with it then an error was caused in views.py when trying to add it to the regions dictionary. This was fixed by adding an if statement that only tried to add to the dictionary if a region exists for the product.
 
+- The maximum number of any item that can be added to the cart is 99, but on the cart page if a number higher than 99 was typed into the quantity form and the 'update' button was then clicked, the form validation was not working. This was becasue the form was being submitted using AJAX and therefore skipped the HTML validation step. This was fixed by manually validating the value when the 'update' button is clicked and only submitting the form using AJAX if valid. If not valid, a 'click' event of a hidden 'submit' input field is called which triggers the HTML form validation.
+
 #### Unfixed Bugs
 
 - 

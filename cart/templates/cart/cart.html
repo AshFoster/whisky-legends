@@ -81,6 +81,7 @@
                                             </div>
                                         </div>
                                     </div>
+                                    <input type="submit" style="display:none" name="submit">
                                 </form>
                                 <p class="mt-2 mb-0"><small>Price: £{{ item.product.price }}</small></p>
                             </div>
@@ -163,20 +164,41 @@
     document.querySelectorAll('.update-btn').forEach(item => {
         item.addEventListener('click', function () {
             let updateForm = this.closest('.update-form');
-            let formData = new FormData(updateForm)
             let qtyInput = updateForm.querySelector('.qty-input');
-            let productId = qtyInput.getAttribute('id').split('id-qty-')[1];
-            let url = `/cart/update/${productId}/`;
-            let csrfToken = "{{ csrf_token }}";
-            let httpRequest = new XMLHttpRequest()
-            httpRequest.open('POST', url)
-            httpRequest.setRequestHeader('X-CSRF-Token', csrfToken)
-            httpRequest.onreadystatechange = function () {
-                if (httpRequest.readyState == 4 && httpRequest.status == 200) {
-                    location.reload();
+
+            if (parseInt(qtyInput.value) >= parseInt(qtyInput.min) && parseInt(qtyInput.value) <= parseInt(qtyInput.max)) {
+                let formData = new FormData(updateForm)
+                let productId = qtyInput.getAttribute('id').split('id-qty-')[1];
+                let url = `/cart/update/${productId}/`;
+                let csrfToken = "{{ csrf_token }}";
+
+                let httpRequest = new XMLHttpRequest()
+                httpRequest.open('POST', url)
+                httpRequest.setRequestHeader('X-CSRF-Token', csrfToken)
+                httpRequest.onreadystatechange = function () {
+                    if (httpRequest.readyState == 4 && httpRequest.status == 200) {
+                        location.reload();
+                    }
                 }
+                httpRequest.send(formData)
+            } else {
+                updateForm.submit.click();
             }
-            httpRequest.send(formData)
+
+            // let formData = new FormData(updateForm)
+            // let productId = qtyInput.getAttribute('id').split('id-qty-')[1];
+            // let url = `/cart/update/${productId}/`;
+            // let csrfToken = "{{ csrf_token }}";
+
+            // let httpRequest = new XMLHttpRequest()
+            // httpRequest.open('POST', url)
+            // httpRequest.setRequestHeader('X-CSRF-Token', csrfToken)
+            // httpRequest.onreadystatechange = function () {
+            //     if (httpRequest.readyState == 4 && httpRequest.status == 200) {
+            //         location.reload();
+            //     }
+            // }
+            // httpRequest.send(formData)
         });
     });
 
