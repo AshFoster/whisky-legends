@@ -453,12 +453,16 @@ footer {
 
 /* For very small screen sizes with maximum height of 325px */
 @media screen and (max-width: 325px) {
-    #mobile-search>div {
+    #mobile-search > div {
         margin-left: .5rem !important;
     }
 
     .navbar-toggler {
         margin-right: .25rem !important;
+    }
+
+    #mobile-logo h1 {
+        font-size: 180% !important;
     }
 }
 
@@ -467,6 +471,10 @@ footer {
     .px-375px-3 {
         padding-right: 1rem;
         padding-left: 1rem;
+    }
+
+    .nav-link {
+        min-width: 45px !important;
     }
 }
 
@@ -519,6 +527,10 @@ footer {
     .minw-sm-390px {
         min-width: 390px;
     }
+
+    .nav-link {
+        min-width: 90px !important;
+    }
 }
 
 /* For screen sizes with maximum height of 767px - below Bootstrap md */
@@ -554,7 +566,6 @@ footer {
     .cart-table td img {
         width: 50%;
     }
-
 }
 
 /* For screen sizes with minimum height of 768px - Bootstrap md */

@@ -10,8 +10,8 @@
             </div>
         </div>
         {% if grand_total and not viewing_cart %}
-            <h5 class="border-top pt-2 mb-2">Your Shopping Cart <small>({{ product_count }} item{% if product_count != 1 %}s{% endif %})</small></h5>
-            <div class="cart-notification-wrapper mb-3 py-2">
+            <h5 class="border-top mb-1 pt-3">Your Shopping Cart <small>({{ product_count }} item{% if product_count != 1 %}s{% endif %})</small></h5>
+            <div class="cart-notification-wrapper mb-3 pb-2">
                 {% for item in cart_items %}
                     <div class="row">
                         <div class="col-3 my-1 d-flex align-items-end">
