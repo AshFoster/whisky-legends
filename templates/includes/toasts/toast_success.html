@@ -1,9 +1,53 @@
-<div class="toast custom-toast rounded-3 box-shadow-custom bg-light" role="alert" aria-live="assertive" aria-atomic="true" data-bs-autohide="false">
+<div class="toast custom-toast px-2 rounded-3 box-shadow-custom bg-light" role="alert" aria-live="assertive" aria-atomic="true" data-bs-autohide="false">
     <div class="toast-header">
         <strong class="me-auto">Success! <span class="text-success"><i class="fas fa-check-circle"></i></span></strong>
         <button type="button" class="toast-close" data-bs-dismiss="toast" aria-label="Close"><i class="fas fa-times"></i></button>
     </div>
     <div class="toast-body">
-        {{ message }}
+        <div class="row">
+            <div class="col pb-2">
+                {{ message }}
+            </div>
+        </div>
+        {% if grand_total %}
+            <h5 class="border-top pt-2 mb-2">Your Shopping Cart <small>({{ product_count }} item{% if product_count != 1 %}s{% endif %})</small></h5>
+            <div class="cart-notification-wrapper mb-3 py-2">
+                {% for item in cart_items %}
+                    <div class="row">
+                        <div class="col-3 my-1 d-flex align-items-end">
+                            <img class="w-100" src="{{ item.product.image.url }}">
+                        </div>
+                        <div class="col-9">
+                            <p class="my-0 pt-3"><strong>{{ item.product.brand.friendly_name }}: {{ item.product.name }}</strong></p>
+                            <p class="my-0 text-muted">Quantity: {{ item.quantity }}</p>
+                            <p class="my-0 text-muted">Price: £{{ item.product.price}}</p>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="d-flex justify-content-between align-items-center mb-2">
+                        <span class="cart-subtotal">Subtotal</span>
+                        <span>£{{ total|floatformat:2 }}</span>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center mb-2">
+                        <span class="cart-delivery">Delivery</span>
+                        <span>£{{ delivery|floatformat:2 }}</span>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center mb-2">
+                        <span class="cart-total"><strong>Total</strong></span>
+                        <span><strong>£{{ grand_total|floatformat:2 }}</strong></span>
+                    </div>
+                    {% if free_delivery_delta > 0 %}
+                    <p class="mb-1 text-danger text-center">
+                        You could get free delivery by spending just <strong>£{{ free_delivery_delta }}</strong> more!
+                    </p>
+                    {% endif %}
+                    <a href="{% url 'view_cart' %}" class="btn btn-custom text-uppercase w-100 my-2 fs-5 box-shadow-custom">Checkout&nbsp;
+                        <i class="fas fa-lock"></i></a>
+                </div>
+            </div>
+        {% endif %}
     </div>
 </div>

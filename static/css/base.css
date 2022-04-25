@@ -442,6 +442,12 @@ footer {
     font-size: 150%;
 }
 
+.cart-notification-wrapper {
+    max-height: 200px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
 
 /* /// ---------------------------------------------------- MEDIA QUERIES */
 
