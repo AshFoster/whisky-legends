@@ -15,7 +15,13 @@
                 {% for item in cart_items %}
                     <div class="row">
                         <div class="col-3 my-1 d-flex align-items-end">
-                            <img class="w-100" src="{{ item.product.image.url }}">
+                            {% if item.product.image %}
+                            <img src="{{ item.product.image.url }}" class="w-100"
+                                    alt="{{ product.brand.friendly_name }}: {{ product.name }}">
+                            {% else %}
+                            <img src="{{ MEDIA_URL }}no-image.jpg" class="w-100"
+                                    alt="{{ product.brand.friendly_name }}: {{ product.name }}">
+                            {% endif %}
                         </div>
                         <div class="col-9">
                             <p class="my-0 pt-3"><strong>{{ item.product.brand.friendly_name }}: {{ item.product.name }}</strong></p>
