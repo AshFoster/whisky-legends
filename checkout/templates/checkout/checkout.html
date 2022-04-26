@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% load static %}
+{% load cart_extras %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'checkout/css/checkout.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<div class="container-lg my-3">
+
+    <!-- Checkout Heading -->
+    <div class="row justify-content-center">
+        <div class="col-11 col-lg-12">
+            <h2 class="my-4 text-center text-lg-start">Checkout</h2>
+            <div class="row g-0 justify-content-center">
+                <hr class="mt-0 mb-4">
+            </div>
+        </div>
+    </div>
+
+    <!-- Checkout form -->
+    <div class="row justify-content-evenly">
+        <div class="col-11 col-lg-8">
+        
+        </div>
+    </div>
+</div>
+
+{% endblock %}
