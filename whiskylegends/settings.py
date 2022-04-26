@@ -51,6 +51,7 @@ INSTALLED_APPS = [
     'cart',
     'checkout',
 
+    'crispy_forms',
     'storages',
 ]
 
@@ -65,6 +66,8 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'whiskylegends.urls'
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 TEMPLATES = [
     {
@@ -83,6 +86,10 @@ TEMPLATES = [
                 'django.template.context_processors.media',
                 'cart.contexts.cart_contents',
             ],
+            'builtins': [
+                'crispy_forms.templatetags.crispy_forms_tags',
+                'crispy_forms.templatetags.crispy_forms_field',
+            ]
         },
     },
 ]
