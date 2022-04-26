@@ -149,7 +149,7 @@ class Product(models.Model):
     image = models.ImageField(null=True, blank=True)
 
     def __str__(self):
-        return str(self.name)
+        return f'{self.brand.friendly_name}: {self.name}'
 
     def calc_rating(self):
         if self.rating_total and self.rated.count() != 0:
