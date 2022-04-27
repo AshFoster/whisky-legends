@@ -81,13 +81,13 @@
                 class="py-4 px-3 rounded-3 box-shadow-custom checkout-form">
                 {% csrf_token %}
                 <fieldset class="rounded-3 px-3 mb-3">
-                    <legend class="px-2 w-auto">Your Details</legend>
+                    <legend class="w-auto">Your Details</legend>
                     {{ order_form.full_name | as_crispy_field }}
                     {{ order_form.email | as_crispy_field }}
                     {{ order_form.phone_number | as_crispy_field }}
                 </fieldset>
                 <fieldset class="rounded px-3 mb-3">
-                    <legend class="px-2 w-auto">Delivery Info</legend>
+                    <legend class="w-auto">Delivery Info</legend>
                     {{ order_form.street_address1 | as_crispy_field }}
                     {{ order_form.street_address2 | as_crispy_field }}
                     {{ order_form.town_or_city | as_crispy_field }}
@@ -109,7 +109,7 @@
                     </div>
                 </fieldset>
                 <fieldset class="px-3">
-                    <legend class="px-2 w-auto">Payment Info</legend>
+                    <legend class="w-auto">Payment Info</legend>
                     <!-- A Stripe card element will go here -->
                     <div class="mb-3" id="card-element"></div>
 
@@ -120,5 +120,11 @@
         </div>
     </div>
 </div>
+{% endblock %}
 
+{% block postloadjs %}
+    {{ block.super }}
+    {{ stripe_public_key|json_script:"id_stripe_public_key" }}
+    {{ client_secret|json_script:"id_client_secret" }}
+    <script src="{% static 'checkout/js/stripe_elements.js' %}"></script>
 {% endblock %}

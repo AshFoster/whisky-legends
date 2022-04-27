@@ -122,7 +122,6 @@ footer {
 .filter-bar {
     font-family: 'Roboto Condensed', sans-serif;
     z-index: 1;
-    background-color: #fff;
 }
 
 .filter-bar .dropdown {

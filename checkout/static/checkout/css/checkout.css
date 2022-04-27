@@ -1,11 +1,31 @@
-.checkout-form .form-control {
-    border-color: rgba(97, 27, 27, 25%);
-    margin-bottom: .5rem;
+.StripeElement,
+.stripe-style-input {
+    box-sizing: border-box;
+    height: 40px;
+    padding: 10px 12px;
+    border: 1px solid transparent;
+    border-radius: .3rem;
+    background-color: white;
+    box-shadow: 0 1px 3px 0 #e6ebf1;
+    -webkit-transition: box-shadow 150ms ease;
+    transition: box-shadow 150ms ease;
 }
 
-.checkout-form .form-control:focus {
+.StripeElement--focus,
+.stripe-style-input:focus,
+.stripe-style-input:active {
     border-color: rgba(97, 27, 27, 50%);
     box-shadow: 0 0 0 0.25rem rgba(97, 27, 27, 40%);
+}
+
+.StripeElement--webkit-autofill {
+    background-color: #fefde5 !important;
+}
+
+#payment-form .form-control,
+#card-element {
+    border-color: rgba(97, 27, 27, 25%);
+    margin-bottom: .5rem;
 }
 
 /* For very small screen sizes with maximum height of 470px */
