@@ -1,0 +1,16 @@
+.checkout-form .form-control {
+    border-color: rgba(97, 27, 27, 25%);
+    margin-bottom: .5rem;
+}
+
+.checkout-form .form-control:focus {
+    border-color: rgba(97, 27, 27, 50%);
+    box-shadow: 0 0 0 0.25rem rgba(97, 27, 27, 40%);
+}
+
+/* For very small screen sizes with maximum height of 470px */
+@media screen and (max-width: 470px) {
+    .order-summary {
+        font-size: 80%;
+    }
+}

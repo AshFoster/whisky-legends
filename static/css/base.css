@@ -527,10 +527,6 @@ footer {
     .minw-sm-390px {
         min-width: 390px;
     }
-
-    .nav-link {
-        min-width: 90px !important;
-    }
 }
 
 /* For screen sizes with maximum height of 767px - below Bootstrap md */
