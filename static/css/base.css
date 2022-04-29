@@ -530,6 +530,10 @@ footer {
     .minw-sm-390px {
         min-width: 390px;
     }
+
+    .fw-sm-normal {
+        font-weight: 400 !important;
+    }
 }
 
 /* For screen sizes with maximum height of 767px - below Bootstrap md */
