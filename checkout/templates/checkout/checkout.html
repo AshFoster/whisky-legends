@@ -13,10 +13,11 @@
     <!-- Checkout Heading -->
     <div class="row justify-content-center">
         <div class="col-11 col-lg-12">
-            <h2 class="my-4 text-center text-uppercase">Checkout <i class="fas fa-lock"></i></h2>
+            <h2 class="my-4 text-center text-uppercase fs-1 checkout-title">Checkout <i class="fas fa-lock"></i></h2>
             <div class="row g-0 justify-content-center">
                 <hr class="w-50 mt-0 mb-4">
             </div>
+            <p class="text-center text-muted fs-5">Please complete the form below and submit your order when you are ready.</p>
         </div>
     </div>
 
@@ -94,14 +95,14 @@
                     {{ order_form.county | as_crispy_field }}
                     {{ order_form.postcode | as_crispy_field }}
                     {{ order_form.country | as_crispy_field }}
-                    <div class="form-check form-check-inline mt-2 me-0 ps-2">
+                    <div class="form-check form-check-inline mt-2 me-0 ps-0">
                         {% if user.is_authenticated %}
-                        <label class="form-check-label" for="id-save-info">Save this delivery information to my
+                        <label class="form-check-label ps-1" for="id-save-info">Save this delivery information to my
                             profile</label>
-                        <input class="form-check-input" type="checkbox" id="id-save-info" name="save-info"
+                        <input class="form-check-input ms-1" type="checkbox" id="id-save-info" name="save-info"
                             checked>
                         {% else %}
-                        <label class="form-check-label" for="id-save-info">
+                        <label class="form-check-label ps-1" for="id-save-info">
                             <a class="link-custom" href="{% url 'account_signup' %}">Create an account</a> or
                             <a class="link-custom" href="{% url 'account_login' %}">login</a> to save this information
                         </label>

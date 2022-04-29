@@ -101,7 +101,7 @@ def checkout_success(request, order_number):
     order = get_object_or_404(Order, order_number=order_number)
     messages.success(
         request,
-        f'Your order has been successful!\n'
+        f'Your order has been successful! '
         f'Order number: {order_number}. '
         f'A confirmation email will be sent to {order.email}.'
     )

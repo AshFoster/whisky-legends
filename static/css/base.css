@@ -164,10 +164,6 @@ footer {
     width: 55px;
 }
 
-.shop-title {
-    color: rgba(0, 0, 0, .7);
-}
-
 .product-card-title-link {
     color: inherit !important;
     text-decoration: none;
@@ -281,6 +277,14 @@ footer {
 .wishlist-btn i {
     color: var(--logo-text-color);
     font-size: 120%;
+}
+
+/* Shop, Cart and Checkout pages */
+
+.shop-title,
+.cart-title,
+.checkout-title {
+    color: rgba(0, 0, 0, .7);
 }
 
 
