@@ -78,7 +78,7 @@
         <!-- Checkout form -->
         <div class="col-11 col-sm-10 col-md-8 col-lg-6 col-xl-5 mt-2 mt-lg-0">
             <form action="{% url 'checkout' %}" method="POST" id="payment-form"
-                class="py-4 px-3 rounded-3 box-shadow-custom checkout-form">
+                class="py-4 px-3 rounded-3 box-shadow-custom">
                 {% csrf_token %}
                 <fieldset class="rounded-3 px-3 mb-3">
                     <legend class="w-auto">Your Details</legend>
@@ -94,7 +94,7 @@
                     {{ order_form.county | as_crispy_field }}
                     {{ order_form.postcode | as_crispy_field }}
                     {{ order_form.country | as_crispy_field }}
-                    <div class="form-check form-check-inline float-right mt-2 me-0">
+                    <div class="form-check form-check-inline mt-2 me-0 ps-2">
                         {% if user.is_authenticated %}
                         <label class="form-check-label" for="id-save-info">Save this delivery information to my
                             profile</label>
@@ -102,8 +102,8 @@
                             checked>
                         {% else %}
                         <label class="form-check-label" for="id-save-info">
-                            <a class="text-info" href="{% url 'account_signup' %}">Create an account</a> or
-                            <a class="text-info" href="{% url 'account_login' %}">login</a> to save this information
+                            <a class="link-custom" href="{% url 'account_signup' %}">Create an account</a> or
+                            <a class="link-custom" href="{% url 'account_login' %}">login</a> to save this information
                         </label>
                         {% endif %}
                     </div>
@@ -114,8 +114,18 @@
                     <div class="mb-3" id="card-element"></div>
 
                     <!-- Used to display form errors -->
-                    <div class="mb-3 text-danger" id="card-errors" role="alert"></div>
+                    <div class="ps-2 text-danger" id="card-errors" role="alert"></div>
                 </fieldset>
+
+                <div class="submit-button my-2 mx-3">                    
+                    <button id="submit-button" class="btn btn-custom text-uppercase w-100 my-2 fs-5 box-shadow-custom">
+                        <span class="text-uppercase">Submit Order &nbsp;<i class="fas fa-lock"></i></span>
+                    </button>
+                    <p class="mt-2 mb-0 ps-2 text-danger">
+                        <i class="fas fa-exclamation-triangle"></i>
+                        <span>Your card will be charged <strong>£{{ grand_total|floatformat:2 }}</strong></span>
+                    </p>
+                </div>
             </form>
         </div>
     </div>

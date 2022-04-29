@@ -210,5 +210,11 @@ if 'USE_AWS' in os.environ:
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+# Delivery variables
 FREE_DELIVERY_THRESHOLD = 45
 STANDARD_DELIVERY_PERCENTAGE = 10
+
+# Stripe
+STRIPE_CURRENCY = 'gbp'
+STRIPE_PUBLIC_KEY = os.environ.get('STRIPE_PUBLIC_KEY', '')
+STRIPE_SECRET_KEY = os.environ.get('STRIPE_SECRET_KEY', '')
