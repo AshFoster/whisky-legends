@@ -44,11 +44,14 @@ card.addEventListener('change', function (event) {
 // Handle form submit
 let form = document.getElementById('payment-form');
 let submitButton = document.getElementById('submit-button');
+let loadingOverlay = document.getElementById('loading-overlay');
 
 form.addEventListener('submit', function(e) {
     e.preventDefault();
     card.update({ 'disabled': true });
-    submitButton.setAttribute('disabled', true);
+    submitButton.setAttribute('disabled', 'true');
+    loadingOverlay.classList.remove('fadeout');
+    loadingOverlay.classList.add('fadein', 'd-block');
     stripe.confirmCardPayment(clientSecret, {
         payment_method: {
             card: card,
@@ -63,8 +66,10 @@ form.addEventListener('submit', function(e) {
                 <span>${result.error.message}</span>
             `;
             errorDiv.innerHTML = html;
+            loadingOverlay.classList.add('fadeout');
+            loadingOverlay.classList.remove('fadein', 'd-block');
             card.update({ 'disabled': false });
-            submitButton.setAttribute('disabled', false);
+            submitButton.removeAttribute('disabled', 'true');
         } else {
             if (result.paymentIntent.status === 'succeeded') {
                 form.submit();

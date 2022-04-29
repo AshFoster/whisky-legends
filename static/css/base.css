@@ -422,7 +422,7 @@ footer {
     position: fixed;
     top: 105px;
     right: 5px;
-    z-index: 9999;
+    z-index: 99999;
     max-width: calc(100% - 10px);
 }
 

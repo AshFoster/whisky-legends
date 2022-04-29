@@ -28,6 +28,57 @@
     margin-bottom: .5rem;
 }
 
+#loading-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(97, 27, 27, .9);
+    z-index: 9999;
+}
+
+.loading-spinner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    height: 100%;
+    color: rgba(255, 255, 255, .7);
+}
+
+/* Animations */
+.fadein {
+    animation-name: fadein;
+    animation-duration: .2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadein {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.fadeout {
+    animation-name: fadeout;
+    animation-duration: .2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeout {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
 /* For very small screen sizes with maximum height of 470px */
 @media screen and (max-width: 470px) {
     .order-summary {
