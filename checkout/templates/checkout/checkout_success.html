@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% load static %}
+{% load cart_extras %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'checkout/css/checkout.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<div class="container-lg my-3">
+
+    <!-- Checkout Heading -->
+    <div class="row justify-content-center">
+        <div class="col-11 col-lg-12">
+            <h2 class="my-4 text-center text-uppercase">Order Complete <span class="text-success"><i class="fas fa-check-circle"></i></span></h2>
+            <div class="row g-0 justify-content-center">
+                <hr class="w-50 mt-0 mb-4">
+            </div>
+        </div>
+    </div>
+
+    <div class="row justify-content-evenly mt-2 mb-5">
+
+    </div>
+
+    <div class="row justify-content-evenly mt-2 mb-5">
+        
+    </div> 
+</div>
+{% endblock %}
