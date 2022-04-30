@@ -8,7 +8,9 @@
 
 let stripePublicKey = document.getElementById('id_stripe_public_key').textContent.slice(1, -1);
 let clientSecret = document.getElementById('id_client_secret').textContent.slice(1, -1)
-let stripe = Stripe(stripePublicKey, {locale: 'en-GB'});
+let stripe = Stripe(stripePublicKey, {
+    locale: 'en-GB'
+});
 let elements = stripe.elements();
 let style = {
     base: {
@@ -22,8 +24,10 @@ let style = {
         iconColor: '#dc3545'
     }
 };
-let card = elements.create('card', {style: style});
-card.mount('#card-element'); 
+let card = elements.create('card', {
+    style: style
+});
+card.mount('#card-element');
 
 // Handle realtime validation errors on the card element
 card.addEventListener('change', function (event) {
@@ -46,34 +50,79 @@ let form = document.getElementById('payment-form');
 let submitButton = document.getElementById('submit-button');
 let loadingOverlay = document.getElementById('loading-overlay');
 
-form.addEventListener('submit', function(e) {
+form.addEventListener('submit', function (e) {
     e.preventDefault();
-    card.update({ 'disabled': true });
+    card.update({
+        'disabled': true
+    });
     submitButton.setAttribute('disabled', 'true');
     loadingOverlay.classList.remove('fadeout');
     loadingOverlay.classList.add('fadein', 'd-block');
-    stripe.confirmCardPayment(clientSecret, {
-        payment_method: {
-            card: card,
-        }
-    }).then(function(result) {
-        if (result.error) {
-            let errorDiv = document.getElementById('card-errors');
-            let html = `
-                <span class="icon" role="alert">
-                <i class="fas fa-times"></i>
-                </span>
-                <span>${result.error.message}</span>
-            `;
-            errorDiv.innerHTML = html;
-            loadingOverlay.classList.add('fadeout');
-            loadingOverlay.classList.remove('fadein', 'd-block');
-            card.update({ 'disabled': false });
-            submitButton.removeAttribute('disabled', 'true');
-        } else {
-            if (result.paymentIntent.status === 'succeeded') {
-                form.submit();
+
+    let saveInfo = Boolean(document.getElementById('id-save-info').checked);
+    let csrfToken = document.querySelector('input[name="csrfmiddlewaretoken"]').value;
+    let url = '/checkout/cache_checkout_data/';
+    let postData = 'csrfmiddlewaretoken=' + encodeURIComponent(csrfToken) + '&client_secret=' + clientSecret + '&save_info=' + saveInfo;
+    let httpRequest = new XMLHttpRequest()
+
+    httpRequest.open('POST', url)
+    httpRequest.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded')
+    httpRequest.onreadystatechange = function () {
+        if (httpRequest.readyState == 4) {
+            if (httpRequest.status == 200) {
+                stripe.confirmCardPayment(clientSecret, {
+                    payment_method: {
+                        card: card,
+                        billing_details: {
+                            name: form.full_name.value.trim(),
+                            email: form.email.value.trim(),
+                            phone: form.phone_number.value.trim(),
+                            address: {
+                                line1: form.street_address1.value.trim(),
+                                line2: form.street_address2.value.trim(),
+                                city: form.town_or_city.value.trim(),
+                                state: form.county.value.trim(),
+                                country: form.country.value.trim(),
+                            }
+                        }
+                    },
+                    shipping: {
+                        name: form.full_name.value.trim(),
+                        phone: form.phone_number.value.trim(),
+                        address: {
+                            line1: form.street_address1.value.trim(),
+                            line2: form.street_address2.value.trim(),
+                            city: form.town_or_city.value.trim(),
+                            state: form.county.value.trim(),
+                            country: form.country.value.trim(),
+                        }
+                    }
+                }).then(function (result) {
+                    if (result.error) {
+                        let errorDiv = document.getElementById('card-errors');
+                        let html = `
+                            <span class="icon" role="alert">
+                            <i class="fas fa-times"></i>
+                            </span>
+                            <span>${result.error.message}</span>
+                        `;
+                        errorDiv.innerHTML = html;
+                        loadingOverlay.classList.add('fadeout');
+                        loadingOverlay.classList.remove('fadein', 'd-block');
+                        card.update({
+                            'disabled': false
+                        });
+                        submitButton.removeAttribute('disabled', 'true');
+                    } else {
+                        if (result.paymentIntent.status === 'succeeded') {
+                            form.submit();
+                        }
+                    }
+                });
+            } else {
+                location.reload();
             }
         }
-    });
+    }
+    httpRequest.send(postData)
 });

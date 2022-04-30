@@ -8,7 +8,7 @@ function getStars(rating) {
     let output = [];
 
     // Append all the filled whole stars
-    for (var i = rating; i >= 1; i--)
+    for (let i = rating; i >= 1; i--)
         output.push('<i class="fas fa-star" aria-hidden="true"></i>&nbsp;');
 
     // If there is a half a star, append it
