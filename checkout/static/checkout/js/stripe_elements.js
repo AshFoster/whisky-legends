@@ -94,6 +94,7 @@ form.addEventListener('submit', function (e) {
                             line2: form.street_address2.value.trim(),
                             city: form.town_or_city.value.trim(),
                             state: form.county.value.trim(),
+                            postal_code: form.postcode.value.trim(),
                             country: form.country.value.trim(),
                         }
                     }
