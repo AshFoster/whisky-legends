@@ -28,6 +28,20 @@
     margin-bottom: .5rem;
 }
 
+select,
+select option {
+    color: #000000;
+}
+
+select:invalid,
+select option[value=""] {
+    color: #7e868d !important;
+}
+
+.lazyselect {
+    line-height: 1 !important;
+}
+
 #loading-overlay {
     display: none;
     position: fixed;
