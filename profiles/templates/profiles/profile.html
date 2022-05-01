@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'profiles/css/profile.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<div class="container-lg my-3">
+
+    <!-- Profile Heading -->
+    <div class="row justify-content-center">
+        <div class="col-11 col-lg-12">
+            <h2 class="my-4 text-center text-uppercase fs-1">My Profile</h2>
+            <div class="row g-0 justify-content-center">
+                <hr class="w-50 mt-0 mb-4">
+            </div>
+        </div>
+    </div>
+
+</div>
+{% endblock %}
