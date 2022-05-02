@@ -59,7 +59,14 @@ form.addEventListener('submit', function (e) {
     loadingOverlay.classList.remove('fadeout');
     loadingOverlay.classList.add('fadein', 'd-block');
 
-    let saveInfo = Boolean(document.getElementById('id-save-info').checked);
+    let saveInfo = document.getElementById('id-save-info');
+
+    if (saveInfo == null) {
+        saveInfo = false;
+    } else {
+        saveInfo = Boolean(saveInfo.checked);
+    }
+
     let csrfToken = document.querySelector('input[name="csrfmiddlewaretoken"]').value;
     let url = '/checkout/cache_checkout_data/';
     let postData = 'csrfmiddlewaretoken=' + encodeURIComponent(csrfToken) + '&client_secret=' + clientSecret + '&save_info=' + saveInfo;

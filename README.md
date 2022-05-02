@@ -234,6 +234,8 @@ Google Chrome was the browser used for the majority of testing during the develo
 
 - The maximum number of any item that can be added to the cart is 99, but on the cart page if a number higher than 99 was typed into the quantity form and the 'update' button was then clicked, the form validation was not working. This was becasue the form was being submitted using AJAX and therefore skipped the HTML validation step. This was fixed by manually validating the value when the 'update' button is clicked and only submitting the form using AJAX if valid. If not valid, a 'click' event of a hidden 'submit' input field is called which triggers the HTML form validation.
 
+- When making a payment through the checkout, if a user was not logged in, the website crashed and the payment did not go through. This was caused because the 'id-save-info' checkbox is not shown when a user is not logged in, so the javascript file came to a halt when trying to access a variable set to this element. This was fixed by checking if the variable's value was 'null' before attempting to make any further changes, and setting it to 'false' instead of 'null' if so.
+
 #### Unfixed Bugs
 
 - 
