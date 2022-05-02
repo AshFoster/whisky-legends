@@ -3,17 +3,22 @@
 {% load i18n %}
 {% load account socialaccount %}
 
-{% block head_title %}{% trans "Sign In" %}{% endblock %}
+{% block extra_title %}{% trans "Sign In" %}{% endblock %}
 
-{% block content %}
+{% block inner_content %}
 
-<h1>{% trans "Sign In" %}</h1>
+<h2 class="mb-4 text-center text-uppercase fs-1">{% trans "Sign In" %}</h2>
+<div class="row g-0 justify-content-center">
+  <div class="col-6">
+    <hr class="mt-0 mb-4">
+  </div>
+</div>
 
 {% get_providers as socialaccount_providers %}
 
 {% if socialaccount_providers %}
 <p>{% blocktrans with site.name as site_name %}Please sign in with one
-of your existing third party accounts. Or, <a href="{{ signup_url }}">sign up</a>
+of your existing third party accounts. Or, <a class="link-custom" href="{{ signup_url }}">sign up</a>
 for a {{ site_name }} account and sign in below:{% endblocktrans %}</p>
 
 <div class="socialaccount_ballot">
@@ -35,12 +40,14 @@ for a {{ site_name }} account and sign in below:{% endblocktrans %}</p>
 
 <form class="login" method="POST" action="{% url 'account_login' %}">
   {% csrf_token %}
-  {{ form.as_p }}
+  {{ form|crispy }}
   {% if redirect_field_value %}
   <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
   {% endif %}
-  <a class="button secondaryAction" href="{% url 'account_reset_password' %}">{% trans "Forgot Password?" %}</a>
-  <button class="primaryAction" type="submit">{% trans "Sign In" %}</button>
+  <p class="mt-2 mb-1">
+    <a class="button secondaryAction" href="{% url 'account_reset_password' %}">{% trans "Forgot Password?" %}</a>
+  </p>
+  <button class="btn btn-custom text-uppercase my-2 fs-5 box-shadow-custom" type="submit">{% trans "Sign In" %}</button>
 </form>
 
 {% endblock %}

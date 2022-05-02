@@ -55,10 +55,10 @@
     {% block extra_js %}
     {% endblock %}
 
-    <title>Whisky Legends {% block extra_title %}{% endblock %}</title>
+    <title>Whisky Legends | {% block extra_title %}{% endblock %}</title>
 </head>
 
-<body class="d-flex flex-column align-items-between min-vh-100 bg-light">
+<body class="d-flex flex-column align-items-between min-vh-100">
     <!-- Header -->
     <header class="container-fluid fixed-top mb-auto">
         {% include 'includes/mobile-nav.html' %}
@@ -93,7 +93,7 @@
     </main>
 
     <!-- Footer -->
-    <footer class="mt-auto">
+    <footer>
         <div class="container-fluid">
             <div class="row justify-content-center mt-4">
                 <div class="col-8 text-center">

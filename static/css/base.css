@@ -248,6 +248,66 @@ footer {
 
 /* /// ---------------------------------------------------- MULTI PAGE STYLES */
 
+/* Allauth pages */
+
+.allauth-form-inner-content h2 {
+    color: rgba(0, 0, 0, .7);
+}
+
+.allauth-form-inner-content p {
+    color: #6c757d;
+    font-size: 110%;
+}
+
+#div_id_remember label {
+    font-size: 110%;
+}
+
+.allauth-form-inner-content input:focus,
+.allauth-form-inner-content input:active {
+    border-color: rgba(97, 27, 27, 50%);
+    box-shadow: 0 0 0 0.25rem rgba(97, 27, 27, 40%);
+}
+
+.allauth-form-inner-content label:not([for='id_remember']):not([for='email_radio_1']) {
+    display: none;
+}
+
+.allauth-form-inner-content input::placeholder {
+    color: #7e868d;
+}
+
+#id_remember {
+    margin-right: .25rem;
+}
+
+#div_id_remember {
+    display: flex;
+    justify-content: center;
+    margin-top: .5rem;
+}
+
+.allauth-form-inner-content input:not([id='id_remember']):not([id='email_radio_1']):not([type='submit']) {
+    border-color: rgba(97, 27, 27, 25%);
+    margin-bottom: .5rem;
+    box-sizing: border-box;
+    height: 40px;
+    padding: 10px 12px;
+    border-radius: .3rem;
+    -webkit-transition: box-shadow 150ms ease;
+    transition: box-shadow 150ms ease;
+}
+
+.allauth-form-inner-content a {
+    color: var(--logo-text-color);
+}
+
+.allauth-form-inner-content a:hover,
+.allauth-form-inner-content a:focus {
+    font-weight: 600;
+    color: var(--logo-text-color);
+}
+
 /* Product detail page and Cart page */
 .back-to-shop {
     border-color: var(--logo-text-color) !important;
