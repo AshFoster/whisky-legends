@@ -342,7 +342,8 @@ footer {
 
 .shop-title,
 .cart-title,
-.checkout-title {
+.checkout-title,
+.profile-title {
     color: rgba(0, 0, 0, .7);
 }
 

@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'profiles/css/profile.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<div class="container-lg my-3">
+
+    <!-- Profile Heading -->
+    <div class="row justify-content-center">
+        <div class="col-11 col-lg-12">
+            <h2 class="my-4 text-center text-uppercase fs-1 profile-title">My Profile</h2>
+            <div class="row g-0 justify-content-center">
+                <hr class="w-50 mt-0 mb-4">
+            </div>
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        {% url 'profile' as url %}
+        <a href="{% url 'profile' %}" class="col-3 m-3 p-0">
+            <button class="w-100 h-100 rounded-3 {% if request.path == url %}active-profile{% endif %}">
+                <h4 class="my-2 text-center text-uppercase profile-title">My Details</h4>
+            </button>
+        </a>
+        {% url 'orders' as url %}
+        <a href="" class="col-3 m-3 p-0">
+            <button class="w-100 h-100 rounded-3 {% if request.path == url %}active-profile{% endif %}">
+                <h4 class="my-2 text-center text-uppercase profile-title">My Orders</h4>
+            </button>
+        </a>
+        {% url 'wishlist' as url %}
+        <a href="" class="col-3 m-3 p-0">
+            <button class="w-100 h-100 rounded-3 {% if request.path == url %}active-profile{% endif %}">
+                <h4 class="my-2 text-center text-uppercase profile-title">My Wishlist</h4>
+            </button>
+        </a>
+        <div class="col-3 my-3">
+            <div class="row h-100">
+                <div class="col-12 d-flex justify-content-center align-items-center">
+                    <a class="link-custom fs-5" href="{% url 'account_email' %}">Update Email</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-3 my-3">
+            <div class="row h-100">
+                <div class="col-12 d-flex justify-content-center align-items-center">
+                    <a class="link-custom fs-5" href="{% url 'account_change_password' %}">Update Password</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row g-0 justify-content-center">
+        <hr class="w-50 my-4">
+    </div>
+    {% block inner_content %}
+    {% endblock %}
+
+</div>
+{% endblock %}
