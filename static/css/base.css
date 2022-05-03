@@ -302,8 +302,8 @@ footer {
     color: var(--logo-text-color);
 }
 
-.allauth-form-inner-content a:hover,
-.allauth-form-inner-content a:focus {
+.allauth-form-inner-content a:hover:not([id='logout-cancel']),
+.allauth-form-inner-content a:focus:not([id='logout-cancel']) {
     font-weight: 600;
     color: var(--logo-text-color);
 }
