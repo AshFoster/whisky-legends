@@ -5,6 +5,8 @@ from django.dispatch import receiver
 
 from django_countries.fields import CountryField
 
+from shop.models import Product
+
 
 class UserProfile(models.Model):
     """
@@ -42,3 +44,19 @@ def create_or_update_user_profile(sender, instance, created, **kwargs):
         UserProfile.objects.create(user=instance)
 
     instance.userprofile.save()
+
+
+class UserWishlist(models.Model):
+    """
+    The User Wishlist model is used to store products in the
+    current user's wishlist
+    """
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    product = models.ManyToManyField(
+        Product,
+        related_name='wishlist_products',
+        blank=True
+    )
+
+    def __str__(self):
+        return self.user.username

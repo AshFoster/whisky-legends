@@ -102,7 +102,6 @@ class StripeWH_Handler:
                 break
             except Order.DoesNotExist:
                 attempt += 1
-                print(attempt)
                 time.sleep(1)
         if order_exists:
             self._send_confirmation_email(order)

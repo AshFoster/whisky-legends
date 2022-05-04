@@ -1,9 +1,11 @@
 import math
 from django.shortcuts import render, get_object_or_404
 from django.contrib import messages
+from django.core.exceptions import ObjectDoesNotExist
 from django.db.models import Q, Min, Max, F, Count
 from django.db.models.functions import Lower
 from django.views import generic, View
+from profiles.models import UserWishlist
 from .models import Product
 
 
@@ -249,10 +251,20 @@ class ProductDetail(View):
         queryset = Product.objects.all()
         product = get_object_or_404(queryset, pk=product_id)
 
+        try:
+            wishlist = UserWishlist.objects.get(user=request.user)
+            if product in wishlist.product.all():
+                wishlist = True
+            else:
+                wishlist = False
+        except ObjectDoesNotExist:
+            wishlist = False
+
         return render(
             request,
             'shop/product_detail.html',
             {
                 'product': product,
+                'wishlist': wishlist,
             },
         )

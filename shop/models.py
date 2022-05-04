@@ -140,11 +140,6 @@ class Product(models.Model):
         related_name='product_rated',
         blank=True
     )
-    wishlist = models.ManyToManyField(
-        User,
-        related_name='product_wishlist',
-        blank=True
-    )
     rating_total = models.IntegerField(null=True, blank=True)
     image = models.ImageField(null=True, blank=True)
 

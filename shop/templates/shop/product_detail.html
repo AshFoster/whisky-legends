@@ -86,13 +86,19 @@
 
                     <!-- Wishlist button -->
                     <div class="d-flex justify-content-center mt-4">
-                        <button class="wishlist-btn text-uppercase">
+                        <form class="form" action="{% url 'update_wishlist' product.id %}" method="POST">
+                            {% csrf_token %}
                             {% if wishlist %}
-                            Remove from wishlist<span class="ms-1"><i class="fas fa-heart"></span>
+                            <button type="submit" class="wishlist-btn text-uppercase">
+                                Remove from wishlist<span class="ms-1"><i class="fas fa-heart"></i></span>
+                            </button>
                             {% else %}
-                            Add to wishlist<span class="ms-1"><i class="far fa-heart"></i></span>
+                            <button type="submit" class="wishlist-btn text-uppercase">
+                                Add to wishlist<span class="ms-1"><i class="far fa-heart"></i></span>
+                            </button>
                             {% endif %}
-                        </button>
+                            <input type="hidden" name="redirect_url" value="{{ request.get_full_path }}">
+                        </form>
                     </div>
                 </div>
 

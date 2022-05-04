@@ -1,9 +1,11 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib import messages
+from django.core.exceptions import ObjectDoesNotExist
 
 from checkout.models import Order
+from shop.models import Product
 
-from .models import UserProfile
+from .models import UserProfile, UserWishlist
 from .forms import UserProfileForm
 
 
@@ -64,11 +66,46 @@ def view_wishlist(request):
     """
     A view to display the current user's wishlist.
     """
-    profile = get_object_or_404(UserProfile, user=request.user)
+    try:
+        wishlist = UserWishlist.objects.get(user=request.user)
+    except ObjectDoesNotExist:
+        wishlist = None
+    else:
+        wishlist = wishlist.product.all()
 
     template = 'profiles/wishlist.html'
     context = {
-        'profile': profile,
+        'wishlist': wishlist,
     }
 
     return render(request, template, context)
+
+
+def update_wishlist(request, product_id):
+    """
+    A view to add/remove a chosen product to/from the current user's wishlist
+    """
+    product = get_object_or_404(Product, pk=product_id)
+    redirect_url = request.POST.get('redirect_url')
+
+    try:
+        wishlist = UserWishlist.objects.get(user=request.user)
+    except ObjectDoesNotExist:
+        wishlist = UserWishlist.objects.create(user=request.user)
+
+    if product in wishlist.product.all():
+        wishlist.product.remove(product)
+        messages.success(
+            request,
+            f'Removed "{product.brand.friendly_name}: '
+            f'{product.name}" from your wishlist.'
+        )
+    else:
+        wishlist.product.add(product)
+        messages.success(
+            request,
+            f'Added "{product.brand.friendly_name}: '
+            f'{product.name}" to your wishlist.'
+        )
+
+    return redirect(redirect_url)
