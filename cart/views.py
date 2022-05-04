@@ -1,12 +1,26 @@
 from django.shortcuts import render, redirect, HttpResponse, get_object_or_404
 from django.contrib import messages
+from django.core.exceptions import ObjectDoesNotExist
 
 from shop.models import Product
+from profiles.models import UserWishlist
 
 
 def view_cart(request):
-    """ A view to return the cart contents page """
-    return render(request, 'cart/cart.html')
+    """
+    A view to return the shopping cart page
+    """
+    try:
+        wishlist = UserWishlist.objects.get(user=request.user).product.all()
+    except ObjectDoesNotExist:
+        wishlist = None
+
+    template = 'cart/cart.html'
+    context = {
+        'wishlist': wishlist,
+    }
+
+    return render(request, template, context)
 
 
 def add_to_cart(request, product_id):
