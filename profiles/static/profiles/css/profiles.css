@@ -27,3 +27,12 @@
 #id_default_country option:first-child {
     color: #7e868d;
 }
+
+/* /// ---------------------------------------------------- MEDIA QUERIES */
+
+/* For very small screen sizes with maximum height of 325px */
+@media screen and (max-width: 325px) {
+    td {
+        font-size: 75%;
+    }
+}
