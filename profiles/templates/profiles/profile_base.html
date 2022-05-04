@@ -31,8 +31,8 @@
                 <h4 class="my-2 text-center text-uppercase profile-title">My Orders</h4>
             </button>
         </a>
-        {% url 'wishlist' as url %}
-        <a href="" class="col-8 col-sm-3 m-2 m-sm-3 p-0">
+        {% url 'view_wishlist' as url %}
+        <a href="{% url 'view_wishlist' %}" class="col-8 col-sm-3 m-2 m-sm-3 p-0">
             <button class="w-100 h-100 rounded-3 {% if request.path == url %}active-profile{% endif %}">
                 <h4 class="my-2 text-center text-uppercase profile-title">My Wishlist</h4>
             </button>

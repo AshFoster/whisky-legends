@@ -58,3 +58,17 @@ def previous_order(request, order_number):
     }
 
     return render(request, template, context)
+
+
+def view_wishlist(request):
+    """
+    A view to display the current user's wishlist.
+    """
+    profile = get_object_or_404(UserProfile, user=request.user)
+
+    template = 'profiles/wishlist.html'
+    context = {
+        'profile': profile,
+    }
+
+    return render(request, template, context)
