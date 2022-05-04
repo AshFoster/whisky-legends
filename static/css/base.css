@@ -82,6 +82,12 @@ footer {
     width: 140px;
 }
 
+/* Text colours */
+
+.text-logo {
+    color: var(--logo-text-color);
+}
+
 
 /* /// ---------------------------------------------------- SPECIFIC PAGE STYLES */
 

@@ -4,6 +4,44 @@
 {% block inner_content %}
 
 <div class="container-lg mb-5">
-
+    <div class="row justify-content-center">
+        <div class="col-12 col-lg-6 my-3 pt-4 px-3 rounded-3 box-shadow-custom">
+            <h4 class="text-center">My Previous Orders</h4>
+            <div class="order-history table-responsive">
+                <table class="table table-sm table-borderless">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Order Number</th>
+                            <th>Items</th>
+                            <th>Order Total</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for order in orders %}
+                        <tr>
+                            <td>{{ order.date|date:"d F Y" }}</td>
+                            <td>
+                                <a href="{% url 'previous_order' order.order_number %}" title="{{ order.order_number }}" class="link-custom text-break">
+                                    {{ order.order_number|truncatechars:16 }}
+                                </a>
+                            </td>
+                            <td>
+                                <ul class="list-unstyled">
+                                    {% for item in order.lineitems.all %}
+                                    <li class="small">
+                                        {{ item.product.brand.friendly_name }}: {{ item.product.name }} x{{ item.quantity }}
+                                    </li>
+                                    {% endfor %}
+                                </ul>
+                            </td>
+                            <td>£{{ order.grand_total }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
 </div>
 {% endblock %}

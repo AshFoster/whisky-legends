@@ -169,7 +169,7 @@ def checkout_success(request, order_number):
             if user_profile_form.is_valid():
                 user_profile_form.save()
 
-    messages.success(request, 'Your order has been successful!')
+    # messages.success(request, 'Your order has been successful!')
 
     if 'cart' in request.session:
         del request.session['cart']
