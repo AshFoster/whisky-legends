@@ -26,7 +26,7 @@
             </button>
         </a>
         {% url 'orders' as url %}
-        <a href="" class="col-3 m-3 p-0">
+        <a href="{% url 'orders' %}" class="col-3 m-3 p-0">
             <button class="w-100 h-100 rounded-3 {% if request.path == url %}active-profile{% endif %}">
                 <h4 class="my-2 text-center text-uppercase profile-title">My Orders</h4>
             </button>
