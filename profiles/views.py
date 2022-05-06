@@ -74,6 +74,7 @@ def view_wishlist(request):
     template = 'profiles/wishlist.html'
     context = {
         'wishlist': wishlist,
+        'viewing_wishlist': True
     }
 
     return render(request, template, context)
@@ -85,6 +86,8 @@ def update_wishlist(request, product_id):
     """
     product = get_object_or_404(Product, pk=product_id)
     redirect_url = request.POST.get('redirect_url')
+    request.session.get('updating_cart', False)
+    request.session['updating_cart'] = False
 
     try:
         wishlist = UserWishlist.objects.get(user=request.user)

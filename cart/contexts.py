@@ -16,11 +16,8 @@ def cart_contents(request):
     total = 0
     product_count = 0
     cart = request.session.get('cart', {})
-    viewing_cart = False
-    current_url = resolve(request.path).route
-
-    if 'cart/' in current_url:
-        viewing_cart = True
+    updating_cart = request.session.get('updating_cart', False)
+    print(updating_cart)
 
     for product_id, quantity in cart.items():
         product = get_object_or_404(Product, pk=product_id)
@@ -49,7 +46,7 @@ def cart_contents(request):
         'free_delivery_delta': free_delivery_delta,
         'free_delivery_threshold': settings.FREE_DELIVERY_THRESHOLD,
         'grand_total': grand_total,
-        'viewing_cart': viewing_cart,
+        'updating_cart': updating_cart,
     }
 
     return context

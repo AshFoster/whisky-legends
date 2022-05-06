@@ -18,6 +18,7 @@ def view_cart(request):
     template = 'cart/cart.html'
     context = {
         'wishlist': wishlist,
+        'viewing_cart': True,
     }
 
     return render(request, template, context)
@@ -32,6 +33,8 @@ def add_to_cart(request, product_id):
     quantity = int(request.POST.get('quantity'))
     redirect_url = request.POST.get('redirect_url')
     cart = request.session.get('cart', {})
+    request.session.get('updating_cart', True)
+    request.session['updating_cart'] = True
 
     if product_id in list(cart.keys()):
         cart[product_id] += quantity
@@ -62,6 +65,8 @@ def update_cart(request, product_id):
         product = get_object_or_404(Product, pk=product_id)
         quantity = int(request.POST.get('quantity'))
         cart = request.session.get('cart', {})
+        request.session.get('updating_cart', True)
+        request.session['updating_cart'] = True
 
         if quantity > 0:
             cart[product_id] = quantity
@@ -95,6 +100,8 @@ def remove_from_cart(request, product_id):
         cart = request.session.get('cart', {})
         cart.pop(product_id)
         request.session['cart'] = cart
+        request.session.get('updating_cart', True)
+        request.session['updating_cart'] = True
         messages.success(
                 request,
                 f'Removed "{product.brand.friendly_name}: '
