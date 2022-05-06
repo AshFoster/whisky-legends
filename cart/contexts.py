@@ -16,6 +16,11 @@ def cart_contents(request):
     product_count = 0
     cart = request.session.get('cart', {})
     updating_cart = request.session.get('updating_cart', False)
+    previous_url = request.META.get('HTTP_REFERER')
+    from_login_register = False
+
+    if 'accounts/signup/' or 'accounts/login/' in previous_url:
+        from_login_register = True
 
     for product_id, quantity in cart.items():
         product = get_object_or_404(Product, pk=product_id)
@@ -45,6 +50,7 @@ def cart_contents(request):
         'free_delivery_threshold': settings.FREE_DELIVERY_THRESHOLD,
         'grand_total': grand_total,
         'updating_cart': updating_cart,
+        'from_login_register': from_login_register,
     }
 
     return context
