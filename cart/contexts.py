@@ -19,7 +19,7 @@ def cart_contents(request):
     previous_url = request.META.get('HTTP_REFERER')
     from_login_register = False
 
-    if 'accounts/signup/' or 'accounts/login/' in previous_url:
+    if 'accounts/signup/' in previous_url or 'accounts/login/' in previous_url:
         from_login_register = True
 
     for product_id, quantity in cart.items():
