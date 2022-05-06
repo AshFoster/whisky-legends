@@ -3,7 +3,6 @@
 from decimal import Decimal
 from django.conf import settings
 from django.shortcuts import get_object_or_404
-from django.urls import resolve
 from shop.models import Product
 
 
@@ -17,7 +16,6 @@ def cart_contents(request):
     product_count = 0
     cart = request.session.get('cart', {})
     updating_cart = request.session.get('updating_cart', False)
-    print(updating_cart)
 
     for product_id, quantity in cart.items():
         product = get_object_or_404(Product, pk=product_id)

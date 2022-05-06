@@ -266,5 +266,6 @@ class ProductDetail(View):
             {
                 'product': product,
                 'wishlist': wishlist,
+                'viewing_detail': True,
             },
         )
