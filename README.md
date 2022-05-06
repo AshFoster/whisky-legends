@@ -238,6 +238,8 @@ Google Chrome was the browser used for the majority of testing during the develo
 
 - When viewing the cart or product detail pages, if a user was not logged in, and error was thrown. This was because within the assoiciated views, a UserWishlist object is assigned to a variable, which is not possible when a registered user does not exist. This was not handled correctly so an exception was thrown. This was solved by first checking if the current user is anonymous, and if so not attempting to access a UserWishlist object.
 
+- When initially adding the 'previous_url' variable to contexts.py if there was no previous url an error was thrown. This was fixed by adding a simple if statement to check whether 'previous_url' had a value before attempting to use it.
+
 #### Unfixed Bugs
 
 - 
