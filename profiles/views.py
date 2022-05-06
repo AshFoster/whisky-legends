@@ -67,11 +67,9 @@ def view_wishlist(request):
     A view to display the current user's wishlist.
     """
     try:
-        wishlist = UserWishlist.objects.get(user=request.user)
+        wishlist = UserWishlist.objects.get(user=request.user).product.all()
     except ObjectDoesNotExist:
         wishlist = None
-    else:
-        wishlist = wishlist.product.all()
 
     template = 'profiles/wishlist.html'
     context = {
