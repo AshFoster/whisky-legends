@@ -100,8 +100,8 @@
                         </form>
                         {% else %}
                         <p class="m-0">
-                            Please <a href="{% url 'account_signup' %}?next={{request.path}}" class="link-custom">register</a> or <a
-                                href="{% url 'account_login' %}?next={{request.path}}" class="link-custom">log In</a> to add this product to
+                            <a href="{% url 'account_signup' %}?next={{request.path}}" class="link-custom">Create an account</a> or 
+                            <a href="{% url 'account_login' %}?next={{request.path}}" class="link-custom">log In</a> to add this product to
                             your wishlist
                         </p>
                         {% endif %}
