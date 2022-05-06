@@ -236,6 +236,8 @@ Google Chrome was the browser used for the majority of testing during the develo
 
 - When making a payment through the checkout, if a user was not logged in, the website crashed and the payment did not go through. This was caused because the 'id-save-info' checkbox is not shown when a user is not logged in, so the javascript file came to a halt when trying to access a variable set to this element. This was fixed by checking if the variable's value was 'null' before attempting to make any further changes, and setting it to 'false' instead of 'null' if so.
 
+- When viewing the cart or product detail pages, if a user was not logged in, and error was thrown. This was because within the assoiciated views, a UserWishlist object is assigned to a variable, which is not possible when a registered user does not exist. This was not handled correctly so an exception was thrown. This was solved by first checking if the current user is anonymous, and if so not attempting to access a UserWishlist object.
+
 #### Unfixed Bugs
 
 - 

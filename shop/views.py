@@ -251,14 +251,17 @@ class ProductDetail(View):
         queryset = Product.objects.all()
         product = get_object_or_404(queryset, pk=product_id)
 
-        try:
-            wishlist = UserWishlist.objects.get(user=request.user)
-            if product in wishlist.product.all():
-                wishlist = True
-            else:
+        if request.user.is_anonymous:
+            wishlist = None
+        else:
+            try:
+                wishlist = UserWishlist.objects.get(user=request.user)
+                if product in wishlist.product.all():
+                    wishlist = True
+                else:
+                    wishlist = False
+            except ObjectDoesNotExist:
                 wishlist = False
-        except ObjectDoesNotExist:
-            wishlist = False
 
         return render(
             request,

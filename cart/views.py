@@ -10,10 +10,14 @@ def view_cart(request):
     """
     A view to return the shopping cart page
     """
-    try:
-        wishlist = UserWishlist.objects.get(user=request.user).product.all()
-    except ObjectDoesNotExist:
+    if request.user.is_anonymous:
         wishlist = None
+    else:
+        try:
+            wishlist = UserWishlist.objects.get(
+                user=request.user).product.all()
+        except ObjectDoesNotExist:
+            wishlist = None
 
     template = 'cart/cart.html'
     context = {

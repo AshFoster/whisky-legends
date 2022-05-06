@@ -44,19 +44,19 @@
                                     {{ item.product.name }}</strong></p>
                             <p class="mt-0 mb-3 text-muted">{{ item.product.volume|round_down }}cl,
                                 {{ item.product.abv|round_down }}%</p>
+                            {% if user.is_authenticated %}
                             <form class="form" action="{% url 'update_wishlist' item.product.id %}" method="POST">
                                 {% csrf_token %}
-                                {% if item.product in wishlist %}
                                 <button type="submit" class="wishlist-btn text-uppercase mt-4 p-0 d-none d-md-inline-block">
+                                    {% if item.product in wishlist %}
                                     Remove from wishlist<span class="ms-1"><i class="fas fa-heart"></i></span>
-                                </button>
-                                {% else %}
-                                <button type="submit" class="wishlist-btn text-uppercase mt-4 p-0 d-none d-md-inline-block">
+                                    {% else %}
                                     Add to wishlist<span class="ms-1"><i class="far fa-heart"></i></span>
+                                    {% endif %}
                                 </button>
-                                {% endif %}
                                 <input type="hidden" name="redirect_url" value="{{ request.get_full_path }}">
                             </form>
+                            {% endif %}
                         </td>
                         <td class="pt-md-5">
                             <div
@@ -111,15 +111,13 @@
                             </a>
                             <form class="form" action="{% url 'update_wishlist' item.product.id %}" method="POST">
                                 {% csrf_token %}
-                                {% if item.product in wishlist %}
                                 <button type="submit" class="wishlist-btn text-uppercase my-3 p-0 d-md-none">
+                                    {% if item.product in wishlist %}
                                     Remove from wishlist<span class="ms-1"><i class="fas fa-heart"></i></span>
-                                </button>
-                                {% else %}
-                                <button type="submit" class="wishlist-btn text-uppercase my-3 p-0 d-md-none">
+                                    {% else %}
                                     Add to wishlist<span class="ms-1"><i class="far fa-heart"></i></span>
+                                    {% endif %}
                                 </button>
-                                {% endif %}
                                 <input type="hidden" name="redirect_url" value="{{ request.get_full_path }}">
                             </form>
                         </td>

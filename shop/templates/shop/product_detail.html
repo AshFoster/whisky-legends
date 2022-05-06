@@ -86,6 +86,7 @@
 
                     <!-- Wishlist button -->
                     <div class="d-flex justify-content-center mt-4">
+                        {% if user.is_authenticated %}
                         <form class="form" action="{% url 'update_wishlist' product.id %}" method="POST">
                             {% csrf_token %}
                             <button type="submit" class="wishlist-btn text-uppercase">
@@ -97,6 +98,13 @@
                             </button>
                             <input type="hidden" name="redirect_url" value="{{ request.get_full_path }}">
                         </form>
+                        {% else %}
+                        <p class="m-0">
+                            Please <a href="{% url 'account_signup' %}" class="link-custom">register</a> or <a
+                                href="{% url 'account_login' %}" class="link-custom">log In</a> to add this product to
+                            your wishlist
+                        </p>
+                        {% endif %}
                     </div>
                 </div>
 
