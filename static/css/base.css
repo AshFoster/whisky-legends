@@ -213,10 +213,63 @@ footer {
     border-color: rgba(97, 27, 27, 25%);
 }
 
+.review-star::before {
+    font-family: "Font Awesome 5 Free"; 
+	font-weight: 400;
+	content: "\f005";
+}
+
+.review-rating {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.review-rating > input {
+    display: none;
+}
+
+.review-rating > label {
+    position: relative;
+    color: var(--logo-text-color);
+    padding-left: 1.5px;
+    padding-right: 1.5px;
+    cursor: pointer;
+}
+
+.review-rating > label::before {
+    font-family: "Font Awesome 5 Free"; 
+	font-weight: 900;
+	content: "\f005";
+    position: absolute;
+    opacity: 0;
+}
+
+.review-rating > label:hover:before,
+.review-rating > label:hover ~ label:before {
+    opacity: 1 !important;
+}
+
+.review-rating > input:checked ~ label:before {
+    opacity: 1;
+}
+
+.review-rating:hover > input:checked ~ label:before {
+    opacity: 0.4;
+}
+
 .review-form-input:focus,
 .review-form-input:active {
     border-color: rgba(97, 27, 27, 50%);
     box-shadow: 0 0 0 0.25rem rgba(97, 27, 27, 40%);
+}
+
+.fa-stack > .fas.fa-star {
+    visibility: hidden;
+}
+
+.fa-stack:hover > .fas.fa-star {
+    visibility: visible;
+    cursor: pointer;
 }
 
 /* Cart page */

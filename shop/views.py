@@ -273,5 +273,6 @@ class ProductDetail(View):
                 'wishlist': wishlist,
                 'viewing_detail': True,
                 'form': form,
+                'range': range(10),
             },
         )
