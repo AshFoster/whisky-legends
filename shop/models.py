@@ -158,7 +158,7 @@ class Review(models.Model):
         on_delete=models.CASCADE,
         related_name='reviews'
     )
-    rating = models.IntegerField(null=True, blank=True)
+    rating = models.IntegerField(null=False, blank=False)
     content = models.TextField(max_length=254, null=False, blank=False)
     date = models.DateTimeField(auto_now_add=True)
 
