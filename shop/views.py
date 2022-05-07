@@ -1,10 +1,10 @@
 import math
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect, reverse
 from django.contrib import messages
 from django.core.exceptions import ObjectDoesNotExist
 from django.db.models import Q, Min, Max, F, Count
 from django.db.models.functions import Lower
-from django.views import generic, View
+from django.views import generic
 from profiles.models import UserWishlist
 from .models import Product
 from .forms import ReviewForm
@@ -243,36 +243,54 @@ class Shop(generic.ListView):
         return context
 
 
-class ProductDetail(View):
+def product_detail(request, product_id):
     """
-    Product Detail class based view to show individual Product model
+    Product view to show individual Product model
     objects on product_detail.html
     """
-    def get(self, request, product_id, *args, **kwargs):
-        queryset = Product.objects.all()
-        product = get_object_or_404(queryset, pk=product_id)
+    product = get_object_or_404(Product, pk=product_id)
+
+    if request.method == 'POST':
+        form = ReviewForm(request.POST)
+        if form.is_valid():
+            review = form.save(commit=False)
+            review.user = request.user
+            review.product = product
+            review.rating = request.POST.get('rating')
+            review.save()
+            messages.success(
+                request,
+                'Your review has been successfully submitted')
+
+            return redirect(reverse('product_detail', args=[product.id]))
+        else:
+            messages.error(
+                request,
+                ('Your review submission has failed. Please '
+                 'ensure the form is valid.')
+            )
+    else:
         form = ReviewForm()
 
-        if request.user.is_anonymous:
-            wishlist = None
-        else:
-            try:
-                wishlist = UserWishlist.objects.get(user=request.user)
-                if product in wishlist.product.all():
-                    wishlist = True
-                else:
-                    wishlist = False
-            except ObjectDoesNotExist:
+    if request.user.is_anonymous:
+        wishlist = None
+    else:
+        try:
+            wishlist = UserWishlist.objects.get(user=request.user)
+            if product in wishlist.product.all():
+                wishlist = True
+            else:
                 wishlist = False
+        except ObjectDoesNotExist:
+            wishlist = False
 
-        return render(
-            request,
-            'shop/product_detail.html',
-            {
-                'product': product,
-                'wishlist': wishlist,
-                'viewing_detail': True,
-                'form': form,
-                'range': range(10),
-            },
-        )
+    template = 'shop/product_detail.html'
+    context = {
+        'product': product,
+        'wishlist': wishlist,
+        'viewing_detail': True,
+        'form': form,
+        'range': range(10),
+    }
+
+    return render(request, template, context)

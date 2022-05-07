@@ -26,13 +26,12 @@
                     <!-- Product rating -->
                     <div class="d-flex flex-column flex-sm-row justify-content-between align-items-center">
                         <div class="d-flex flex-column justify-content-center justify-content-sm-start">
-                            <div>
+                            <div class="text-end">
                                 Rating: <strong id="ratingValue">
-                                    {% if product.rating_total and product.rated.count > 0 %}{{ product.calc_rating }}{% else %}0{% endif %}
-                                </strong>/10
+                                    {% if product.reviews %}{{ product.calc_rating }}{% else %}0{% endif %}</strong>/10
                             </div>
-                            <small class="rating-count">({{ product.rated.count }}
-                                vote{% if product.rated.count != 1 %}s{% endif %})</small>
+                            <small class="rating-count">({{ product.reviews.count }}
+                                vote{% if product.reviews.count != 1 %}s{% endif %})</small>
                         </div>
                         <div id=stars class="ms-sm-1"></div>
                     </div>
@@ -130,15 +129,16 @@
         <div class="col-12 col-sm-11 col-xl-9 col-xxl-8 rounded-3 box-shadow-custom">
             <div class="row justify-content-center">
                 <div class="col-8 d-flex flex-column justify-content-center">
-                    <h3 class="my-4 text-center">Customer Reviews</h3>
+                    <h3 class="my-4 text-center">Review This Product</h3>
                     <form class="mb-4 px-3" action="{% url 'product_detail' product.id %}" method="POST" id="review-form">
                         {% csrf_token %}
                         {{ form | crispy }}
-                        <div class="d-flex justify-content-center my-4">
+                        <h5 class="text-center mt-4 mb-1">Your rating</h5>
+                        <div class="d-flex justify-content-center mb-4">
                             <!-- CREDIT - https://medium.com/free-code-camp/how-to-make-the-impossible-possible-in-css-with-a-little-creativity-bd96bb42b29d#:~:text=If%20you%20ever%20used%20CSS,to%20select%20what%20came%20before. -->
                             <div class="review-rating">
                                 {% for i in range %}                               
-                                <input type="radio" name="rating" value="{{10|subtract:i}}" id="{{10|subtract:i}}">
+                                <input type="radio" name="rating" value="{{10|subtract:i}}" id="{{10|subtract:i}}" required>
                                 <label for="{{10|subtract:i}}"><span class="review-star"></span></label>
                                 {% endfor %}
                             </div> 

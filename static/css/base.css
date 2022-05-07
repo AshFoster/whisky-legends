@@ -225,7 +225,9 @@ footer {
 }
 
 .review-rating > input {
-    display: none;
+    position: absolute;
+    right: 49vw;
+    opacity: 0;
 }
 
 .review-rating > label {

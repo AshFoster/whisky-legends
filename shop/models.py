@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 from django.utils.text import slugify
+from django.db.models import Sum
 
 
 class Type(models.Model):
@@ -135,21 +136,18 @@ class Product(models.Model):
         null=True,
         blank=True)
     age = models.IntegerField(null=True, blank=True)
-    rated = models.ManyToManyField(
-        User,
-        related_name='product_rated',
-        blank=True
-    )
-    rating_total = models.IntegerField(null=True, blank=True)
     image = models.ImageField(null=True, blank=True)
 
     def __str__(self):
         return f'{self.brand.friendly_name}: {self.name}'
 
     def calc_rating(self):
-        if self.rating_total and self.rated.count() != 0:
-            print(self.rated.count())
-            return self.rating_total/self.rated.count()
+        try:
+            reviews = self.reviews.aggregate(Sum('rating'))
+            rating = round(reviews['rating__sum'] / self.reviews.count(), 1)
+            return rating
+        except TypeError:
+            return 0
 
 
 class Review(models.Model):
@@ -160,12 +158,7 @@ class Review(models.Model):
         on_delete=models.CASCADE,
         related_name='reviews'
     )
-    rating = models.DecimalField(
-        max_digits=2,
-        decimal_places=1,
-        null=True,
-        blank=True
-    )
+    rating = models.IntegerField(null=True, blank=True)
     content = models.TextField(max_length=254, null=False, blank=False)
     date = models.DateTimeField(auto_now_add=True)
 
@@ -173,4 +166,4 @@ class Review(models.Model):
         ordering = ['-date']
 
     def __str__(self):
-        return f'{self.user.username} on {self.date}'
+        return f'{self.user} on {self.date}'

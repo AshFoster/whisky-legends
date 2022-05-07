@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Type, Brand, Country, Region, Flavour, Product
+from .models import Type, Brand, Country, Region, Flavour, Product, Review
 
 
 class ProductAdmin(admin.ModelAdmin):
@@ -71,9 +71,17 @@ class FlavourAdmin(admin.ModelAdmin):
     exclude = ('name',)
 
 
+class ReviewAdmin(admin.ModelAdmin):
+    list_display = ('user', 'product', 'content',
+                    'rating', 'date',)
+
+    ordering = ('date',)
+
+
 admin.site.register(Product, ProductAdmin)
 admin.site.register(Type, TypeAdmin)
 admin.site.register(Brand, BrandAdmin)
 admin.site.register(Country, CountryAdmin)
 admin.site.register(Region, RegionAdmin)
 admin.site.register(Flavour, FlavourAdmin)
+admin.site.register(Review, ReviewAdmin)
