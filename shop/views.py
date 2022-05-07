@@ -7,6 +7,7 @@ from django.db.models.functions import Lower
 from django.views import generic, View
 from profiles.models import UserWishlist
 from .models import Product
+from .forms import ReviewForm
 
 
 class Shop(generic.ListView):
@@ -250,6 +251,7 @@ class ProductDetail(View):
     def get(self, request, product_id, *args, **kwargs):
         queryset = Product.objects.all()
         product = get_object_or_404(queryset, pk=product_id)
+        form = ReviewForm()
 
         if request.user.is_anonymous:
             wishlist = None
@@ -270,5 +272,6 @@ class ProductDetail(View):
                 'product': product,
                 'wishlist': wishlist,
                 'viewing_detail': True,
+                'form': form,
             },
         )

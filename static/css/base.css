@@ -209,6 +209,16 @@ footer {
     font-size: 80%;
 }
 
+.review-form-input {
+    border-color: rgba(97, 27, 27, 25%);
+}
+
+.review-form-input:focus,
+.review-form-input:active {
+    border-color: rgba(97, 27, 27, 50%);
+    box-shadow: 0 0 0 0.25rem rgba(97, 27, 27, 40%);
+}
+
 /* Cart page */
 
 .cart-table {

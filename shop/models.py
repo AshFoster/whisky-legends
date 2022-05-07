@@ -150,3 +150,27 @@ class Product(models.Model):
         if self.rating_total and self.rated.count() != 0:
             print(self.rated.count())
             return self.rating_total/self.rated.count()
+
+
+class Review(models.Model):
+    user = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)
+    product = models.ForeignKey(
+        Product,
+        blank=True,
+        on_delete=models.CASCADE,
+        related_name='reviews'
+    )
+    rating = models.DecimalField(
+        max_digits=2,
+        decimal_places=1,
+        null=True,
+        blank=True
+    )
+    content = models.TextField(max_length=254, null=False, blank=False)
+    date = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        ordering = ['-date']
+
+    def __str__(self):
+        return f'{self.user.username} on {self.date}'
