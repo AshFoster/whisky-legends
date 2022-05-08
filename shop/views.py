@@ -261,6 +261,7 @@ def product_detail(request, product_id):
             messages.success(
                 request,
                 'Your review has been successfully submitted')
+            request.session['reviewing'] = True
 
             return redirect(reverse('product_detail', args=[product.id]))
         else:
@@ -269,8 +270,11 @@ def product_detail(request, product_id):
                 ('Your review submission has failed. Please '
                  'ensure the form is valid.')
             )
+            request.session['reviewing'] = True
     else:
         form = ReviewForm()
+
+    reviewing = request.session.get('reviewing', False)
 
     if request.user.is_anonymous:
         wishlist = None
@@ -291,6 +295,7 @@ def product_detail(request, product_id):
         'viewing_detail': True,
         'form': form,
         'range': range(10),
+        'reviewing': reviewing,
     }
 
     return render(request, template, context)

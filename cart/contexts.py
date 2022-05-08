@@ -20,7 +20,8 @@ def cart_contents(request):
     from_login_register = False
 
     if previous_url:
-        if 'accounts/signup/' in previous_url or 'accounts/login/' in previous_url:
+        if ('accounts/signup/' in previous_url or
+                'accounts/login/' in previous_url):
             from_login_register = True
 
     for product_id, quantity in cart.items():
@@ -34,7 +35,8 @@ def cart_contents(request):
         })
 
     if total < settings.FREE_DELIVERY_THRESHOLD:
-        delivery = total * Decimal(settings.STANDARD_DELIVERY_PERCENTAGE / 100)
+        delivery = total * Decimal(
+            settings.STANDARD_DELIVERY_PERCENTAGE / 100)
         free_delivery_delta = settings.FREE_DELIVERY_THRESHOLD - total
     else:
         delivery = 0

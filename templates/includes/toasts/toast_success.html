@@ -55,7 +55,7 @@
                 </div>
             </div>
         {% elif viewing_cart or viewing_detail %}
-        {% if wishlist and not updating_cart %}
+        {% if wishlist and not updating_cart and not from_login_register and not reviewing %}
         <hr>
         <a href="{% url 'view_wishlist' %}" class="btn btn-custom text-uppercase w-100 my-2 fs-5 box-shadow-custom">
             View Wishlist&nbsp;<i class="fas fa-heart"></i></a>
