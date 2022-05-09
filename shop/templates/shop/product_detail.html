@@ -160,21 +160,20 @@
             </div>
             <hr class="my-0 mx-auto w-75">
             <div class="row justify-content-center">
-                <div class="col-12 col-md-8 d-flex flex-column justify-content-center mb-4">
-                    <h3 class="my-4 text-center">Customer Reviews</h3>
+                <div class="col-12 col-md-8 d-flex flex-column justify-content-center align-items-center align-items-md-start mb-4">
+                    <h3 class="my-4 w-100 text-center">Customer Reviews</h3>
                     {% for review in reviews %}
                     <div class="review-stars text-logo" data-rating="{{ review.rating }}"></div>
-                    <p class="my-0"><strong>
+                    <p class="my-0 px-2 px-md-0"><strong>
                         {% with review.user as user %}
                         {% if user %}{% if user.userprofile.default_full_name %}{{ user.userprofile.default_full_name }}{% else %}{{ user.username }}{% endif %}{% else %}Unknown User{% endif %}{% endwith %}, {{ review.date|date:'jS F Y' }}</strong></p>
-                    <p class="my-0 text-muted">{{ review.content }}</p>
+                    <p class="my-0 px-2 px-md-0 text-muted text-center text-md-start">{{ review.content }}</p>
                     {% if user == review.user or user.is_superuser %}
                     <form class="form" action="{% url 'delete_review' review.id %}" method="POST">
                         {% csrf_token %}
-                        <button type="submit" class="remove-btn text-start text-danger text-uppercase mt-1 p-0 d-block">
+                        <button type="submit" class="remove-btn text-danger text-uppercase mt-1 p-0 d-block">
                             <a>Delete<span class="ms-1"><i class="fas fa-trash"></i></span></a>
                         </button>
-                        <input type="hidden" name="redirect_url" value="{{ request.get_full_path }}">
                     </form>
                     {% if not forloop.last %}
                     <hr class="mt-2">
