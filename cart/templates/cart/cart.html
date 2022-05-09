@@ -42,8 +42,9 @@
                         <td class="pt-md-5 position-relative">
                             <p class="my-0"><strong>{{ item.product.brand.friendly_name }}:
                                     {{ item.product.name }}</strong></p>
-                            <p class="mt-0 mb-3 text-muted">{{ item.product.volume|round_down }}cl,
-                                {{ item.product.abv|round_down }}%</p>
+                            {% if item.product.volume or item.product.abv %}
+                            <p class="mt-0 mb-3 text-muted">{% if item.product.volume %}{{ item.product.volume|round_down }}cl{% if item.product.volume and item.product.abv %}, {% endif %}{% endif %}{% if item.product.abv %}{{ item.product.abv|round_down }}%{% endif %}</p>
+                            {% endif %}
                             {% if user.is_authenticated %}
                             <form class="form" action="{% url 'update_wishlist' item.product.id %}" method="POST">
                                 {% csrf_token %}

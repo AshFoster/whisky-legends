@@ -316,10 +316,10 @@ def delete_review(request, review_id):
     if not request.user.is_superuser and not request.user == review.user:
         messages.error(
             request,
-            'Sorry, only review authors and store '
-            'admin can delete this review.'
+            'Sorry, only review authors and shop '
+            'admins can delete reviews.'
         )
-        return redirect(reverse('product_detail', args=[product.id]))
+        return redirect(reverse('home'))
 
     review.delete()
     messages.success(
@@ -334,7 +334,29 @@ def add_product(request):
     """
     A view to add a product to the shop
     """
-    form = ProductForm()
+    if not request.user.is_superuser:
+        messages.error(
+            request,
+            'Sorry, only shop admins can add '
+            'a product.'
+        )
+        return redirect(reverse('home'))
+
+    if request.method == 'POST':
+        form = ProductForm(request.POST, request.FILES)
+        if form.is_valid():
+            product = form.save()
+            messages.success(request, 'Successfully added product!')
+            return redirect(reverse('product_detail', args=[product.id]))
+        else:
+            messages.error(
+                request,
+                'Failed to add product. Please ensure the '
+                'form is valid.'
+            )
+    else:
+        form = ProductForm()
+
     template = 'shop/add_product.html'
     context = {
         'form': form,

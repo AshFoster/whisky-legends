@@ -19,9 +19,13 @@
                         {{ product.brand.country.friendly_name }}
                     </small>
                     <br>
-                    <small>({{ product.volume|round_down }}cl, {{ product.abv|round_down }}%)</small>
+                    {% if product.volume or product.abv %}
+                    <small>({% if product.volume %}{{ product.volume|round_down }}cl{% endif %}{% if product.volume and product.abv %}, {% endif %}{% if product.abv %}{{ product.abv|round_down }}%{% endif %})</small>
+                    {% endif %}
                     <p class="mt-4">{{ product.description }}</p>
+                    {% if product.flavour %}
                     <p class="my-3"><small>Flavour: {{ product.flavour.friendly_name }}</small></p>
+                    {% endif %}
 
                     <!-- Product rating -->
                     <div class="d-flex flex-column flex-sm-row justify-content-between align-items-center">
