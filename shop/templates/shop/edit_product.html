@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+<div class="container-lg my-3">
+
+    <!-- Product Management Heading -->
+    <div class="row justify-content-center">
+        <div class="col-11 col-lg-12">
+            <h2 class="my-4 text-center text-uppercase fs-1 checkout-title">Product Management <i class="fas fa-glass-whiskey"></i></h2>
+            <div class="row g-0 justify-content-center">
+                <hr class="w-50 mt-0 mb-4">
+            </div>
+        </div>
+    </div>
+
+    <div class="row justify-content-center mt-2 mb-5">
+        <div class="col-11 col-sm-10 col-md-8 my-3 py-4 px-3 px-sm-4 rounded-3 box-shadow-custom">
+            <h4 class="text-center text-uppercase mb-4">Edit a Product</h4>
+            <form method="POST" action="{% url 'edit_product' product.id %}" class="form mb-2" enctype="multipart/form-data">
+                {% csrf_token %}
+                {{ form | crispy }}
+                <div class="col-12 d-flex flex-column-reverse flex-sm-row justify-content-evenly align-items-center my-3 px-375px-3">
+                    <a href="{% url 'shop' %}" class="btn p-2 back-to-shop">
+                        <i class="fas fa-chevron-left"></i><i class="fas fa-chevron-left"></i>
+                        <span class="text-uppercase">&nbsp;Back to shop</span>
+                    </a>
+                    <input type="submit" class="btn btn-custom mb-3 mb-sm-0 text-uppercase fs-5"
+                        value="Edit Product">
+                </div>
+            </form>
+        </div> 
+    </div>
+</div>
+{% endblock %}
