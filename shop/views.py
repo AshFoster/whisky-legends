@@ -249,6 +249,7 @@ def product_detail(request, product_id):
     objects on product_detail.html
     """
     product = get_object_or_404(Product, pk=product_id)
+    reviews = product.reviews.all()
 
     if request.method == 'POST':
         form = ReviewForm(request.POST)
@@ -296,6 +297,7 @@ def product_detail(request, product_id):
         'form': form,
         'range': range(10),
         'reviewing': reviewing,
+        'reviews': reviews,
     }
 
     return render(request, template, context)

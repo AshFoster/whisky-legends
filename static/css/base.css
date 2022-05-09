@@ -274,6 +274,11 @@ footer {
     cursor: pointer;
 }
 
+#stars i,
+.review-stars i {
+    padding-right: 3px;
+}
+
 /* Cart page */
 
 .cart-table {
