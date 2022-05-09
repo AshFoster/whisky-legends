@@ -8,7 +8,7 @@ from django.db.models.functions import Lower
 from django.views import generic
 from profiles.models import UserWishlist
 from .models import Product, Review
-from .forms import ReviewForm
+from .forms import ReviewForm, ProductForm
 
 
 class Shop(generic.ListView):
@@ -328,3 +328,16 @@ def delete_review(request, review_id):
         f'{product.name}". '
     )
     return redirect(reverse('product_detail', args=[product.id]))
+
+
+def add_product(request):
+    """
+    A view to add a product to the shop
+    """
+    form = ProductForm()
+    template = 'shop/add_product.html'
+    context = {
+        'form': form,
+    }
+
+    return render(request, template, context)

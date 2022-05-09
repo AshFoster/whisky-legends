@@ -1,5 +1,5 @@
 from django import forms
-from .models import Review, Product, Type
+from .models import Review, Product, Type, Brand, Flavour
 
 
 class ReviewForm(forms.ModelForm):
@@ -30,8 +30,15 @@ class ProductForm(forms.ModelForm):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         types = Type.objects.all()
-        friendly_names = [(t.id, t.get_friendly_name()) for t in types]
+        type_friendly_names = [(t.id, t.get_friendly_name()) for t in types]
+        brands = Brand.objects.all()
+        brand_friendly_names = [(b.id, b.get_friendly_name()) for b in brands]
+        flavours = Flavour.objects.all()
+        flavour_friendly_names = [(f.id, f.get_friendly_name()) for f in flavours]
 
-        self.fields['type'].choices = friendly_names
+        self.fields['type'].choices = type_friendly_names
+        self.fields['brand'].choices = brand_friendly_names
+        self.fields['flavour'].choices = flavour_friendly_names
+        self.fields['description'].widget.attrs['rows'] = 5
         for field_name, field in self.fields.items():
             field.widget.attrs['class'] = 'add-product-input'
