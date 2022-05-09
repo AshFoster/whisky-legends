@@ -42,6 +42,8 @@ class Shop(generic.ListView):
         price_filter = self.request.GET.get('price')
         self.search_query = self.request.GET.get('search')
 
+        self.queryset = Product.objects.all().order_by('brand')
+
         if sort_by:
             self.sort = sort_by
             if sort_by == 'brand':
