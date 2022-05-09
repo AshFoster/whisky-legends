@@ -1,5 +1,6 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 from django.core.exceptions import ObjectDoesNotExist
 
 from checkout.models import Order
@@ -9,6 +10,7 @@ from .models import UserProfile, UserWishlist
 from .forms import UserProfileForm
 
 
+@login_required
 def profile(request):
     """
     A view to display the current user's profile info.
@@ -32,6 +34,7 @@ def profile(request):
     return render(request, template, context)
 
 
+@login_required
 def orders(request):
     """
     A view to display the current user's order history.
@@ -62,6 +65,7 @@ def previous_order(request, order_number):
     return render(request, template, context)
 
 
+@login_required
 def view_wishlist(request):
     """
     A view to display the current user's wishlist.
@@ -80,6 +84,7 @@ def view_wishlist(request):
     return render(request, template, context)
 
 
+@login_required
 def update_wishlist(request, product_id):
     """
     A view to add/remove a chosen product to/from the current user's wishlist

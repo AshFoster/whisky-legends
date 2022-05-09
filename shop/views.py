@@ -2,6 +2,7 @@ import math
 from django.shortcuts import (render, get_object_or_404,
                               redirect, reverse)
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 from django.core.exceptions import ObjectDoesNotExist
 from django.db.models import Q, Min, Max, F, Count
 from django.db.models.functions import Lower
@@ -304,6 +305,7 @@ def product_detail(request, product_id):
     return render(request, template, context)
 
 
+@login_required
 def delete_review(request, review_id):
     """
     A view to delete a review from a product
@@ -330,6 +332,7 @@ def delete_review(request, review_id):
     return redirect(reverse('product_detail', args=[product.id]))
 
 
+@login_required
 def add_product(request):
     """
     A view to add a product to the shop
@@ -365,6 +368,7 @@ def add_product(request):
     return render(request, template, context)
 
 
+@login_required
 def edit_product(request, product_id):
     """
     A view to edit a product in the shop
@@ -407,6 +411,7 @@ def edit_product(request, product_id):
     return render(request, template, context)
 
 
+@login_required
 def delete_product(request, product_id):
     """
     A view to delete a product from the shop
