@@ -22,6 +22,15 @@
                     {% if product.volume or product.abv %}
                     <small>({% if product.volume %}{{ product.volume|round_down }}cl{% endif %}{% if product.volume and product.abv %}, {% endif %}{% if product.abv %}{{ product.abv|round_down }}%{% endif %})</small>
                     {% endif %}
+
+                    <!-- Edit and Delete links -->
+                    {% if request.user.is_superuser %}
+                    <small class="d-flex justify-content-evenly mt-3">
+                        <a href="{% url 'edit_product' product.id %}" class="update-btn text-primary text-uppercase p-0">Edit <i class="fas fa-edit"></i></a>
+                        <a class="remove-btn text-danger text-uppercase p-0" href="{% url 'delete_product' product.id %}">Delete <i class="fas fa-trash"></i></a>
+                    </small>
+                    {% endif %}
+
                     <p class="mt-4">{{ product.description }}</p>
                     {% if product.flavour %}
                     <p class="my-3"><small>Flavour: {{ product.flavour.friendly_name }}</small></p>

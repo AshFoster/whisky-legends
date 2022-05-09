@@ -322,6 +322,12 @@
                                 </p>
                             </div>
                             {% endif %}
+                            {% if request.user.is_superuser %}
+                            <small class="d-flex justify-content-evenly mb-3">
+                                <a href="{% url 'edit_product' product.id %}" class="update-btn text-primary text-uppercase p-0">Edit <i class="fas fa-edit"></i></a>
+                                <a class="remove-btn text-danger text-uppercase p-0" href="{% url 'delete_product' product.id %}">Delete <i class="fas fa-trash"></i></a>
+                            </small>
+                            {% endif %}
                             <form class="form" action="{% url 'add_to_cart' product.id %}" method="POST">
                                 {% csrf_token %}
                                 <div class="d-flex justify-content-center">
