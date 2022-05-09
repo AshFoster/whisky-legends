@@ -1,12 +1,13 @@
 import math
-from django.shortcuts import render, get_object_or_404, redirect, reverse
+from django.shortcuts import (render, get_object_or_404,
+                              redirect, reverse)
 from django.contrib import messages
 from django.core.exceptions import ObjectDoesNotExist
 from django.db.models import Q, Min, Max, F, Count
 from django.db.models.functions import Lower
 from django.views import generic
 from profiles.models import UserWishlist
-from .models import Product
+from .models import Product, Review
 from .forms import ReviewForm
 
 
@@ -301,3 +302,29 @@ def product_detail(request, product_id):
     }
 
     return render(request, template, context)
+
+
+def delete_review(request, review_id):
+    """
+    A view to delete a review from a product
+    """
+    review = get_object_or_404(Review, pk=review_id)
+    product = review.product
+    request.session['updating_cart'] = False
+    request.session['reviewing'] = True
+
+    if not request.user.is_superuser and not request.user == review.user:
+        messages.error(
+            request,
+            'Sorry, only review authors and store '
+            'admin can delete this review.'
+        )
+        return redirect(reverse('product_detail', args=[product.id]))
+
+    review.delete()
+    messages.success(
+        request,
+        f'Deleted review from "{product.brand.friendly_name}: '
+        f'{product.name}". '
+    )
+    return redirect(reverse('product_detail', args=[product.id]))

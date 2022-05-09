@@ -168,8 +168,21 @@
                         {% with review.user as user %}
                         {% if user %}{% if user.userprofile.default_full_name %}{{ user.userprofile.default_full_name }}{% else %}{{ user.username }}{% endif %}{% else %}Unknown User{% endif %}{% endwith %}, {{ review.date|date:'jS F Y' }}</strong></p>
                     <p class="my-0 text-muted">{{ review.content }}</p>
+                    {% if user == review.user or user.is_superuser %}
+                    <form class="form" action="{% url 'delete_review' review.id %}" method="POST">
+                        {% csrf_token %}
+                        <button type="submit" class="remove-btn text-start text-danger text-uppercase mt-1 p-0 d-block">
+                            <a>Delete<span class="ms-1"><i class="fas fa-trash"></i></span></a>
+                        </button>
+                        <input type="hidden" name="redirect_url" value="{{ request.get_full_path }}">
+                    </form>
+                    {% if not forloop.last %}
+                    <hr class="mt-2">
+                    {% endif %}
+                    {% else %}
                     {% if not forloop.last %}
                     <hr>
+                    {% endif %}
                     {% endif %}
                     {% empty %}
                     <p class="text-center text-muted fs-5 mb-5"><strong>This product has no reviews yet.</strong></p>
