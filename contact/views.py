@@ -19,11 +19,11 @@ class Contact(FormView):
         """
         initial = super().get_initial()
 
-        if hasattr(self.request.user, 'profile'):
-            if self.request.user.profile.default_full_name == '':
+        if hasattr(self.request.user, 'userprofile'):
+            if self.request.user.userprofile.default_full_name == '':
                 initial['name'] = self.request.user.username
             else:
-                initial['name'] = self.request.user.profile.default_full_name
+                initial['name'] = self.request.user.userprofile.default_full_name
 
             initial['email'] = self.request.user.email
 
