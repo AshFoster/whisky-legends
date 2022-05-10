@@ -93,6 +93,7 @@ def update_wishlist(request, product_id):
     redirect_url = request.POST.get('redirect_url')
     request.session['updating_cart'] = False
     request.session['reviewing'] = False
+    request.session['updating_product'] = False
 
     try:
         wishlist = UserWishlist.objects.get(user=request.user)

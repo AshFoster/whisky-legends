@@ -253,6 +253,7 @@ def product_detail(request, product_id):
     """
     product = get_object_or_404(Product, pk=product_id)
     reviews = product.reviews.all()
+    updating_product = request.session.get('updating_product', False)
 
     if request.method == 'POST':
         form = ReviewForm(request.POST)
@@ -301,6 +302,7 @@ def product_detail(request, product_id):
         'range': range(10),
         'reviewing': reviewing,
         'reviews': reviews,
+        'updating_product': updating_product,
     }
 
     return render(request, template, context)
@@ -315,6 +317,7 @@ def delete_review(request, review_id):
     product = review.product
     request.session['updating_cart'] = False
     request.session['reviewing'] = True
+    request.session['updating_product'] = False
 
     if not request.user.is_superuser and not request.user == review.user:
         messages.error(
@@ -338,6 +341,10 @@ def add_product(request):
     """
     A view to add a product to the shop
     """
+    request.session['updating_cart'] = False
+    request.session['reviewing'] = False
+    request.session['updating_product'] = True
+
     if not request.user.is_superuser:
         messages.error(
             request,
@@ -374,6 +381,10 @@ def edit_product(request, product_id):
     """
     A view to edit a product in the shop
     """
+    request.session['updating_cart'] = False
+    request.session['reviewing'] = False
+    request.session['updating_product'] = True
+
     if not request.user.is_superuser:
         messages.error(
             request,
@@ -417,6 +428,10 @@ def delete_product(request, product_id):
     """
     A view to delete a product from the shop
     """
+    request.session['updating_cart'] = False
+    request.session['reviewing'] = False
+    request.session['updating_product'] = True
+
     if not request.user.is_superuser:
         messages.error(
             request,
