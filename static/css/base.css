@@ -450,6 +450,30 @@ footer {
     color: rgba(0, 0, 0, .7);
 }
 
+/* Add Product and Edit Product pages */
+
+.btn-file {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-file span {
+    font-size: 80%;
+}
+
+.btn-file input[type="file"] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.custom-checkbox {
+    margin-bottom: -1.5rem;
+}
 
 /* /// ---------------------------------------------------- BASE.HTML styles */
 

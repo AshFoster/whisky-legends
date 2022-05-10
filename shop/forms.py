@@ -1,4 +1,5 @@
 from django import forms
+from .widgets import CustomClearableFileInput
 from .models import Review, Product, Type, Brand, Flavour
 
 
@@ -27,14 +28,26 @@ class ProductForm(forms.ModelForm):
         model = Product
         fields = '__all__'
 
+    image = forms.ImageField(
+        label='Image',
+        required=False,
+        widget=CustomClearableFileInput
+    )
+
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         types = Type.objects.all()
-        type_friendly_names = [(t.id, t.get_friendly_name()) for t in types]
+        type_friendly_names = [
+            (t.id, t.get_friendly_name()) for t in types
+        ]
         brands = Brand.objects.all()
-        brand_friendly_names = [(b.id, b.get_friendly_name()) for b in brands]
+        brand_friendly_names = [
+            (b.id, b.get_friendly_name()) for b in brands
+        ]
         flavours = Flavour.objects.all()
-        flavour_friendly_names = [(f.id, f.get_friendly_name()) for f in flavours]
+        flavour_friendly_names = [
+            (f.id, f.get_friendly_name()) for f in flavours
+        ]
 
         self.fields['type'].choices = type_friendly_names
         self.fields['brand'].choices = brand_friendly_names

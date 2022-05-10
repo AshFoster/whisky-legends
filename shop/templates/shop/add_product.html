@@ -20,7 +20,14 @@
             <h4 class="text-center text-uppercase mb-4">Add a Product</h4>
             <form method="POST" action="{% url 'add_product' %}" class="form mb-2" enctype="multipart/form-data">
                 {% csrf_token %}
-                {{ form | crispy }}
+                {% csrf_token %}
+                {% for field in form %}
+                {% if field.name != 'image' %}
+                {{ field | as_crispy_field }}
+                {% else %}
+                {{ field }}
+                {% endif %}
+                {% endfor %}
                 <div class="col-12 d-flex flex-column-reverse flex-sm-row justify-content-evenly align-items-center my-3 px-375px-3">
                     <a href="{% url 'shop' %}" class="btn p-2 back-to-shop">
                         <i class="fas fa-chevron-left"></i><i class="fas fa-chevron-left"></i>
@@ -33,4 +40,14 @@
         </div> 
     </div>
 </div>
+{% endblock %}
+
+{% block postloadjs %}
+{{ block.super }}
+<script type="text/javascript">
+    document.getElementById('new-image').addEventListener('change', function () {
+        let file = this.files[0];
+        document.getElementById('filename').textContent = `Image will be set to: ${file.name}`;
+    })
+</script>
 {% endblock %}
