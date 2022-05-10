@@ -3,6 +3,7 @@
 from decimal import Decimal
 from django.conf import settings
 from django.shortcuts import get_object_or_404
+from django.core.exceptions import ObjectDoesNotExist
 from shop.models import Product
 
 
@@ -25,14 +26,17 @@ def cart_contents(request):
             from_login_register = True
 
     for product_id, quantity in cart.items():
-        product = get_object_or_404(Product, pk=product_id)
-        total += quantity * product.price
-        product_count += quantity
-        cart_items.append({
-            'product_id': product_id,
-            'quantity': quantity,
-            'product': product,
-        })
+        try:
+            product = Product.objects.get(pk=product_id)
+            total += quantity * product.price
+            product_count += quantity
+            cart_items.append({
+                'product_id': product_id,
+                'quantity': quantity,
+                'product': product,
+            })
+        except ObjectDoesNotExist:
+            pass
 
     if total < settings.FREE_DELIVERY_THRESHOLD:
         delivery = total * Decimal(

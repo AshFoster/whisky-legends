@@ -242,6 +242,8 @@ Google Chrome was the browser used for the majority of testing during the develo
 
 - When adding a product via the product management page, the product was not showing up in the list of products on shop.html. This was rectified by setting the queryset within the get_queryset function in the Shop view instead of within the class definition itself.
 
+- When deleting a product that was currenlty in a user's cart a 404 error would be thrown and would do so until the user's current session was cleared. This was due to using the get_object_or_404 when creating the cart_items dictionary within contexts.py. This was solved by using a try except block to skip any cart items that do not exist instead of the using get_object_or_404.
+
 #### Unfixed Bugs
 
 - 
