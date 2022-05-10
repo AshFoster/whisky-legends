@@ -324,9 +324,14 @@
                             {% endif %}
                             {% if request.user.is_superuser %}
                             <small class="d-flex justify-content-evenly mb-3">
-                                <a href="{% url 'edit_product' product.id %}" class="update-btn text-primary text-uppercase p-0">Edit <i class="fas fa-edit"></i></a>
-                                <a class="remove-btn text-danger text-uppercase p-0" href="{% url 'delete_product' product.id %}">Delete <i class="fas fa-trash"></i></a>
+                                <a href="{% url 'edit_product' product.id %}"
+                                    class="update-btn text-primary text-uppercase p-0">Edit <i
+                                        class="fas fa-edit"></i></a>
+                                <a href="#" class="remove-btn text-danger text-uppercase p-0 delete-product-btn"
+                                    data-bs-toggle="modal" data-bs-target="#deleteProductModal{{ product.id }}">Delete <i class="fas fa-trash"></i></a>
                             </small>
+                            <!-- Delete product Modal -->
+                            {% include 'shop/includes/delete_product_modal.html' %}
                             {% endif %}
                             <form class="form" action="{% url 'add_to_cart' product.id %}" method="POST">
                                 {% csrf_token %}
@@ -334,7 +339,8 @@
                                     <input type="submit" class="btn btn-custom box-shadow-custom w-100"
                                         value="Add to cart">
                                 </div>
-                                <input type="hidden" name="quantity" value="1" data-item_id="{{ product.id }}" id="id-qty-{{ product.id }}">
+                                <input type="hidden" name="quantity" value="1" data-item_id="{{ product.id }}"
+                                    id="id-qty-{{ product.id }}">
                                 <input type="hidden" name="redirect_url" value="{{ request.get_full_path }}">
                             </form>
                         </div>
@@ -344,7 +350,6 @@
             </div>
         </div>
     </div>
-</div>
 </div>
 
 <!-- Back to top button -->

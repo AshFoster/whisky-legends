@@ -405,6 +405,12 @@ footer {
     color: #fff;
 }
 
+/* Product detail page and Shop page */
+
+#deleteProductModal {
+    background-color: rgba(0, 0, 0, .5);
+}
+
 /* Product detail page and Cart page */
 .back-to-shop {
     border-color: var(--logo-text-color) !important;

@@ -240,7 +240,7 @@ Google Chrome was the browser used for the majority of testing during the develo
 
 - When initially adding the 'previous_url' variable to contexts.py if there was no previous url an error was thrown. This was fixed by adding a simple if statement to check whether 'previous_url' had a value before attempting to use it.
 
-- When adding a product via the product management page, the product was not showing up in the list of products on shop.html. This was rectified by setting the queryset within the get_queryset function in the Shop view as well as within the class definition itself.
+- When adding a product via the product management page, the product was not showing up in the list of products on shop.html. This was rectified by setting the queryset within the get_queryset function in the Shop view instead of within the class definition itself.
 
 #### Unfixed Bugs
 

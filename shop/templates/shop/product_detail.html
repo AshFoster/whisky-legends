@@ -27,7 +27,7 @@
                     {% if request.user.is_superuser %}
                     <small class="d-flex justify-content-evenly mt-3">
                         <a href="{% url 'edit_product' product.id %}" class="update-btn text-primary text-uppercase p-0">Edit <i class="fas fa-edit"></i></a>
-                        <a class="remove-btn text-danger text-uppercase p-0" href="{% url 'delete_product' product.id %}">Delete <i class="fas fa-trash"></i></a>
+                        <a href="#" class="remove-btn text-danger text-uppercase p-0" data-bs-toggle="modal" data-bs-target="#deleteProductModal{{ product.id }}">Delete <i class="fas fa-trash"></i></a>
                     </small>
                     {% endif %}
 
@@ -204,6 +204,10 @@
         </div>
     </div>
 </div>
+
+<!-- Delete product Modal -->
+{% include 'shop/includes/delete_product_modal.html' %}
+
 {% endblock %}
 
 {% block postloadjs %}

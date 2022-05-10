@@ -18,7 +18,6 @@ class Shop(generic.ListView):
     filtering, sorting and search queries
     """
     model = Product
-    queryset = Product.objects.all().order_by('brand')
     template_name = 'shop/shop.html'
     context_object_name = 'products'
     sort = None
