@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+<div class="container-lg my-3">
+
+    <!-- Contact Heading -->
+    <div class="row justify-content-center">
+        <div class="col-11 col-lg-12">
+            <h2 class="my-4 text-center text-uppercase fs-1 checkout-title">Contact Us <i class="fas fa-envelope"></i></h2>
+            <div class="row g-0 justify-content-center">
+                <hr class="w-50 mt-0 mb-4">
+            </div>
+        </div>
+    </div>
+
+    <div class="row justify-content-center mt-2 mb-5">
+        <div class="col-11 col-sm-10 col-md-8 my-3 py-4 px-3 px-sm-4 rounded-3 box-shadow-custom">
+            <form method="POST" action="{% url 'contact' %}" class="form mb-2">
+                {% csrf_token %}
+                {{ form | crispy }}
+                <div class="col-12 d-flex justify-content-center align-items-center mt-4">
+                    <input type="submit" class="btn btn-custom text-uppercase fs-5 box-shadow-custom"
+                        value="Submit">
+                </div>
+            </form>
+        </div> 
+    </div>
+</div>
+{% endblock %}
