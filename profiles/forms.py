@@ -1,4 +1,5 @@
 from django import forms
+from allauth.account.forms import SignupForm
 from .models import UserProfile
 
 
@@ -30,3 +31,14 @@ class UserProfileForm(forms.ModelForm):
                 self.fields[field].widget.attrs['placeholder'] = placeholder
             self.fields[field].widget.attrs['class'] = 'profile-form-input'
             self.fields[field].label = False
+
+
+class MyCustomSignupForm(SignupForm):
+    '''
+    Overide allauth signup form so email is autofocused
+    instead of username
+    '''
+    def __init__(self, *args, **kwargs):
+        super(MyCustomSignupForm, self).__init__(*args, **kwargs)
+
+        self.fields['email'].widget.attrs['autofocus'] = 'on'
