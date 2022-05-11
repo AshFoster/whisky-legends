@@ -55,7 +55,7 @@
                     <p class="fs-2 text-center m-0">£{{ product.price }}</p>
 
                     <!-- Form for quantity selectors and 'Add to cart' button -->
-                    <form class="form" action="{% url 'add_to_cart' product.id %}" method="POST">
+                    <form class="form add-cart-form" action="{% url 'add_to_cart' product.id %}" method="POST">
                         {% csrf_token %}
                         <div class="form-row">
 
@@ -89,10 +89,10 @@
                                     <i class="fas fa-chevron-left"></i><i class="fas fa-chevron-left"></i>
                                     <span class="text-uppercase">&nbsp;Back to shop</span>
                                 </a>
-                                <input type="submit" class="btn btn-custom text-uppercase ms-1 fs-5"
+                                <input type="button" class="btn btn-custom text-uppercase ms-1 fs-5 add-cart-btn"
                                     value="Add to cart">
                             </div>
-                            <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                            <input type="submit" style="display:none" name="submit">
                         </div>
                     </form>
 

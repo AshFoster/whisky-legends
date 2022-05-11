@@ -335,15 +335,13 @@
                             {% include 'shop/includes/delete_product_modal.html' %}
 
                             {% endif %}
-                            <form class="form" action="{% url 'add_to_cart' product.id %}" method="POST">
+                            <form class="form add-cart-form" action="{% url 'add_to_cart' product.id %}" method="POST">
                                 {% csrf_token %}
                                 <div class="d-flex justify-content-center">
-                                    <input type="submit" class="btn btn-custom box-shadow-custom w-100"
+                                    <input type="button" class="btn btn-custom box-shadow-custom w-100 add-cart-btn"
                                         value="Add to cart">
                                 </div>
-                                <input type="hidden" name="quantity" value="1" data-item_id="{{ product.id }}"
-                                    id="id-qty-{{ product.id }}">
-                                <input type="hidden" name="redirect_url" value="{{ request.get_full_path }}">
+                                <input type="hidden" name="quantity" class="qty-input" value="1" id="id-qty-{{ product.id }}">
                             </form>
                         </div>
                     </div>

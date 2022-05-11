@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect, HttpResponse, get_object_or_404
+from django.shortcuts import render, HttpResponse, get_object_or_404
 from django.contrib import messages
 from django.core.exceptions import ObjectDoesNotExist
 
@@ -33,31 +33,34 @@ def add_to_cart(request, product_id):
     A view to add a chosen quantity of a specified
     product to the cart
     """
-    product = get_object_or_404(Product, pk=product_id)
-    quantity = int(request.POST.get('quantity'))
-    redirect_url = request.POST.get('redirect_url')
-    cart = request.session.get('cart', {})
-    request.session.get('updating_cart', True)
-    request.session['updating_cart'] = True
+    try:
+        product = get_object_or_404(Product, pk=product_id)
+        quantity = int(request.POST.get('quantity'))
+        cart = request.session.get('cart', {})
+        request.session.get('updating_cart', True)
+        request.session['updating_cart'] = True
 
-    if product_id in list(cart.keys()):
-        cart[product_id] += quantity
-        messages.success(
-            request,
-            f'Updated "{product.brand.friendly_name}: '
-            f'{product.name}" quantity to '
-            f'{cart[product_id]}'
-        )
-    else:
-        cart[product_id] = quantity
-        messages.success(
-            request,
-            f'Added "{product.brand.friendly_name}: '
-            f'{product.name}" to your cart'
-        )
+        if product_id in list(cart.keys()):
+            cart[product_id] += quantity
+            messages.success(
+                request,
+                f'Updated "{product.brand.friendly_name}: '
+                f'{product.name}" quantity to '
+                f'{cart[product_id]}'
+            )
+        else:
+            cart[product_id] = quantity
+            messages.success(
+                request,
+                f'Added "{product.brand.friendly_name}: '
+                f'{product.name}" to your cart'
+            )
 
-    request.session['cart'] = cart
-    return redirect(redirect_url)
+        request.session['cart'] = cart
+        return HttpResponse(status=200)
+    except Exception as e:
+        messages.error(request, f'Error adding to cart: {e}')
+        return HttpResponse(status=500)
 
 
 def update_cart(request, product_id):
