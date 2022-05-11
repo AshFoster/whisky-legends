@@ -20,7 +20,7 @@
             <form method="POST" action="{% url 'contact' %}" class="form mb-2">
                 {% csrf_token %}
                 {{ form | crispy }}
-                <div class="col-12 d-flex justify-content-center align-items-center mt-4">
+                <div class="d-flex justify-content-center align-items-center mt-4">
                     <input type="submit" class="btn btn-custom text-uppercase fs-5 box-shadow-custom"
                         value="Submit">
                 </div>

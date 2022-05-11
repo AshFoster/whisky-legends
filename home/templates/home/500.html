@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+<div class="container-lg my-auto">
+    <div class="row justify-content-center my-4 text-center">
+        <div class="col-10 col-sm-8 col-lg-6 py-4 px-5 rounded-3 box-shadow-custom">
+            <h1>500 ERROR!</h1>
+            <p class="my-3">Sorry, an internal server error has been encountered!</p>
+            <p class="my-3">Your request could not be completed.</p>
+            <div class="col-12 d-flex justify-content-center align-items-center mt-4 mb-2">
+                <a href="{% url 'home' %}" class="btn btn-custom text-uppercase fs-5 box-shadow-custom">
+                    <i class="fas fa-chevron-left"></i><i class="fas fa-chevron-left"></i>
+                    <span class="text-uppercase">&nbsp;Back to Home</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
