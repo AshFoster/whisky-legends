@@ -182,12 +182,12 @@
                         {% if user %}{% if user.userprofile.default_full_name %}{{ user.userprofile.default_full_name }}{% else %}{{ user.username }}{% endif %}{% else %}Unknown User{% endif %}{% endwith %}, {{ review.date|date:'jS F Y' }}</strong></p>
                     <p class="my-0 px-2 px-md-0 text-muted text-center text-md-start">{{ review.content }}</p>
                     {% if user == review.user or user.is_superuser %}
-                    <form class="form" action="{% url 'delete_review' review.id %}" method="POST">
-                        {% csrf_token %}
-                        <button type="submit" class="remove-btn text-danger text-uppercase mt-1 p-0 d-block">
-                            <a>Delete<span class="ms-1"><i class="fas fa-trash"></i></span></a>
-                        </button>
-                    </form>
+                    <a href="#" class="remove-btn text-danger text-uppercase mt-1 p-0"
+                                    data-bs-toggle="modal" data-bs-target="#deleteReviewModal{{ review.id }}">Delete <i class="fas fa-trash"></i></a>
+
+                    <!-- Delete review Modal -->
+                    {% include 'shop/includes/delete_review_modal.html' %}
+
                     {% if not forloop.last %}
                     <hr class="mt-2">
                     {% endif %}

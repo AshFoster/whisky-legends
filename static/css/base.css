@@ -406,7 +406,8 @@ footer {
 
 /* Product detail page and Shop page */
 
-#deleteProductModal {
+.delete-product-modal,
+.delete-review-modal {
     background-color: rgba(0, 0, 0, .5);
 }
 
