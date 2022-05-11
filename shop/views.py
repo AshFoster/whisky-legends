@@ -1,6 +1,6 @@
 import math
 from django.shortcuts import (render, get_object_or_404,
-                              redirect, reverse)
+                              redirect, reverse, HttpResponse)
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.core.exceptions import ObjectDoesNotExist
@@ -28,6 +28,21 @@ class Shop(generic.ListView):
     price_max_initial = 0
     products_filtered = False
     search_query = None
+
+    def dispatch(self, request, *args, **kwargs):
+        '''
+        Overides dispatch to check whether the user has submitted
+        a blank search and makes them aware if they have.
+        '''
+        if 'search' in self.request.GET:
+            self.search_query = self.request.GET.get('search')
+            if not self.search_query:
+                messages.warning(
+                    self.request,
+                    "You didn't enter any search criteria!"
+                )
+                return redirect(reverse('shop'))
+        return super(Shop, self).dispatch(request, *args, **kwargs)
 
     def get_queryset(self):
         sort_by = self.request.GET.get('sort')
@@ -110,17 +125,11 @@ class Shop(generic.ListView):
             self.queryset = self.queryset.filter(
                 price__range=(self.price_min, self.price_max))
 
-        if not self.search_query:
-            # messages.error(
-            #     self.request,
-            #     "You didn't enter any search criteria!"
-            # )
-            return self.queryset
-
-        queries = (Q(name__icontains=self.search_query) |
-                   Q(brand__friendly_name__icontains=self.search_query) |
-                   Q(age__icontains=self.search_query))
-        self.queryset = self.queryset.filter(queries)
+        if self.search_query:
+            queries = (Q(name__icontains=self.search_query) |
+                       Q(brand__friendly_name__icontains=self.search_query) |
+                       Q(age__icontains=self.search_query))
+            self.queryset = self.queryset.filter(queries)
 
         return self.queryset
 
