@@ -30,6 +30,7 @@
                 <table class="table table-sm table-bordered cart-table mb-0">
                     {% for item in cart_items %}
                     <tr>
+                        <!-- Item image -->
                         <td class="p-md-3 w-140px">
                             {% if item.product.image %}
                             <img src="{{ item.product.image.url }}" class="img-fluid" 
@@ -39,6 +40,8 @@
                                     alt="{{ product.brand.friendly_name }}: {{ product.name }}">
                             {% endif %}
                         </td>
+
+                        <!-- Item name, info, and wishlist button (wishlist button only on larger screens) -->
                         <td class="pt-md-5 position-relative">
                             <p class="my-0"><strong>{{ item.product.brand.friendly_name }}:
                                     {{ item.product.name }}</strong></p>
@@ -59,6 +62,8 @@
                             </form>
                             {% endif %}
                         </td>
+
+                        <!-- Item quantity selector and update button -->
                         <td class="pt-md-5">
                             <div
                                 class="d-flex flex-column justify-content-start align-items-center align-items-md-start">
@@ -101,6 +106,8 @@
                                 <p class="mt-2 mb-0"><small>Price: £{{ item.product.price }}</small></p>
                             </div>
                         </td>
+
+                        <!-- Item total, remove button, and wishlist button (wishlist only on smaller screens) -->
                         <td class="pt-md-5">
                             <p class="mb-1"><strong>Item total:</strong></p>
                             <p class="mt-0 mb-2 fs-5">
@@ -127,6 +134,8 @@
                     </tr>
                     {% endfor %}
                 </table>
+
+                <!-- Back to shop button if cart is not empty -->
                 <div class="d-flex justify-content-center">
                     <a href="{% url 'shop' %}" class="btn p-2 back-to-shop my-4">
                         <i class="fas fa-chevron-left"></i><i class="fas fa-chevron-left"></i>
@@ -135,6 +144,8 @@
                 </div>
             </div>
             {% else %}
+
+            <!-- Back to shop button if cart is empty -->
             <div class="d-flex flex-column justify-content-center align-items-center mb-4 mx-3">
                 <p class="lead mt-5">Your cart is empty.</p>
                 <a href="{% url 'shop' %}" class="btn p-2 back-to-shop">
