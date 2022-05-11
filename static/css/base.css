@@ -404,20 +404,6 @@ footer {
     transition: box-shadow 150ms ease;
 }
 
-.allauth-form-inner-content a {
-    color: var(--logo-text-color);
-}
-
-.allauth-form-inner-content a:hover:not([id='logout-cancel']),
-.allauth-form-inner-content a:focus:not([id='logout-cancel']) {
-    color: #fff;
-}
-
-.allauth-form-inner-content a:hover:not([id='back-to-profile']),
-.allauth-form-inner-content a:focus:not([id='back-to-profile']) {
-    color: #fff;
-}
-
 /* Product detail page and Shop page */
 
 #deleteProductModal {
