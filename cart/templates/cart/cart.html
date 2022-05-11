@@ -49,9 +49,9 @@
                             <p class="mt-0 mb-3 text-muted">{% if item.product.volume %}{{ item.product.volume|round_down }}cl{% if item.product.volume and item.product.abv %}, {% endif %}{% endif %}{% if item.product.abv %}{{ item.product.abv|round_down }}%{% endif %}</p>
                             {% endif %}
                             {% if user.is_authenticated %}
-                            <form class="form" action="{% url 'update_wishlist' item.product.id %}" method="POST">
+                            <form class="form wishlist-form" action="{% url 'update_wishlist' item.product.id %}" method="POST">
                                 {% csrf_token %}
-                                <button type="submit" class="wishlist-btn text-uppercase mt-4 p-0 d-none d-md-inline-block">
+                                <button type="button" class="wishlist-btn text-uppercase mt-4 p-0 d-none d-md-inline-block" data-id="wishlist-{{ item.product_id }}">
                                     {% if item.product in wishlist %}
                                     Remove from wishlist<span class="ms-1"><i class="fas fa-heart"></i></span>
                                     {% else %}
@@ -118,9 +118,9 @@
                                 Remove<span class="ms-1"><i class="fas fa-trash"></i></span>
                             </a>
                             {% if user.is_authenticated %}
-                            <form class="form" action="{% url 'update_wishlist' item.product.id %}" method="POST">
+                            <form class="form wishlist-form" action="{% url 'update_wishlist' item.product.id %}" method="POST">
                                 {% csrf_token %}
-                                <button type="submit" class="wishlist-btn text-uppercase my-3 p-0 d-md-none">
+                                <button type="button" class="wishlist-btn text-uppercase my-3 p-0 d-md-none" data-id="wishlist-{{ item.product_id }}">
                                     {% if item.product in wishlist %}
                                     Remove from wishlist<span class="ms-1"><i class="fas fa-heart"></i></span>
                                     {% else %}

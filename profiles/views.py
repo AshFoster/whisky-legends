@@ -1,4 +1,4 @@
-from django.shortcuts import render, get_object_or_404, redirect
+from django.shortcuts import render, get_object_or_404, HttpResponse
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.core.exceptions import ObjectDoesNotExist
@@ -90,7 +90,6 @@ def update_wishlist(request, product_id):
     A view to add/remove a chosen product to/from the current user's wishlist
     """
     product = get_object_or_404(Product, pk=product_id)
-    redirect_url = request.POST.get('redirect_url')
     request.session['updating_cart'] = False
     request.session['reviewing'] = False
     request.session['updating_product'] = False
@@ -100,19 +99,23 @@ def update_wishlist(request, product_id):
     except ObjectDoesNotExist:
         wishlist = UserWishlist.objects.create(user=request.user)
 
-    if product in wishlist.product.all():
-        wishlist.product.remove(product)
-        messages.success(
-            request,
-            f'Removed "{product.brand.friendly_name}: '
-            f'{product.name}" from your wishlist.'
-        )
-    else:
-        wishlist.product.add(product)
-        messages.success(
-            request,
-            f'Added "{product.brand.friendly_name}: '
-            f'{product.name}" to your wishlist.'
-        )
+    try:
+        if product in wishlist.product.all():
+            wishlist.product.remove(product)
+            messages.success(
+                request,
+                f'Removed "{product.brand.friendly_name}: '
+                f'{product.name}" from your wishlist.'
+            )
+        else:
+            wishlist.product.add(product)
+            messages.success(
+                request,
+                f'Added "{product.brand.friendly_name}: '
+                f'{product.name}" to your wishlist.'
+            )
 
-    return redirect(redirect_url)
+        return HttpResponse(status=200)
+    except Exception as e:
+        messages.error(request, f'Error updating wishlist: {e}')
+        return HttpResponse(status=500)
