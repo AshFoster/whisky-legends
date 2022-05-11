@@ -1,11 +1,11 @@
 import math
 from django.shortcuts import (render, get_object_or_404,
-                              redirect, reverse, HttpResponse)
+                              redirect, reverse)
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.core.exceptions import ObjectDoesNotExist
-from django.db.models import Q, Min, Max, F, Count
-from django.db.models.functions import Lower
+from django.db.models import Q, Min, Max, F, Count, Sum
+from django.db.models.functions import Lower, Coalesce
 from django.views import generic
 from profiles.models import UserWishlist
 from .models import Product, Review
@@ -59,22 +59,26 @@ class Shop(generic.ListView):
         self.queryset = Product.objects.all().order_by('brand')
 
         if sort_by:
+            rating_none = None
             self.sort = sort_by
-            if sort_by == 'brand':
-                sort_by = 'lower_brand'
-                self.queryset = self.queryset.annotate(
-                    lower_brand=Lower('brand__friendly_name'))
-
-            if sort_by == 'rating':
-                self.queryset = self.queryset.annotate(
-                    rating_count=Count('rated'))
-                self.queryset = self.queryset.annotate(
-                    rating=F('rating_total') / F('rating_count'))
-
             if sort_direction:
                 self.direction = sort_direction
                 if sort_direction == 'desc':
                     sort_by = f'-{sort_by}'
+                    rating_none = 0
+
+            if 'brand' in sort_by:
+                sort_by = sort_by.replace('brand', 'lower_brand')
+                self.queryset = self.queryset.annotate(
+                    lower_brand=Lower('brand__friendly_name'))
+
+            if 'rating' in sort_by:
+                self.queryset = self.queryset.annotate(
+                    review_count=Count('reviews')).annotate(
+                    rating_sum=Sum('reviews__rating')).annotate(
+                    rating=Coalesce(F('rating_sum') / F('review_count'),
+                                    rating_none))
+
             self.queryset = self.queryset.order_by(sort_by)
 
         if type_filter:

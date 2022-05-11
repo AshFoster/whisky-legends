@@ -244,6 +244,8 @@ Google Chrome was the browser used for the majority of testing during the develo
 
 - When deleting a product that was currenlty in a user's cart a 404 error would be thrown and would do so until the user's current session was cleared. This was due to using the get_object_or_404 when creating the cart_items dictionary within contexts.py. This was solved by using a try except block to skip any cart items that do not exist instead of the using get_object_or_404.
 
+- When sorting by rating, products that did not have a rating were shown in the list before the highest or lowest rated products. This was because their annotated 'rating' field always had a value of None. To fix this a variable called 'rating_none' is declared, initially with a value of None, which is used when sorting in acsending order, but given a value of zero when sorting in decsending order. This forces the products with no rating to be forced to the end of the list when sorting in either direction.
+
 #### Unfixed Bugs
 
 - 
