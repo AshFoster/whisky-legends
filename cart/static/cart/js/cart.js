@@ -1,4 +1,4 @@
-// Update quantity and reload on click
+// Update quantity of item in cart and reload on click
 // CREDIT - https://stackoverflow.com/questions/64612746/how-would-i-do-this-ajax-jquery-in-vanilla-js
 document.querySelectorAll('.update-btn').forEach(item => {
     item.addEventListener('click', function () {
@@ -26,7 +26,7 @@ document.querySelectorAll('.update-btn').forEach(item => {
     });
 });
 
-// Remove item and reload on click
+// Remove item from cart and reload on click
 // CREDIT - https://stackoverflow.com/questions/64612746/how-would-i-do-this-ajax-jquery-in-vanilla-js
 document.querySelectorAll('.remove-btn').forEach(item => {
     item.addEventListener('click', function () {
