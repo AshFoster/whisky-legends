@@ -318,6 +318,26 @@ document.querySelectorAll('.add-cart-btn').forEach(item => {
     });
 })
 
+// Delete product and reload on click
+// CREDIT - https://stackoverflow.com/questions/64612746/how-would-i-do-this-ajax-jquery-in-vanilla-js
+document.querySelectorAll('.delete-product-modal a').forEach(item => {
+    item.addEventListener('click', function () {
+        let productId = this.closest('.delete-product-modal').getAttribute('id').split('deleteProductModal')[1];
+        let url = `/shop/delete_product/${productId}/`;
+        let csrfToken = document.querySelector('input[name="csrfmiddlewaretoken"]').value;
+        let params = 'csrfmiddlewaretoken=' + encodeURIComponent(csrfToken);
+        let httpRequest = new XMLHttpRequest();
+        httpRequest.open('POST', url);
+        httpRequest.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+        httpRequest.onreadystatechange = function () {
+            if (httpRequest.readyState == 4 && httpRequest.status == 200) {
+                location.reload();
+            }
+        };
+        httpRequest.send(params);
+    });
+});
+
 
 /* 
 Once the DOM has finshed loading call all necessary functions
