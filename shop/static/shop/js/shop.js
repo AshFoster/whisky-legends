@@ -30,6 +30,10 @@ function setMaxHeight(className) {
 }
 // END CREDIT
 
+/* 
+Sets up 'sort' related dropdown list. Adds active class if 'sort' is found in url, and
+adds event listeners to update url with selected 'sort' option.
+*/
 function setSort() {
     let sortURL = params.get('sort');
     let directionURL = params.get('direction');
@@ -67,6 +71,10 @@ function setSort() {
     }
 }
 
+/* 
+Sets up 'type' related dropdown list. Adds active class if 'type' is found in url, and
+adds event listeners to update url with selected 'type' option.
+*/
 function setTypeFilter() {
     let typeFilterURL = params.get('type');
     let typeListItems = document.querySelectorAll('.type-item');
@@ -93,6 +101,10 @@ function setTypeFilter() {
     }
 }
 
+/* 
+Sets up 'brand' related dropdown list. Adds active class if 'brand' is found in url, and
+adds event listeners to update url with selected 'brand' option.
+*/
 function setBrandFilter() {
     let brandFilterURL = params.get('brand');
     let brandListItems = document.querySelectorAll('.brand-item');
@@ -119,6 +131,10 @@ function setBrandFilter() {
     }
 }
 
+/* 
+Sets up 'country' related dropdown list. Adds active class if 'country' is found in url, and
+adds event listeners to update url with selected 'country' option.
+*/
 function setCountryFilter() {
     let countryFilterURL = params.get('country');
     let countryListItems = document.querySelectorAll('.country-item');
@@ -145,6 +161,10 @@ function setCountryFilter() {
     }
 }
 
+/* 
+Sets up 'region' related dropdown list. Adds active class if 'region' is found in url, and
+adds event listeners to update url with selected 'region' option.
+*/
 function setRegionFilter() {
     let regionFilterURL = params.get('region');
     let regionListItems = document.querySelectorAll('.region-item');
@@ -171,6 +191,10 @@ function setRegionFilter() {
     }
 }
 
+/* 
+Sets up 'price' related dropdown list. Adds active class if 'price' is found in url, and
+adds event listeners to update url with selected 'price' option.
+*/
 function setPriceFilter() {
     let priceFilterURL = params.get('price');
     let minPrice = document.querySelector('.min-price');
@@ -226,6 +250,10 @@ function setPriceFilter() {
     }
 }
 
+/* 
+Sets up 'age' related dropdown list. Adds active class if 'age' is found in url, and
+adds event listeners to update url with selected 'age' option.
+*/
 function setAgeFilter() {
     let ageFilterURL = params.get('age');
     let ageListItems = document.querySelectorAll('.age-item');
@@ -252,6 +280,10 @@ function setAgeFilter() {
     }
 }
 
+/* 
+Sets up 'flavour' related dropdown list. Adds active class if 'flavour' is found in url, and
+adds event listeners to update url with selected 'flavour' option.
+*/
 function setFlavourFilter() {
     let flavourFilterURL = params.get('flavour');
     let flavourListItems = document.querySelectorAll('.flavour-item');
@@ -278,6 +310,11 @@ function setFlavourFilter() {
     }
 }
 
+/* 
+Adds event listeners to the 'bttButton' element so it only appears when
+page is scrolled below the top, and returns the user to the top of  the
+page when clicked.
+*/
 function setBttButton() {
     let bttButton = document.querySelector('.btt-button')
 
@@ -294,6 +331,18 @@ function setBttButton() {
         window.scrollTo(0, 0);
     });
 }
+
+// Call all functions declared above
+setMaxHeight('.product-card-title');
+setSort()
+setTypeFilter();
+setBrandFilter();
+setCountryFilter();
+setRegionFilter();
+setPriceFilter();
+setAgeFilter();
+setFlavourFilter();
+setBttButton()
 
 // Add to cart and reload on click
 // CREDIT - https://stackoverflow.com/questions/64612746/how-would-i-do-this-ajax-jquery-in-vanilla-js
@@ -325,7 +374,7 @@ document.querySelectorAll('.delete-product-modal a').forEach(item => {
         let productId = this.closest('.delete-product-modal').getAttribute('id').split('deleteProductModal')[1];
         let url = `/shop/delete_product/${productId}/`;
         let csrfToken = document.querySelector('input[name="csrfmiddlewaretoken"]').value;
-        let params = 'csrfmiddlewaretoken=' + encodeURIComponent(csrfToken);
+        let param = 'csrfmiddlewaretoken=' + encodeURIComponent(csrfToken);
         let httpRequest = new XMLHttpRequest();
         httpRequest.open('POST', url);
         httpRequest.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
@@ -334,36 +383,8 @@ document.querySelectorAll('.delete-product-modal a').forEach(item => {
                 location.reload();
             }
         };
-        httpRequest.send(params);
+        httpRequest.send(param);
     });
-});
-
-
-/* 
-Once the DOM has finshed loading call all necessary functions
-*/
-document.addEventListener('DOMContentLoaded', function () {
-
-    setMaxHeight('.product-card-title');
-
-    setSort()
-
-    setTypeFilter();
-
-    setBrandFilter();
-
-    setCountryFilter();
-
-    setRegionFilter();
-
-    setPriceFilter();
-
-    setAgeFilter();
-
-    setFlavourFilter();
-
-    setBttButton()
-
 });
 
 /* 
