@@ -321,6 +321,7 @@ To clone the GitHub repository follow these steps:
 - [Lucidchart](https://www.lucidchart.com/) - used to create site map and entity relationship diagrams.
 - [Logo Pony](https://logopony.co.uk/) - To create default product image
 - [Red Ketchup Image Resizer](https://redketchup.io/image-resizer) - To resize default product image
+- [favicon.io](https://favicon.io/) - To generate favicon icons
 
 ## Credits
 
