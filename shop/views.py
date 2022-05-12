@@ -1,6 +1,6 @@
 import math
 from django.shortcuts import (render, get_object_or_404,
-                              redirect, reverse)
+                              redirect, reverse, HttpResponse)
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.core.exceptions import ObjectDoesNotExist
@@ -269,26 +269,31 @@ def product_detail(request, product_id):
     updating_product = request.session.get('updating_product', False)
 
     if request.method == 'POST':
-        form = ReviewForm(request.POST)
-        if form.is_valid():
-            review = form.save(commit=False)
-            review.user = request.user
-            review.product = product
-            review.rating = request.POST.get('rating')
-            review.save()
-            messages.success(
-                request,
-                'Your review has been successfully submitted')
-            request.session['reviewing'] = True
+        try:
+            form = ReviewForm(request.POST)
+            if form.is_valid():
+                review = form.save(commit=False)
+                review.user = request.user
+                review.product = product
+                review.rating = request.POST.get('rating')
+                review.save()
+                messages.success(
+                    request,
+                    'Your review has been successfully submitted')
+                request.session['reviewing'] = True
 
-            return redirect(reverse('product_detail', args=[product.id]))
-        else:
-            messages.error(
-                request,
-                ('Your review submission has failed. Please '
-                 'ensure the form is valid.')
-            )
-            request.session['reviewing'] = True
+                return HttpResponse(status=200)
+            else:
+                messages.error(
+                    request,
+                    ('Your review submission has failed. Please '
+                     'ensure the form is valid.')
+                )
+                request.session['reviewing'] = True
+                return HttpResponse(status=200)
+        except Exception as e:
+            messages.error(request, f'Error submitting review: {e}')
+            return HttpResponse(status=500)
     else:
         form = ReviewForm()
 

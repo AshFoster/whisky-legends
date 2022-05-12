@@ -29,7 +29,7 @@ let rating = document.getElementById("ratingValue").textContent
 document.getElementById("stars").innerHTML = getStars(rating);
 
 document.querySelectorAll('.review-stars').forEach(item => {
-    reviewRating = item.getAttribute('data-rating')
+    let reviewRating = item.getAttribute('data-rating')
     item.innerHTML = getStars(reviewRating);
 });
 
@@ -77,4 +77,28 @@ document.querySelector('.wishlist-btn').addEventListener('click', function () {
         }
     };
     httpRequest.send(formData);
+});
+
+// Submit review and reload on click
+// CREDIT - https://stackoverflow.com/questions/64612746/how-would-i-do-this-ajax-jquery-in-vanilla-js
+document.querySelector('#submit-button').addEventListener('click', function () {
+    let reviewForm = document.querySelector('#review-form');
+    let formData = new FormData(reviewForm);
+    if (document.querySelector('#review-form-content').value != '' && document.querySelector('input[name="rating"]:checked') != null) {
+        let productId = this.getAttribute('data-id').split('review-')[1];
+        let url = `/shop/${productId}/`;
+        let csrfToken = document.querySelector('input[name="csrfmiddlewaretoken"]').value;
+
+        let httpRequest = new XMLHttpRequest();
+        httpRequest.open('POST', url);
+        httpRequest.setRequestHeader('X-CSRF-Token', csrfToken);
+        httpRequest.onreadystatechange = function () {
+            if (httpRequest.readyState == 4 && httpRequest.status == 200) {
+                location.reload();
+            }
+        };
+        httpRequest.send(formData);
+    } else {
+        reviewForm.submit.click();
+    }
 });
