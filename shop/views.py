@@ -344,14 +344,17 @@ def delete_review(request, review_id):
             'admins can delete reviews.'
         )
         return redirect(reverse('home'))
-
-    review.delete()
-    messages.success(
-        request,
-        f'Deleted review from "{product.brand.friendly_name}: '
-        f'{product.name}". '
-    )
-    return redirect(reverse('product_detail', args=[product.id]))
+    try:
+        review.delete()
+        messages.success(
+            request,
+            f'Deleted review from "{product.brand.friendly_name}: '
+            f'{product.name}". '
+        )
+        return HttpResponse(status=200)
+    except Exception as e:
+        messages.error(request, f'Error deleting review: {e}')
+        return HttpResponse(status=500)
 
 
 @login_required

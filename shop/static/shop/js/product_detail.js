@@ -102,3 +102,23 @@ document.querySelector('#submit-button').addEventListener('click', function () {
         reviewForm.submit.click();
     }
 });
+
+// Delete review and reload on click
+// CREDIT - https://stackoverflow.com/questions/64612746/how-would-i-do-this-ajax-jquery-in-vanilla-js
+document.querySelectorAll('.delete-review-modal a').forEach(item => {
+    item.addEventListener('click', function () {
+        let reviewId = this.closest('.delete-review-modal').getAttribute('id').split('deleteReviewModal')[1];
+        let url = `/shop/delete_review/${reviewId}/`;
+        let csrfToken = document.querySelector('input[name="csrfmiddlewaretoken"]').value;
+        let params = 'csrfmiddlewaretoken=' + encodeURIComponent(csrfToken);
+        let httpRequest = new XMLHttpRequest();
+        httpRequest.open('POST', url);
+        httpRequest.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+        httpRequest.onreadystatechange = function () {
+            if (httpRequest.readyState == 4 && httpRequest.status == 200) {
+                location.reload();
+            }
+        };
+        httpRequest.send(params);
+    });
+});
