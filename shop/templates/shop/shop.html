@@ -267,16 +267,16 @@
         </div>
     </div>
 
-    <!-- Product home link and product count message -->
+    <!-- Product count message and all products link-->
     <div class="row justify-content-center">
         <div class="col-sm-11 col-md-10">
             <p class="text-muted mt-md-2 mb-0 text-center">
-                {% if search_query or products_filtered or current_sorting != 'None_None' %}
-                <span><a href="{% url 'shop' %}" class="link-custom">Shop Home</a> | </span>
-                {% endif %}
                 {% if not search_query %}Showing {% endif %}{{ products|length }}
                 Product{% if products|length != 1 %}s{% endif %}{% if search_query %} found for
                 <strong>"{{ search_query }}"</strong>{% endif %}
+                {% if search_query or products_filtered or current_sorting != 'None_None' %}
+                <span> | <a href="{% url 'shop' %}" class="link-custom">Show All Products</a></span>
+                {% endif %}
             </p>
         </div>
     </div>
