@@ -1,3 +1,4 @@
+// Set colour of country field to look muted if none selected
 let defaultCountry = document.getElementById('id_default_country');
 
 if (defaultCountry != null) {

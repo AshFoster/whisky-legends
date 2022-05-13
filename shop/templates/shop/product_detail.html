@@ -127,7 +127,7 @@
                             alt="{{ product.brand.friendly_name }}: {{ product.name }}">
                     </a>
                     {% else %}
-                    <a href="">
+                    <a href="{{ MEDIA_URL }}no-image.jpg" target="_blank">
                         <img src="{{ MEDIA_URL }}no-image.jpg" class="img-fluid"
                             alt="{{ product.brand.friendly_name }}: {{ product.name }}">
                     </a>
@@ -144,6 +144,8 @@
             <div class="row justify-content-center">
                 <div class="col-12 col-md-8 d-flex flex-column justify-content-center">
                     <h3 class="my-4 text-center">Review This Product</h3>
+
+                    <!-- Review form -->
                     {% if user.is_authenticated %}
                     <form class="mb-4 px-3" action="{% url 'product_detail' product.id %}" method="POST" id="review-form">
                         {% csrf_token %}
@@ -179,14 +181,18 @@
             <div class="row justify-content-center">
                 <div class="col-12 col-md-8 d-flex flex-column justify-content-center align-items-center align-items-md-start mb-4">
                     <h3 class="my-4 w-100 text-center">Customer Reviews</h3>
+
+                    <!-- Customer reviews -->
                     {% for review in reviews %}
                     <div class="review-stars text-logo" data-rating="{{ review.rating }}"></div>
                     <p class="my-0 px-2 px-md-0"><strong>
                         {% with review.user as user %}
                         {% if user %}{% if user.userprofile.default_full_name %}{{ user.userprofile.default_full_name }}{% else %}{{ user.username }}{% endif %}{% else %}Unknown User{% endif %}{% endwith %}, {{ review.date|date:'jS F Y' }}</strong></p>
                     <p class="my-0 px-2 px-md-0 text-muted text-center text-md-start">{{ review.content }}</p>
+
+                    <!-- Delete review button -->
                     {% if user == review.user or user.is_superuser %}
-                    <a href="#" class="remove-btn text-danger text-uppercase mt-1 p-0"
+                    <a class="remove-btn text-danger text-uppercase mt-1 p-0"
                                     data-bs-toggle="modal" data-bs-target="#deleteReviewModal{{ review.id }}">Delete <i class="fas fa-trash"></i></a>
 
                     <!-- Delete review Modal -->

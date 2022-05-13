@@ -322,6 +322,8 @@
                                 </p>
                             </div>
                             {% endif %}
+
+                            <!-- Delete product button -->
                             {% if request.user.is_superuser %}
                             <small class="d-flex justify-content-evenly mb-3">
                                 <a href="{% url 'edit_product' product.id %}"
@@ -333,8 +335,9 @@
 
                             <!-- Delete product Modal -->
                             {% include 'shop/includes/delete_product_modal.html' %}
-
                             {% endif %}
+
+                            <!-- Add to cart button -->
                             <form class="form add-cart-form" action="{% url 'add_to_cart' product.id %}" method="POST">
                                 {% csrf_token %}
                                 <div class="d-flex justify-content-center">

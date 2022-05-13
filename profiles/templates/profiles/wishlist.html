@@ -34,7 +34,7 @@
                 <div class="d-flex flex-column justify-content-center align-items-center text-center col-10 col-sm-3 mb-3">
                     <form class="form wishlist-form" action="{% url 'update_wishlist' product.id %}" method="POST">
                         {% csrf_token %}
-                        <button type="submit" class="remove-btn text-danger text-uppercase p-0 fs-5" data-id="wishlist-{{ product.id }}">
+                        <button type="button" class="remove-btn text-danger text-uppercase p-0 fs-5" data-id="wishlist-{{ product.id }}">
                             <a>Remove<span class="ms-1"><i class="fas fa-trash"></i></span></a>
                         </button>
                     </form>
