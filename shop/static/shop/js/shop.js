@@ -370,7 +370,8 @@ document.querySelectorAll('.add-cart-btn').forEach(item => {
 // Delete product and reload on click
 // CREDIT - https://stackoverflow.com/questions/64612746/how-would-i-do-this-ajax-jquery-in-vanilla-js
 document.querySelectorAll('.delete-product-modal a').forEach(item => {
-    item.addEventListener('click', function () {
+    item.addEventListener('click', function (e) {
+        e.preventDefault();
         let productId = this.closest('.delete-product-modal').getAttribute('id').split('deleteProductModal')[1];
         let url = `/shop/delete_product/${productId}/`;
         let csrfToken = document.querySelector('input[name="csrfmiddlewaretoken"]').value;

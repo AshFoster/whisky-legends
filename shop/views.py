@@ -452,6 +452,7 @@ def delete_product(request, product_id):
     request.session['updating_cart'] = False
     request.session['reviewing'] = False
     request.session['updating_product'] = True
+    previous_url = request.META.get('HTTP_REFERER')
 
     if not request.user.is_superuser:
         messages.error(
@@ -465,7 +466,13 @@ def delete_product(request, product_id):
         product = get_object_or_404(Product, pk=product_id)
         product.delete()
         messages.success(request, 'Product deleted!')
-        return HttpResponse(status=200)
+        if f'/shop/{product_id}/' in previous_url:
+            return redirect(reverse('shop'))
+        else:
+            return HttpResponse(status=200)
     except Exception as e:
         messages.error(request, f'Error deleting product: {e}')
-        return HttpResponse(status=500)
+        if f'/shop/{product_id}/' in previous_url:
+            return redirect(reverse('shop'))
+        else:
+            return HttpResponse(status=500)
