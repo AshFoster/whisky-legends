@@ -154,6 +154,8 @@ footer {
 
 .filter-bar .dropdown-menu {
     min-width: 200px;
+    max-height: 274px;
+    overflow-y: auto;
 }
 
 .active-filter {
