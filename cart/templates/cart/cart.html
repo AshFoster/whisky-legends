@@ -109,10 +109,10 @@
                         <!-- Item total, remove button, and wishlist button (wishlist only on smaller screens) -->
                         <td class="pt-md-5">
                             <p class="mb-1"><strong>Item total:</strong></p>
-                            <p class="mt-0 mb-2 fs-5">
+                            <p class="mt-0 mb-md-2 fs-5">
                                 <strong>£{{ item.product.price|calc_subtotal:item.quantity }}</strong>
                             </p>
-                            <a class="remove-btn text-danger text-uppercase mt-4 p-0 d-block"
+                            <a class="remove-btn text-danger text-uppercase my-3 p-0 d-block"
                                 id="remove-{{ item.product_id }}">
                                 Remove<span class="ms-1"><i class="fas fa-trash"></i></span>
                             </a>
