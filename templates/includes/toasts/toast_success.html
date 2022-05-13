@@ -9,7 +9,7 @@
                 {{ message }}
             </div>
         </div>
-        {% if grand_total and not viewing_cart and not viewing_profile and not viewing_wishlist and not viewing_home and not from_login_register and updating_cart %}
+        {% if grand_total and not viewing_cart and not viewing_profile and not viewing_wishlist and not viewing_home and not from_login_register and not viewing_contact and updating_cart %}
             <h5 class="border-top mb-1 pt-3">Your Shopping Cart <small>({{ product_count }} item{% if product_count != 1 %}s{% endif %})</small></h5>
             <div class="cart-notification-wrapper mb-3 pb-2">
                 {% for item in cart_items %}

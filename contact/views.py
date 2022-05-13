@@ -53,3 +53,13 @@ class Contact(FormView):
                              messages.SUCCESS,
                              'Your message has been sent successfully.')
         return super().form_valid(form)
+
+    def get_context_data(self, **kwargs):
+        """
+        Sets context data to be used on contact.html
+        """
+        context = super(Contact, self).get_context_data(**kwargs)
+
+        context['viewing_contact'] = True
+
+        return context
