@@ -489,6 +489,11 @@ header a:focus {
     font-weight: 600;
 }
 
+.active {
+    font-weight: 600;
+    background-color: inherit !important;
+}
+
 .topnav {
     background: var(--paper-url) no-repeat center center;
     background-size: cover;

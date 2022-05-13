@@ -11,10 +11,16 @@
             <div class="col">
                 <ul class="list-inline list-unstyled my-auto text-center">
                     <li class="list-inline-item">
-                        <a class="nav-link p-2 active" aria-current="page" href="{% url 'shop' %}">Shop</a>
+                        {% url 'home' as url %}
+                        <a class="nav-link p-2 {% if request.path == url %}active{% endif %}"href="{% url 'home' %}">Home</a>
                     </li>
                     <li class="list-inline-item">
-                        <a class="nav-link p-2" href="{% url 'contact' %}">Contact</a>
+                        {% url 'shop' as url %}
+                        <a class="nav-link p-2 {% if url in request.path %}active{% endif %}" href="{% url 'shop' %}">Shop</a>
+                    </li>
+                    <li class="list-inline-item">
+                        {% url 'contact' as url %}
+                        <a class="nav-link p-2 {% if request.path == url %}active{% endif %}" href="{% url 'contact' %}">Contact</a>
                     </li>
                 </ul>
             </div>
@@ -42,7 +48,8 @@
     <div class="col-md-3 col-lg-4 my-auto p-0">
         <ul class="list-unstyled my-0 d-flex align-items-center justify-content-end">
             <li class="me-1">
-                <a class="nav-link p-2 cart-icon" href="{% url 'view_cart' %}">
+                {% url 'view_cart' as url %}
+                <a class="nav-link p-2 cart-icon {% if request.path == url %}active{% endif %}" href="{% url 'view_cart' %}">
                     <div class="text-center">
                         <div><i class="fas fa-shopping-cart fa-1x"></i></div>
                         <p class="my-0">
@@ -65,13 +72,18 @@
                 <div class="dropdown-menu border rounded-3 account-dropdown" aria-labelledby="user-options">
                     {% if request.user.is_authenticated %}
                     {% if request.user.is_superuser %}
-                    <a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a>
+                    {% url 'add_product' as url %}
+                    <a href="{% url 'add_product' %}" class="dropdown-item {% if request.path == url %}active{% endif %}">Product Management</a>
                     {% endif %}
-                    <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
-                    <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
+                    {% url 'profile' as url %}
+                    <a href="{% url 'profile' %}" class="dropdown-item {% if url in request.path %}active{% endif %}">My Profile</a>
+                    {% url 'account_logout' as url %}
+                    <a href="{% url 'account_logout' %}" class="dropdown-item {% if request.path == url %}active{% endif %}">Logout</a>
                     {% else %}
-                    <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
-                    <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
+                    {% url 'account_signup' as url %}
+                    <a href="{% url 'account_signup' %}" class="dropdown-item {% if request.path == url %}active{% endif %}">Register</a>
+                    {% url 'account_login' as url %}
+                    <a href="{% url 'account_login' %}" class="dropdown-item {% if request.path == url %}active{% endif %}">Login</a>
                     {% endif %}
                 </div>
             </li>
