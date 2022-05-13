@@ -538,7 +538,7 @@ header a:focus {
     background-size: cover;
     border-color: var(--logo-text-color) !important;
     width: calc(100vw + 2px) !important;
-    top: 78px !important;
+    top: 77px !important;
     left: -1px !important;
 }
 
