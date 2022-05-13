@@ -149,11 +149,11 @@
                                         <label for="minPrice" class="min-price-label">Min: </label>
                                         <input type="number" name="minPrice" class="min-price"
                                             min="{{ price_min_initial }}" max="{{ price_max_initial|subtract:1 }}"
-                                            value="{{ price_min_initial }}">
+                                            value="{{ price_min_initial }}" id="minPrice">
                                         <label for="maxPrice" class="max-price-label">Max: </label>
                                         <input type="number" name="maxPrice" class="max-price"
                                             min="{{ price_min_initial|add:1 }}" max="{{ price_max_initial }}"
-                                            value="{{ price_max_initial }}">
+                                            value="{{ price_max_initial }}" id="maxPrice">
                                     </li>
                                     <li class="dropdown-item pt-2" id="priceApply">Apply 'Price' filter</li>
                                     {% if prices_filtered %}

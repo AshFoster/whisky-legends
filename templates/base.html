@@ -182,7 +182,7 @@
     </div>
 
     {% block postloadjs %}
-    <script type="text/javascript">
+    <script>
         document.querySelectorAll('.toast').forEach(item => {
             toast = new bootstrap.Toast(item);
             toast.show();
