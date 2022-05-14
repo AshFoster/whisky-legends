@@ -188,14 +188,15 @@ class Shop(generic.ListView):
                 brands[product.brand.friendly_name] = brands[
                     product.brand.friendly_name] + 1
 
-            if product.brand.country.friendly_name not in countries:
-                country_names[product.brand.country.friendly_name] = \
-                    product.brand.country.name
-                countries[product.brand.country.friendly_name] = 1
-                countries_count += 1
-            else:
-                countries[product.brand.country.friendly_name] = countries[
-                    product.brand.country.friendly_name] + 1
+            if product.brand.country:
+                if product.brand.country.friendly_name not in countries:
+                    country_names[product.brand.country.friendly_name] = \
+                        product.brand.country.name
+                    countries[product.brand.country.friendly_name] = 1
+                    countries_count += 1
+                else:
+                    countries[product.brand.country.friendly_name] = countries[
+                        product.brand.country.friendly_name] + 1
 
             if product.brand.region:
                 if product.brand.region.friendly_name not in regions:
@@ -207,14 +208,15 @@ class Shop(generic.ListView):
                     regions[product.brand.region.friendly_name] = regions[
                         product.brand.region.friendly_name] + 1
 
-            if product.flavour.friendly_name not in flavours:
-                flavour_names[product.flavour.friendly_name] = \
-                    product.flavour.name
-                flavours[product.flavour.friendly_name] = 1
-                flavours_count += 1
-            else:
-                flavours[product.flavour.friendly_name] = flavours[
-                    product.flavour.friendly_name] + 1
+            if product.flavour:
+                if product.flavour.friendly_name not in flavours:
+                    flavour_names[product.flavour.friendly_name] = \
+                        product.flavour.name
+                    flavours[product.flavour.friendly_name] = 1
+                    flavours_count += 1
+                else:
+                    flavours[product.flavour.friendly_name] = flavours[
+                        product.flavour.friendly_name] + 1
 
             if product.age:
                 if product.age not in ages:
