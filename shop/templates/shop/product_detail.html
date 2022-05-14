@@ -2,6 +2,8 @@
 {% load static %}
 {% load shop_extras %}
 
+{% block extra_title %}{{ product.brand.friendly_name }}: {{ product.name }}{% endblock %}
+
 {% block content %}
 <div class="container-fluid my-5 product-detail-container">
     <div class="row justify-content-center">
