@@ -31,13 +31,17 @@
 
 ## Overview
 
-Whisky Legends is an e-commerce website that sells an array of whiskies from all over the world, as well as a small selection of whisky related merchandise. Users will be able to register for an account which will provide them access to their own profile where they are able to store personal and delivery information, view their order history, and view their own wishlist. Registered users will also be able to rate and review any of the whiskies/products on the site.
+Whisky Legends is an e-commerce website that sells an array of whiskies from all over the world, as well as a small selection of whisky related products. Users will be able to register for an account which will provide them access to their own profile where they are able to store personal and delivery information, view their order history, and view their own wishlist. Registered users will also be able to rate and review any of the whiskies/products on the site.
 
 ## User Experience
 
 ### Strategy
 
-This website is aimed at whisky fans who would like to purchase one or multiple bottles of whisky, and/or some whisky related merchandise.
+This website is aimed at whisky fans who would like to purchase one or multiple bottles of whisky, and/or some whisky related products.
+
+#### Business Model
+
+The business model for this e-commerce website is a 'B2C – Business to customer' model. Non of the products sold are made or developed by Whisky legends, so everything is bought at wholesale prices in order to sell to customers at a profit. With this in mind the site has been disigned to make everything as easy as possible for customers visiting the site. Everthing is designed to be easily found and understood, with the aim of producing a positive response from the site's users.
 
 #### Marketing Strategy
 
