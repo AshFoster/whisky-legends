@@ -31,13 +31,13 @@
 
 ## Overview
 
-Whisky Legends is an ecommerce website that sells an array of whiskies from all over the world. A subscription service is also available, offering users the chance of sampling different whiskies on a monthly basis. There are 3 subscription lengths: 3 months, 6 months and 12 months. Users will also be able to register for an account which will provide them access to their own profile, order history and wishlist functionality. Registered users will also be able to rate and review whiskies they have previously purchased.
+Whisky Legends is an e-commerce website that sells an array of whiskies from all over the world, as well as a small selection of whisky related merchandise. Users will be able to register for an account which will provide them access to their own profile where they are able to store personal and delivery information, view their order history, and view their own wishlist. Registered users will also be able to rate and review any of the whiskies/products on the site.
 
 ## User Experience
 
 ### Strategy
 
-This website is aimed at whisky fans who would like to purchase one or multiple bottles of whisky, and/or who would like to sample different whiskies every month over a chosen subscription period.
+This website is aimed at whisky fans who would like to purchase one or multiple bottles of whisky, and/or some whisky related merchandise.
 
 #### Marketing Strategy
 
