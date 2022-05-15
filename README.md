@@ -322,6 +322,7 @@ To clone the GitHub repository follow these steps:
 - [Logo Pony](https://logopony.co.uk/) - To create default product image
 - [Red Ketchup Image Resizer](https://redketchup.io/image-resizer) - To resize default product image
 - [favicon.io](https://favicon.io/) - To generate favicon icons
+- [XML-Sitemaps](https://www.xml-sitemaps.com/) - To generate the xml sitemap
 
 ## Credits
 

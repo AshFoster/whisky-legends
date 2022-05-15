@@ -1,0 +1,2167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://whisky-legends.herokuapp.com/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/cart/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/signup/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/shop/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/contact/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/password/reset/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/shop/46/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/shop/45/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/shop/68/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/shop/67/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/shop/50/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/shop/40/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/shop/41/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/shop/54/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/shop/53/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/shop/70/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/shop/69/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/shop/57/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/shop/4/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/shop/71/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/shop/58/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/shop/59/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/shop/5/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/shop/1/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/shop/72/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/shop/55/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/shop/2/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/shop/63/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/shop/73/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/shop/64/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/shop/47/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/shop/42/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/shop/48/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/shop/74/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/shop/17/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/shop/65/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/shop/60/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/shop/3/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/shop/49/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/shop/51/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/shop/79/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/shop/83/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/shop/82/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/shop/81/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/shop/80/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/shop/75/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/shop/76/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/shop/13/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/shop/56/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/shop/6/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/shop/52/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/shop/44/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/shop/86/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/shop/84/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/shop/85/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/shop/66/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/shop/61/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/shop/62/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/shop/43/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/signup/?next=/shop/46/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=/shop/46/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=/shop/delete_product/46/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/signup/?next=/shop/45/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=/shop/45/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=/shop/delete_product/45/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/signup/?next=/shop/68/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=/shop/68/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=/shop/delete_product/68/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/signup/?next=/shop/67/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=/shop/67/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=/shop/delete_product/67/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/signup/?next=/shop/50/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=/shop/50/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=/shop/delete_product/50/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/signup/?next=/shop/40/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=/shop/40/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=/shop/delete_product/40/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/signup/?next=/shop/41/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=/shop/41/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=/shop/delete_product/41/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/signup/?next=/shop/54/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=/shop/54/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=/shop/delete_product/54/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/signup/?next=/shop/53/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=/shop/53/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=/shop/delete_product/53/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/signup/?next=/shop/70/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=/shop/70/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=/shop/delete_product/70/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/signup/?next=/shop/69/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=/shop/69/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=/shop/delete_product/69/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/signup/?next=/shop/57/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=/shop/57/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=/shop/delete_product/57/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/signup/?next=/shop/4/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=/shop/4/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=/shop/delete_product/4/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/signup/?next=/shop/71/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=/shop/71/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=/shop/delete_product/71/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/signup/?next=/shop/58/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=/shop/58/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=/shop/delete_product/58/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/signup/?next=/shop/59/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=/shop/59/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=/shop/delete_product/59/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/signup/?next=/shop/5/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=/shop/5/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=/shop/delete_product/5/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/signup/?next=/shop/1/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=/shop/1/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=/shop/delete_product/1/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/signup/?next=/shop/72/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=/shop/72/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=/shop/delete_product/72/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/signup/?next=/shop/55/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=/shop/55/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=/shop/delete_product/55/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/signup/?next=/shop/2/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=/shop/2/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=/shop/delete_product/2/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/signup/?next=/shop/63/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=/shop/63/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=/shop/delete_product/63/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/signup/?next=/shop/73/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=/shop/73/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=/shop/delete_product/73/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/signup/?next=/shop/64/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=/shop/64/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=/shop/delete_product/64/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/signup/?next=/shop/47/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=/shop/47/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=/shop/delete_product/47/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/signup/?next=/shop/42/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=/shop/42/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=/shop/delete_product/42/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/signup/?next=/shop/48/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=/shop/48/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=/shop/delete_product/48/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/signup/?next=/shop/74/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=/shop/74/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=/shop/delete_product/74/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/signup/?next=/shop/17/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=/shop/17/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=/shop/delete_product/17/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/signup/?next=/shop/65/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=/shop/65/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=/shop/delete_product/65/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/signup/?next=/shop/60/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=/shop/60/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=/shop/delete_product/60/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/signup/?next=/shop/3/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=/shop/3/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=/shop/delete_product/3/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/signup/?next=/shop/49/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=/shop/49/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=/shop/delete_product/49/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/signup/?next=/shop/51/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=/shop/51/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=/shop/delete_product/51/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/signup/?next=/shop/79/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=/shop/79/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=/shop/delete_product/79/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/signup/?next=/shop/83/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=/shop/83/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=/shop/delete_product/83/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/signup/?next=/shop/82/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=/shop/82/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=/shop/delete_product/82/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/signup/?next=/shop/81/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=/shop/81/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=/shop/delete_product/81/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/signup/?next=/shop/80/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=/shop/80/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=/shop/delete_product/80/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/signup/?next=/shop/75/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=/shop/75/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=/shop/delete_product/75/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/signup/?next=/shop/76/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=/shop/76/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=/shop/delete_product/76/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/signup/?next=/shop/13/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=/shop/13/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=/shop/delete_product/13/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/signup/?next=/shop/56/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=/shop/56/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=/shop/delete_product/56/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/signup/?next=/shop/6/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=/shop/6/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=/shop/delete_product/6/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/signup/?next=/shop/52/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=/shop/52/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=/shop/delete_product/52/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/signup/?next=/shop/44/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=/shop/44/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=/shop/delete_product/44/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/signup/?next=/shop/86/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=/shop/86/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=/shop/delete_product/86/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/signup/?next=/shop/84/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=/shop/84/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=/shop/delete_product/84/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/signup/?next=/shop/85/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=/shop/85/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=/shop/delete_product/85/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/signup/?next=/shop/66/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=/shop/66/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=/shop/delete_product/66/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/signup/?next=/shop/61/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=/shop/61/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=/shop/delete_product/61/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/signup/?next=/shop/62/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=/shop/62/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=/shop/delete_product/62/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/signup/?next=/shop/43/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=/shop/43/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=/shop/delete_product/43/</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=%2Fshop%2F46%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/signup/?next=%2Fshop%2F46%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/signup/?next=%2Fshop%2Fdelete_product%2F46%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=%2Fshop%2F45%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/signup/?next=%2Fshop%2F45%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/signup/?next=%2Fshop%2Fdelete_product%2F45%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=%2Fshop%2F68%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/signup/?next=%2Fshop%2F68%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/signup/?next=%2Fshop%2Fdelete_product%2F68%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=%2Fshop%2F67%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/signup/?next=%2Fshop%2F67%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/signup/?next=%2Fshop%2Fdelete_product%2F67%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=%2Fshop%2F50%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/signup/?next=%2Fshop%2F50%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/signup/?next=%2Fshop%2Fdelete_product%2F50%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=%2Fshop%2F40%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/signup/?next=%2Fshop%2F40%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/signup/?next=%2Fshop%2Fdelete_product%2F40%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=%2Fshop%2F41%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/signup/?next=%2Fshop%2F41%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/signup/?next=%2Fshop%2Fdelete_product%2F41%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=%2Fshop%2F54%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/signup/?next=%2Fshop%2F54%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/signup/?next=%2Fshop%2Fdelete_product%2F54%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=%2Fshop%2F53%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/signup/?next=%2Fshop%2F53%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/signup/?next=%2Fshop%2Fdelete_product%2F53%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=%2Fshop%2F70%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/signup/?next=%2Fshop%2F70%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/signup/?next=%2Fshop%2Fdelete_product%2F70%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=%2Fshop%2F69%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/signup/?next=%2Fshop%2F69%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/signup/?next=%2Fshop%2Fdelete_product%2F69%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=%2Fshop%2F57%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/signup/?next=%2Fshop%2F57%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/signup/?next=%2Fshop%2Fdelete_product%2F57%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=%2Fshop%2F4%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/signup/?next=%2Fshop%2F4%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/signup/?next=%2Fshop%2Fdelete_product%2F4%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=%2Fshop%2F71%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/signup/?next=%2Fshop%2F71%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/signup/?next=%2Fshop%2Fdelete_product%2F71%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=%2Fshop%2F58%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/signup/?next=%2Fshop%2F58%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/signup/?next=%2Fshop%2Fdelete_product%2F58%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=%2Fshop%2F59%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/signup/?next=%2Fshop%2F59%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/signup/?next=%2Fshop%2Fdelete_product%2F59%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=%2Fshop%2F5%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/signup/?next=%2Fshop%2F5%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/signup/?next=%2Fshop%2Fdelete_product%2F5%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=%2Fshop%2F1%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/signup/?next=%2Fshop%2F1%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/signup/?next=%2Fshop%2Fdelete_product%2F1%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=%2Fshop%2F72%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/signup/?next=%2Fshop%2F72%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/signup/?next=%2Fshop%2Fdelete_product%2F72%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=%2Fshop%2F55%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/signup/?next=%2Fshop%2F55%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/signup/?next=%2Fshop%2Fdelete_product%2F55%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=%2Fshop%2F2%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/signup/?next=%2Fshop%2F2%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/signup/?next=%2Fshop%2Fdelete_product%2F2%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=%2Fshop%2F63%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/signup/?next=%2Fshop%2F63%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/signup/?next=%2Fshop%2Fdelete_product%2F63%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=%2Fshop%2F73%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/signup/?next=%2Fshop%2F73%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/signup/?next=%2Fshop%2Fdelete_product%2F73%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=%2Fshop%2F64%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/signup/?next=%2Fshop%2F64%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/signup/?next=%2Fshop%2Fdelete_product%2F64%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=%2Fshop%2F47%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/signup/?next=%2Fshop%2F47%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/signup/?next=%2Fshop%2Fdelete_product%2F47%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=%2Fshop%2F42%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/signup/?next=%2Fshop%2F42%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/signup/?next=%2Fshop%2Fdelete_product%2F42%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=%2Fshop%2F48%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/signup/?next=%2Fshop%2F48%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/signup/?next=%2Fshop%2Fdelete_product%2F48%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=%2Fshop%2F74%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/signup/?next=%2Fshop%2F74%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/signup/?next=%2Fshop%2Fdelete_product%2F74%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=%2Fshop%2F17%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/signup/?next=%2Fshop%2F17%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/signup/?next=%2Fshop%2Fdelete_product%2F17%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=%2Fshop%2F65%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/signup/?next=%2Fshop%2F65%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/signup/?next=%2Fshop%2Fdelete_product%2F65%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=%2Fshop%2F60%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/signup/?next=%2Fshop%2F60%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/signup/?next=%2Fshop%2Fdelete_product%2F60%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=%2Fshop%2F3%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/signup/?next=%2Fshop%2F3%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/signup/?next=%2Fshop%2Fdelete_product%2F3%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=%2Fshop%2F49%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/signup/?next=%2Fshop%2F49%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/signup/?next=%2Fshop%2Fdelete_product%2F49%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=%2Fshop%2F51%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/signup/?next=%2Fshop%2F51%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/signup/?next=%2Fshop%2Fdelete_product%2F51%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=%2Fshop%2F79%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/signup/?next=%2Fshop%2F79%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/signup/?next=%2Fshop%2Fdelete_product%2F79%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=%2Fshop%2F83%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/signup/?next=%2Fshop%2F83%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/signup/?next=%2Fshop%2Fdelete_product%2F83%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=%2Fshop%2F82%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/signup/?next=%2Fshop%2F82%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/signup/?next=%2Fshop%2Fdelete_product%2F82%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=%2Fshop%2F81%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/signup/?next=%2Fshop%2F81%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/signup/?next=%2Fshop%2Fdelete_product%2F81%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=%2Fshop%2F80%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/signup/?next=%2Fshop%2F80%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/signup/?next=%2Fshop%2Fdelete_product%2F80%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=%2Fshop%2F75%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/signup/?next=%2Fshop%2F75%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/signup/?next=%2Fshop%2Fdelete_product%2F75%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=%2Fshop%2F76%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/signup/?next=%2Fshop%2F76%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/signup/?next=%2Fshop%2Fdelete_product%2F76%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=%2Fshop%2F13%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/signup/?next=%2Fshop%2F13%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/signup/?next=%2Fshop%2Fdelete_product%2F13%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=%2Fshop%2F56%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/signup/?next=%2Fshop%2F56%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/signup/?next=%2Fshop%2Fdelete_product%2F56%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=%2Fshop%2F6%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/signup/?next=%2Fshop%2F6%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/signup/?next=%2Fshop%2Fdelete_product%2F6%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=%2Fshop%2F52%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/signup/?next=%2Fshop%2F52%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/signup/?next=%2Fshop%2Fdelete_product%2F52%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=%2Fshop%2F44%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/signup/?next=%2Fshop%2F44%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/signup/?next=%2Fshop%2Fdelete_product%2F44%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=%2Fshop%2F86%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/signup/?next=%2Fshop%2F86%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/signup/?next=%2Fshop%2Fdelete_product%2F86%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=%2Fshop%2F84%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/signup/?next=%2Fshop%2F84%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/signup/?next=%2Fshop%2Fdelete_product%2F84%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=%2Fshop%2F85%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/signup/?next=%2Fshop%2F85%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/signup/?next=%2Fshop%2Fdelete_product%2F85%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=%2Fshop%2F66%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/signup/?next=%2Fshop%2F66%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/signup/?next=%2Fshop%2Fdelete_product%2F66%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=%2Fshop%2F61%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/signup/?next=%2Fshop%2F61%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/signup/?next=%2Fshop%2Fdelete_product%2F61%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=%2Fshop%2F62%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/signup/?next=%2Fshop%2F62%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/signup/?next=%2Fshop%2Fdelete_product%2F62%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=%2Fshop%2F43%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/signup/?next=%2Fshop%2F43%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/signup/?next=%2Fshop%2Fdelete_product%2F43%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=%2Fshop%2Fdelete_product%2F46%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=%2Fshop%2Fdelete_product%2F45%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=%2Fshop%2Fdelete_product%2F68%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=%2Fshop%2Fdelete_product%2F67%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=%2Fshop%2Fdelete_product%2F50%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=%2Fshop%2Fdelete_product%2F40%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=%2Fshop%2Fdelete_product%2F41%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=%2Fshop%2Fdelete_product%2F54%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=%2Fshop%2Fdelete_product%2F53%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=%2Fshop%2Fdelete_product%2F70%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=%2Fshop%2Fdelete_product%2F69%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=%2Fshop%2Fdelete_product%2F57%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=%2Fshop%2Fdelete_product%2F4%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=%2Fshop%2Fdelete_product%2F71%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=%2Fshop%2Fdelete_product%2F58%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=%2Fshop%2Fdelete_product%2F59%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=%2Fshop%2Fdelete_product%2F5%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=%2Fshop%2Fdelete_product%2F1%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=%2Fshop%2Fdelete_product%2F72%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=%2Fshop%2Fdelete_product%2F55%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=%2Fshop%2Fdelete_product%2F2%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=%2Fshop%2Fdelete_product%2F63%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=%2Fshop%2Fdelete_product%2F73%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=%2Fshop%2Fdelete_product%2F64%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=%2Fshop%2Fdelete_product%2F47%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=%2Fshop%2Fdelete_product%2F42%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=%2Fshop%2Fdelete_product%2F48%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=%2Fshop%2Fdelete_product%2F74%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=%2Fshop%2Fdelete_product%2F17%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=%2Fshop%2Fdelete_product%2F65%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=%2Fshop%2Fdelete_product%2F60%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=%2Fshop%2Fdelete_product%2F3%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=%2Fshop%2Fdelete_product%2F49%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=%2Fshop%2Fdelete_product%2F51%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=%2Fshop%2Fdelete_product%2F79%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=%2Fshop%2Fdelete_product%2F83%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=%2Fshop%2Fdelete_product%2F82%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=%2Fshop%2Fdelete_product%2F81%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=%2Fshop%2Fdelete_product%2F80%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=%2Fshop%2Fdelete_product%2F75%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=%2Fshop%2Fdelete_product%2F76%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=%2Fshop%2Fdelete_product%2F13%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=%2Fshop%2Fdelete_product%2F56%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=%2Fshop%2Fdelete_product%2F6%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=%2Fshop%2Fdelete_product%2F52%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=%2Fshop%2Fdelete_product%2F44%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=%2Fshop%2Fdelete_product%2F86%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=%2Fshop%2Fdelete_product%2F84%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=%2Fshop%2Fdelete_product%2F85%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=%2Fshop%2Fdelete_product%2F66%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=%2Fshop%2Fdelete_product%2F61%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=%2Fshop%2Fdelete_product%2F62%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://whisky-legends.herokuapp.com/accounts/login/?next=%2Fshop%2Fdelete_product%2F43%2F</loc>
+  <lastmod>2022-05-15T06:37:18+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+
+
+</urlset>

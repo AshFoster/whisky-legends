@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /accounts/
+Disallow: /cart/
+Disallow: /contact/
+Disallow: /checkout/
+Disallow: /profile/
+Sitemap: https://whisky-legends.herokuapp.com/sitemap.xml
