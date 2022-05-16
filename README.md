@@ -114,49 +114,50 @@ More detail about the user stories including the acceptance criteria associated 
 
 All of the user stories outlined above are feasible for the first release of the website. Some further features that could be implemented later on include:
 
-Providing store owners with the ability to add new brands, countires, flavours etc from the front end instead of having to do this via the Django admin panal.
-Adding a 'load more' button to the shop page to prevent the need to load all products each time the page is visited.
+- Providing store owners with the ability to add new brands, countires, flavours etc from the front end instead of having to do this via the Django admin panal.
+- Adding a 'load more' button to the shop page to prevent the need to load all products each time the page is visited.
 
-I don't feel that having these features will impact the user experience too much, so felt it was fine to exclude them for the first release.
+Having these features will not impact the user experience too much, so it is fine to exclude them for the first release.
 
 ### Structure
 
 The structure of the website is aimed to be as simple as possible whilst showing all the necessary information. The main parts of the site will be accessible from the navbar, with any other parts easily accessible from the relevant pages. The main parts of the site included within the navbar are as follows:
 
-Home
-Shop
-Contact
-Cart
-Register
-Login
-Product Management (store owners only) - this link takes the user to the 'Add Product' page
-My Profile (registered users only)
-Sign Out (registered users only)
+- Home
+- Shop
+- Contact
+- Cart
+- Register
+- Login
+- Product Management (store owners only) - this link takes the user to the 'Add Product' page
+- My Profile (registered users only)
+- Sign Out (registered users only)
+
 Other parts of the site not included in the navbar are as follows:
 
-Product detail (accessed from shop page and users' wishlist pages)
-Checkout (accessed from cart page)
-Checkout Success (accessed after successful checkout submission)
-Edit Product (store owners only - accessed from shop page and product detail page)
-Delete Product (store owners only - accessed from shop page and product detail page - confirmation modal is shown - redirects on confirmation)
-Delete Review (store owners and reviewer only - accessed from product detail page - confirmation modal is shown - redirects on confirmation)
-My Orders (registered users only - accessed from 'My Profile' page)
-Previous Order (registered users only - accessed from 'My Orders' page)
-My Wishlist (registered users only - accessed from 'My Profile' page or via success toast when adding to wishlist)
-Update Email (registered users only - accessed from 'My Profile' page)
-Update Password (registered users only - accessed from 'My Profile' page)
-Reset Password (registered users only - accessed from sign in page)
-404 Error
-500 Error
+- Product detail (accessed from shop page and users' wishlist pages)
+- Checkout (accessed from cart page)
+- Checkout Success (accessed after successful checkout submission)
+- Edit Product (store owners only - accessed from shop page and product detail page)
+- Delete Product (store owners only - accessed from shop page and product detail page - confirmation modal is shown - redirects on confirmation)
+- Delete Review (store owners and reviewer only - accessed from product detail page - confirmation modal is shown - redirects on confirmation)
+- My Orders (registered users only - accessed from 'My Profile' page)
+- Previous Order (registered users only - accessed from 'My Orders' page)
+- My Wishlist (registered users only - accessed from 'My Profile' page or via success toast when adding to wishlist)
+- Update Email (registered users only - accessed from 'My Profile' page)
+- Update Password (registered users only - accessed from 'My Profile' page)
+- Reset Password (registered users only - accessed from sign in page)
+- 404 Error
+- 500 Error
 
 The site has been split up into 6 apps: cart, checkout, contact, home, profiles and shop.
 
-The cart app handles everything to do with viewing, adding, updating and rremoving from the cart.
-The checkout app handles everything to do with processing payments and interacting with stripe.
-The contact app handles the contact form.
-The home app handles the home page, 404 error page and 500 error page.
-The profiles app handles the user profile, order history and wishlist functionality and pages.
-The shop app handles viewing, filtering, sorting, reviewing, adding, updating and deleting products.
+- The cart app handles everything to do with viewing, adding, updating and rremoving from the cart.
+- The checkout app handles everything to do with processing payments and interacting with stripe.
+- The contact app handles the contact form.
+- The home app handles the home page, 404 error page and 500 error page.
+- The profiles app handles the user profile, order history and wishlist functionality and pages.
+- The shop app handles viewing, filtering, sorting, reviewing, adding, updating and deleting products.
 
 The site map can be seen in the following image:
 
@@ -164,8 +165,47 @@ The site map can be seen in the following image:
 
 #### Data Models
 
-##### App Models
+Throughout development and deployment the same Heroku Postgres database has been used to store all necessary data for the site. 11 custom models have been created across 3 of the site's apps, Checkout, Profiles and Shop.
 
+##### Checkout App Models
+
+The Checkout app has 2 database models associated with it: Order and OrderLineItem.
+
+- The Order model stores all the necessary data needed for an individual order, including order number, delivery info, date and costs etc. It also has a many to one relationship with the UserProfile model (described below in [Profiles App Models](#profiles-app-models)). The 'Original Cart' and 'Stripe PID' fields are used in conjunction with Stripe Webhooks to prevent duplicate orders from being created if the user is somehow disconnected whilst a payment is being processed.
+
+- The OrderLineItem model stores individual line items associated with an order, including quantity and cost. It has a many to one relationship with the Order model and also has a many to one relationship with the Product model (described below in [Shop App Models](#shop-app-models)). There will be an order line item instance for each product in an order.
+
+##### Profiles App Models
+
+The Profiles app has 2 database models associated with it: UserProfile and Wishlist.
+
+- The UserProfile model has a one to one relationship with Django's built-in User model, and has a variety of other fields used to store user's default name and delivery details etc.
+
+- The Wishlist table has a one to one relationship with Django's built-in User model as well as a many to many relationship with the Product model (described below in [Shop App Models](#shop-app-models)). Each user can have an individual wishlist that can contain multiple products.
+
+##### Shop App Models
+
+The Shop app has 7 database models associated with it: Type, Brand, Country, Region, Flavour, Product and Review.
+
+The Type model is used to store all available product types.
+
+The Brand model is used to store all available product brands. It has many to one relationships with the Country and Region models.
+
+The Country model is used to store all available countries.
+
+The Region model is used to store all available regions.
+
+The Flavour model is used to store all available whisky flavours.
+
+The Product model is used store all the necessary information associated with an individual product. It has many to one relationships with the Type, Brand and Flavour models, as well as fields to store info such as name, description etc.
+
+The Review model has many to one relationships with Django's built-in User model and with the Product model. Its other fields store review related information including rating, content and date.
+
+##### Database Schema
+
+Here is an image showing how all of the site's models relate to each other.
+
+![All Database Models](assets/readme-images/db-models.png)
 
 ### Skeleton
 
