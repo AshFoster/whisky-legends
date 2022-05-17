@@ -12,15 +12,15 @@
                 <ul class="list-inline list-unstyled my-auto text-center">
                     <li class="list-inline-item">
                         {% url 'home' as url %}
-                        <a class="nav-link p-2 {% if request.path == url %}active{% endif %}"href="{% url 'home' %}">Home</a>
+                        <a class="nav-link m-1 p-1 {% if request.path == url %}active{% endif %}"href="{% url 'home' %}">Home</a>
                     </li>
                     <li class="list-inline-item">
                         {% url 'shop' as url %}
-                        <a class="nav-link p-2 {% if url in request.path %}active{% endif %}" href="{% url 'shop' %}">Shop</a>
+                        <a class="nav-link m-1 p-1 {% if url in request.path %}active{% endif %}" href="{% url 'shop' %}">Shop</a>
                     </li>
                     <li class="list-inline-item">
                         {% url 'contact' as url %}
-                        <a class="nav-link p-2 {% if request.path == url %}active{% endif %}" href="{% url 'contact' %}">Contact</a>
+                        <a class="nav-link m-1 p-1 {% if request.path == url %}active{% endif %}" href="{% url 'contact' %}">Contact</a>
                     </li>
                 </ul>
             </div>
