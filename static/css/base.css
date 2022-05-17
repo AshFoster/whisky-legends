@@ -265,12 +265,6 @@ footer {
     border-color: rgba(97, 27, 27, 25%);
 }
 
-.review-form-input:focus,
-.review-form-input:active {
-    border-color: rgba(97, 27, 27, 50%);
-    box-shadow: 0 0 0 0.25rem rgba(97, 27, 27, 40%);
-}
-
 .fa-stack > .fas.fa-star {
     visibility: hidden;
 }
@@ -335,23 +329,11 @@ footer {
     margin-bottom: .5rem;
 }
 
-.add-product-input:focus,
-.add-product-input:active {
-    border-color: rgba(97, 27, 27, 50%);
-    box-shadow: 0 0 0 0.25rem rgba(97, 27, 27, 40%);
-}
-
 /* Contact page */
 
 .contact-form-input {
     border-color: rgba(97, 27, 27, 25%);
     margin-bottom: .5rem;
-}
-
-.contact-form-input:focus,
-.contact-form-input:active {
-    border-color: rgba(97, 27, 27, 50%);
-    box-shadow: 0 0 0 0.25rem rgba(97, 27, 27, 40%);
 }
 
 /* /// ---------------------------------------------------- MULTI PAGE STYLES */
@@ -369,12 +351,6 @@ footer {
 
 #div_id_remember label {
     font-size: 110%;
-}
-
-.allauth-form-inner-content input:focus,
-.allauth-form-inner-content input:active {
-    border-color: rgba(97, 27, 27, 50%);
-    box-shadow: 0 0 0 0.25rem rgba(97, 27, 27, 40%);
 }
 
 .allauth-form-inner-content label:not([for='id_remember']):not([for='email_radio_1']) {
@@ -475,6 +451,41 @@ footer {
 
 .custom-checkbox {
     margin-bottom: -1.5rem;
+}
+
+/* All pages */
+
+header .nav-link:focus,
+header .nav-link:active,
+header .input-group:focus,
+header .input-group:active,
+header .form-control:focus,
+header .form-control:active,
+footer .form-control:focus,
+footer .form-control:active,
+.filter-btn:focus,
+.filter-btn:active,
+.btn-custom:focus,
+.btn-custom:active,
+.back-to-shop:focus,
+.back-to-shop:active,
+.StripeElement--focus,
+.stripe-style-input:focus,
+.stripe-style-input:active,
+.form-check-input:focus,
+.form-check-input:active,
+.profile-form-input:focus,
+.profile-form-input:active,
+.review-form-input:focus,
+.review-form-input:active,
+.allauth-form-inner-content input:focus,
+.allauth-form-inner-content input:active,
+.add-product-input:focus,
+.add-product-input:active,
+.contact-form-input:focus,
+.contact-form-input:active {
+    border-color: rgba(97, 27, 27, 50%);
+    box-shadow: 0 0 0 0.25rem rgba(97, 27, 27, 40%);
 }
 
 /* /// ---------------------------------------------------- BASE.HTML styles */

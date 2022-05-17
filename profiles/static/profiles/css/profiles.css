@@ -13,12 +13,6 @@
     margin-bottom: .5rem;
 }
 
-.profile-form-input:focus,
-.profile-form-input:active {
-    border-color: rgba(97, 27, 27, 50%);
-    box-shadow: 0 0 0 0.25rem rgba(97, 27, 27, 40%);
-}
-
 #id_default_country,
 #id_default_country option:not(:first-child) {
     color: #212529;
