@@ -640,7 +640,7 @@ footer {
 }
 
 .cart-notification-wrapper {
-    max-height: 200px;
+    max-height: 125px;
     overflow-x: hidden;
     overflow-y: auto;
 }
