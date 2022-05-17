@@ -363,7 +363,7 @@ Google Chrome was the browser used for the majority of testing during the develo
 
 #### Unfixed Bugs
 
-- 
+- When the 'save info' checkbox is not selected when submitting a successful order on checkout.html the user's details are still saved to the profile page even though they shouldn't be.
 
 
 ## Deployment
