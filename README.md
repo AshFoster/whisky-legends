@@ -49,7 +49,7 @@ The marketing strategy for this site uses a combination of Email Marketing, Soci
 
 Users can subscribe to the site's mailing list by submitting their email address via a simple MailChimp form in the site's footer.
 
-A [Facebook business page](https://www.facebook.com/Whisky-Legends-113839797954063) has been created which is also linked to in the footer of the site, where users are encourged to visit and follow the page.
+A [Facebook business page](https://www.facebook.com/Whisky-Legends-113839797954063) has been created which is also linked to in the footer of the site, where users are encourged to visit and follow the page. An image of the page can be found [here](assets//readme-images/fb-full.JPG).
 
 ##### Search Engine Optimisation
 
@@ -247,10 +247,15 @@ Here are links to each of them:
 
 #### Imagery
 
+An image of old paper has been used as the background of the header, footer, modals and some menu dropdowns. This provides a somewhat old fashioned feel which helps portray the whisky related theme.
+
+![Old Paper Image](assets/readme-images/paper-readme.JPG)
+
 #### Colour Scheme
 
-![Website's Colours](assets/readme-images/colour-scheme.JPG)
+The colour scheme of the site is very simple, with the main colours being white, a shade of red, a shade of black, and black itself with various levels of opacity. The shade of red further helps with the whisky related theme.
 
+![Website's Colours](assets/readme-images/colour-scheme.JPG)
 
 #### Typography
 
@@ -258,7 +263,11 @@ For the typography choices, [Google Fonts](https://fonts.google.com/?sort=popula
 
 The ones that stood out and seemed most suited to the project were chosen. They are as follows:
 
-Each of them is of the font category Sans Serif which is the font used as a fallback if for any reason the specified font isn't available.
+Lobster - This is used for the Whisky Legends logo shown on the navbar.
+
+Roboto Condensed - This is used for all other text throughout the site.
+
+Lobster is of the font category 'Cursive' and Roboto Condensed is of the font category Sans Serif. The font categories will be used as a fallback if for any reason a specified font isn't available.
 
 ## Features
 
@@ -420,6 +429,7 @@ To clone the GitHub repository follow these steps:
 - [GitPod](https://www.gitpod.io/) - the online IDE (Integrated Development Environment) used for development.
 - [GitHub](https://github.com/) - used as an online code repository.
 - [Heroku](https://www.heroku.com/) - used for deployment.
+- [Amazon Web Services](https://aws.amazon.com/) - used for hosting statc files.
 - [Google Fonts](https://fonts.google.com/) - for the fonts used throughout the site.
 - [Font Awesome](https://fontawesome.com/) - for the icons used throughout the site.
 - [Colormind](http://colormind.io/) - used to obtain colour palette images.
@@ -436,4 +446,9 @@ To clone the GitHub repository follow these steps:
 
 - [YouTube](https://www.youtube.com/)
 - [Code Institute's Full Stack Developer Course](https://codeinstitute.net/)
-  - Course material and walkthrough projects provided some ideas.
+  - Course material and the Boutique Ado walkthrough project provided a lot of great ideas, without which this project would not have been possible.
+
+### Images and Content
+
+- [The Whisky Exchange](https://www.thewhiskyexchange.com/) - A special mention for the Whisky Exchange who allowed the use of their images and product descriptions.
+- [Flaviar](https://flaviar.com/) - Provided other layout ideas.
