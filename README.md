@@ -330,7 +330,7 @@ Lobster is of the font category 'Cursive' and Roboto Condensed is of the font ca
 
   ![Cart page](assets/readme-images/cart.JPG)
 
-  - The cart page displays each product that has been added to the cart. The number of items it contains is shown in brackets next to the page title. If nothing is in the cart a message is displayed sayng so.
+  - The cart page displays each product that has been added to the cart. The number of items it contains is shown in brackets next to the page title. If nothing is in the cart a message is displayed saying so.
   - Each product in the cart has an image, a title, abv and volume (if relevant), an 'add to wishlist' button, a quantity selector, 'update' and 'remove' buttons, its price and an item total. The quantity selector has a number in the middle with a default value of 1. It has +/- minus buttons which increase or lower the number but will not go above 99 or below 1. The number can be also be typed in, or adjusted using its little scroll arrows. When the 'update' button is clicked the quantity of the specified product is updated to what is shown by the quantity selector. The 'remove' button removes the specified product from the cart.
   - The 'add to wishlist' button is only shown if the user of logged in, and when clicked adds the product to their wishlist. Once a product is in a user's wishlist the button will display as 'remove from wishlist' instead, which when clicked removes the product from their wishlist.
   - There is a 'back to shop' button below the cart items.
@@ -352,6 +352,26 @@ Lobster is of the font category 'Cursive' and Roboto Condensed is of the font ca
   - The order success page thanks the user for their order and provides them with a summary of their order. The summary is split up into 4 sections, 'order info', order details', 'delivering to' and 'billing info'.
   - The 'order info' section provides the user with their order number and order date. The other sections summarise all the information that they have preiously provided including the products and qunatities of the order, where it will be delivered to, and how much they will be billed.
   - Below the order summary they is a 'back to shop' button.
+
+- __My profile page__
+
+  - The 'my profile' page is split up into 3 separate pages, 'my details', 'my orders' and 'my wishlist', each of which can be accessed from the others due to the same 3 buttons being at the top of each page. The button for the page that the user is currently on has a darker border to indicate it's the current page.
+
+  ![My details page](assets/readme-images/profile.JPG)
+
+  - The 'my details' page contains a form that is used to store the user's personal and delivery details in order to potentially speed up the checkout process for future orders. These details are entered either on this page or from having 'save info' checked when submitting a previous order. The user can update any of these details by entering them into the form and clicking the 'update info' button.  
+  - There are also 'Update Email' and 'Update Password' links which take the user to pages where they can change the email address registered with their account, or change their current password.
+
+  ![My orders page](assets/readme-images/orders.JPG)
+
+  - The 'my orders' page shows a list of all of the user's previous orders from newest to oldest. Each order's date, order number, items and order total are displayed in a table. The order number is a link which takes the user to the 'previous order' page of that particular order. This is the same as the 'order success' page, but is titled differently to indicate that it is a previous order.
+  - If there are no previous orders then a message is displayed saying so.
+
+  ![My wishlist page](assets/readme-images/wishlist.JPG)
+
+  - The 'my wishlist' page shows a list of all products that the user has added to their wishlist. For each product an image, some product details and a 'remove' button are displayed. The 'remove' button removes the product from the wishlist.
+  - If there are no products in the wishlist then a message is displayed saying so.
+
 
 ## Testing
 
