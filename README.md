@@ -355,7 +355,7 @@ Lobster is of the font category 'Cursive' and Roboto Condensed is of the font ca
 
 - __My profile page__
 
-  - The 'my profile' page is split up into 3 separate pages, 'my details', 'my orders' and 'my wishlist', each of which can be accessed from the others due to the same 3 buttons being at the top of each page. The button for the page that the user is currently on has a darker border to indicate it's the current page.
+  - The profile page is split up into 3 separate pages, 'my details', 'my orders' and 'my wishlist', each of which can be accessed from the others due to the same 3 buttons being at the top of each page. The button for the page that the user is currently on has a darker border to indicate it's the current page.
 
   ![My details page](assets/readme-images/profile.JPG)
 
@@ -371,6 +371,14 @@ Lobster is of the font category 'Cursive' and Roboto Condensed is of the font ca
 
   - The 'my wishlist' page shows a list of all products that the user has added to their wishlist. For each product an image, some product details and a 'remove' button are displayed. The 'remove' button removes the product from the wishlist.
   - If there are no products in the wishlist then a message is displayed saying so.
+
+- __Contact page__
+
+  ![Contact page](assets/readme-images/contact.JPG)
+
+  - The contact page allows the user to contact the admin of the site.
+  - It contains a from with 3 required fields, name, email and message. If any of them have been missed on submission the user is told.
+  - If the user is signed in then the name and email fields will already be completed using information from their account.
 
 
 ## Testing
