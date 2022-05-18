@@ -411,6 +411,15 @@ Lobster is of the font category 'Cursive' and Roboto Condensed is of the font ca
   - There is also a 'forgot password' link that takes the user to the 'Reset Password' page.
   - There is a 'sign up' link that takes the user to the 'Register' page.
 
+- __Reset password page__
+
+  ![Reset password page](assets/readme-images/reset-password.JPG)
+
+  - The Reset Password page allows users to reset their password in the case that they have forgotten their current password.
+  - The user must enter the email address associated with their account and click 'Reset My Password'. An email will then be sent to their email with a link that takes them to a page where they can reset their password.
+  - If the user enters an email address that is not associated with an account then the user is made aware of this.
+  - There is also a 'contact us' link that takes the user to the 'Contact' page that they can use if they are having trouble resetting their password.
+
 
 ## Testing
 
