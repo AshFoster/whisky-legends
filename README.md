@@ -420,6 +420,14 @@ Lobster is of the font category 'Cursive' and Roboto Condensed is of the font ca
   - If the user enters an email address that is not associated with an account then the user is made aware of this.
   - There is also a 'contact us' link that takes the user to the 'Contact' page that they can use if they are having trouble resetting their password.
 
+- __Update Email__
+
+  ![Update Email](assets/readme-images/update-email.JPG)
+
+  - This page allows the user to add email addresses to their account, change their primary email address, remove email addresses and to re-send a verification email regarding one of their email addresses.
+  - If there is only one email address associated with their account then this will be the primary address. The email used when registering will automatically be assigned as primary. If the user decides they would like to change their primary email address they will need to add it to their account, then verify it via email, and then set it as the primary email address. They then have the option of leaving the old email address on the account or removing it.
+  - Only non-primary email addresses can be removed from an account.
+
 
 ## Testing
 
