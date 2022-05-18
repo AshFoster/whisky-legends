@@ -437,6 +437,14 @@ Lobster is of the font category 'Cursive' and Roboto Condensed is of the font ca
   - The current password must match the current password, and the repeated new password must match the first new password. If any of these do not match then the user is told accordingly.
   - There is also a 'back to profile' button which takes the user back to their profile.
 
+- __Sign Out__
+
+  ![Sign Out](assets/readme-images/sign-out.JPG)
+
+  - When the user clicks on the 'logout' link in the navbar they are taken to this page which simply asks them to confirm that they would like to sign out.
+  - When they do sign out they are directed to the home page.
+  - There is also a 'cancel' button which also directs them to the home page but without signing them out.
+
 
 ## Testing
 
