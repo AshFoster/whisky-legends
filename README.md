@@ -427,6 +427,15 @@ Lobster is of the font category 'Cursive' and Roboto Condensed is of the font ca
   - This page allows the user to add email addresses to their account, change their primary email address, remove email addresses and to re-send a verification email regarding one of their email addresses.
   - If there is only one email address associated with their account then this will be the primary address. The email used when registering will automatically be assigned as primary. If the user decides they would like to change their primary email address they will need to add it to their account, then verify it via email, and then set it as the primary email address. They then have the option of leaving the old email address on the account or removing it.
   - Only non-primary email addresses can be removed from an account.
+  - There is a 'back to profile' button at the bottom which takes the user back to their profile.
+
+- __Change Password__
+
+  ![Change Password](assets/readme-images/change-password.JPG)
+
+  - This page allows the user to change their password. All they need to do is type in their current password, and then their new password twice.
+  - The current password must match the current password, and the repeated new password must match the first new password. If any of these do not match then the user is told accordingly.
+  - There is also a 'back to profile' button which takes the user back to their profile.
 
 
 ## Testing
