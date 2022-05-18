@@ -389,6 +389,17 @@ Lobster is of the font category 'Cursive' and Roboto Condensed is of the font ca
   - Upon successful submisson of the form the user is redirected to the product detail page of the added product.
   - When a super user decides to edit a product this is the page that they will land on, though it will be titled 'edit product' and the form will contain all of the products current details.
 
+- __Register page__
+
+   ![Register Page](assets/readme-images/register.JPG)
+
+  - The Register page asks the user for an email address, then to repeat the email address, a username, a password and then to repeat the password.
+  - There is a 'Sign Up' button below the form which submits the form.
+  - If the email address or username already exists the user is told and must use another email address and/or username.
+  - If the repeated email address or password do not match the first one the user is told and will need to type them in again.
+  - All fields need to be completed and if any are not the user will be asked to complete the empty fields.
+  - There is a 'sign In' link which takes the user to the 'Sign In' page.
+
 
 ## Testing
 
