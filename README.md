@@ -302,13 +302,29 @@ Lobster is of the font category 'Cursive' and Roboto Condensed is of the font ca
 
   ![Shop page](assets/readme-images/shop.JPG)
 
-  - The shop page displays all of the products that the site has for sale. Each product is contained within its own card which contain an image, the product's name, its price and an 'add to cart' button. The image and the name can be clicked to take the user to the product detail page of that particular product. The 'add to cart' button does as it says, after which a bootstrap toast is displayed containing a message letting the user know that they've added to their cart successfully, as well as showing the current contents of their cart. 
+  - The shop page displays all of the products that the site has for sale. Each product is contained within its own card which contain an image, the product's name, its price and an 'add to cart' button. The image and the name can be clicked to take the user to the product detail page of that particular product. The 'add to cart' button does as it says, after which a bootstrap toast is displayed containing a message letting the user know that they've added to their cart successfully, as well as showing the current contents of their cart.
+  - When logged in as a superuser each product has 'edit' and 'delete' buttons. The 'edit button takes the user the 'edit product' page and the 'delete' button deletes the product from the database but first displays a modal asking the user if they're sure they want to delete it.
   - Above all of the products is a small message letting the user know how may products are currently being displayed.
   - Futher above that is the filter bar. This contains various dropdowns allowing the user to filter the products using various different filters. It also contains a 'sort by' dropdown which allows the user to sort the products by a-z, price, and rating (in both directions). There is a number next to each filter category which shows how many items there are within that dropdown that can be filtered on. Each of these items also has a number next to them showing how many of that particular item would be displayed when filtered.
   - When filtered, the relevant dropdown boxes are highlighted and display what is currently being filtered - this is shown in the image below which shows the brand 'Auchentoshan' as currently filtered and that there are 2 of them. Multiple filters can be used at the same time and each can be cleared individually by clicking 'clear' within the relevant dropdown menu.
   - When products are filtered, a 'Show all products' link appears next to the product count message which when clicked shows all of the products again.
 
   ![Filter Bar](assets/readme-images/filter-bar-filtered.JPG)
+
+- __Product detail page__
+
+  ![Product detail page](assets/readme-images/product-detail.JPG)
+
+  - Each product has its own detail page which shows all available information about it.
+  - It is split up into various sections. One shows the product brand and title, the region and country it's from (if relevant), and its abv and bottle volume (if relevant). The next section includes a brief description of the product, its flavour category (if relevant), and then its rating out of 10 along including the number of votes. The rating is shown as an actual number as well as a number of stars. If no rating exists yet then the rating is shown as 0 from 0 votes. Below this is the products price, followed by a qunatity selector, a 'back to shop' button, an 'add to cart' button and an 'add to wishlist' button. The quantity selector has a number in the middle with a default value of 1. It has +/- minus buttons which increase or lower the number but will not go above 99 or below 1. The number can be also be typed in, or adjusted using its little scroll arrows. When the 'add to cart' button is clicked the quantity shown by the quantity selector is added to the cart. The 'back to shop' button does just that and returns the user to the shop page.
+  - The 'add to wishlist' button is only shown if the user of logged in, and when clicked adds the product to their wishlist. Once a product is in a user's wishlist the button will display as 'remove from wishlist' instead, which when clicked removes the product from their wishlist.
+  - An image of the product is shown on the right-hand side (above on smaller screens).
+  - If the user is a super user they will see 'edit' and 'delete buttons above the product description. The 'edit button takes the user the 'edit product' page and the 'delete' button deletes the product from the database but first displays a modal asking the user if they're sure they want to delete it.
+  - Below all of this is the review section - shown in the image below. The review section is split up into 2 sections, 'review this product' and 'customer reviews'.
+  - The 'review this product' section displays a simple form containing a text area for a review to be written, some stars for selecting a rating out of 10 and a submit button. Only logged in users will see the review form. When a review is submitted the user is notified whether it was successfull or not, and if so, the review will then be displayed in the 'customer reviews' section below.
+  - The 'customer reviews' section displays all current reviews for the product with the latest one at the top. Each review includes a rating, the reviewer's name, the date it was posted and the review content itself. When a user is logged in, any reviews they have submitted include a 'delete' button. When logged in as a super user the 'delete' button is included on all reviews.
+
+  ![Review section](assets/readme-images/reviews.JPG)
 
 ## Testing
 
