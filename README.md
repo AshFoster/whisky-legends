@@ -283,6 +283,13 @@ Lobster is of the font category 'Cursive' and Roboto Condensed is of the font ca
   - Below is a search bar which when used takes the user to the 'Shop' page with any search results that may have been found. On smaller screens this is hidden and a search icon is displayed which when clicked makes the search bar appear below.
   - On the right-hand side there is a cart icon and an account icon. The cart icon has a number below it indicating the current value the cart, and when clicked takes the user to the 'Cart' page. The account icon, when clicked, opens up a small dropdown menu showing 'register' and 'login' to users that aren't logged in, and 'my profile' and 'logout' to users that are. If a super user is logged in they will also see a 'product management' link, which takes them to a page where they can add products.
   - When on each of the pages shown within the navbar the relevant link is bold and brighter to show the user which part of the site they're currently viewing.
+
+- __Footer__
+
+  ![Footer](assets/readme-images/footer.JPG)
+
+  - The footer is split up into 3 main sections. One shows a small paragraph describing what Whisky Legends is all about. One contains an input box which allows the user to subscribe to the site's newsletter, and the other shows a link to the site's facebook business page.
+  - Below these there is a link to display the site's privacy policy modal, and right at the bottom copyright-related information is displayed.
   
 
 ## Testing
