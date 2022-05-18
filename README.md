@@ -336,6 +336,15 @@ Lobster is of the font category 'Cursive' and Roboto Condensed is of the font ca
   - There is a 'back to shop' button below the cart items.
   - On the right-hand side (above on smaller screens) is a card titled 'order now'. It contains the subtotal of all items in the cart, any delivery costs, their combinded total and a 'checkout' button which takes the user to the checkout page.
 
+- __Checkout page__
+
+  ![Checkout page](assets/readme-images/checkout.JPG)
+
+  - The checkout page contains 2 main sections, a form for the user to fill in and submit, and an order summary.
+  - The form is split up into 3 sections, 'your details', delivery info' and 'payment info'. Each of these has some required fields that the user must complete so that their order can be processed. If the user is logged in there is a checkbox that when checked saves some of the 'your details' and 'delivery details' fields to their profile upon successful submission of the form. If their profile already contains this information then it is automatically displayed when the page is first loaded.
+  - Below the form is a 'submit' button which when clicked submits their order, and if all the information they have provided is ok then they are redirected to the 'order success' page. If anything is not accepted then they are made aware that they must amend the necessary field(s) in order to proceed.
+  - On the right-hand side (above on smaller screens) is the order summary section which lists all products included on the order, including an image, name, quantity, price and item total. Below the list of products is a subtotal, any delivery costs, their combined total and an 'edit cart' button which takes the user back to their cart where they can update as necessary.
+
 ## Testing
 
 ### User Stories Testing
