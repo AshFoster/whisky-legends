@@ -400,6 +400,17 @@ Lobster is of the font category 'Cursive' and Roboto Condensed is of the font ca
   - All fields need to be completed and if any are not the user will be asked to complete the empty fields.
   - There is a 'sign In' link which takes the user to the 'Sign In' page.
 
+- __Sign in page__
+
+  ![Sign In Page](assets/readme-images/sign-in.JPG)
+
+  - The Sign In page asks the user for their username (or email) and password for them to sign in.
+  - There is a 'Sign In' button below the form which submits the form.
+  - If the username (or email) or password is incorrect the user is told.
+  - All fields need to be completed and if any are not the user will be asked to complete the empty fields.
+  - There is also a 'forgot password' link that takes the user to the 'Reset Password' page.
+  - There is a 'sign up' link that takes the user to the 'Register' page.
+
 
 ## Testing
 
