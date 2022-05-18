@@ -326,6 +326,16 @@ Lobster is of the font category 'Cursive' and Roboto Condensed is of the font ca
 
   ![Review section](assets/readme-images/reviews.JPG)
 
+- __Cart page__
+
+  ![Cart page](assets/readme-images/cart.JPG)
+
+  - The cart page displays each product that has been added to the cart. The number of items it contains is shown in brackets next to the page title. If nothing is in the cart a message is displayed sayng so.
+  - Each product in the cart has an image, a title, abv and volume (if relevant), an 'add to wishlist' button, a quantity selector, 'update' and 'remove' buttons, its price and an item total. The quantity selector has a number in the middle with a default value of 1. It has +/- minus buttons which increase or lower the number but will not go above 99 or below 1. The number can be also be typed in, or adjusted using its little scroll arrows. When the 'update' button is clicked the quantity of the specified product is updated to what is shown by the quantity selector. The 'remove' button removes the specified product from the cart.
+  - The 'add to wishlist' button is only shown if the user of logged in, and when clicked adds the product to their wishlist. Once a product is in a user's wishlist the button will display as 'remove from wishlist' instead, which when clicked removes the product from their wishlist.
+  - There is a 'back to shop' button below the cart items.
+  - On the right-hand side (above on smaller screens) is a card titled 'order now'. It contains the subtotal of all items in the cart, any delivery costs, their combinded total and a 'checkout' button which takes the user to the checkout page.
+
 ## Testing
 
 ### User Stories Testing
