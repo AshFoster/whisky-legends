@@ -359,7 +359,7 @@ Lobster is of the font category 'Cursive' and Roboto Condensed is of the font ca
 
   ![My details page](assets/readme-images/profile.JPG)
 
-  - The 'my details' page contains a form that is used to store the user's personal and delivery details in order to potentially speed up the checkout process for future orders. These details are entered either on this page or from having 'save info' checked when submitting a previous order. The user can update any of these details by entering them into the form and clicking the 'update info' button.  
+  - The 'my details' page allows the user to store their personal and delivery details in order to potentially speed up the checkout process for future orders. These details are entered either on this page or from having 'save info' checked when submitting a previous order. The user can update any of these details by entering them into the form and clicking the 'update info' button.  
   - There are also 'Update Email' and 'Update Password' links which take the user to pages where they can change the email address registered with their account, or change their current password.
 
   ![My orders page](assets/readme-images/orders.JPG)
@@ -379,6 +379,15 @@ Lobster is of the font category 'Cursive' and Roboto Condensed is of the font ca
   - The contact page allows the user to contact the admin of the site.
   - It contains a from with 3 required fields, name, email and message. If any of them have been missed on submission the user is told.
   - If the user is signed in then the name and email fields will already be completed using information from their account.
+
+- __Add product page__
+
+  ![Add product page](assets/readme-images/add-product.JPG)
+
+  - The add product page allows super users to add products to the database that will be included on the shop page.
+  - It conatins a form with vaious fields, some of which are required and some of which are not. If any of the required fields have been missed the user is told.
+  - Upon successful submisson of the form the user is redirected to the product detail page of the added product.
+  - When a super user decides to edit a product this is the page that they will land on, though it will be titled 'edit product' and the form will contain all of the products current details.
 
 
 ## Testing
