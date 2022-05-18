@@ -298,6 +298,17 @@ Lobster is of the font category 'Cursive' and Roboto Condensed is of the font ca
   - Here, the user is welcomed to the site. A button is also displayed suggesting for them to visit the site's online shop.
   - An image of some whisky glasses is shown behind to futher show that the site is whisky related.
   
+- __Shop page__
+
+  ![Shop page](assets/readme-images/shop.JPG)
+
+  - The shop page displays all of the products that the site has for sale. Each product is contained within its own card which contain an image, the product's name, its price and an 'add to cart' button. The image and the name can be clicked to take the user to the product detail page of that particular product. The 'add to cart' button does as it says, after which a bootstrap toast is displayed containing a message letting the user know that they've added to their cart successfully, as well as showing the current contents of their cart. 
+  - Above all of the products is a small message letting the user know how may products are currently being displayed.
+  - Futher above that is the filter bar. This contains various dropdowns allowing the user to filter the products using various different filters. It also contains a 'sort by' dropdown which allows the user to sort the products by a-z, price, and rating (in both directions). There is a number next to each filter category which shows how many items there are within that dropdown that can be filtered on. Each of these items also has a number next to them showing how many of that particular item would be displayed when filtered.
+  - When filtered, the relevant dropdown boxes are highlighted and display what is currently being filtered - this is shown in the image below which shows the brand 'Auchentoshan' as currently filtered and that there are 2 of them. Multiple filters can be used at the same time and each can be cleared individually by clicking 'clear' within the relevant dropdown menu.
+  - When products are filtered, a 'Show all products' link appears next to the product count message which when clicked shows all of the products again.
+
+  ![Filter Bar](assets/readme-images/filter-bar-filtered.JPG)
 
 ## Testing
 
