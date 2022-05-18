@@ -345,6 +345,14 @@ Lobster is of the font category 'Cursive' and Roboto Condensed is of the font ca
   - Below the form is a 'submit' button which when clicked submits their order, and if all the information they have provided is ok then they are redirected to the 'order success' page. If anything is not accepted then they are made aware that they must amend the necessary field(s) in order to proceed.
   - On the right-hand side (above on smaller screens) is the order summary section which lists all products included on the order, including an image, name, quantity, price and item total. Below the list of products is a subtotal, any delivery costs, their combined total and an 'edit cart' button which takes the user back to their cart where they can update as necessary.
 
+- __Order success page__
+
+  ![Order success page](assets/readme-images/order-success.JPG)
+
+  - The order success page thanks the user for their order and provides them with a summary of their order. The summary is split up into 4 sections, 'order info', order details', 'delivering to' and 'billing info'.
+  - The 'order info' section provides the user with their order number and order date. The other sections summarise all the information that they have preiously provided including the products and qunatities of the order, where it will be delivered to, and how much they will be billed.
+  - Below the order summary they is a 'back to shop' button.
+
 ## Testing
 
 ### User Stories Testing
