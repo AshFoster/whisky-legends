@@ -290,6 +290,13 @@ Lobster is of the font category 'Cursive' and Roboto Condensed is of the font ca
 
   - The footer is split up into 3 main sections. One shows a small paragraph describing what Whisky Legends is all about. One contains an input box which allows the user to subscribe to the site's newsletter, and the other shows a link to the site's facebook business page.
   - Below these there is a link to display the site's privacy policy modal, and right at the bottom copyright-related information is displayed.
+
+- __Home page__
+
+  ![Home page](assets/readme-images/home.JPG)
+
+  - Here, the user is welcomed to the site. A button is also displayed suggesting for them to visit the site's online shop.
+  - An image of some whisky glasses is shown behind to futher show that the site is whisky related.
   
 
 ## Testing
