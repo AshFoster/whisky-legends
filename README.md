@@ -452,13 +452,23 @@ Lobster is of the font category 'Cursive' and Roboto Condensed is of the font ca
 #### Epic 1: Admin and Store Management
 
   - __As a store owner I want to be able to add a product so that I can add new items to my store__
-
+  
+    - When logged in as a super user there is a 'product management' link within the account dropdown menu in the navbar. Clicking this takes the user to the 'add product' page where a they can fill in a form with the necessary information needed to add a product to the database. Some of the fields are required and some are not. If one of the required fields has been missed, or if any of the fields have incorrect formatting then the user is made aware and asked to make the necessary changes.
+    - Upon sucessful submission of the form the user is redirected to the product detail page of the product they have just added, and a message is displayed letting them know that they have successfully added a product.
+    - Products can also be added to the database via Django's admin panal.
 
   - __As a store owner I want to be able to edit/update a product so that I can change product prices, descriptions, images and other product criteria__
 
+    - When logged in as a super user and viewing the shop page, each product in the list includes an 'edit' link which takes the user to the 'edit product' page. Here, an alert is shown letting the user know that they're editing a product and a form is shown with all of the current product information already filled in. The user can amend any of these fields and submit the form to update as necessary. If any of changes are of the incorrect format, or if a required field is now empty the user is made aware and asked to make the necessary changes.
+    - Upon sucessful submission of the form the user is redirected to the product detail page of the product they have just added, and a message is displayed letting them know that they have successfully updated the product.
+    - There is also an 'edit' link included on the product detail page of each product which acts in the same way.
+    - Products can also be edited via Django's admin panal.
 
   - __As a store owner I want to be able to delete a product so that I can remove items that are no longer for sale__
 
+    - When logged in as a super user and viewing the shop page, each product in the list includes a 'delete' link which makes a modal appear asking the user if they're sure they'd like to delete the product. The modal has buttons for 'no' and 'yes'. If 'no' is clicked the modal simply disappears again, and if 'yes' is clicked then product is deleted from the database, the page reloads in the same place and a message is displayed letting the user know that they have deleted the product.
+    - There is also a 'delete' link included on the product detail page of each product which acts in the same way. Upon successful deletion the user is redirected to the shop page.
+    - Products can also be deleted via Django's admin panal.
 
   - __As a store owner I want to be able to delete product reviews so that I can delete any reviews that are no longer relevant__
 
