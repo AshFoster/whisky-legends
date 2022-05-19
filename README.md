@@ -391,7 +391,7 @@ Lobster is of the font category 'Cursive' and Roboto Condensed is of the font ca
 
 - __Register page__
 
-   ![Register Page](assets/readme-images/register.JPG)
+   ![Register page](assets/readme-images/register.JPG)
 
   - The Register page asks the user for an email address, then to repeat the email address, a username, a password and then to repeat the password.
   - There is a 'Sign Up' button below the form which submits the form.
@@ -402,7 +402,7 @@ Lobster is of the font category 'Cursive' and Roboto Condensed is of the font ca
 
 - __Sign in page__
 
-  ![Sign In Page](assets/readme-images/sign-in.JPG)
+  ![Sign in Page](assets/readme-images/sign-in.JPG)
 
   - The Sign In page asks the user for their username (or email) and password for them to sign in.
   - There is a 'Sign In' button below the form which submits the form.
@@ -420,37 +420,157 @@ Lobster is of the font category 'Cursive' and Roboto Condensed is of the font ca
   - If the user enters an email address that is not associated with an account then the user is made aware of this.
   - There is also a 'contact us' link that takes the user to the 'Contact' page that they can use if they are having trouble resetting their password.
 
-- __Update Email__
+- __Update email page__
 
-  ![Update Email](assets/readme-images/update-email.JPG)
+  ![Update email page](assets/readme-images/update-email.JPG)
 
   - This page allows the user to add email addresses to their account, change their primary email address, remove email addresses and to re-send a verification email regarding one of their email addresses.
   - If there is only one email address associated with their account then this will be the primary address. The email used when registering will automatically be assigned as primary. If the user decides they would like to change their primary email address they will need to add it to their account, then verify it via email, and then set it as the primary email address. They then have the option of leaving the old email address on the account or removing it.
   - Only non-primary email addresses can be removed from an account.
   - There is a 'back to profile' button at the bottom which takes the user back to their profile.
 
-- __Change Password__
+- __Change password page__
 
-  ![Change Password](assets/readme-images/change-password.JPG)
+  ![Change password page](assets/readme-images/change-password.JPG)
 
   - This page allows the user to change their password. All they need to do is type in their current password, and then their new password twice.
   - The current password must match the current password, and the repeated new password must match the first new password. If any of these do not match then the user is told accordingly.
   - There is also a 'back to profile' button which takes the user back to their profile.
 
-- __Sign Out__
+- __Sign out page__
 
-  ![Sign Out](assets/readme-images/sign-out.JPG)
+  ![Sign out page](assets/readme-images/sign-out.JPG)
 
   - When the user clicks on the 'logout' link in the navbar they are taken to this page which simply asks them to confirm that they would like to sign out.
   - When they do sign out they are directed to the home page.
   - There is also a 'cancel' button which also directs them to the home page but without signing them out.
 
-
 ## Testing
 
 ### User Stories Testing
 
-#### Epic 1:
+#### Epic 1: Admin and Store Management
+
+  - __As a store owner I want to be able to add a product so that I can add new items to my store__
+
+
+  - __As a store owner I want to be able to edit/update a product so that I can change product prices, descriptions, images and other product criteria__
+
+
+  - __As a store owner I want to be able to delete a product so that I can remove items that are no longer for sale__
+
+
+  - __As a store owner I want to be able to delete product reviews so that I can delete any reviews that are no longer relevant__
+
+
+  - __As a store owner I want to be able to be notified when a user has submitted the contact form so that I can avoid the need to keep checking the admin site for any contact form submissions to read__
+
+
+#### Epic 2: User Accounts
+
+  - __As a site user I want to be able to easily register for an account so that I can have a personal account and be able to view my profile__
+
+
+  - __As a registered site user I want to be able to easily log in or log out so that I can access my personal account information__
+
+
+  - __As a registered site user I want to be able to easily recover my password in case I forget it so that I can recover access to my account__
+
+
+  - __As a registered site user I want to be able to update the email address linked to my account so that I can use a new email address with my account__
+
+
+  - __As a registered site user I want to be able to update my password so that I can strengthen my password or use a more memorable password__
+
+
+  - __As a registered site user I want to be able to have a personalised user profile so that I can view my personal order history and order confirmations, and save my payment information__
+
+
+  - __As a registered site user I want to be able to put whiskies into a personal wishlist so that I can keep track of whiskies that I'd like to purchase in the furture__
+
+
+  - __As a registered site user I want to be able to remove items from personal wishlist so that I can remove items that I've now purchased or no longer wish to purchase in the future__
+
+
+  - __As a registered site user I want to be able to write reviews of whiskies or other products so that I can share my opinion about products with other users__
+
+
+  - __As a registered site user I want to be able to delete any product reviews I've written so that I can remove any reviews I no londer wish to share__
+
+
+  - __As a registered site user I want to be able to rate whiskies or other products that I've purchased so that I can show other users how much I like or dislike them__
+  
+#### Epic 3: Browsing and Navigation
+
+  - __As a site user I want to be able to view a list of whiskies and other available products so that I can select something to purchase__
+
+
+  - __As a site user I want to be able to view individual whiskies or other products details so that I can identify its price, description, rating and image__
+
+
+  - __As a site user I want to be able to easily view the total of my purchases at any time so that I can avoid spending too much__
+
+
+  - __As a site user I want to be able to view the site's privacy policy so that I can see what information is collected about me and how it is used__
+
+
+  - __As a site user I want to be able to click a link to the site's facebook business page so that I can follow them on facebook__
+
+
+  - __As a site user I want to be able to sign up to the site's newsletter so that I can receive the latest newsletters as soon as they're released__
+
+
+  - __As a site user I want to be able to fill in a contact form so that I can get in contact with the site owners to ask any questions I might have__
+
+
+  - __As a site user I want to be able to read customer reviews on whiskies or other products so that I can see what other customers have to say about them__
+
+
+  - __As a site user I want to be able to view ratings of whiskies or other products so that I can see which have the highest and lowest ratings__
+
+#### Epic 4: Filtering, Sorting and Searching
+
+  - __As a site user I want to be able to sort the list of available whiskies and other products so that I can easily identify the best rated, best priced and regionally sorted whiskies__
+
+
+  - __As a site user I want to be able to filter on a specific category/categories of whisky so that I can easily identify whiskies of a particular category/categories__
+
+
+  - __As a site user I want to be able to sort a specific category of whisky so that I can find the best priced or best rated whisky from a specific category or sort the whiskies in that category by name__
+
+
+  - __As a site user I want to be able to sort multiple categories of whiskies simultaneously so that I can find the best priced or best rated whiskies across broad categories such as "region" or "type"__
+
+
+  - __As a site user I want to be able to search for a whisky or other product by name or description so that I can find a specific whisky or other product I'd like to purchase__
+
+
+  - __As a site user I want to be able to easily see what I've searched for and the number of results so that I can quickly decide whether the whisky or other product I want is available__
+
+#### Epic 5: Purchasing and Checkout
+
+  - __As a site user I want to be able to easily add whiskies and/or other products to my shopping cart so that I can keep track of multiple items I'd like to purchase together__
+
+
+  - __As a site user I want to be able to easily select the quantity of a whisky or other product when purchasing it so that I can ensure I don't accidentally select the wrong product quantity__
+
+
+  - __As a site user I want to be able to view items in my cart to be purchased so that I can identify the total cost of my purchase and all items I will receive__
+
+
+  - __As a site user I want to be able to adjust the quantity of individual items in my cart so that I can easly make changes to my purchase before checkout__
+
+
+  - __As a site user I want to be able to access a checkout page so that I can purchase products from the shop__
+
+
+  - __As a site user I want to be able to easily enter my delivery and payment information so that I can check out quickly and with no hassle__
+
+
+  - __As a site user I want to be able to view an order confirmation after checkout so that I can verify that I haven't made any mistakes__
+
+
+  - __As a site user I want to be able to recieve an email confirmation after checking out so that I can keep the confirmation of what I've purchased for my records__
 
 
 ### Validator Testing
