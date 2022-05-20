@@ -75,7 +75,7 @@ More detail about the user stories including the acceptance criteria associated 
       - As a registered site user I want to be able to update the email address linked to my account so that I can use a new email address with my account
       - As a registered site user I want to be able to update my password so that I can strengthen my password or use a more memorable password
       - As a registered site user I want to be able to have a personalised user profile so that I can view my personal order history and order confirmations, and save my delivery information
-      - As a registered site user I want to be able to put whiskies into a personal wishlist so that I can keep track of whiskies that I'd like to purchase in the furture
+      - As a registered site user I want to be able to put whiskies into a personal wishlist so that I can keep track of whiskies that I'd like to purchase in the future
       - As a registered site user I want to be able to remove items from personal wishlist so that I can remove items that I've now purchased or no longer wish to purchase in the future
       - As a registered site user I want to be able to write reviews of whiskies or other products so that I can share my opinion about products with other users
       - As a registered site user I want to be able to delete any product reviews I've written so that I can remove any reviews I no londer wish to share
@@ -520,12 +520,26 @@ Lobster is of the font category 'Cursive' and Roboto Condensed is of the font ca
 
   - __As a registered site user I want to be able to have a personalised user profile so that I can view my personal order history and order confirmations, and save my delivery information__
 
+    - Registered users who are signed in can access their profile by clicking the 'my profile' link in the accounts dropdown within the navbar.
+    - The profile page is split up into 3 separate pages, 'my details', 'my orders' and 'my wishlist', each of which can be accessed from the others due to the same 3 buttons being at the top of each page. The button for the page that the user is currently on has a darker border to indicate it's the current page.
+    - The 'my details' page is the default page and is where users can save their delivery information. There is a form with various fields all of which are optional. The user can type into any or all of them with any details they'd like to save and click the 'update info' button to save their info to the database. On successful submission of the form the page reloads and a message is displayed letting them know that they have successfully updated their profile.
+    - Any previosuly saved info is displayed in the form when it is first loaded.
+    - Clicking on the 'my orders' button reloads the page and displays any previous order that the user has made. If there are no orders the user is made aware.
+    - The orders are diplayed in a table with the latest at the top. Each has a date, order number, items and order total. The order number is a link that when clicked takes the user to the 'previous order' page where they can see the order summary containing further details of their order. On the 'previous order' page the is a 'back to previous order' button that takes the user back to the 'my orders' page.
+    - Clicking on the 'my wishlist' button reloads the page and displays the user's wishlist. If their wishlist is empty the user is made aware.
 
-  - __As a registered site user I want to be able to put whiskies into a personal wishlist so that I can keep track of whiskies that I'd like to purchase in the furture__
+  - __As a registered site user I want to be able to put whiskies into a personal wishlist so that I can keep track of whiskies that I'd like to purchase in the future__
 
+    - Registered users who are signed in can add products to their wishlist from 2 places on the site, the 'product detail' page and the 'cart' page.
+    - On each 'product detail' page there is an 'add to wishlist' button that the user can click. Clicking it adds the product to their wishlist, and a message is displayed letting them know that they have done so successfully. The message also contains a 'view wishlist' button which take the user to their 'my wishlist' page. On the cart page each product in the cart also has an 'add to wishlist' which acts in the same way.
+    - When a product has been added to a user's wishlist, the buttons will then say 'remove from wishlist'.
 
   - __As a registered site user I want to be able to remove items from personal wishlist so that I can remove items that I've now purchased or no longer wish to purchase in the future__
 
+    - Registered users who are signed in can remove products from their wishlist from 3 places on the site, the 'product detail' page, the 'cart' page and the 'my wishlist' page.
+    - When a product is in a user's wishlist, on that product's detail page there is a 'remove from wishlist' button that the user can click. Clicking it removes the product from their wishlist, and a message is displayed letting them know that it has been removed successfully. When a product is in a user's wishlist as well as in their cart, on the cart page the product has a 'remove from wishlist' button which acts in the same way.
+    - When a product has been removed from a user's wishlist, the buttons will then say 'add to wishlist' again.
+    - When viewing the 'my wishlist' page, any products in the wishlist have their own 'remove' button which acts in the same way as the 'remove from wishlist' buttons on the other pages.
 
   - __As a registered site user I want to be able to write reviews of whiskies or other products so that I can share my opinion about products with other users__
 
