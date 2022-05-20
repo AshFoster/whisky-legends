@@ -479,7 +479,6 @@ Lobster is of the font category 'Cursive' and Roboto Condensed is of the font ca
 
     - When any user submits the contact form successfully, an email is sent to the admin's email address containing the name of who it is from, their email address and the message they have submitted.
 
-
 #### Epic 2: User Accounts
 
   - __As a site user I want to be able to easily register for an account so that I can have a personal account and be able to view my profile__
@@ -554,35 +553,50 @@ Lobster is of the font category 'Cursive' and Roboto Condensed is of the font ca
 
   - __As a registered site user I want to be able to rate whiskies or other products that I've purchased so that I can show other users how much I like or dislike them__
 
-    When a signed in user is reviewing a product, they must also rate the product. When a product has been rated and reviewed, its rating is updated to include the new rating. The rating is seen on the product's detail page, and on the product's card on the 'shop' page.
+    - When a signed in user is reviewing a product, they must also rate the product. When a product has been rated and reviewed, its rating is updated to include the new rating. The rating is seen on the product's detail page, and on the product's card on the 'shop' page.
   
 #### Epic 3: Browsing and Navigation
 
   - __As a site user I want to be able to view a list of whiskies and other available products so that I can select something to purchase__
 
+    - When viewing the website any user can navigate to the 'shop' page, via the navbar or via other links on various pages of the site.
+    - The 'shop' page lists all available products for the user to view.
 
   - __As a site user I want to be able to view individual whiskies or other products details so that I can identify its price, description, rating and image__
 
+    - When viewing the list of products on the 'shop' page, each product has some information displayed about it. An image (if available), brand, name, price and rating (if rated) can easily be seen.
+    - The user can click on the image or name to be taken to the product's detail page. Here, the user can see all the available information about the product, including the region, country, bottle volume, abv, description and flavour category in addition to the information displayed on the 'shop' page. Not all of this information is available or relevant for all products, so only relevant and avaiable information is displayed. For example, a book does not have a region, country, bottle volume, abv or flavour category so these are not be displayed.
 
   - __As a site user I want to be able to easily view the total of my purchases at any time so that I can avoid spending too much__
 
+    - When viewing the site, there is a cart icon with a number beneath it within the navbar. The number represents the total value of all of the products currently in the cart. Since the navbar is fixed to the top of the screen, this value is always visable. Clicking on the icon takes the user the cart page where they can see all products and their quantities in the cart, and can make any necessary adjustments.
 
   - __As a site user I want to be able to view the site's privacy policy so that I can see what information is collected about me and how it is used__
 
+    - When viewing the site, at the bottom of the footer is a 'privacy policy' link that makes a modal appear that contains the site's privacy policy. The modal can be closed in 3 ways: by clicking the close button at the bottom right, by clicking the cross near the top right or by clicking anywhere outside of the modal.
 
   - __As a site user I want to be able to click a link to the site's facebook business page so that I can follow them on facebook__
 
+    - When viewing the site, within the footer is a 'facebook' link which takes the user to the 'Whisky Legends' facebook business page in a new tab.
 
   - __As a site user I want to be able to sign up to the site's newsletter so that I can receive the latest newsletters as soon as they're released__
 
+    - When viewing the site, within the footer is a 'mailchimp' text input and 'subscribe' button. Here, the user can enter their email address into the text input and click the 'subscribe' button to subscribe to the site's mailing list. Clicking the 'subscribe' button takes the user to a mailchimp page in a new tab. If successful the page will let the user know as such, and if not, the page will let them know of any problem(s) they need to resolve.
 
   - __As a site user I want to be able to fill in a contact form so that I can get in contact with the site owners to ask any questions I might have__
 
+    - When viewing the site any user can navigate to the 'contact' page by clicking on the 'contact' link in the navbar.
+    - This page contains a simple form that requires the user to enter their name, email and a message that they would like to send. All fields are required, and if any are left blank or do not match the necessary criteria the user is made aware.
+    - Upon successful submission of the form, the user is shown a message stating that their message has been sent successfully. All the information provided by the user is then sent via email to the main admin's email account.
+    - If the user is signed in then the name and email fields will already be completed using information from their account.
 
   - __As a site user I want to be able to read customer reviews on whiskies or other products so that I can see what other customers have to say about them__
 
+    - When viewing a product's detail page, at the bottom of the page is the 'reviews' section. Here, users can read any reviews they or other users have left for that particular product.
 
   - __As a site user I want to be able to view ratings of whiskies or other products so that I can see which have the highest and lowest ratings__
+
+    - When viewing the 'shop' page or a product's detail page, product ratings can be seen assuming they've been rated. The rating is out of 10 and is calculated as an average of all ratings for the product. On the 'shop' page, only the number can be seen, but on a product's detail page the rating is also represented by a number of stars. The number votes is also displayed.
 
 #### Epic 4: Filtering, Sorting and Searching
 
