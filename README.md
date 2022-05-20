@@ -74,7 +74,7 @@ More detail about the user stories including the acceptance criteria associated 
       - As a registered site user I want to be able to easily recover my password in case I forget it so that I can recover access to my account
       - As a registered site user I want to be able to update the email address linked to my account so that I can use a new email address with my account
       - As a registered site user I want to be able to update my password so that I can strengthen my password or use a more memorable password
-      - As a registered site user I want to be able to have a personalised user profile so that I can view my personal order history and order confirmations, and save my payment information
+      - As a registered site user I want to be able to have a personalised user profile so that I can view my personal order history and order confirmations, and save my delivery information
       - As a registered site user I want to be able to put whiskies into a personal wishlist so that I can keep track of whiskies that I'd like to purchase in the furture
       - As a registered site user I want to be able to remove items from personal wishlist so that I can remove items that I've now purchased or no longer wish to purchase in the future
       - As a registered site user I want to be able to write reviews of whiskies or other products so that I can share my opinion about products with other users
@@ -442,8 +442,8 @@ Lobster is of the font category 'Cursive' and Roboto Condensed is of the font ca
   ![Sign out page](assets/readme-images/sign-out.JPG)
 
   - When the user clicks on the 'logout' link in the navbar they are taken to this page which simply asks them to confirm that they would like to sign out.
-  - When they do sign out they are directed to the home page.
-  - There is also a 'cancel' button which also directs them to the home page but without signing them out.
+  - When they do sign out they are redirected to the home page.
+  - There is also a 'cancel' button which also redirects them to the home page but without signing them out.
 
 ## Testing
 
@@ -484,20 +484,41 @@ Lobster is of the font category 'Cursive' and Roboto Condensed is of the font ca
 
   - __As a site user I want to be able to easily register for an account so that I can have a personal account and be able to view my profile__
 
+    - When viewing the wesbite any user that is not already signed in can navigate to the 'register' page by clicking on the 'register' link in the accounts dropdown within the navbar. There are also links to the register page on all 'product detail' pages in place of the 'add to wishlist' button and review form.
+    - There is also a link to the register page on the sign in page.
+    - When viewing the 'register' page the user can register for an account by filling in their email address, username, and password into the relevant fields. The email and username fields must be unique, and the email and password both need to be entered twice with both entries matching. If any of these requirements are not met, the user is made aware.
+    - Upon successful submission of the form, the user is redirected to a 'verification sent' page where they're told that they've been sent an email and that they need to follow the link in the email to confirm their email address. The link takes the user to an 'email confirm' page where there is a 'confirm' button for them to click. Clicking this button confirms their email address and redirects them to the 'sign in' page where they can sign in.
 
   - __As a registered site user I want to be able to easily log in or log out so that I can access my personal account information__
 
+    - When viewing the wesbite any user that is not already signed in can navigate to the 'sign in' page by clicking on the 'sign in' link in the accounts dropdown within the navbar. There are also links to the sign in page on all 'product detail' pages in place of the 'add to wishlist' button and review form.
+    - There is also a link to the sign in page on the register page.
+    - When viewing the 'sign in' page the user can sign in by filling in their email address (or username), and password into the relevant fields. If any of the fields are incorrect the user is made aware.
+    - Upon successful submission of the form, the user is redirected to the home page where a message is displayed stating that have now been signed in.
+    - If signing in from a link on a product detail page, the user will be redirected to that page rather than the home page.
+    - When signed in, all users can easily navigate to the 'sign out' page by clicking the 'logout' link in the accounts dropdown within the navbar. The 'sign out' page contains a 'sign out' button and a 'cancel' button. Clicking the 'sign out' button signs them out and redirects them to the home page. The 'cancel' button also redirects them to the home page but without signing them out.
 
   - __As a registered site user I want to be able to easily recover my password in case I forget it so that I can recover access to my account__
 
+    - When a registered user is attempting to sign in but has forgotten their password, from the 'sign in' page they can click a link labelled 'forgot password?' which will take the user to the 'reset password' page.
+    - On this page, the user is prompted to type in the email address linked to their account. Once they have done this they can click the 'reset my password' button which will submit the form and reload the page. A message is now displayed letting them know that an email has been sent to them. The email they receive contains a link that takes them to the 'password reset' page where they can choose a new password for their account by typing it in twice and clicking the 'change password' button.
+    - Both the 'reset password' page and the 'password reset' page will let the user know if anything they have typed in does not match the forms' requirements.
 
   - __As a registered site user I want to be able to update the email address linked to my account so that I can use a new email address with my account__
 
+    - When a registered and signed in user is viewing the 'my details' page of their profile and clicks on the 'update email' link, they are taken to the 'email addresses' page.
+    - A list of email addresses currently associated with the account is shown with the primary email labelled as such.
+    - If there are multiple emails in the list then the user can change the primary email to any other email that has been verified. They can also remove any email addresses from their account as long as they are not the primary email.
+    - The user can add another email address to their account by typing in a valid new email address and clicking the 'add email' button. Email addresses already linked to another user account cannot be used. If the email address typed in does not match the requirements of the form the user is made aware.
+    - Upon successful submission of the form the email address typed in is added to the list of addresses above and is marked as unverified. A message is also displayed letting the user know that a confirmation email has been sent to their account. When the link in the email is followed the user is taken to a page where that can confirm verification of the email address.
 
   - __As a registered site user I want to be able to update my password so that I can strengthen my password or use a more memorable password__
 
+    - When a registered and signed in user is viewing the 'my details' page of their profile and clicks on the 'update password' button, they are taken to the 'change password' page.
+    - Here, the user can change their password by correctly typing in their current password, typing a new password twice and then clicking the 'change password' button. If the current password does not match, or the new passwords do not match, the user is made aware.
+    - Upon successful submission of the form, the page reloads and displays a message letting the user know that they have changed their password successfully.
 
-  - __As a registered site user I want to be able to have a personalised user profile so that I can view my personal order history and order confirmations, and save my payment information__
+  - __As a registered site user I want to be able to have a personalised user profile so that I can view my personal order history and order confirmations, and save my delivery information__
 
 
   - __As a registered site user I want to be able to put whiskies into a personal wishlist so that I can keep track of whiskies that I'd like to purchase in the furture__
