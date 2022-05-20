@@ -466,14 +466,18 @@ Lobster is of the font category 'Cursive' and Roboto Condensed is of the font ca
 
   - __As a store owner I want to be able to delete a product so that I can remove items that are no longer for sale__
 
-    - When logged in as a super user and viewing the shop page, each product in the list includes a 'delete' link which makes a modal appear asking the user if they're sure they'd like to delete the product. The modal has buttons for 'no' and 'yes'. If 'no' is clicked the modal simply disappears again, and if 'yes' is clicked then product is deleted from the database, the page reloads in the same place and a message is displayed letting the user know that they have deleted the product.
+    - When logged in as a super user and viewing the shop page, each product in the list includes a 'delete' link that makes a modal appear asking the user if they're sure they'd like to delete the product. The modal has buttons for 'no' and 'yes'. If 'no' is clicked the modal simply disappears again, and if 'yes' is clicked then product is deleted from the database, the page reloads in the same place and a message is displayed letting the user know that they have deleted the product.
     - There is also a 'delete' link included on the product detail page of each product which acts in the same way. Upon successful deletion the user is redirected to the shop page.
     - Products can also be deleted via Django's admin panal.
 
   - __As a store owner I want to be able to delete product reviews so that I can delete any reviews that are no longer relevant__
 
+    - When logged in as a super user and viewing the reviews section on a product's detail page, each review includes a 'delete' link that makes a modal appear asking the user if they're sure they'd like to delete the review. The modal has buttons for 'no' and 'yes'. If 'no' is clicked the modal simply disappears again, and if 'yes' is clicked then review is deleted from the database, the page reloads in the same place and a message is displayed letting the user know that they have deleted the review.
+    - Reviews can also be deleted via Django's admin panal.
 
   - __As a store owner I want to be able to be notified when a user has submitted the contact form so that I can avoid the need to keep checking the admin site for any contact form submissions to read__
+
+    - When any user submits the contact form successfully, an email is sent to the admin's email address containing the name of who it is from, their email address and the message they have submitted.
 
 
 #### Epic 2: User Accounts
