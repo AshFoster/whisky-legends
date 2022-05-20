@@ -543,11 +543,18 @@ Lobster is of the font category 'Cursive' and Roboto Condensed is of the font ca
 
   - __As a registered site user I want to be able to write reviews of whiskies or other products so that I can share my opinion about products with other users__
 
+    - When signed in users are viewing a product's detail page, at the bottom of the page there is a review section. At the top of the review section is a form that contains a content field, a rating field and a 'submit review' button. Both the content and rating fields are required, and if the form is submitted when one or both are empty then the user is made aware and asked to complete the relevant field(s).
+    - The rating field is made up of 10 stars, initially all empty. When the user hovers over any of the stars, all stars to the left of the hovered star become filled in. If the user then moves the cursor away, the stars revert back to being empty. If the user clicks on the star, they all remain filled in. If the user then hovers over any stars to the left of the selected star, all stars to the right of the hovered star but not beyond the selected star become a lighter colour to indicate what is currently selected and what is currenlty hovered over. The user can change their selection by simply clicking on another star.
+    - When the form is submitted successfully the page reloads, a message is displayed letting the user know that they've added their review successfully, and the review appears at the top of the review list below.
 
   - __As a registered site user I want to be able to delete any product reviews I've written so that I can remove any reviews I no londer wish to share__
 
+    - When signed in users are viewing the reviews section on a product's detail page, any review they have posted includes a 'delete' link that makes a modal appear asking the user if they're sure they'd like to delete the review. The modal has buttons for 'no' and 'yes'. If 'no' is clicked the modal simply disappears again, and if 'yes' is clicked then review is deleted from the database, the page reloads in the same place and a message is displayed letting the user know that they have deleted the review.
+    - The 'delete' button is only visible on reviews that the current user has posted.
 
   - __As a registered site user I want to be able to rate whiskies or other products that I've purchased so that I can show other users how much I like or dislike them__
+
+    When a signed in user is reviewing a product, they must also rate the product. When a product has been rated and reviewed, its rating is updated to include the new rating. The rating is seen on the product's detail page, and on the product's card on the 'shop' page.
   
 #### Epic 3: Browsing and Navigation
 
