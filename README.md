@@ -93,7 +93,7 @@ More detail about the user stories including the acceptance criteria associated 
       - As a site user I want to be able to view ratings of whiskies or other products so that I can see which have the highest and lowest ratings
 
   - __Epic 4: Filtering, Sorting and Searching__
-      - As a site user I want to be able to sort the list of available whiskies and other products so that I can easily identify the best rated, best priced and regionally sorted whiskies
+      - As a site user I want to be able to sort the list of available whiskies and other products so that I can easily identify the best rated, best priced and alphabetically sorted whiskies
       - As a site user I want to be able to filter on a specific category/categories of whisky so that I can easily identify whiskies of a particular category/categories
       - As a site user I want to be able to sort a specific category of whisky so that I can find the best priced or best rated whisky from a specific category or sort the whiskies in that category by name
       - As a site user I want to be able to sort multiple categories of whiskies simultaneously so that I can find the best priced or best rated whiskies across broad categories such as "region" or "type"
@@ -600,22 +600,34 @@ Lobster is of the font category 'Cursive' and Roboto Condensed is of the font ca
 
 #### Epic 4: Filtering, Sorting and Searching
 
-  - __As a site user I want to be able to sort the list of available whiskies and other products so that I can easily identify the best rated, best priced and regionally sorted whiskies__
+  - __As a site user I want to be able to sort the list of available whiskies and other products so that I can easily identify the best rated, best priced and alphabetically sorted whiskies__
 
+    - When viewing the 'shop' page, there is a filter section at the top of the page with various dropdown menus, 1 of which is labelled 'sort by'. This dropdown list contains 6 options, a-z, price (high to low), rating (high to low) and the reverse of all 3. Clicking any one of these sorts the list of products as expected.
+    - When a sort option is selected, the 'sort by' dropdown menu is now lablled with the currently selected sort option and is also highlighted to make it obvious that the products are currently sorted as such. The dropdown menu now has an additional 'clear' option that reverts the product list back to its original order.
+    - When sorting by rating in either direction, products that don't currently have ratings are shown after the products that do have ratings.
 
   - __As a site user I want to be able to filter on a specific category/categories of whisky so that I can easily identify whiskies of a particular category/categories__
 
+    - When viewing the 'shop' page, there is a filter section at the top of the page with various dropdown menus. These dropdowns provide the user with various product categories that they can filter by: type, brand, country, region, price, age and flavour. Each one is labelled appropriately including a number that represents how many dropdown items there are to choose from - other than price which shows the price range of the currently displayed products. When looking at the dropdown options, each option also includes a number that represents how many products would be displayed if that option is chosen. When an option is clicked on, the page reloads, now only displaying the relevant products based on the chosen option.
+    - When a filter option is selected, the relevant dropdown menu is now lablled with the currently filtered option and is also highlighted to make it obvious that the products are currently filtered as such. The dropdown menu now only contains a 'clear' option that clears that particular filter when clicked.
+    - All other filter dropdowns are updated appropriately, now only showing the options relevant to the currently filtered products.
 
   - __As a site user I want to be able to sort a specific category of whisky so that I can find the best priced or best rated whisky from a specific category or sort the whiskies in that category by name__
 
+    - When viewing a list of currently filtered products on the 'shop' page, the 'sort by' dropdown menu is still available and still acts as expected, sorting only the filtered products by the selected sort option.
 
   - __As a site user I want to be able to sort multiple categories of whiskies simultaneously so that I can find the best priced or best rated whiskies across broad categories such as "region" or "type"__
 
+    - When viewing a list of currently filtered products on the 'shop' page, all other filter options are still available - assuming they're still relevant to the remaining filtered products - and act in the same way as they would if the products weren't already filtered. The user can filter by as many categories as they like, limited only by whether or not the filter is still relevant to the currently filtered products.
 
   - __As a site user I want to be able to search for a whisky or other product by name or description so that I can find a specific whisky or other product I'd like to purchase__
 
+    - When viewing the site there is a search bar within the navbar (via a dropdown on small screens), and since the navbar is fixed to the top of the page, the search bar is always available. The user can type words into the search bar, then hit enter or click the 'Search' button, and will be taken to the 'shop' page displaying all the products that are relevant to their search.
+    - If no products are found an appropriate message is displayed.
 
   - __As a site user I want to be able to easily see what I've searched for and the number of results so that I can quickly decide whether the whisky or other product I want is available__
+
+    - When viewing the 'shop' page after submitting a search query via the search bar, above the list of products is a message displaying how many products have been found, in addition to what was searched for and a 'show all products' link that acts as expected.
 
 #### Epic 5: Purchasing and Checkout
 
