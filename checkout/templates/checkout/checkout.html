@@ -105,8 +105,8 @@
                             checked>
                         {% else %}
                         <label class="form-check-label ps-1" for="id-save-info">
-                            <a class="link-custom" href="{% url 'account_signup' %}">Create an account</a> or
-                            <a class="link-custom" href="{% url 'account_login' %}">login</a> to save this information
+                            <a class="link-custom" href="{% url 'account_signup' %}?next={{request.path}}">Create an account</a> or
+                            <a class="link-custom" href="{% url 'account_login' %}?next={{request.path}}">login</a> to save this information
                         </label>
                         {% endif %}
                     </div>
