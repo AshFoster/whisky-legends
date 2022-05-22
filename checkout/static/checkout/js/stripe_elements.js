@@ -7,7 +7,7 @@
 */
 
 let stripePublicKey = document.getElementById('id_stripe_public_key').textContent.slice(1, -1);
-let clientSecret = document.getElementById('id_client_secret').textContent.slice(1, -1)
+let clientSecret = document.getElementById('id_client_secret').textContent.slice(1, -1);
 let stripe = Stripe(stripePublicKey);
 let elements = stripe.elements({
     fonts: [
@@ -76,10 +76,10 @@ form.addEventListener('submit', function (e) {
     let csrfToken = document.querySelector('input[name="csrfmiddlewaretoken"]').value;
     let url = '/checkout/cache_checkout_data/';
     let postData = 'csrfmiddlewaretoken=' + encodeURIComponent(csrfToken) + '&client_secret=' + clientSecret + '&save_info=' + saveInfo;
-    let httpRequest = new XMLHttpRequest()
+    let httpRequest = new XMLHttpRequest();
 
-    httpRequest.open('POST', url)
-    httpRequest.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded')
+    httpRequest.open('POST', url);
+    httpRequest.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
     httpRequest.onreadystatechange = function () {
         if (httpRequest.readyState == 4) {
             if (httpRequest.status == 200) {
@@ -137,6 +137,6 @@ form.addEventListener('submit', function (e) {
                 location.reload();
             }
         }
-    }
-    httpRequest.send(postData)
+    };
+    httpRequest.send(postData);
 });

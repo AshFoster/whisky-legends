@@ -46,27 +46,27 @@ function setSort() {
 
     for (let item of sortListItems) {
         item.addEventListener('click', function () {
-            let sort = item.querySelector('.sort-name').value.split('_')[0]
-            let direction = item.querySelector('.sort-name').value.split('_')[1]
-            let currentURL = window.location.search
+            let sort = item.querySelector('.sort-name').value.split('_')[0];
+            let direction = item.querySelector('.sort-name').value.split('_')[1];
+            let currentURL = window.location.search;
             if (sortURL != null) {
                 currentURL = currentURL.replace(sortURL, sort);
                 currentURL = currentURL.replace(directionURL, direction);
-                window.location.search = currentURL
+                window.location.search = currentURL;
             } else {
                 currentURL += '&sort=' + sort;
                 currentURL += '&direction=' + direction;
-                window.location.search = currentURL
+                window.location.search = currentURL;
             }
         });
     }
 
     if (sortClear != null) {
         sortClear.addEventListener('click', function () {
-            let currentURL = window.location.search
+            let currentURL = window.location.search;
             currentURL = currentURL.replace('&sort=' + sortURL, '');
             currentURL = currentURL.replace('&direction=' + directionURL, '');
-            window.location.search = currentURL
+            window.location.search = currentURL;
         });
     }
 }
@@ -208,27 +208,27 @@ function setPriceFilter() {
 
     if (priceFilterURL != null) {
         document.getElementById('priceDropdown').classList.add('active-filter');
-        minPrice.value = priceFilterURL.split(',')[0]
-        maxPrice.value = priceFilterURL.split(',')[1]
-        minPrice.max = Number(maxPrice.value) - 1
-        maxPrice.min = Number(minPrice.value) + 1
+        minPrice.value = priceFilterURL.split(',')[0];
+        maxPrice.value = priceFilterURL.split(',')[1];
+        minPrice.max = Number(maxPrice.value) - 1;
+        maxPrice.min = Number(minPrice.value) + 1;
     }
 
     priceApply.addEventListener('click', function () {
         if (Number(minPrice.value) >= Number(minPrice.min) && Number(minPrice.value) <= Number(minPrice.max)) {
-            minPriceValue = Math.round(minPrice.value)
+            minPriceValue = Math.round(minPrice.value);
         } else if (Number(minPrice.value) <= Number(minPrice.max)) {
-            minPriceValue = Math.round(minPrice.min)
+            minPriceValue = Math.round(minPrice.min);
         } else {
-            minPriceValue = Math.round(minPrice.max)
+            minPriceValue = Math.round(minPrice.max);
         }
 
         if (Number(maxPrice.value) <= Number(maxPrice.max) && Number(maxPrice.value) >= Number(maxPrice.min)) {
-            maxPriceValue = Math.round(maxPrice.value)
+            maxPriceValue = Math.round(maxPrice.value);
         } else if (Number(maxPrice.value) >= Number(maxPrice.min)) {
-            maxPriceValue = Math.round(maxPrice.max)
+            maxPriceValue = Math.round(maxPrice.max);
         } else {
-            maxPriceValue = Math.round(maxPrice.min)
+            maxPriceValue = Math.round(maxPrice.min);
         }
 
         if (minPriceValue >= maxPriceValue) {
@@ -316,14 +316,14 @@ page is scrolled below the top, and returns the user to the top of  the
 page when clicked.
 */
 function setBttButton() {
-    let bttButton = document.querySelector('.btt-button')
+    let bttButton = document.querySelector('.btt-button');
 
     window.addEventListener("scroll", function () {
         let y = window.scrollY;
         if (y > 0) {
-            bttButton.style.display = 'block'
+            bttButton.style.display = 'block';
         } else {
-            bttButton.style.display = 'none'
+            bttButton.style.display = 'none';
         }
     });
 
@@ -334,7 +334,7 @@ function setBttButton() {
 
 // Call all functions declared above
 setMaxHeight('.product-card-title');
-setSort()
+setSort();
 setTypeFilter();
 setBrandFilter();
 setCountryFilter();
@@ -342,7 +342,7 @@ setRegionFilter();
 setPriceFilter();
 setAgeFilter();
 setFlavourFilter();
-setBttButton()
+setBttButton();
 
 // Add to cart and reload on click
 // CREDIT - https://stackoverflow.com/questions/64612746/how-would-i-do-this-ajax-jquery-in-vanilla-js
@@ -365,7 +365,7 @@ document.querySelectorAll('.add-cart-btn').forEach(item => {
         };
         httpRequest.send(formData);
     });
-})
+});
 
 // Delete product and reload on click
 // CREDIT - https://stackoverflow.com/questions/64612746/how-would-i-do-this-ajax-jquery-in-vanilla-js

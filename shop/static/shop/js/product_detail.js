@@ -25,11 +25,11 @@ function getStars(rating) {
 }
 // END CREDIT
 
-let rating = document.getElementById("ratingValue").textContent
+let rating = document.getElementById("ratingValue").textContent;
 document.getElementById("stars").innerHTML = getStars(rating);
 
 document.querySelectorAll('.review-stars').forEach(item => {
-    let reviewRating = item.getAttribute('data-rating')
+    let reviewRating = item.getAttribute('data-rating');
     item.innerHTML = getStars(reviewRating);
 });
 
