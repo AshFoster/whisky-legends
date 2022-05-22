@@ -483,14 +483,14 @@ Lobster is of the font category 'Cursive' and Roboto Condensed is of the font ca
 
   - __As a site user I want to be able to easily register for an account so that I can have a personal account and be able to view my profile__
 
-    - When viewing the wesbite any user that is not already signed in can navigate to the 'register' page by clicking on the 'register' link in the accounts dropdown within the navbar. There are also links to the register page on all 'product detail' pages in place of the 'add to wishlist' button and review form.
+    - When viewing the wesbite any user that is not already signed in can navigate to the 'register' page by clicking on the 'register' link in the accounts dropdown within the navbar. There are also links to the register page on all 'product detail' pages in place of the 'add to wishlist' button and review form, and on the 'checkout' page in place of the 'save info' checkbox.
     - There is also a link to the register page on the sign in page.
     - When viewing the 'register' page the user can register for an account by filling in their email address, username, and password into the relevant fields. The email and username fields must be unique, and the email and password both need to be entered twice with both entries matching. If any of these requirements are not met, the user is made aware.
     - Upon successful submission of the form, the user is redirected to a 'verification sent' page where they're told that they've been sent an email and that they need to follow the link in the email to confirm their email address. The link takes the user to an 'email confirm' page where there is a 'confirm' button for them to click. Clicking this button confirms their email address and redirects them to the 'sign in' page where they can sign in.
 
   - __As a registered site user I want to be able to easily log in or log out so that I can access my personal account information__
 
-    - When viewing the wesbite any user that is not already signed in can navigate to the 'sign in' page by clicking on the 'sign in' link in the accounts dropdown within the navbar. There are also links to the sign in page on all 'product detail' pages in place of the 'add to wishlist' button and review form.
+    - When viewing the wesbite any user that is not already signed in can navigate to the 'sign in' page by clicking on the 'sign in' link in the accounts dropdown within the navbar. There are also links to the sign in page on all 'product detail' pages in place of the 'add to wishlist' button and review form, and on the 'checkout' page in place of the 'save info' checkbox.
     - There is also a link to the sign in page on the register page.
     - When viewing the 'sign in' page the user can sign in by filling in their email address (or username), and password into the relevant fields. If any of the fields are incorrect the user is made aware.
     - Upon successful submission of the form, the user is redirected to the home page where a message is displayed stating that have now been signed in.
@@ -652,15 +652,21 @@ Lobster is of the font category 'Cursive' and Roboto Condensed is of the font ca
 
   - __As a site user I want to be able to access a checkout page so that I can purchase products from the shop__
 
+    - When viewing the 'cart' page, there is an 'order now' section that includes a 'checkout' button. Clicking this takes the user to the 'checkout' page.
 
   - __As a site user I want to be able to easily enter my delivery and payment information so that I can check out quickly and with no hassle__
 
+    - When viewing the 'checkout' page, there is a form for the user to fill in and submit. The form is split up into 3 sections: 'your details', delivery info' and 'payment info'. Each of these has some required fields that the user must complete so that their order can be processed. If the user is logged in there is a checkbox that when checked saves some of these fields to their profile upon successful submission of the form. If their profile already contains this information then it is automatically displayed when the page is first loaded.
+    - Below the form is a 'submit' button that when clicked submits their order, and if all the information they have provided is ok then they are redirected to the 'order success' page. If anything is not accepted then they are made aware that they must amend the necessary field(s) in order to proceed.
 
   - __As a site user I want to be able to view an order confirmation after checkout so that I can verify that I haven't made any mistakes__
 
+    - After successfully submitting the 'checkout' form, the user is redirected to the 'order success' page where they are shown an summary of their order. The summary is split up into 4 sections, 'order info', order details', 'delivering to' and 'billing info'.
+    - The 'order info' section provides the user with their order number and order date. The other sections summarise all the information that they have preiously provided including the products and qunatities of the order, where it will be delivered to, and how much they will be billed.
 
   - __As a site user I want to be able to recieve an email confirmation after checking out so that I can keep the confirmation of what I've purchased for my records__
 
+    - After successfully submitting the 'checkout' form, an email is sent to the user containing their order information.
 
 ### Validator Testing
 
