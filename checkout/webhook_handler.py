@@ -17,7 +17,7 @@ class StripeWH_Handler:
     """
     def __init__(self, request):
         self.request = request
-    
+
     def _send_confirmation_email(self, order):
         """
         Send confirmation email to the user
@@ -29,13 +29,13 @@ class StripeWH_Handler:
         body = render_to_string(
             'checkout/confirmation_emails/confirmation_email_body.txt',
             {'order': order, 'contact_email': settings.DEFAULT_FROM_EMAIL})
-        
+
         send_mail(
             subject,
             body,
             settings.DEFAULT_FROM_EMAIL,
             [customer_email]
-        ) 
+        )
 
     def handle_event(self, event):
         """

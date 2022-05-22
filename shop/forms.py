@@ -10,7 +10,7 @@ class ReviewForm(forms.ModelForm):
 
     def __init__(self, *args, **kwargs):
         """
-        Remove auto-generated label, add placeholder and add a 
+        Remove auto-generated label, add placeholder and add a
         class to content field
         """
         super().__init__(*args, **kwargs)
@@ -37,7 +37,7 @@ class ProductForm(forms.ModelForm):
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        
+
         types = Type.objects.all()
         type_friendly_names = [
             (t.id, t.get_friendly_name()) for t in types

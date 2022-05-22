@@ -5,7 +5,7 @@ from .models import Type, Brand, Country, Region, Flavour, Product, Review
 class ProductAdmin(admin.ModelAdmin):
     list_display = ('brand_friendly', 'name', 'type',
                     'country', 'region', 'flavour',
-                    'price', 'abv', 'volume','rating',
+                    'price', 'abv', 'volume', 'rating',
                     'image',)
 
     ordering = ('brand',)
