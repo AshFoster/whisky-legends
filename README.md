@@ -633,15 +633,22 @@ Lobster is of the font category 'Cursive' and Roboto Condensed is of the font ca
 
   - __As a site user I want to be able to easily add whiskies and/or other products to my shopping cart so that I can keep track of multiple items I'd like to purchase together__
 
+    - User's can add products to their cart from 2 pages: the 'shop' page and the 'product detail' page. On the 'shop' page, each product has its own 'add to cart' button. When clicked, a message is displayed notifying the user that they have added the product to their cart. The message also includes a small breakdown of their current cart contents and a 'view cart' button that takes them to the 'cart' page. There is also an 'add to cart' button on each product's detail page that acts in the same way. Though here, there is also a quantity selector.
 
   - __As a site user I want to be able to easily select the quantity of a whisky or other product when purchasing it so that I can ensure I don't accidentally select the wrong product quantity__
 
+    - When adding a product to the cart via the 'product detail' page, user's also have access to a quantity selector. Its default value is 1, but can easily be changed by clicking on the +/- buttons, by typing in the number or by using the input box's scroll arrows. The minimum number allowed is 1 and the maximum number allowed is 99. The +/- buttons and scroll arrows do not allow the user to select a number higher or lower than the minimum or maximum. The user can type in numbers higher or lower the minimum or maximum but are notified that this is not allowed when they subsequently click the 'add to cart' button.
 
   - __As a site user I want to be able to view items in my cart to be purchased so that I can identify the total cost of my purchase and all items I will receive__
 
+    - The navbar includes a cart icon that takes the user to the 'cart' page. Here, the user can see a list of the all products and quantities in their cart, the total cost of each product and the total cost of all products combined including any delivery costs.
+    - Each time the user adds to or updates their cart, a message is displayed that includes a small breakdown of their current cart contants as well as the total cost of all of the products. The small breakdown is not included in the message if the user is on the 'cart' page when updating the cart.
 
   - __As a site user I want to be able to adjust the quantity of individual items in my cart so that I can easly make changes to my purchase before checkout__
 
+    - When viewing the 'cart' page, each product has its own 'update' button, 'remove' button and quantity selector that shows the user how many of that product is currently in the cart. This can be changed by clicking on the +/- buttons, by typing in the number or by using the input box's scroll arrows. The user can then click the 'update' button that will reload the page and display a message letting them know that they have updated the quantity of that product successfully. The order summary totals are also updated correctly.
+    - The minimum number allowed is 1 and the maximum number allowed is 99. The +/- buttons and scroll arrows do not allow the user to select a number higher or lower than the minimum or maximum. The user can type in numbers higher or lower the minimum or maximum but are notified that this is not allowed when they subsequently click the 'update' button.
+    - User's can also remove a product from their cart by clicking the 'remove' button. This acts as expected, removing the product from the cart, reloading the page and displaying a message letting the user know that they have removed the product successfully.
 
   - __As a site user I want to be able to access a checkout page so that I can purchase products from the shop__
 
