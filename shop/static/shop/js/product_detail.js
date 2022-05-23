@@ -61,32 +61,13 @@ document.querySelector('.add-cart-btn').addEventListener('click', function () {
 
 // Add/Remove from wishlist and reload on click
 // CREDIT - https://stackoverflow.com/questions/64612746/how-would-i-do-this-ajax-jquery-in-vanilla-js
-document.querySelector('.wishlist-btn').addEventListener('click', function () {
-    let wishlistForm = this.closest('.wishlist-form');
-    let formData = new FormData(wishlistForm);
-    let productId = this.getAttribute('data-id').split('wishlist-')[1];
-    let url = `/profile/wishlist/update/${productId}/`;
-    let csrfToken = document.querySelector('input[name="csrfmiddlewaretoken"]').value;
-
-    let httpRequest = new XMLHttpRequest();
-    httpRequest.open('POST', url);
-    httpRequest.setRequestHeader('X-CSRF-Token', csrfToken);
-    httpRequest.onreadystatechange = function () {
-        if (httpRequest.readyState == 4 && httpRequest.status == 200) {
-            location.reload();
-        }
-    };
-    httpRequest.send(formData);
-});
-
-// Submit review and reload on click
-// CREDIT - https://stackoverflow.com/questions/64612746/how-would-i-do-this-ajax-jquery-in-vanilla-js
-document.querySelector('#submit-button').addEventListener('click', function () {
-    let reviewForm = document.querySelector('#review-form');
-    let formData = new FormData(reviewForm);
-    if (document.querySelector('#review-form-content').value != '' && document.querySelector('input[name="rating"]:checked') != null) {
-        let productId = this.getAttribute('data-id').split('review-')[1];
-        let url = `/shop/${productId}/`;
+let wishlistBtn = document.querySelector('.wishlist-btn');
+if (wishlistBtn != null) {
+    wishlistBtn.addEventListener('click', function () {
+        let wishlistForm = this.closest('.wishlist-form');
+        let formData = new FormData(wishlistForm);
+        let productId = this.getAttribute('data-id').split('wishlist-')[1];
+        let url = `/profile/wishlist/update/${productId}/`;
         let csrfToken = document.querySelector('input[name="csrfmiddlewaretoken"]').value;
 
         let httpRequest = new XMLHttpRequest();
@@ -98,10 +79,35 @@ document.querySelector('#submit-button').addEventListener('click', function () {
             }
         };
         httpRequest.send(formData);
-    } else {
-        reviewForm.submit.click();
-    }
-});
+    });
+}
+
+// Submit review and reload on click
+// CREDIT - https://stackoverflow.com/questions/64612746/how-would-i-do-this-ajax-jquery-in-vanilla-js
+let submitBtn = document.querySelector('#submit-button');
+if (submitBtn != null) {
+    submitBtn.addEventListener('click', function () {
+        let reviewForm = document.querySelector('#review-form');
+        let formData = new FormData(reviewForm);
+        if (document.querySelector('#review-form-content').value != '' && document.querySelector('input[name="rating"]:checked') != null) {
+            let productId = this.getAttribute('data-id').split('review-')[1];
+            let url = `/shop/${productId}/`;
+            let csrfToken = document.querySelector('input[name="csrfmiddlewaretoken"]').value;
+
+            let httpRequest = new XMLHttpRequest();
+            httpRequest.open('POST', url);
+            httpRequest.setRequestHeader('X-CSRF-Token', csrfToken);
+            httpRequest.onreadystatechange = function () {
+                if (httpRequest.readyState == 4 && httpRequest.status == 200) {
+                    location.reload();
+                }
+            };
+            httpRequest.send(formData);
+        } else {
+            reviewForm.submit.click();
+        }
+    });
+}
 
 // Delete review and reload on click
 // CREDIT - https://stackoverflow.com/questions/64612746/how-would-i-do-this-ajax-jquery-in-vanilla-js

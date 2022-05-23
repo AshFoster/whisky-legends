@@ -48,8 +48,9 @@ document.querySelectorAll('.remove-btn').forEach(item => {
 
 // Add/Remove from wishlist and reload on click
 // CREDIT - https://stackoverflow.com/questions/64612746/how-would-i-do-this-ajax-jquery-in-vanilla-js
-document.querySelectorAll('.wishlist-btn').forEach(item => {
-    item.addEventListener('click', function () {
+let wishlistBtn = document.querySelector('.wishlist-btn');
+if (wishlistBtn != null) {
+    wishlistBtn.addEventListener('click', function () {
         let wishlistForm = this.closest('.wishlist-form');
         let formData = new FormData(wishlistForm);
         let productId = this.getAttribute('data-id').split('wishlist-')[1];
@@ -66,4 +67,4 @@ document.querySelectorAll('.wishlist-btn').forEach(item => {
         };
         httpRequest.send(formData);
     });
-});
+}
