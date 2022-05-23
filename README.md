@@ -752,6 +752,8 @@ Google Chrome was the browser used for the majority of testing during the develo
 
 - When sorting by rating, products that did not have a rating were shown in the list before the highest-rated or lowest-rated products. This was because their annotated 'rating' field always had a value of None. To fix this a variable called 'rating_none' is declared, initially with a value of None, which is used when sorting in ascending order, but given a value of zero when sorting in descending order. This forces the products with no rating to be forced to the end of the list when sorting in either direction.
 
+- When adding a product to the cart on the 'shop' page, when there were already 99 of that product in the cart, it was possible to add more even though the maximum allowed is meant to be 99. This was fixed by checking the quantity of the product in the 'add_cart' view and only adding it to the cart if fewer than 99 were already in the cart, displaying an error message if not.
+
 #### Unfixed Bugs
 
 - When the 'save info' checkbox is not selected when submitting a successful order on checkout.html the user's details are still saved to the profile page even though they shouldn't be.

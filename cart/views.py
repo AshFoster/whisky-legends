@@ -41,13 +41,20 @@ def add_to_cart(request, product_id):
         request.session['updating_cart'] = True
 
         if product_id in list(cart.keys()):
-            cart[product_id] += quantity
-            messages.success(
-                request,
-                f'Updated "{product.brand.friendly_name}: '
-                f'{product.name}" quantity to '
-                f'{cart[product_id]}'
-            )
+            if cart[product_id] <= 99:
+                cart[product_id] += quantity
+                messages.success(
+                    request,
+                    f'Updated "{product.brand.friendly_name}: '
+                    f'{product.name}" quantity to '
+                    f'{cart[product_id]}'
+                )
+            else:
+                messages.error(
+                    request,
+                    f'There are already 99 "{product.brand.friendly_name}: '
+                    f'{product.name}" in your cart! You cannot add any more.'
+                )
         else:
             cart[product_id] = quantity
             messages.success(
