@@ -13,7 +13,8 @@
         <div class="col-11 col-lg-12">
             <h2 class="my-4 text-center text-lg-start fs-1 cart-title">YOUR SHOPPING CART
                 {% if product_count > 0 %}
-                <small class="d-block d-lg-inline text-muted fs-5">({{ product_count }} item{% if product_count != 1 %}s{% endif %})</small>
+                <small class="d-block d-lg-inline text-muted fs-5">({{ product_count }}
+                    item{% if product_count != 1 %}s{% endif %})</small>
                 {% endif %}
             </h2>
             {% if product_count == 0 %}
@@ -35,11 +36,11 @@
                         <!-- Item image -->
                         <td class="p-md-3 w-140px">
                             {% if item.product.image %}
-                            <img src="{{ item.product.image.url }}" class="img-fluid" 
-                                    alt="{{ product.brand.friendly_name }}: {{ product.name }}">
+                            <img src="{{ item.product.image.url }}" class="img-fluid"
+                                alt="{{ product.brand.friendly_name }}: {{ product.name }}">
                             {% else %}
                             <img src="{{ MEDIA_URL }}no-image.jpg" class="img-fluid"
-                                    alt="{{ product.brand.friendly_name }}: {{ product.name }}">
+                                alt="{{ product.brand.friendly_name }}: {{ product.name }}">
                             {% endif %}
                         </td>
 
@@ -48,12 +49,18 @@
                             <p class="my-0"><strong>{{ item.product.brand.friendly_name }}:
                                     {{ item.product.name }}</strong></p>
                             {% if item.product.volume or item.product.abv %}
-                            <p class="mt-0 mb-3 text-muted">{% if item.product.volume %}{{ item.product.volume|round_down }}cl{% if item.product.volume and item.product.abv %}, {% endif %}{% endif %}{% if item.product.abv %}{{ item.product.abv|round_down }}%{% endif %}</p>
+                            <p class="mt-0 mb-3 text-muted">
+                                {% if item.product.volume %}{{ item.product.volume|round_down }}cl{% if item.product.volume and item.product.abv %},
+                                {% endif %}{% endif %}{% if item.product.abv %}{{ item.product.abv|round_down }}%{% endif %}
+                            </p>
                             {% endif %}
                             {% if user.is_authenticated %}
-                            <form class="form wishlist-form" action="{% url 'update_wishlist' item.product.id %}" method="POST">
+                            <form class="form wishlist-form" action="{% url 'update_wishlist' item.product.id %}"
+                                method="POST">
                                 {% csrf_token %}
-                                <button type="button" class="wishlist-btn text-uppercase mt-4 p-0 d-none d-md-inline-block" data-id="wishlist-{{ item.product_id }}">
+                                <button type="button"
+                                    class="wishlist-btn text-uppercase mt-4 p-0 d-none d-md-inline-block"
+                                    data-id="wishlist-{{ item.product_id }}">
                                     {% if item.product in wishlist %}
                                     Remove from wishlist<span class="ms-1"><i class="fas fa-heart"></i></span>
                                     {% else %}
@@ -83,17 +90,19 @@
                                             <div class="input-group">
                                                 <div class="input-group-prepend">
                                                     <button class="decrement-qty btn btn-custom rounded-0 rounded-start"
+                                                        aria-label="decrement quantity"
                                                         data-product-id="{{ item.product.id }}"
                                                         id="decrement-qty-{{ item.product.id }}">
                                                         <i class="fas fa-minus"></i>
                                                     </button>
                                                 </div>
                                                 <input class="form-control qty-input" type="number" name="quantity"
-                                                    value="{{ item.quantity }}" min="1" max="99"
-                                                    data-product-id="{{ item.product.id }}"
+                                                    aria-label="quantity input" value="{{ item.quantity }}" min="1"
+                                                    max="99" data-product-id="{{ item.product.id }}"
                                                     id="id-qty-{{ item.product.id }}">
                                                 <div class="input-group-append">
                                                     <button class="increment-qty btn btn-custom rounded-0 rounded-end"
+                                                        aria-label="increment quantity"
                                                         data-product-id="{{ item.product.id }}"
                                                         id="increment-qty-{{ item.product.id }}">
                                                         <i class="fas fa-plus"></i>
@@ -119,9 +128,11 @@
                                 Remove<span class="ms-1"><i class="fas fa-trash"></i></span>
                             </a>
                             {% if user.is_authenticated %}
-                            <form class="form wishlist-form" action="{% url 'update_wishlist' item.product.id %}" method="POST">
+                            <form class="form wishlist-form" action="{% url 'update_wishlist' item.product.id %}"
+                                method="POST">
                                 {% csrf_token %}
-                                <button type="button" class="wishlist-btn text-uppercase my-3 p-0 d-md-none" data-id="wishlist-{{ item.product_id }}">
+                                <button type="button" class="wishlist-btn text-uppercase my-3 p-0 d-md-none"
+                                    data-id="wishlist-{{ item.product_id }}">
                                     {% if item.product in wishlist %}
                                     Remove from wishlist<span class="ms-1"><i class="fas fa-heart"></i></span>
                                     {% else %}
@@ -179,7 +190,8 @@
                     You could get free delivery by spending just <strong>£{{ free_delivery_delta }}</strong> more!
                 </p>
                 {% endif %}
-                <a href="{% url 'checkout' %}" class="btn btn-custom text-uppercase w-100 my-2 fs-5 box-shadow-custom">Checkout&nbsp;
+                <a href="{% url 'checkout' %}"
+                    class="btn btn-custom text-uppercase w-100 my-2 fs-5 box-shadow-custom">Checkout&nbsp;
                     <i class="fas fa-lock"></i></a>
             </div>
         </div>

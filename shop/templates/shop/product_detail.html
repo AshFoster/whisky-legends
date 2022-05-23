@@ -22,14 +22,17 @@
                     </small>
                     <br>
                     {% if product.volume or product.abv %}
-                    <small>({% if product.volume %}{{ product.volume|round_down }}cl{% endif %}{% if product.volume and product.abv %}, {% endif %}{% if product.abv %}{{ product.abv|round_down }}%{% endif %})</small>
+                    <small>({% if product.volume %}{{ product.volume|round_down }}cl{% endif %}{% if product.volume and product.abv %},
+                        {% endif %}{% if product.abv %}{{ product.abv|round_down }}%{% endif %})</small>
                     {% endif %}
 
                     <!-- Edit and Delete links -->
                     {% if request.user.is_superuser %}
                     <small class="d-flex justify-content-evenly mt-3">
-                        <a href="{% url 'edit_product' product.id %}" class="update-btn text-primary text-uppercase p-0">Edit <i class="fas fa-edit"></i></a>
-                        <a href="#" class="remove-btn text-danger text-uppercase p-0" data-bs-toggle="modal" data-bs-target="#deleteProductModal{{ product.id }}">Delete <i class="fas fa-trash"></i></a>
+                        <a href="{% url 'edit_product' product.id %}"
+                            class="update-btn text-primary text-uppercase p-0">Edit <i class="fas fa-edit"></i></a>
+                        <a href="#" class="remove-btn text-danger text-uppercase p-0" data-bs-toggle="modal"
+                            data-bs-target="#deleteProductModal{{ product.id }}">Delete <i class="fas fa-trash"></i></a>
                     </small>
                     {% endif %}
 
@@ -68,16 +71,18 @@
                                     <div class="input-group">
                                         <div class="input-group-prepend">
                                             <button class="decrement-qty btn btn-custom rounded-0 rounded-start"
-                                                data-product-id="{{ product.id }}" id="decrement-qty-{{ product.id }}">
+                                                aria-label="decrement quantity" data-product-id="{{ product.id }}"
+                                                id="decrement-qty-{{ product.id }}">
                                                 <i class="fas fa-minus"></i>
                                             </button>
                                         </div>
                                         <input class="form-control qty-input" type="number" name="quantity" value="1"
-                                            min="1" max="99" data-product-id="{{ product.id }}"
-                                            id="id-qty-{{ product.id }}">
+                                            aria-label="quantity input" min="1" max="99"
+                                            data-product-id="{{ product.id }}" id="id-qty-{{ product.id }}">
                                         <div class="input-group-append">
                                             <button class="increment-qty btn btn-custom rounded-0 rounded-end"
-                                                data-product-id="{{ product.id }}" id="increment-qty-{{ product.id }}">
+                                                aria-label="increment quantity" data-product-id="{{ product.id }}"
+                                                id="increment-qty-{{ product.id }}">
                                                 <i class="fas fa-plus"></i>
                                             </button>
                                         </div>
@@ -103,7 +108,8 @@
                         {% if user.is_authenticated %}
                         <form class="form wishlist-form" action="{% url 'update_wishlist' product.id %}" method="POST">
                             {% csrf_token %}
-                            <button type="button" class="wishlist-btn text-uppercase" data-id="wishlist-{{ product.id }}">
+                            <button type="button" class="wishlist-btn text-uppercase"
+                                data-id="wishlist-{{ product.id }}">
                                 {% if wishlist %}
                                 Remove from wishlist<span class="ms-1"><i class="fas fa-heart"></i></span>
                                 {% else %}
@@ -113,8 +119,10 @@
                         </form>
                         {% else %}
                         <p class="m-0">
-                            <a href="{% url 'account_signup' %}?next={{request.path}}" class="link-custom">Create an account</a> or 
-                            <a href="{% url 'account_login' %}?next={{request.path}}" class="link-custom">log In</a> to add this product to
+                            <a href="{% url 'account_signup' %}?next={{request.path}}" class="link-custom">Create an
+                                account</a> or
+                            <a href="{% url 'account_login' %}?next={{request.path}}" class="link-custom">log In</a> to
+                            add this product to
                             your wishlist
                         </p>
                         {% endif %}
@@ -149,53 +157,60 @@
 
                     <!-- Review form -->
                     {% if user.is_authenticated %}
-                    <form class="mb-4 px-3" action="{% url 'product_detail' product.id %}" method="POST" id="review-form">
+                    <form class="mb-4 px-3" action="{% url 'product_detail' product.id %}" method="POST"
+                        id="review-form">
                         {% csrf_token %}
                         {{ form | crispy }}
                         <h5 class="text-center mt-4 mb-1">Your rating</h5>
                         <div class="d-flex justify-content-center mb-4">
                             <!-- CREDIT - https://medium.com/free-code-camp/how-to-make-the-impossible-possible-in-css-with-a-little-creativity-bd96bb42b29d#:~:text=If%20you%20ever%20used%20CSS,to%20select%20what%20came%20before. -->
                             <div class="review-rating">
-                                {% for i in range %}                               
-                                <input type="radio" name="rating" value="{{10|subtract:i}}" id="{{10|subtract:i}}" required>
+                                {% for i in range %}
+                                <input type="radio" name="rating" value="{{10|subtract:i}}" id="{{10|subtract:i}}"
+                                    required>
                                 <label for="{{10|subtract:i}}"><span class="review-star"></span></label>
                                 {% endfor %}
-                            </div> 
+                            </div>
                         </div>
                         <div class="d-flex justify-content-center">
                             <button id="submit-button" type="button"
                                 class="btn btn-custom text-uppercase col-12 col-sm-8 col-md-6 mb-2 fs-5 box-shadow-custom"
                                 data-id="review-{{ product.id }}">
-                                <span class="text-uppercase">Submit Review &nbsp;<i class="fas fa-comment-alt"></i></span>
+                                <span class="text-uppercase">Submit Review &nbsp;<i
+                                        class="fas fa-comment-alt"></i></span>
                             </button>
                         </div>
                         <input type="submit" style="display:none" name="submit">
                     </form>
                     {% else %}
                     <p class="text-center mb-4">
-                        <a href="{% url 'account_signup' %}?next={{request.path}}" class="link-custom">Create an account</a> or 
-                        <a href="{% url 'account_login' %}?next={{request.path}}" class="link-custom">log In</a> to review this product
+                        <a href="{% url 'account_signup' %}?next={{request.path}}" class="link-custom">Create an
+                            account</a> or
+                        <a href="{% url 'account_login' %}?next={{request.path}}" class="link-custom">log In</a> to
+                        review this product
                     </p>
                     {% endif %}
                 </div>
             </div>
             <hr class="my-0 mx-auto w-75">
             <div class="row justify-content-center">
-                <div class="col-12 col-md-8 d-flex flex-column justify-content-center align-items-center align-items-md-start mb-4">
+                <div
+                    class="col-12 col-md-8 d-flex flex-column justify-content-center align-items-center align-items-md-start mb-4">
                     <h3 class="my-4 w-100 text-center">Customer Reviews</h3>
 
                     <!-- Customer reviews -->
                     {% for review in reviews %}
                     <div class="review-stars text-logo" data-rating="{{ review.rating }}"></div>
                     <p class="my-0 px-2 px-md-0"><strong>
-                        {% with review.user as user %}
-                        {% if user %}{% if user.userprofile.default_full_name %}{{ user.userprofile.default_full_name }}{% else %}{{ user.username }}{% endif %}{% else %}Unknown User{% endif %}{% endwith %}, {{ review.date|date:'jS F Y' }}</strong></p>
+                            {% with review.user as user %}
+                            {% if user %}{% if user.userprofile.default_full_name %}{{ user.userprofile.default_full_name }}{% else %}{{ user.username }}{% endif %}{% else %}Unknown
+                            User{% endif %}{% endwith %}, {{ review.date|date:'jS F Y' }}</strong></p>
                     <p class="my-0 px-2 px-md-0 text-muted text-center text-md-start">{{ review.content }}</p>
 
                     <!-- Delete review button -->
                     {% if user == review.user or user.is_superuser %}
-                    <a class="remove-btn text-danger text-uppercase mt-1 p-0"
-                                    data-bs-toggle="modal" data-bs-target="#deleteReviewModal{{ review.id }}">Delete <i class="fas fa-trash"></i></a>
+                    <a class="remove-btn text-danger text-uppercase mt-1 p-0" data-bs-toggle="modal"
+                        data-bs-target="#deleteReviewModal{{ review.id }}">Delete <i class="fas fa-trash"></i></a>
 
                     <!-- Delete review Modal -->
                     {% include 'shop/includes/delete_review_modal.html' %}
@@ -209,7 +224,8 @@
                     {% endif %}
                     {% endif %}
                     {% empty %}
-                    <p class="w-100 text-center text-muted fs-5 mb-5"><strong>This product has no reviews yet.</strong></p>
+                    <p class="w-100 text-center text-muted fs-5 mb-5"><strong>This product has no reviews yet.</strong>
+                    </p>
                     {% endfor %}
                 </div>
             </div>
