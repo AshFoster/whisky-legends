@@ -697,7 +697,7 @@ Lobster is of the font category 'Cursive' and Roboto Condensed is of the font ca
 
 ### Performance Testing
 
-The website was audited for mobile and desktop using Google Chrome's lighthouse feature.
+The website was audited for desktop and mobile using Google Chrome's lighthouse feature. The 'performance' category scores were not good for most pages on both desktop and mobile, with most pages falling below or significantly below a score of 90%. All pages did, however, score above 90% for all other categories. The bad performance is mainly due to loading bootstrap, stripe and other static files.
 
 [WAVE Evaluation Tool](https://wave.webaim.org/) was used to test the accessibility across all the pages of the site.
 
