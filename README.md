@@ -31,9 +31,15 @@
 
 ## Overview
 
-Whisky Legends is an e-commerce website that sells an array of whiskies from all over the world, as well as a small selection of whisky-related products. Users are able to register for an account which will provide them with access to their own profile where they are able to store personal and delivery information, view their order history, and view their own wishlist. Registered users will also be able to rate and review any of the whiskies/products on the site.
+Whisky Legends is an e-commerce website that sells an array of whiskies from all over the world, as well as a small selection of whisky-related products. Users are able to register for an account which provides them with access to their own profile where they are able to store personal and delivery information, view their order history, and view their own wishlist. Registered users are also able to rate and review any of the whiskies/products on the site.
 
-The payment system
+The Stripe account associated with this project is set to 'test' mode, so to make payments on the site one of Stripe's test cards will need to be used, 2 of which are outlined below.
+
+4242 4242 4242 4242 - to simulate standard payments
+
+4000 0025 0000 3155 - to simulate 3D Secure authentication payments
+
+Then use any future date and any 3-digit CVC code.
 
 ## User Experience
 
@@ -778,7 +784,7 @@ This project has been deployed on Heroku using the following steps:
 - Then click 'Deploy a GitHub branch' under the Manual deploy section.
 - Once confirmation of deployment is shown, the project is now deployed and can be opened.
 
-During the development of this project, Heroku had a security breach and stopped allowing deployment through their website. Since then, to push the latest code to Heroku the Heroku CLI needs to be used instead. To do so, the following steps were followed:
+During the development of this project, Heroku had a security breach and stopped allowing deployment through their website. Since then, to push the latest code to Heroku the Heroku CLI needed to be used instead. To do so, the following steps were followed:
  - To log in, type `heroku login -i` into the terminal, then the relevant Heroku account's email and password.
  - Then connect to the relevant Heroku app via git remote by typing `heroku git:remote -a app_name` where 'app_name' is the name of the relevant Heroku app.
  - Finally, push to Heroku using `git push heroku main`
