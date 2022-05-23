@@ -31,13 +31,15 @@
 
 ## Overview
 
-Whisky Legends is an e-commerce website that sells an array of whiskies from all over the world, as well as a small selection of whisky related products. Users will be able to register for an account which will provide them access to their own profile where they are able to store personal and delivery information, view their order history, and view their own wishlist. Registered users will also be able to rate and review any of the whiskies/products on the site.
+Whisky Legends is an e-commerce website that sells an array of whiskies from all over the world, as well as a small selection of whisky-related products. Users are able to register for an account which will provide them with access to their own profile where they are able to store personal and delivery information, view their order history, and view their own wishlist. Registered users will also be able to rate and review any of the whiskies/products on the site.
+
+The payment system
 
 ## User Experience
 
 ### Strategy
 
-This website is aimed at whisky fans who would like to purchase one or multiple bottles of whisky, and/or some whisky related products.
+This website is aimed at whisky fans who would like to purchase one or multiple bottles of whisky, and/or some whisky-related products.
 
 #### Business Model
 
@@ -763,11 +765,23 @@ This project has been deployed on Heroku using the following steps:
 - Then go to the Settings tab and click Reveal Config Vars.
 - Add the following variables as config vars:
   - SECRET_KEY - can be any key you like
-  - EMAIL_HOST_USER - must be the email address associated with a SendGrid account
+  - EMAIL_HOST_USER - use a gmail email address set up with two-factor authentication
+  - EMAIL_HOST_PASSWORD - generate and use an app password associated with the EMAIL_HOST_USER address
+  - AWS_ACCESS_KEY_ID - use an AWS access key (same account used for AWS_SECRET_ACCESS_KEY)
+  - AWS_SECRET_ACCESS_KEY - use an AWS secret key (same account used for AWS_ACCESS_KEY_ID )
+  - STRIPE_PUBLIC_KEY - use a Stripe public key (same account used for STRIPE_SECRET_KEY and STRIPE_WH_SECRET)
+  - STRIPE_SECRET_KEY - use a Stripe secret key (same account used for STRIPE_PUBLIC_KEY and STRIPE_WH_SECRET)
+  - STRIPE_WH_SECRET - use a Stripe webhook secret key (same account used for STRIPE_PUBLIC_KEY and STRIPE_SECRET_KEY)
+  - USE_AWS - set to True
 - Now go to the Deploy tab.
 - Connect to Github using the relevant repository name.
 - Then click 'Deploy a GitHub branch' under the Manual deploy section.
 - Once confirmation of deployment is shown, the project is now deployed and can be opened.
+
+During the development of this project, Heroku had a security breach and stopped allowing deployment through their website. Since then, to push the latest code to Heroku the Heroku CLI needs to be used instead. To do so, the following steps were followed:
+ - To log in, type `heroku login -i` into the terminal, then the relevant Heroku account's email and password.
+ - Then connect to the relevant Heroku app via git remote by typing `heroku git:remote -a app_name` where 'app_name' is the name of the relevant Heroku app.
+ - Finally, push to Heroku using `git push heroku main`
 
 ### Forking or Cloning the GitHub Repository
 
@@ -812,6 +826,7 @@ To clone the GitHub repository follow these steps:
 - [GitPod](https://www.gitpod.io/) - the online IDE (Integrated Development Environment) used for development.
 - [GitHub](https://github.com/) - used as an online code repository.
 - [Heroku](https://www.heroku.com/) - used for deployment.
+- [Stripe](https://stripe.com/gb) - used for online payment processing.
 - [Amazon Web Services](https://aws.amazon.com/) - used for hosting statc files.
 - [Google Fonts](https://fonts.google.com/) - for the fonts used throughout the site.
 - [Font Awesome](https://fontawesome.com/) - for the icons used throughout the site.
@@ -835,3 +850,4 @@ To clone the GitHub repository follow these steps:
 
 - [The Whisky Exchange](https://www.thewhiskyexchange.com/) - A special mention for the Whisky Exchange who allowed the use of their images and product descriptions.
 - [Flaviar](https://flaviar.com/) - Provided other layout ideas.
+- [WallpaperAccess](https://wallpaperaccess.com/) - Provided the old paper image used throughout the site. 
