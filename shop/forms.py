@@ -42,23 +42,24 @@ class ProductForm(forms.ModelForm):
         type_friendly_names = [
             (t.id, t.get_friendly_name()) for t in types
         ]
-        type_friendly_names.insert(0, (u'', u''))
+        type_friendly_names.insert(0, ('', ''))
 
         brands = Brand.objects.all()
         brand_friendly_names = [
             (b.id, b.get_friendly_name()) for b in brands
         ]
-        brand_friendly_names.insert(0, (u'', u''))
+        brand_friendly_names.insert(0, ('', ''))
 
         flavours = Flavour.objects.all()
         flavour_friendly_names = [
             (f.id, f.get_friendly_name()) for f in flavours
         ]
-        flavour_friendly_names.insert(0, (u'', u''))
+        flavour_friendly_names.insert(0, ('', ''))
 
         self.fields['type'].choices = type_friendly_names
         self.fields['brand'].choices = brand_friendly_names
         self.fields['flavour'].choices = flavour_friendly_names
         self.fields['description'].widget.attrs['rows'] = 5
+        self.fields['image'].widget.attrs['aria-label'] = 'Image selector'
         for field_name, field in self.fields.items():
             field.widget.attrs['class'] = 'add-product-input'

@@ -28,7 +28,7 @@ select option {
 
 select:invalid,
 select option[value=""] {
-    color: #7e868d !important;
+    color: #6c777d !important;
 }
 
 .lazyselect {
