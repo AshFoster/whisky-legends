@@ -1,3 +1,5 @@
+# CREDIT - Idea and basic structure of the webhook handler views came from
+# Code Institue's walkthrough project 'Boutique Ado'
 import json
 import time
 

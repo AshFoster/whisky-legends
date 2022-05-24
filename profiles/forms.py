@@ -2,7 +2,8 @@ from django import forms
 from allauth.account.forms import SignupForm
 from .models import UserProfile
 
-
+# CREDIT - Idea and basic structure of the UserProfileForm came from
+# Code Institue's walkthrough project 'Boutique Ado'
 class UserProfileForm(forms.ModelForm):
     class Meta:
         model = UserProfile

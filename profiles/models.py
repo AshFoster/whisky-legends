@@ -7,7 +7,8 @@ from django_countries.fields import CountryField
 
 from shop.models import Product
 
-
+# CREDIT - Idea and basic structure of the UserProfile model came from
+# Code Institue's walkthrough project 'Boutique Ado'
 class UserProfile(models.Model):
     """
     The User Profle model is used to store default delivery

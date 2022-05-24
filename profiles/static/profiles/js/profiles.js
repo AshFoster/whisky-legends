@@ -21,7 +21,6 @@ if (defaultCountry != null) {
 }
 
 // Remove from wishlist and reload on click
-// CREDIT - https://stackoverflow.com/questions/64612746/how-would-i-do-this-ajax-jquery-in-vanilla-js
 document.querySelectorAll('.remove-btn').forEach(item => {
     item.addEventListener('click', function () {
         let wishlistForm = this.closest('.wishlist-form');

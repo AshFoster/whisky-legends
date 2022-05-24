@@ -360,6 +360,8 @@ def delete_review(request, review_id):
         return HttpResponse(status=500)
 
 
+# CREDIT - Idea and basic structure of the add, edit and delete product
+# functions came from Code Institue's walkthrough project 'Boutique Ado'
 @login_required
 def add_product(request):
     """
