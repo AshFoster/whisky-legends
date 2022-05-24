@@ -310,28 +310,6 @@ function setFlavourFilter() {
     }
 }
 
-/* 
-Adds event listeners to the 'bttButton' element so it only appears when
-page is scrolled below the top, and returns the user to the top of  the
-page when clicked.
-*/
-function setBttButton() {
-    let bttButton = document.querySelector('.btt-button');
-
-    window.addEventListener("scroll", function () {
-        let y = window.scrollY;
-        if (y > 0) {
-            bttButton.style.display = 'block';
-        } else {
-            bttButton.style.display = 'none';
-        }
-    });
-
-    bttButton.addEventListener('click', function () {
-        window.scrollTo(0, 0);
-    });
-}
-
 // Call all functions declared above
 setMaxHeight('.product-card-title');
 setSort();
@@ -342,7 +320,18 @@ setRegionFilter();
 setPriceFilter();
 setAgeFilter();
 setFlavourFilter();
-setBttButton();
+
+
+// Call setMaxHeight function on all elements with .product-card-title class when the window is resized
+window.addEventListener('resize', function () {
+
+    setMaxHeight('.product-card-title');
+
+}, false);
+
+// CREDIT - The following functions here were inspired by Code Institute's walkthrough
+// project 'Boutique Ado', and the method on how to use AJAX without jQuery
+// was found here: https://stackoverflow.com/questions/64612746/how-would-i-do-this-ajax-jquery-in-vanilla-js
 
 // Add to cart and reload on click
 document.querySelectorAll('.add-cart-btn').forEach(item => {
@@ -385,12 +374,3 @@ document.querySelectorAll('.delete-product-modal a').forEach(item => {
         httpRequest.send(param);
     });
 });
-
-/* 
-Call setMaxHeight function on all elements with .product-card-title class when the window is resized
-*/
-window.addEventListener('resize', function () {
-
-    setMaxHeight('.product-card-title');
-
-}, false);

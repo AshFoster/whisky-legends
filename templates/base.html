@@ -9,8 +9,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description"
-        content="Whisky Legends - Purchase whiskies and/or related items/gifts.">
+    <meta name="description" content="Whisky Legends - Purchase whiskies and/or related items/gifts.">
     <meta name="keywords"
         content="whisky, whiskey, legends, whisky legends, buy whiskey online, whiskey or whisky, whiskey gifts for him, whisky gift UK, bourbon brands, scotch brands, scotch meaning, bourbon vs whiskey, bourbon taste, How is Scotch different from whiskey?, Is it spelled whiskey or whisky?, Japanese Whiskey">
     {% endblock %}
@@ -103,10 +102,14 @@
             <div class="row justify-content-center mt-4">
                 <div class="col-8 text-center">
                     <h4 class="mt-3"><strong>About Us</strong></h4>
-                    <p>Here at Whisky Legends we offer you the chance to purchase from a great selection of the finest whiskies 
-                        from all around the world, as well a small selection of whisky based products. We also offer free delivery
-                        when you spend over £45. If you register for an account with us you'll be able to store your delivery details
-                        for future orders, keep track of all previous order, create your own wishlist and rate/review all of our whiskies.</p>
+                    <p>Here at Whisky Legends we offer you the chance to purchase from a great selection of the finest
+                        whiskies
+                        from all around the world, as well a small selection of whisky based products. We also offer
+                        free delivery
+                        when you spend over £45. If you register for an account with us you'll be able to store your
+                        delivery details
+                        for future orders, keep track of all previous order, create your own wishlist and rate/review
+                        all of our whiskies.</p>
                 </div>
             </div>
             <div class="row justify-content-evenly">
@@ -181,13 +184,15 @@
         </div>
     </div>
 
+    <!-- Back to top button -->
+    <div class="btt-button">
+        <a class="btt-link">
+            <i class="fas fa-chevron-circle-up mx-auto my-auto"></i>
+        </a>
+    </div>
+
     {% block postloadjs %}
-    <script>
-        document.querySelectorAll('.toast').forEach(item => {
-            toast = new bootstrap.Toast(item);
-            toast.show();
-        });
-    </script>
+    <script src="{% static 'js/base.js' %}"></script>
     {% endblock %}
 
 </body>
