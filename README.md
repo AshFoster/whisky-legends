@@ -31,9 +31,11 @@
 
 ## Overview
 
-Whisky Legends is an e-commerce website that sells an array of whiskies from all over the world, as well as a small selection of whisky-related products. Users can register for an account which provides them with access to their own profile where they can store personal and delivery information, view their order history and view their own wishlist. Registered users are also able to rate and review any of the whiskies/products on the site.
+Whisky Legends is an e-commerce website that sells an array of whiskies from all over the world, as well as a small selection of whisky-related products. Users can register for an account which provides them with access to a profile where they can store personal and delivery information, view their order history and view their wishlist. Registered users are also able to rate and review any of the whiskies/products on the site.
 
-The Stripe account associated with this project is set to 'test' mode, so to make payments on the site one of Stripe's test cards will need to be used, 2 of which are outlined below.
+### Making Payments
+
+The website uses [Stripe](https://stripe.com/gb) to process payments. The Stripe account associated with this project is in 'test' mode, so to make payments on the site, one of Stripe's test cards will need to be used, 2 of which are as follows.
 
 4242 4242 4242 4242 - to simulate standard payments
 
