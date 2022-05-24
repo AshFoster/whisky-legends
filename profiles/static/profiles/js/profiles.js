@@ -1,3 +1,7 @@
+// CREDIT - The functions here were inspired by Code Institute's walkthrough
+// project 'Boutique Ado', and the method on how to use AJAX without jQuery
+// was found here: https://stackoverflow.com/questions/64612746/how-would-i-do-this-ajax-jquery-in-vanilla-js
+
 // Set colour of country field to look muted if none selected
 let defaultCountry = document.getElementById('id_default_country');
 

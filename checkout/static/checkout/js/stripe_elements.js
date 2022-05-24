@@ -1,10 +1,7 @@
-/*
-    Core logic/payment flow for this comes from here:
-    https://stripe.com/docs/payments/accept-a-payment
-
-    CSS from here: 
-    https://stripe.com/docs/stripe-js
-*/
+// CREDIT - The logic/payment flow ideas used here came from Code Institute's walkthrough
+// project 'Boutique Ado', and from the Stripe documentation.
+// The method on how to use AJAX without jQuery was found here:
+// https://stackoverflow.com/questions/64612746/how-would-i-do-this-ajax-jquery-in-vanilla-js
 
 let stripePublicKey = document.getElementById('id_stripe_public_key').textContent.slice(1, -1);
 let clientSecret = document.getElementById('id_client_secret').textContent.slice(1, -1);

@@ -216,23 +216,24 @@ footer {
 }
 
 .review-star::before {
-    font-family: "Font Awesome 5 Free"; 
-	font-weight: 400;
-	content: "\f005";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 400;
+    content: "\f005";
 }
 
+/* CREDIT - Idea for hovering/selecting stars on review form came from here: https://medium.com/free-code-camp/how-to-make-the-impossible-possible-in-css-with-a-little-creativity-bd96bb42b29d#:~:text=If%20you%20ever%20used%20CSS,to%20select%20what%20came%20before. */
 .review-rating {
     display: flex;
     flex-direction: row-reverse;
 }
 
-.review-rating > input {
+.review-rating>input {
     position: absolute;
     right: 49vw;
     opacity: 0;
 }
 
-.review-rating > label {
+.review-rating>label {
     position: relative;
     color: var(--logo-text-color);
     padding-left: 1.5px;
@@ -240,24 +241,24 @@ footer {
     cursor: pointer;
 }
 
-.review-rating > label::before {
-    font-family: "Font Awesome 5 Free"; 
-	font-weight: 900;
-	content: "\f005";
+.review-rating>label::before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f005";
     position: absolute;
     opacity: 0;
 }
 
-.review-rating > label:hover:before,
-.review-rating > label:hover ~ label:before {
+.review-rating>label:hover:before,
+.review-rating>label:hover~label:before {
     opacity: 1 !important;
 }
 
-.review-rating > input:checked ~ label:before {
+.review-rating>input:checked~label:before {
     opacity: 1;
 }
 
-.review-rating:hover > input:checked ~ label:before {
+.review-rating:hover>input:checked~label:before {
     opacity: 0.4;
 }
 
@@ -265,19 +266,25 @@ footer {
     border-color: rgba(97, 27, 27, 25%);
 }
 
-.fa-stack > .fas.fa-star {
-    visibility: hidden;
-}
-
-.fa-stack:hover > .fas.fa-star {
-    visibility: visible;
-    cursor: pointer;
-}
+/* END CREDIT */
 
 #stars i,
 .review-stars i {
     padding-right: 3px;
 }
+
+/* CREDIT - Utility class to hide content visually while keeping it screen reader-accessible
+came from https://www.scottohara.me/blog/2017/04/14/inclusively-hidden.html */
+.visually-hidden:not(:focus):not(:active) {
+    clip: rect(0 0 0 0);
+    clip-path: inset(100%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+/* END CREDIT */
 
 /* Cart page */
 
@@ -292,7 +299,7 @@ footer {
 
 .cart-table .wishlist-btn,
 .remove-btn,
-.update-btn  {
+.update-btn {
     font-size: 90%;
 }
 
@@ -661,7 +668,7 @@ footer {
 
 /* For very small screen sizes with maximum height of 325px */
 @media screen and (max-width: 325px) {
-    #mobile-search > div {
+    #mobile-search>div {
         margin-left: .5rem !important;
     }
 

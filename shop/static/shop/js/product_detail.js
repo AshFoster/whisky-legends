@@ -1,6 +1,8 @@
 // CREDIT - getStars function idea was found here:
 // https://codereview.stackexchange.com/questions/177945/convert-rating-value-to-visible-stars-using-fontawesome-icons
-// This function outputs stars to the nearest half based on a rating out of 10
+/*
+This function outputs stars to the nearest half based on a rating out of 10
+*/
 function getStars(rating) {
 
     // Round to nearest half
@@ -21,20 +23,23 @@ function getStars(rating) {
     }
 
     return output.join('');
-
 }
-// END CREDIT
 
+// Set stars shown on product detail page by calling getStars
 let rating = document.getElementById("ratingValue").textContent;
 document.getElementById("stars").innerHTML = getStars(rating);
 
+// Set stars shown on reviews by calling getStars
 document.querySelectorAll('.review-stars').forEach(item => {
     let reviewRating = item.getAttribute('data-rating');
     item.innerHTML = getStars(reviewRating);
 });
 
+// CREDIT - The following functions here were inspired by Code Institute's walkthrough
+// project 'Boutique Ado', and the method on how to use AJAX without jQuery
+// was found here: https://stackoverflow.com/questions/64612746/how-would-i-do-this-ajax-jquery-in-vanilla-js
+
 // Add to cart and reload on click
-// CREDIT - https://stackoverflow.com/questions/64612746/how-would-i-do-this-ajax-jquery-in-vanilla-js
 document.querySelector('.add-cart-btn').addEventListener('click', function () {
     let addCartForm = this.closest('.add-cart-form');
     let qtyInput = addCartForm.querySelector('.qty-input');
@@ -60,7 +65,6 @@ document.querySelector('.add-cart-btn').addEventListener('click', function () {
 });
 
 // Add/Remove from wishlist and reload on click
-// CREDIT - https://stackoverflow.com/questions/64612746/how-would-i-do-this-ajax-jquery-in-vanilla-js
 let wishlistBtn = document.querySelector('.wishlist-btn');
 if (wishlistBtn != null) {
     wishlistBtn.addEventListener('click', function () {
@@ -83,7 +87,6 @@ if (wishlistBtn != null) {
 }
 
 // Submit review and reload on click
-// CREDIT - https://stackoverflow.com/questions/64612746/how-would-i-do-this-ajax-jquery-in-vanilla-js
 let submitBtn = document.querySelector('#submit-button');
 if (submitBtn != null) {
     submitBtn.addEventListener('click', function () {
@@ -110,7 +113,6 @@ if (submitBtn != null) {
 }
 
 // Delete review and reload on click
-// CREDIT - https://stackoverflow.com/questions/64612746/how-would-i-do-this-ajax-jquery-in-vanilla-js
 document.querySelectorAll('.delete-review-modal a').forEach(item => {
     item.addEventListener('click', function () {
         let reviewId = this.closest('.delete-review-modal').getAttribute('id').split('deleteReviewModal')[1];

@@ -21,6 +21,7 @@ class ReviewForm(forms.ModelForm):
         self.fields['content'].widget.attrs['rows'] = 5
         self.fields['content'].widget.attrs['class'] = 'review-form-input'
         self.fields['content'].widget.attrs['id'] = 'review-form-content'
+        self.fields['content'].widget.attrs['aria-label'] = 'review content'
 
 
 class ProductForm(forms.ModelForm):

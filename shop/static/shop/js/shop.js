@@ -345,7 +345,6 @@ setFlavourFilter();
 setBttButton();
 
 // Add to cart and reload on click
-// CREDIT - https://stackoverflow.com/questions/64612746/how-would-i-do-this-ajax-jquery-in-vanilla-js
 document.querySelectorAll('.add-cart-btn').forEach(item => {
     item.addEventListener('click', function () {
         let addCartForm = this.closest('.add-cart-form');
@@ -368,7 +367,6 @@ document.querySelectorAll('.add-cart-btn').forEach(item => {
 });
 
 // Delete product and reload on click
-// CREDIT - https://stackoverflow.com/questions/64612746/how-would-i-do-this-ajax-jquery-in-vanilla-js
 document.querySelectorAll('.delete-product-modal a').forEach(item => {
     item.addEventListener('click', function (e) {
         e.preventDefault();

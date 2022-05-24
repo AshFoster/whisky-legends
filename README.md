@@ -752,7 +752,7 @@ Google Chrome was the browser used for the majority of testing during the develo
 
 - When sorting by rating, products that did not have a rating were shown in the list before the highest-rated or lowest-rated products. This was because their annotated 'rating' field always had a value of None. To fix this a variable called 'rating_none' is declared, initially with a value of None, which is used when sorting in ascending order, but given a value of zero when sorting in descending order. This forces the products with no rating to be forced to the end of the list when sorting in either direction.
 
-- When adding a product to the cart on the 'shop' page, when there were already 99 of that product in the cart, it was possible to add more even though the maximum allowed is meant to be 99. This was fixed by checking the quantity of the product in the 'add_cart' view and only adding it to the cart if fewer than 99 were already in the cart, displaying an error message if not.
+- When adding a product to the cart on the 'shop' page, when there were already 99 of that product in the cart, it was possible to add more, even though the maximum allowed is meant to be 99. This was fixed by checking the quantity of the product in the 'add_cart' view and only adding it to the cart if fewer than 99 were already in the cart, displaying an error message if not.
 
 #### Unfixed Bugs
 
@@ -774,8 +774,8 @@ This project has been deployed on Heroku using the following steps:
   - SECRET_KEY - can be any key you like
   - EMAIL_HOST_USER - use a Gmail email address set up with two-factor authentication
   - EMAIL_HOST_PASSWORD - generate and use an app password associated with the EMAIL_HOST_USER address
-  - AWS_ACCESS_KEY_ID - use an AWS access key (same account used for AWS_SECRET_ACCESS_KEY)
-  - AWS_SECRET_ACCESS_KEY - use an AWS secret key (same account used for AWS_ACCESS_KEY_ID )
+  - AWS_ACCESS_KEY_ID - use an AWS (Amazon Web Services) access key (same account used for AWS_SECRET_ACCESS_KEY)
+  - AWS_SECRET_ACCESS_KEY - use an AWS (Amazon Web Services) secret key (same account used for AWS_ACCESS_KEY_ID )
   - STRIPE_PUBLIC_KEY - use a Stripe public key (same account used for STRIPE_SECRET_KEY and STRIPE_WH_SECRET)
   - STRIPE_SECRET_KEY - use a Stripe secret key (same account used for STRIPE_PUBLIC_KEY and STRIPE_WH_SECRET)
   - STRIPE_WH_SECRET - use a Stripe webhook secret key (same account used for STRIPE_PUBLIC_KEY and STRIPE_SECRET_KEY)
@@ -834,7 +834,7 @@ To clone the GitHub repository follow these steps:
 - [GitHub](https://github.com/) - used as an online code repository.
 - [Heroku](https://www.heroku.com/) - used for deployment.
 - [Stripe](https://stripe.com/gb) - used for online payment processing.
-- [Amazon Web Services](https://aws.amazon.com/) - used for hosting statc files.
+- [Amazon Web Services](https://aws.amazon.com/) - used for hosting static files.
 - [Google Fonts](https://fonts.google.com/) - for the fonts used throughout the site.
 - [Font Awesome](https://fontawesome.com/) - for the icons used throughout the site.
 - [Colormind](http://colormind.io/) - used to obtain colour palette images.

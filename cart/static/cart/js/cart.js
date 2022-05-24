@@ -1,5 +1,8 @@
+// CREDIT - The functions here were inspired by Code Institute's walkthrough
+// project 'Boutique Ado', and the method on how to use AJAX without jQuery
+// was found here: https://stackoverflow.com/questions/64612746/how-would-i-do-this-ajax-jquery-in-vanilla-js
+
 // Update quantity of item in cart and reload on click
-// CREDIT - https://stackoverflow.com/questions/64612746/how-would-i-do-this-ajax-jquery-in-vanilla-js
 document.querySelectorAll('.update-btn').forEach(item => {
     item.addEventListener('click', function () {
         let updateForm = this.closest('.update-form');
@@ -27,7 +30,6 @@ document.querySelectorAll('.update-btn').forEach(item => {
 });
 
 // Remove item from cart and reload on click
-// CREDIT - https://stackoverflow.com/questions/64612746/how-would-i-do-this-ajax-jquery-in-vanilla-js
 document.querySelectorAll('.remove-btn').forEach(item => {
     item.addEventListener('click', function () {
         let productId = this.getAttribute('id').split('remove-')[1];
@@ -47,7 +49,6 @@ document.querySelectorAll('.remove-btn').forEach(item => {
 });
 
 // Add/Remove from wishlist and reload on click
-// CREDIT - https://stackoverflow.com/questions/64612746/how-would-i-do-this-ajax-jquery-in-vanilla-js
 let wishlistBtn = document.querySelector('.wishlist-btn');
 if (wishlistBtn != null) {
     wishlistBtn.addEventListener('click', function () {
