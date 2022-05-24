@@ -762,6 +762,14 @@ Google Chrome was the browser used for the majority of testing during the develo
 
 [Here's a link to the live site.](https://whisky-legends.herokuapp.com/)
 
+### Amazon Web Services (AWS)
+
+An [Amazon Web Services](https://aws.amazon.com/) S3 bucket has been used to host all static and media files for this website. A user, user group and bucket were created with appropriate names and with public access set to enabled. The ACCESS and SECRET keys provided were then used as environment variables within the project.
+
+### Stripe
+
+[Stripe](https://stripe.com/gb) was used for processing payments on the site, including the use of Stripe webhooks. After setting up an account and an appropriate webhook endpoint, the PUBLIC, SECRET and webhook SECRET keys provided were then used as environment variables within the project.
+
 ### Deploying with Heroku
 
 This project has been deployed on Heroku using the following steps:
@@ -833,8 +841,8 @@ To clone the GitHub repository follow these steps:
 - [GitPod](https://www.gitpod.io/) - the online IDE (Integrated Development Environment) used for development.
 - [GitHub](https://github.com/) - used as an online code repository.
 - [Heroku](https://www.heroku.com/) - used for deployment.
+- [Amazon Web Services](https://aws.amazon.com/) - used for hosting static and media files.
 - [Stripe](https://stripe.com/gb) - used for online payment processing.
-- [Amazon Web Services](https://aws.amazon.com/) - used for hosting static files.
 - [Google Fonts](https://fonts.google.com/) - for the fonts used throughout the site.
 - [Font Awesome](https://fontawesome.com/) - for the icons used throughout the site.
 - [Colormind](http://colormind.io/) - used to obtain colour palette images.
