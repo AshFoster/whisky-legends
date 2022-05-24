@@ -113,20 +113,24 @@ if (submitBtn != null) {
 }
 
 // Delete review and reload on click
-document.querySelectorAll('.delete-review-modal a').forEach(item => {
-    item.addEventListener('click', function () {
-        let reviewId = this.closest('.delete-review-modal').getAttribute('id').split('deleteReviewModal')[1];
-        let url = `/shop/delete_review/${reviewId}/`;
-        let csrfToken = document.querySelector('input[name="csrfmiddlewaretoken"]').value;
-        let params = 'csrfmiddlewaretoken=' + encodeURIComponent(csrfToken);
-        let httpRequest = new XMLHttpRequest();
-        httpRequest.open('POST', url);
-        httpRequest.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-        httpRequest.onreadystatechange = function () {
-            if (httpRequest.readyState == 4 && httpRequest.status == 200) {
-                location.reload();
-            }
-        };
-        httpRequest.send(params);
+let deleteReviewBtns = document.querySelectorAll('.delete-review-modal a');
+if (deleteReviewBtns != null) {
+    deleteReviewBtns.forEach(item => {
+        item.addEventListener('click', function (e) {
+            e.preventDefault();
+            let reviewId = this.closest('.delete-review-modal').getAttribute('id').split('deleteReviewModal')[1];
+            let url = `/shop/delete_review/${reviewId}/`;
+            let csrfToken = document.querySelector('input[name="csrfmiddlewaretoken"]').value;
+            let params = 'csrfmiddlewaretoken=' + encodeURIComponent(csrfToken);
+            let httpRequest = new XMLHttpRequest();
+            httpRequest.open('POST', url);
+            httpRequest.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+            httpRequest.onreadystatechange = function () {
+                if (httpRequest.readyState == 4 && httpRequest.status == 200) {
+                    location.reload();
+                }
+            };
+            httpRequest.send(params);
+        });
     });
-});
+}

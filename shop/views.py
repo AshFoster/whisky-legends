@@ -263,7 +263,7 @@ class Shop(generic.ListView):
 
 def product_detail(request, product_id):
     """
-    Product view to show individual Product model
+    A view to show individual Product model
     objects on product_detail.html
     """
     product = get_object_or_404(Product, pk=product_id)
@@ -346,6 +346,7 @@ def delete_review(request, review_id):
             'admins can delete reviews.'
         )
         return redirect(reverse('home'))
+        
     try:
         review.delete()
         messages.success(
