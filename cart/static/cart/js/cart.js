@@ -1,6 +1,5 @@
-// CREDIT - The functions here were inspired by Code Institute's walkthrough
-// project 'Boutique Ado', and the method on how to use AJAX without jQuery
-// was found here: https://stackoverflow.com/questions/64612746/how-would-i-do-this-ajax-jquery-in-vanilla-js
+// CREDIT - The method on how to use AJAX without jQuery was found here:
+// https://stackoverflow.com/questions/64612746/how-would-i-do-this-ajax-jquery-in-vanilla-js
 
 // Update quantity of item in cart and reload on click
 document.querySelectorAll('.update-btn').forEach(item => {

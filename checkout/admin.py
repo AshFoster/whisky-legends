@@ -1,5 +1,3 @@
-# CREDIT - The idea for this admin set up came from
-# Code Institue's walkthrough project 'Boutique Ado'
 from django.contrib import admin
 from .models import Order, OrderLineItem
 

@@ -1,5 +1,3 @@
-# CREDIT - The idea for these signals came from
-# Code Institue's walkthrough project 'Boutique Ado'
 from django.db.models.signals import post_save, post_delete
 from django.dispatch import receiver
 

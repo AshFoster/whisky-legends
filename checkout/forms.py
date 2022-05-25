@@ -1,5 +1,3 @@
-# CREDIT - The idea for OrderForm structure came from
-# Code Institue's walkthrough project 'Boutique Ado'
 from django import forms
 from .models import Order
 

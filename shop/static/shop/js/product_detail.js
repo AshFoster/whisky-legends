@@ -35,9 +35,8 @@ document.querySelectorAll('.review-stars').forEach(item => {
     item.innerHTML = getStars(reviewRating);
 });
 
-// CREDIT - The following functions here were inspired by Code Institute's walkthrough
-// project 'Boutique Ado', and the method on how to use AJAX without jQuery
-// was found here: https://stackoverflow.com/questions/64612746/how-would-i-do-this-ajax-jquery-in-vanilla-js
+// CREDIT - The  method on how to use AJAX without jQuery was found here:
+// https://stackoverflow.com/questions/64612746/how-would-i-do-this-ajax-jquery-in-vanilla-js
 
 // Add to cart and reload on click
 document.querySelector('.add-cart-btn').addEventListener('click', function () {

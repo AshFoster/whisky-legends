@@ -1,8 +1,5 @@
-# CREDIT - Idea and basic structure of contexts.py came from
-# Code Institue's walkthrough project 'Boutique Ado'
 from decimal import Decimal
 from django.conf import settings
-from django.shortcuts import get_object_or_404
 from django.core.exceptions import ObjectDoesNotExist
 from shop.models import Product
 

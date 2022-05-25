@@ -1,5 +1,3 @@
-# CREDIT - Idea and basic structure of the webhook views came from
-# Code Institue's walkthrough project 'Boutique Ado'
 import stripe
 
 from django.conf import settings

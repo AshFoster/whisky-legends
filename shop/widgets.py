@@ -1,4 +1,3 @@
-# CREDIT - Inspired by Code Institue's walkthrough project 'Boutique Ado'
 from django.forms.widgets import ClearableFileInput
 from django.utils.translation import gettext_lazy as _
 

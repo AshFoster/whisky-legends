@@ -862,7 +862,7 @@ To clone the GitHub repository follow these steps:
 
 - [YouTube](https://www.youtube.com/)
 - [Code Institute's Full Stack Developer Course](https://codeinstitute.net/)
-  - Course material and the Boutique Ado walkthrough project provided a lot of great ideas, without which this project would not have been possible.
+  - Course material and the 'Boutique Ado' walkthrough project provided a lot of great ideas, without which this project would not have been possible.
 
 ### Images and Content
 

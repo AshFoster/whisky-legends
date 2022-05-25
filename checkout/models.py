@@ -1,5 +1,3 @@
-# CREDIT - The idea for these models came from
-# Code Institue's walkthrough project 'Boutique Ado'
 import uuid
 
 from django.db import models
