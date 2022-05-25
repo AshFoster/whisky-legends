@@ -12,7 +12,7 @@
 
                 <!-- Product information -->
                 <div
-                    class="col-11 col-sm-8 col-lg-6 order-2 order-lg-1 minw-sm-390px p-0 p-sm-2 text-center text-sm-start">
+                    class="col-11 col-sm-8 col-lg-6 order-2 order-lg-1 minw-sm-390px p-0 p-sm-2 text-center text-lg-start">
                     <h2 class="mt- mb-0">{{ product.brand.friendly_name }}: {{ product.name }}</h2>
                     <small>
                         {% if product.brand.region.friendly_name %}
@@ -130,7 +130,7 @@
                 </div>
 
                 <!-- Product image -->
-                <div class="col-11 col-sm-8 col-lg-6 order-1 order-lg-2 minw-sm-390px">
+                <div class="col-11 col-sm-8 col-lg-6 order-1 order-lg-2 minw-sm-390px px-2 d-flex justify-content-center">
                     {% if product.image %}
                     <a href="{{ product.image.url }}" target="_blank">
                         <img src="{{ product.image.url }}" class="img-fluid"
