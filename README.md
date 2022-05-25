@@ -860,12 +860,13 @@ To clone the GitHub repository follow these steps:
 
 ### Code
 
-- [YouTube](https://www.youtube.com/)
 - [Code Institute's Full Stack Developer Course](https://codeinstitute.net/)
-  - Course material and the 'Boutique Ado' walkthrough project provided a lot of great ideas, without which this project would not have been possible.
+  - The '[Boutique Ado](https://github.com/Code-Institute-Solutions/boutique_ado_v1/tree/f5880efee43b3b9ea1276a09ca972f4588001c59)' walkthrough project provided a lot the great ideas and inspiration, without which this project would not have been possible.
+  - The course material provided a lot of great ideas, too.
+- [YouTube](https://www.youtube.com/)
 
 ### Images and Content
 
 - [The Whisky Exchange](https://www.thewhiskyexchange.com/) - A special mention for The Whisky Exchange for allowing the use of their images and product descriptions.
 - [Flaviar](https://flaviar.com/) - Provided other layout ideas.
-- [WallpaperAccess](https://wallpaperaccess.com/) - Provided the old paper image used throughout the site. 
+- [WallpaperAccess](https://wallpaperaccess.com/) - Provided the 'old paper' image used throughout the site. 
