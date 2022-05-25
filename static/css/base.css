@@ -83,7 +83,6 @@ footer {
 }
 
 /* Text colours */
-
 .text-logo {
     color: var(--logo-text-color);
 }
@@ -92,7 +91,6 @@ footer {
 /* /// ---------------------------------------------------- SPECIFIC PAGE STYLES */
 
 /* Home page */
-
 .hero-container {
     position: relative;
     background-color: rgba(0, 0, 0, .3);
@@ -118,7 +116,6 @@ footer {
 }
 
 /* Shop page */
-
 .filter-bar-toggler .dropdown-toggle[aria-expanded="true"]::after {
     border-top: none;
     border-bottom: 6px solid #fff;
@@ -194,7 +191,6 @@ footer {
 }
 
 /* Product Detail page */
-
 .product-detail-container {
     font-size: 110%;
 }
@@ -284,10 +280,10 @@ came from https://www.scottohara.me/blog/2017/04/14/inclusively-hidden.html */
     white-space: nowrap;
     width: 1px;
 }
+
 /* END CREDIT */
 
 /* Cart page */
-
 .cart-table {
     border-color: rgba(0, 0, 0, .25);
 }
@@ -330,14 +326,12 @@ came from https://www.scottohara.me/blog/2017/04/14/inclusively-hidden.html */
 }
 
 /* Add Product page */
-
 .add-product-input {
     border-color: rgba(97, 27, 27, 25%);
     margin-bottom: .5rem;
 }
 
 /* Contact page */
-
 .contact-form-input {
     border-color: rgba(97, 27, 27, 25%);
     margin-bottom: .5rem;
@@ -346,7 +340,6 @@ came from https://www.scottohara.me/blog/2017/04/14/inclusively-hidden.html */
 /* /// ---------------------------------------------------- MULTI PAGE STYLES */
 
 /* Allauth pages */
-
 .allauth-form-inner-content h2 {
     color: rgba(0, 0, 0, .7);
 }
@@ -390,7 +383,6 @@ came from https://www.scottohara.me/blog/2017/04/14/inclusively-hidden.html */
 }
 
 /* Product detail page and Shop page */
-
 .delete-product-modal,
 .delete-review-modal {
     background-color: rgba(0, 0, 0, .5);
@@ -427,7 +419,6 @@ came from https://www.scottohara.me/blog/2017/04/14/inclusively-hidden.html */
 }
 
 /* Shop, Cart and Checkout pages */
-
 .shop-title,
 .cart-title,
 .checkout-title,
@@ -436,7 +427,6 @@ came from https://www.scottohara.me/blog/2017/04/14/inclusively-hidden.html */
 }
 
 /* Add Product and Edit Product pages */
-
 .btn-file {
     position: relative;
     overflow: hidden;
@@ -461,7 +451,6 @@ came from https://www.scottohara.me/blog/2017/04/14/inclusively-hidden.html */
 }
 
 /* All pages */
-
 header .nav-link:focus,
 header .nav-link:active,
 header .input-group:focus,
@@ -498,7 +487,6 @@ footer .form-control:active,
 /* /// ---------------------------------------------------- BASE.HTML styles */
 
 /* Header/Navbar */
-
 header a {
     color: black !important;
     text-transform: uppercase;
@@ -579,7 +567,6 @@ header a:focus {
 }
 
 /* Footer */
-
 footer {
     background: var(--paper-url) no-repeat center center;
     background-size: cover;
@@ -629,7 +616,6 @@ footer {
 }
 
 /* Bootstrap toasts */
-
 .message-container {
     position: fixed;
     top: 105px;
@@ -662,7 +648,6 @@ footer {
     overflow-x: hidden;
     overflow-y: auto;
 }
-
 
 /* /// ---------------------------------------------------- MEDIA QUERIES */
 
@@ -719,7 +704,6 @@ footer {
         font-size: 275%;
     }
 }
-
 
 /* For small screen sizes with maximum height of 575px - below Bootstrap sm */
 @media screen and (max-width: 575px) {
