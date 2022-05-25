@@ -45,6 +45,10 @@ class Shop(generic.ListView):
         return super(Shop, self).dispatch(request, *args, **kwargs)
 
     def get_queryset(self):
+        '''
+        Sets the queryset to be used on shop.html based
+        on any filter and/or sorting that has been selected
+        '''
         sort_by = self.request.GET.get('sort')
         sort_direction = self.request.GET.get('direction')
         type_filter = self.request.GET.get('type')
