@@ -350,7 +350,7 @@ def delete_review(request, review_id):
             'admins can delete reviews.'
         )
         return redirect(reverse('home'))
-        
+
     try:
         review.delete()
         messages.success(
