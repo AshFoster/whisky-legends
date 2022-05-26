@@ -17,6 +17,10 @@ from .forms import OrderForm
 
 @require_POST
 def cache_checkout_data(request):
+    '''
+    Caches cart, save info, and user by adding it to the payment
+    intent's metadata
+    '''
     try:
         pid = request.POST.get('client_secret').split('_secret')[0]
         stripe.api_key = settings.STRIPE_SECRET_KEY
