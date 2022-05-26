@@ -87,7 +87,6 @@ footer {
     color: var(--logo-text-color);
 }
 
-
 /* /// ---------------------------------------------------- SPECIFIC PAGE STYLES */
 
 /* Home page */
@@ -793,7 +792,6 @@ footer {
     .hero-container .btn {
         font-size: 1.5rem;
     }
-
 }
 
 /* For screen sizes with minimum height of 992px - Bootstrap lg */
