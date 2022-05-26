@@ -855,6 +855,7 @@ To clone the GitHub repository follow these steps:
 - [favicon.io](https://favicon.io/) - to generate favicon icons
 - [XML-Sitemaps](https://www.xml-sitemaps.com/) - to generate the xml sitemap
 - [Grammarly](https://www.grammarly.com/) - to check and correct spelling and grammar
+- [Pexels](https://www.pexels.com/) - to obtain the home page's hero image
 
 ## Credits
 
