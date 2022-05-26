@@ -257,12 +257,11 @@ footer {
 .review-rating:hover>input:checked~label:before {
     opacity: 0.4;
 }
+/* END CREDIT */
 
 .review-form-input {
     border-color: rgba(97, 27, 27, 25%);
 }
-
-/* END CREDIT */
 
 #stars i,
 .review-stars i {
@@ -280,7 +279,6 @@ came from https://www.scottohara.me/blog/2017/04/14/inclusively-hidden.html */
     white-space: nowrap;
     width: 1px;
 }
-
 /* END CREDIT */
 
 /* Cart page */
@@ -323,18 +321,6 @@ came from https://www.scottohara.me/blog/2017/04/14/inclusively-hidden.html */
 
 .cart-total {
     font-size: 120%;
-}
-
-/* Add Product page */
-.add-product-input {
-    border-color: rgba(97, 27, 27, 25%);
-    margin-bottom: .5rem;
-}
-
-/* Contact page */
-.contact-form-input {
-    border-color: rgba(97, 27, 27, 25%);
-    margin-bottom: .5rem;
 }
 
 /* /// ---------------------------------------------------- MULTI PAGE STYLES */
@@ -418,7 +404,7 @@ came from https://www.scottohara.me/blog/2017/04/14/inclusively-hidden.html */
     font-size: 120%;
 }
 
-/* Shop, Cart and Checkout pages */
+/* Shop, Cart, Checkout and Profile pages */
 .shop-title,
 .cart-title,
 .checkout-title,
@@ -426,7 +412,13 @@ came from https://www.scottohara.me/blog/2017/04/14/inclusively-hidden.html */
     color: rgba(0, 0, 0, .7);
 }
 
-/* Add Product and Edit Product pages */
+/* Add Product, Edit Product and Contact pages */
+.add-product-input,
+.contact-form-input {
+    border-color: rgba(97, 27, 27, 25%);
+    margin-bottom: .5rem;
+}
+
 .btn-file {
     position: relative;
     overflow: hidden;
@@ -803,9 +795,6 @@ footer {
     }
 
 }
-
-/* For screen sizes with maximum height of 991px - below Bootstrap lg */
-@media screen and (max-width: 991px) {}
 
 /* For screen sizes with minimum height of 992px - Bootstrap lg */
 @media screen and (min-width: 992px) {
