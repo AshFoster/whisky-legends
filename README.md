@@ -798,7 +798,7 @@ This project has been deployed on Heroku using the following steps:
 During the development of this project, Heroku had a security breach and stopped allowing deployment through their website. Since then, to push the latest code to Heroku the Heroku CLI needed to be used instead. To do so, the following steps were followed:
  - To log in, type `heroku login -i` into the terminal, then the relevant Heroku account's email and password.
  - Then connect to the relevant Heroku app via git remote by typing `heroku git:remote -a app_name` where 'app_name' is the name of the relevant Heroku app.
- - Finally, push to Heroku using `git push heroku main`
+ - Finally, push to Heroku using `git push heroku main`.
 
 ### Forking or Cloning the GitHub Repository
 
