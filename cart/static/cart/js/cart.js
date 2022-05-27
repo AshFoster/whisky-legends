@@ -48,23 +48,25 @@ document.querySelectorAll('.remove-btn').forEach(item => {
 });
 
 // Add/Remove from wishlist and reload on click
-let wishlistBtn = document.querySelector('.wishlist-btn');
-if (wishlistBtn != null) {
-    wishlistBtn.addEventListener('click', function () {
-        let wishlistForm = this.closest('.wishlist-form');
-        let formData = new FormData(wishlistForm);
-        let productId = this.getAttribute('data-id').split('wishlist-')[1];
-        let url = `/profile/wishlist/update/${productId}/`;
-        let csrfToken = document.querySelector('input[name="csrfmiddlewaretoken"]').value;
-
-        let httpRequest = new XMLHttpRequest();
-        httpRequest.open('POST', url);
-        httpRequest.setRequestHeader('X-CSRF-Token', csrfToken);
-        httpRequest.onreadystatechange = function () {
-            if (httpRequest.readyState == 4 && httpRequest.status == 200) {
-                location.reload();
-            }
-        };
-        httpRequest.send(formData);
+let wishlistBtns = document.querySelectorAll('.wishlist-btn');
+if (wishlistBtns != null) {
+    wishlistBtns.forEach(item => {
+        item.addEventListener('click', function () {
+            let wishlistForm = this.closest('.wishlist-form');
+            let formData = new FormData(wishlistForm);
+            let productId = this.getAttribute('data-id').split('wishlist-')[1];
+            let url = `/profile/wishlist/update/${productId}/`;
+            let csrfToken = document.querySelector('input[name="csrfmiddlewaretoken"]').value;
+    
+            let httpRequest = new XMLHttpRequest();
+            httpRequest.open('POST', url);
+            httpRequest.setRequestHeader('X-CSRF-Token', csrfToken);
+            httpRequest.onreadystatechange = function () {
+                if (httpRequest.readyState == 4 && httpRequest.status == 200) {
+                    location.reload();
+                }
+            };
+            httpRequest.send(formData);
+        });
     });
 }
