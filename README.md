@@ -850,19 +850,19 @@ To clone the GitHub repository follow these steps:
 - [Colormind](http://colormind.io/) - used to obtain colour palette images.
 - [Gmail](https://www.google.com/gmail/) - used to send emails when required.
 - [Lucidchart](https://www.lucidchart.com/) - used to create site map and entity relationship diagrams.
-- [Logo Pony](https://logopony.co.uk/) - to create default product image
+- [Logo Pony](https://logopony.co.uk/) - to create default product image.
 - [Red Ketchup Image Resizer](https://redketchup.io/image-resizer) - To resize default product image
-- [favicon.io](https://favicon.io/) - to generate favicon icons
-- [XML-Sitemaps](https://www.xml-sitemaps.com/) - to generate the xml sitemap
-- [Grammarly](https://www.grammarly.com/) - to check and correct spelling and grammar
-- [Pexels](https://www.pexels.com/) - to obtain the home page's hero image
+- [favicon.io](https://favicon.io/) - to generate favicon icons.
+- [XML-Sitemaps](https://www.xml-sitemaps.com/) - to generate the xml sitemap.
+- [Grammarly](https://www.grammarly.com/) - to check and correct spelling and grammar.
+- [Pexels](https://www.pexels.com/) - to obtain the home page's hero image.
 
 ## Credits
 
 ### Code
 
 - [Code Institute's Full Stack Developer Course](https://codeinstitute.net/)
-  - The '[Boutique Ado](https://github.com/Code-Institute-Solutions/boutique_ado_v1/tree/f5880efee43b3b9ea1276a09ca972f4588001c59)' walkthrough project provided a lot the great ideas and inspiration, without which this project would not have been possible.
+  - The '[Boutique Ado](https://github.com/Code-Institute-Solutions/boutique_ado_v1/tree/f5880efee43b3b9ea1276a09ca972f4588001c59)' walkthrough project provided a lot of great ideas and inspiration, without which this project would not have been possible.
   - The course material provided a lot of great ideas, too.
 - [YouTube](https://www.youtube.com/)
 
