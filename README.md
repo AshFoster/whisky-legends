@@ -851,7 +851,7 @@ To clone the GitHub repository follow these steps:
 - [Gmail](https://www.google.com/gmail/) - used to send emails when required.
 - [Lucidchart](https://www.lucidchart.com/) - used to create site map and entity relationship diagrams.
 - [Logo Pony](https://logopony.co.uk/) - to create default product image.
-- [Red Ketchup Image Resizer](https://redketchup.io/image-resizer) - To resize default product image
+- [Red Ketchup Image Resizer](https://redketchup.io/image-resizer) - To resize default product image.
 - [favicon.io](https://favicon.io/) - to generate favicon icons.
 - [XML-Sitemaps](https://www.xml-sitemaps.com/) - to generate the xml sitemap.
 - [Grammarly](https://www.grammarly.com/) - to check and correct spelling and grammar.
