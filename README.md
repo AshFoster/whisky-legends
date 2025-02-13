@@ -1,6 +1,6 @@
 # Whisky Legends
 
-[Click here to view the live site.](https://whisky-legends.herokuapp.com/)
+[Click here to view the live site.](https://whisky-legends.onrender.com/)
 
 ![Am I Responsive Image](assets/readme-images/am-i-responsive.JPG)
 
